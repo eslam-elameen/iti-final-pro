@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "name": "eslam6",
+      "email": "eslam@gmail.com",
+      "password": "ASDasd123%",
+      "confirmPassword": "ASDasd123%",
+      "id": 1
+    },
+    {
+      "name": "ehabnaf3",
+      "email": "ehab@ehab.com",
+      "password": "ehabE123",
+      "confirmPassword": "ehabE123",
+      "id": 2
+    }
+  ],
+  "products": [
+    {}
+  ]
+}
