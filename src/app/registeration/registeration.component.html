@@ -1,25 +1,25 @@
 <form [formGroup]='registrationForm' (ngSubmit)='onregisterSubmit(registrationForm)'>
 
-    <input type="text" formControlName='name' placeholder="enter your name ">
-    <div *ngIf='registrationForm.controls.name.hasError("pattern")&&registrationForm.controls.name.touched'>
+    <input type="text" formControlName='name' placeholder="enter your name " id="uname">
+    <!-- <div *ngIf='registrationForm.controls.name.hasError("pattern")&&registrationForm.controls.name.touched'>
         must contain 6 carchter between a-z 0-9
-    </div>
+    </div> -->
     <div *ngIf='registrationForm.controls.name.hasError("required")&&registrationForm.controls.name.touched'>
         confirm password is required
     </div>
 
     <input type="text" formControlName='email' placeholder="enter your email ">
-    <div *ngIf='registrationForm.controls.email.hasError("pattern")&&registrationForm.controls.email.touched'>
+    <!-- <div *ngIf='registrationForm.controls.email.hasError("pattern")&&registrationForm.controls.email.touched'>
         the email should be ex : dsa@gmail.com
-    </div>
+    </div> -->
     <div *ngIf='registrationForm.controls.email.hasError("required")&&registrationForm.controls.email.touched'>
         confirm password is required
     </div>
 
     <input type="password" formControlName='password' placeholder="enter your password">
-    <div *ngIf='registrationForm.controls.password.hasError("pattern")&&registrationForm.controls.password.touched'>
+    <!-- <div *ngIf='registrationForm.controls.password.hasError("pattern")&&registrationForm.controls.password.touched'>
         the password should contain ex :a-z,A-Z,0-9,!@#
-    </div>
+    </div> -->
 
     <div *ngIf='registrationForm.controls.password.hasError("required")&&registrationForm.controls.password.touched'>
         confirm password is required
