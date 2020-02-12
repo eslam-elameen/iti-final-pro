@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterationComponent implements OnInit {
   allDataOfUsers;
-   
+  flag;
   registrationForm: FormGroup
   constructor(private registerBuild: FormBuilder, private http: ApiService) { }
   ngOnInit() {
@@ -22,14 +22,10 @@ export class RegisterationComponent implements OnInit {
       validator: this.match('password', 'confirmPassword'),
     });
 
-    // this.http.getData().subscribe(data => {
-    //   this.allDataOfUsers = data
-      // console.log(this.allDataOfUsers)
-    // })
-    this.http.getData().subscribe(data=>{
+    this.http.getData().subscribe(data => {
       this.allDataOfUsers = data
       console.log(this.allDataOfUsers);
-      
+
     })
   }
 
@@ -48,44 +44,29 @@ export class RegisterationComponent implements OnInit {
     }
   }
   onregisterSubmit(form) {
-    let flag = false;
-    console.log(form.value)
-    console.log(this.registrationForm.value.name)
-    for(let i = 0 ; i < this.allDataOfUsers.length ; i++){
-      // if(form.value.name===this.allDataOfUsers[i].name){
-      //   console.log('inside if');
-      //   break;
-      // }else{
-      //   console.log('else');
-        
-      // }
-      if(form.value.name === this.allDataOfUsers[i].name){
-        console.log('inside if')
-        flag=true
-        console.log(flag)
-        // break;
-        //  console.log(data);
-      }else{
-        console.log(' else');
-        console.log(flag)
-        // document.getElementById('uname').value = ''
-        
-        
-
-        // console.log(form.value.name);
-        // console.log(this.allDataOfUsers[i].name);
-      }
-    
-    }
-    this.test(form, flag)
-    
-  }
-      test(form, flag){
-        if(!flag){
-          const headers = { "Content-Type": "application/json" }
-          this.http.postData("http://localhost:3000/users", form.value, headers).subscribe(data => {
-          })
-    
+    if (form.valid == true) {
+      this.flag = false;
+      console.log('json data')
+      console.log(this.allDataOfUsers);
+      for (let i = 0; i < this.allDataOfUsers.length; i++) {
+        if (form.value.name === this.allDataOfUsers[i].name) {
+          console.log('inside if')
+          this.flag = true
+        } else {
+          console.log(' else');
         }
       }
+      this.test(form)
+    }
+  }
+  test(form) {
+    console.log('inside test function')
+    if (this.flag == false) {
+      const headers = { "Content-Type": "application/json" }
+      this.http.postData("http://localhost:3000/users", form.value, headers).subscribe(data => {
+      })
+      this.allDataOfUsers.push(form.value)
+      console.log(this.allDataOfUsers)
+    }
+  }
 }

@@ -1,33 +1,6 @@
 {
   "users": [
-    {
-      "name": "test",
-      "email": "a",
-      "password": "a",
-      "confirmPassword": "a",
-      "id": 7
-    },
-    {
-      "name": "aa",
-      "email": "a",
-      "password": "a",
-      "confirmPassword": "a",
-      "id": 8
-    },
-    {
-      "name": "aa",
-      "email": "a",
-      "password": "a",
-      "confirmPassword": "a",
-      "id": 9
-    },
-    {
-      "name": "aa",
-      "email": "a",
-      "password": "a",
-      "confirmPassword": "a",
-      "id": 10
-    } 
+   
   ],
   "products": [
     {}
