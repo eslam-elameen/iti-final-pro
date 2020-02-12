@@ -1,7 +1,6 @@
 import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { checkServerIdentity } from 'tls';
 @Component({
   selector: 'app-registeration',
   templateUrl: './registeration.component.html',
@@ -69,7 +68,7 @@ export class RegisterationComponent implements OnInit {
       }else{
         console.log(' else');
         console.log(flag)
-        document.getElementById('uname').value = ''
+        // document.getElementById('uname').value = ''
         
         
 
