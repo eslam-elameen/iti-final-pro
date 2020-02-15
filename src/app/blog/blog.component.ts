@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogServiceService } from '../blog-service.service';
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: 'app-blog',
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private http: BlogServiceService, private dataServ: BlogServiceService, private _router: Router) { }
+  title = 'myNewApp';
+  counter;
+  count: number;
+  posts;
+  Cart = [];
+  cards;
+  post1;
   ngOnInit() {
+
+    // this.http.getData().subscribe(res => {
+    //   this.posts = res;
+    //   this.dataServ.currentMessage.subscribe(message =>
+    //     this.count = message)
+    // });
+
+    this.http.getData().subscribe(res => {
+      // this.posts = res;
+      this.cards = res;
+      for (const item of this.cards) {
+          this.cards =  this.cards[Math.floor(Math.random() *  this.cards.length)];
+          console.log(this.cards);
+          this.cards = res;
+
+        }
+      });
+      
+    }
   }
 
-}
+

@@ -1,1 +1,30 @@
-<p>single-blog works!</p>
+<!-- <p>single-blog works!</p> -->
+<div class="container single-blog" *ngIf="postItem">
+    <h1></h1>
+    <p>{{postItem.body}}</p>
+    <div class="cards">
+        <div class="row">
+            <div class="col-md-4 ">
+                <!-- <button ion-button round (click)="getLocalData()">Charger</button> -->
+                <div class="media">
+                    <div class="col-md-5 pr-0">
+                        <img class="card-img-top img-fluid" src="{{ postItem.img }}" alt="Card image cap">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="media-body">
+                            <h5 class="mt-0 pl-0">{{postItem.header}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <img class="card-img-top" src="{{ postItem.img }}" alt="Card image cap">
+                <h5 class="card-title my-4">{{postItem.header}}</h5>
+                <div class="card-bodys">
+                    <p class="lead">{{postItem.bigDescrtion}}</p>
+                </div>
+            </div>
+        </div>
+        <div>
+    </div>
+    </div>

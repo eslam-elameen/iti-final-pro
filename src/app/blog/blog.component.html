@@ -1,1 +1,36 @@
-<p>blog works!</p>
+<main class="blog">
+    <div class="container">
+      <h2 class="text-center pt-5 pb-5">Our Tips</h2>
+      <div class="row" *ngFor="let item of cards" [id]="item.id">
+      <div class="cards">
+        <div class="col-md-4">
+           
+            <img class="card-img-top" src="{{ item.img }}" alt="Card image cap">
+        </div>
+        <div class="col-md-6">
+            <h6 class="card-title">{{ item.header }}</h6>
+
+            <p class="lead">{{ item.descriptionSmall }}</p>
+            <button class="card-link btn btn-primary" routerLink="/blog/{{item.id}}">Learn More</button>
+
+            <div class="line-down"></div>
+        </div>
+    </div>
+          <!-- <div class="card">
+            <div class="card-body">
+              <img class="card-img-top" routerLink="/blog/{{item.id}}" src="{{ item.img }}" alt="Card image cap">
+              <h6 class="card-title">{{ item.productTitle }}</h6>
+              <p class="card-text">{{ item.price }}</p>
+              <img src="" alt="">
+              {{message}}
+              <a routerLink="/blog/{{item.id}}">click me</a>
+              
+              <button class="card-link btn btn-primary" (click)="newMessage()">add to Cart</button>
+            </div>
+          </div> -->
+      
+    </div>
+    
+    </div>
+
+  </main>
