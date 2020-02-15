@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ShippingAreaComponent } from './shipping-area/shipping-area.component';
 import { BlogComponent } from './blog/blog.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
+import { HomeComponent } from './home/home.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +23,17 @@ import { SingleBlogComponent } from './single-blog/single-blog.component';
     FooterComponent,
     ShippingAreaComponent,
     BlogComponent,
-    SingleBlogComponent
+    SingleBlogComponent,
+    HomeComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
