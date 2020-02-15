@@ -10,9 +10,12 @@ export class ApiService {
   postData(url, body, headers) {
     return this.http.post<any>(url, body, headers);
   };
-  getData(){
+  getUserData(){
     return this.http.get('http://localhost:3000/users');
-    // return this.http.get("https://jsonplaceholder.typicode.com/users")
   }
+  getProfileData(){
+    return this.http.get('http://localhost:3000/profile');
+  }
+
 }
 

@@ -1,0 +1,15 @@
+.register{
+    background: linear-gradient(to top,#fbc2eb 0%,#a18cd1 100%);
+}
+.card_container{
+    background: #000;
+    box-shadow: 0 8px 20px 0 rgba(0,0,0,.15);
+    width: 100%;
+    display: table;
+}
+
+.card_container .card_photo{
+    // background: url(../images/bg-heading-03.jpg) top left/cover no-repeat;
+    display: table-cell;
+    width: 50%;
+}

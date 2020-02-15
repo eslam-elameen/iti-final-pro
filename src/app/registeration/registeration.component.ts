@@ -9,8 +9,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class RegisterationComponent implements OnInit {
   allDataOfUsers;
   flag;
-  registrationForm: FormGroup
+  registrationForm: FormGroup;
+  getFile: File;
+  
   constructor(private registerBuild: FormBuilder, private http: ApiService) { }
+  
   ngOnInit() {
 
     this.registrationForm = this.registerBuild.group({
@@ -22,9 +25,9 @@ export class RegisterationComponent implements OnInit {
       validator: this.match('password', 'confirmPassword'),
     });
 
-    this.http.getData().subscribe(data => {
+    this.http.getUserData().subscribe(data => {
       this.allDataOfUsers = data
-      console.log(this.allDataOfUsers);
+      // console.log(this.allDataOfUsers);
 
     })
   }
@@ -43,30 +46,28 @@ export class RegisterationComponent implements OnInit {
       }
     }
   }
-  onregisterSubmit(form) {
-    if (form.valid == true) {
+  onregisterSubmit(registrationForm) {
+    
+    if (registrationForm.valid == true) {
       this.flag = false;
-      console.log('json data')
-      console.log(this.allDataOfUsers);
+      // console.log('json data')
+      // console.log(this.allDataOfUsers);
       for (let i = 0; i < this.allDataOfUsers.length; i++) {
-        if (form.value.name === this.allDataOfUsers[i].name) {
-          console.log('inside if')
+        if (registrationForm.value.name === this.allDataOfUsers[i].name) {
           this.flag = true
         } else {
-          console.log(' else');
         }
       }
-      this.test(form)
+      this.test(registrationForm)
     }
   }
-  test(form) {
-    console.log('inside test function')
+  test(registrationForm) {
+    console.log('inside test function');
     if (this.flag == false) {
       const headers = { "Content-Type": "application/json" }
-      this.http.postData("http://localhost:3000/users", form.value, headers).subscribe(data => {
+      this.http.postData("http://localhost:3000/users", registrationForm.value, headers).subscribe(data => {
       })
-      this.allDataOfUsers.push(form.value)
-      console.log(this.allDataOfUsers)
+      this.allDataOfUsers.push(registrationForm.value);
     }
   }
 }
