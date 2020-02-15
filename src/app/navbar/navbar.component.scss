@@ -1,0 +1,39 @@
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: Montserrat;
+    // padding: 0 100px;
+    color:  #303030;
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+}
+.navbar-expand-lg .navbar-nav {
+    align-items: center;
+}
+.dropdown-toggle {
+    background : none;
+    font-family: Montserrat;
+    padding: 0 100px;
+    color: #303030;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+.btn-group:hover>.dropdown-menu {
+    display: inline-block;
+    
+  }
+//   .dropdown-menu:hover {
+//       margin-top: 27px;
+//   } 
+
+
+  .form-inline .btn-success {
+    background: none;
+    border: none;
+  }
+  .form-inline .btn-success i {
+      color: #dd611e;
+  }
