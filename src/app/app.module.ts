@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeroHeaderComponent } from './hero-header/hero-header.component';
@@ -14,6 +16,8 @@ import { BlogComponent } from './blog/blog.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
 import { ProductsComponent } from './products/products.component';
 import { ProTypeComponent } from './products/pro-type/pro-type.component';
+import { SearchComponent } from './navbar/search/search.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 
 @NgModule({
@@ -27,6 +31,8 @@ import { ProTypeComponent } from './products/pro-type/pro-type.component';
     SingleBlogComponent,
     ProductsComponent,
     ProTypeComponent,
+    SearchComponent,
+    SearchResultComponent,
     
   ],
   imports: [
@@ -36,6 +42,8 @@ import { ProTypeComponent } from './products/pro-type/pro-type.component';
     BsDropdownModule.forRoot(),
     CarouselModule.forRoot(),
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
     
 
   ],

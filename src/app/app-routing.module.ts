@@ -5,11 +5,12 @@ import {ProTypeComponent} from './products/pro-type/pro-type.component'
 
 import { BlogComponent } from './blog/blog.component';
 import {SingleBlogComponent} from './single-blog/single-blog.component'
-
+import {SearchResultComponent} from './search-result/search-result.component'
 
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
+  {path:'result',component:SearchResultComponent},
   {path:'blog',component:BlogComponent},
   {path:'blog/:id',component:SingleBlogComponent},
  

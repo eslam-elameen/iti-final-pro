@@ -1,0 +1,21 @@
+
+<input #check type="checkbox" name="Pettix" id="" value="" [(ngModel)]="tex">
+<input #check2 type="checkbox" name="Mr.pets" id="" value="" [(ngModel)]="tex2">
+
+
+<!-- <div  '>
+<p>{{item.name}}</p>    
+</div> -->
+<div class="row">
+  <div class="card col-md-3" *ngFor = 'let item of searchData  '  >
+    <img src="{{item.img}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item.productTitle}}</h5>
+      <p class="card-text">{{item.kind}}</p>
+      <p class="card-text">{{item.storeName}}</p>
+
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+

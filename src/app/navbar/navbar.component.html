@@ -81,6 +81,12 @@
         <form class="form-inline my-2 my-lg-0">
             <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="far fa-user"></i></button>
             <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+            <form [formGroup]="mySearch" (ngSubmit)="onSubmit(mySearch.value.search)">
+                <input type="search" formControlName="search" placeholder="Your name">
+                <button  routerLink="/result" type="submit" >
+                    Send
+                </button>
+            </form>
             <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-shopping-cart"></i></button>
         </form>
     </div>

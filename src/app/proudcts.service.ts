@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
 
 
 
@@ -7,9 +8,15 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProudctsService {
-
+  private sendSearchResult = new BehaviorSubject([]);
+  getSearch = this.sendSearchResult.asObservable()
   constructor(private http:HttpClient) { }
   getData() {
     return this.http.get("http://localhost:3000/products")
+  }
+  getResult(data:[]) {
+    console.log(data); 
+
+    this.sendSearchResult.next(data);
   }
 }
