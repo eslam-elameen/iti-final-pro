@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ProudctsService} from '../proudcts.service'
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-dogs',
@@ -9,19 +9,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DogsComponent implements OnInit {
   productsData;
-  dogData=[];
+  dogData;
 
   constructor(private dogServe:ProudctsService,private route: ActivatedRoute) {
+  
     this.dogServe.getData().subscribe(data =>{
       this.productsData = data;
       console.log(this.productsData);
-       for(const item of this.productsData ){
-         if(item.storeName === "Pinky Pet Shop"){
-           this.dogData.push(item)
-         }
-
-       }
+      this.route.params.subscribe( params => { this.dogData = this.productsData.filter(item => item.category== params.category);
+        console.log( this.dogData )
+    })
      
+      
     
     } )
    }

@@ -251,7 +251,7 @@
       },
       {
       "id":"47",
-      "category":"dog" ,
+      "category":"cat" ,
       "storeName":"Pinky Pet Shop",
       "kindFood":"Food",
       "productTitle":"Puppy Trainer" ,
@@ -260,7 +260,7 @@
       },
       {
       "id":"48",
-      "category":"dog" ,
+      "category":"cat" ,
       "storeName":"Pinky Pet Shop",
       "kindFood":"Tool",
       "productTitle":"Furba & Catzone" ,
@@ -269,7 +269,7 @@
       },
       {
       "id":"49",
-      "category":"dog" ,
+      "category":"dog",
       "storeName":"Pinky Pet Shop",
       "kindFood":"Shampoo ",
       "productTitle":"Fuzzy" ,
