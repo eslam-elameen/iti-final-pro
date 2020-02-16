@@ -12,17 +12,17 @@ export class BlogServiceService {
   myArr = [];
   private messageSource = new BehaviorSubject(0);
   currentMessage = this.messageSource.asObservable();
-  constructor(private http: HttpClient) { 
-    
-   }
+  
+  constructor(private HttpClin: HttpClient) { }
    getData() {
-    return this.http.get("  http://localhost:3000/posts")
+    return this.HttpClin.get("http://localhost:3000/posts")
+  
+  }
+  getRandom(){
+    return this.HttpClin.get("http://localhost:3000/posts");
   }
   getSingleData(id) {
-    return this.http.get(`  http://localhost:3000/posts/${id}`)
-  }
-  cardDetail(id) {
-    return this.http.get(`  http://localhost:3000/posts`)
+    return this.HttpClin.get(`http://localhost:3000/posts/${id}`)
   }
 
   getCount() {
@@ -31,4 +31,5 @@ export class BlogServiceService {
   changeMessage(count: number) {
     this.messageSource.next(count)
   }
+
 }

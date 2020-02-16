@@ -1,0 +1,37 @@
+.blog {
+    padding-bottom: 100px;
+}
+.cards {
+    display: flex;
+    margin-bottom: 20px;
+}
+.line-down {
+    height:1px;
+    border-bottom:1px solid gray;
+    margin-top: 20px;
+    width: 100%;
+
+}
+
+.lead {
+    color: #6f6f6f;
+    font-size: 16px;
+}
+.card-img-top {
+    height: 200px;
+    border: none;
+}
+.btn-primary {
+    background: none;
+    border: 1px solid #dd611e;
+    border-radius: 0;
+    color: #333;
+    transition: .5s all ease-in-out;
+}
+.btn-primary:hover {
+    background: #dd611e;
+    border: 1px solid #dd611e;
+    border-radius: 0;
+    color: #fff;
+
+}

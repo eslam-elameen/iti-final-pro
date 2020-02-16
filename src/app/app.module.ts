@@ -31,8 +31,11 @@ import { DogsComponent } from './dogs/dogs.component';
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
     CarouselModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    
+
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
