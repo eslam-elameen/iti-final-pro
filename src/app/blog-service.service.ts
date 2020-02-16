@@ -15,14 +15,14 @@ export class BlogServiceService {
   
   constructor(private HttpClin: HttpClient) { }
    getData() {
-    return this.HttpClin.get("http://localhost:3000/posts")
+    return this.HttpClin.get(" http://localhost:3000/blogs")
   
   }
   getRandom(){
-    return this.HttpClin.get("http://localhost:3000/posts");
+    return this.HttpClin.get("http://localhost:3000/blogs");
   }
   getSingleData(id) {
-    return this.HttpClin.get(`http://localhost:3000/posts/${id}`)
+    return this.HttpClin.get("http://localhost:3000/blogs/"+id)
   }
 
   getCount() {

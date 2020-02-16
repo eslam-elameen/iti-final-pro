@@ -19,24 +19,27 @@ export class BlogComponent implements OnInit {
   post1;
   ngOnInit() {
 
-    // this.http.getData().subscribe(res => {
-    //   this.posts = res;
-    //   this.dataServ.currentMessage.subscribe(message =>
-    //     this.count = message)
-    // });
+    this.http.getData().subscribe(res => {
+      this.posts = res;
+      this.dataServ.currentMessage.subscribe(message =>
+        this.count = message)
+    });
 
     this.http.getData().subscribe(res => {
-      // this.posts = res;
-      this.cards = res;
-      for (const item of this.cards) {
-          this.cards =  this.cards[Math.floor(Math.random() *  this.cards.length)];
-          console.log(this.cards);
-          this.cards = res;
+      this.posts = res;
+      console.log(this.posts)
+      // this.cards = res;
+      // for (const item of this.cards) {
+      //     this.cards =  this.[Math.floor(Math.random() *  this.cards.length)];
+      //     console.log(this.cards);
+          // this.cards = res;
 
-        }
-      });
+        })
+  
+    
       
     }
   }
+  // }
 
 

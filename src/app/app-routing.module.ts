@@ -1,15 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {DogsComponent} from './dogs/dogs.component'
+import {ProductsComponent} from './products/products.component'
+import {ProTypeComponent} from './products/pro-type/pro-type.component'
 
-import { from } from 'rxjs';
 import { BlogComponent } from './blog/blog.component';
-import { ShippingAreaComponent } from './shipping-area/shipping-area.component';
-import { SingleBlogComponent } from './single-blog/single-blog.component';
+import {SingleBlogComponent} from './single-blog/single-blog.component'
+
+
 
 const routes: Routes = [
-  {path:"products/:category",component:DogsComponent},
-  {path:"products/:category/:kindFood",component:DogsComponent}
+  {path:'',redirectTo:'home',pathMatch:'full'},
+  {path:'blog',component:BlogComponent},
+  {path:'blog/:id',component:SingleBlogComponent},
+ 
+  {path:":category",component:ProductsComponent},
+  {path:":category/:kind",component:ProTypeComponent},
+
+  // {path:"cats/:kind",component:DogsComponent},
+  // {path:"birds/:kind",component:DogsComponent},
+
+
 
 ];
 

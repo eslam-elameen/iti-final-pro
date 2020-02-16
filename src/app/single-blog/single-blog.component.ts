@@ -11,17 +11,21 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SingleBlogComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private blogService: BlogServiceService) { }
+  constructor(private single: ActivatedRoute, private blogService: BlogServiceService) { }
   cards;
   postItem;
   ngOnInit() {
-    this.route.paramMap.subscribe(param => {
+    this.single.paramMap.subscribe(param => {
       this.getSinglePost(param.get('id'));
+      console.log(param)
     })  
   }
   getSinglePost(postId) {
     this.blogService.getSingleData(postId).subscribe(postObj => {
       this.postItem = postObj;
+      console.log(this.postItem);
+
+      
     })
 
     

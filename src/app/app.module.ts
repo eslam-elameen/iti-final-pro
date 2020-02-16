@@ -12,7 +12,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ShippingAreaComponent } from './shipping-area/shipping-area.component';
 import { BlogComponent } from './blog/blog.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
-import { DogsComponent } from './dogs/dogs.component';
+import { ProductsComponent } from './products/products.component';
+import { ProTypeComponent } from './products/pro-type/pro-type.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { DogsComponent } from './dogs/dogs.component';
     ShippingAreaComponent,
     BlogComponent,
     SingleBlogComponent,
-    DogsComponent
+    ProductsComponent,
+    ProTypeComponent,
+    
   ],
   imports: [
     BrowserModule,
