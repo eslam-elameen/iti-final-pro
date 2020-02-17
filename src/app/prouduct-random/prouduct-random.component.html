@@ -1,0 +1,20 @@
+<p>prouduct-random works!</p>
+<!-- <div class="container">
+  
+    <div *ngFor="let card of sets">
+       <h2>{{ card.header }}</h2>
+      </div>
+</div>  -->
+
+<carousel [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="true" [interval]="false" [indicatorsByChunk]="false">>
+
+    <div class="row">
+        <div class="col-md-3" *ngFor="let card of sets;" class="mx-auto">
+            <slide>
+
+                <img [src]=" card.img " alt="image slide" style="display: inline-block; width: 100%;">
+                <!-- <h2>{{ card. }}</h2> -->
+            </slide>
+        </div>
+    </div>
+</carousel>

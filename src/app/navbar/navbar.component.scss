@@ -1,7 +1,11 @@
 
+.bg-light {
+  background: transparent !important;
+  background: none;
+}
+
 .navbar-light .navbar-nav .nav-link {
     font-family: Montserrat;
-    // padding: 0 100px;
     color:  #303030;
     padding: 0 15px;
     text-transform: uppercase;
@@ -25,11 +29,6 @@
     display: inline-block;
     
   }
-//   .dropdown-menu:hover {
-//       margin-top: 27px;
-//   } 
-
-
   .form-inline .btn-success {
     background: none;
     border: none;

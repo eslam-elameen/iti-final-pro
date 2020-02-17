@@ -13,6 +13,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ShippingAreaComponent } from './shipping-area/shipping-area.component';
 import { BlogComponent } from './blog/blog.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
+import { HomeComponent } from './home/home.component';
+import { ServicesComponent } from './services/services.component';
+import { ProuductRandomComponent } from './prouduct-random/prouduct-random.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { SingleBlogComponent } from './single-blog/single-blog.component';
     FooterComponent,
     ShippingAreaComponent,
     BlogComponent,
-    SingleBlogComponent
+    SingleBlogComponent,
+    HomeComponent,
+    ServicesComponent,
+    ProuductRandomComponent
   ],
   imports: [
     BrowserModule,
