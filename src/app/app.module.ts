@@ -18,6 +18,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProTypeComponent } from './products/pro-type/pro-type.component';
 import { SearchComponent } from './navbar/search/search.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { FilterResultPipe } from './filter-result.pipe';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { SearchResultComponent } from './search-result/search-result.component';
     ProTypeComponent,
     SearchComponent,
     SearchResultComponent,
+    FilterResultPipe,
     
   ],
   imports: [
