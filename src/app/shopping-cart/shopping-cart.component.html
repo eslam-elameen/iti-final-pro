@@ -1,1 +1,36 @@
-<p>shopping-cart works!</p>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-8">
+            <table class="table">
+                <thead>
+                  <tr >
+                    <th scope="col">Product Title</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">price</th>
+                    <th scope="col">Total Price</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr *ngFor="let item of  productFromLocal">
+                    <td>{{item.productTitle}}</td>
+                    <td>
+                      <button class="btn btn-primary btn-sm" (click)="onDecrease(item)">-</button>
+                      {{item.qty}}
+                      <button class="btn btn-primary btn-sm" (click)="onIncrease(item)">+</button>
+                    </td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.totalPrice}}</td>
+                    <td><button class="btn btn-danger" (click)="onDelete(item.id)" >Delete</button></td>
+                  </tr>
+                  <h1>Total Price: {{totalAllProductPrice()}}</h1>
+                </tbody>
+
+
+              </table>
+
+        </div>
+    </div>
+</div>
+

@@ -6,16 +6,12 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class BlogServiceService {
- 
-  constructor(private http: HttpClient) { 
-    
-   }
-   getData() {
 
-    let getUrl = ''
-    return this.http.get(getUrl);
-  }
- 
 
- 
+  private behaviorSubject = new BehaviorSubject([]);
+  countItem = this.behaviorSubject.asObservable();
+
+  constructor(private http: HttpClient) {}
+
+
 }

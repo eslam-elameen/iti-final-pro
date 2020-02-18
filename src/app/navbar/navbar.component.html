@@ -115,7 +115,8 @@
             <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
             <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="far fa-user"></i></button>
             <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-            <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-shopping-cart"></i></button>
+            <a class="btn btn-success my-2 my-sm-0" routerLink="/shopping-cart" routerLinkActive="router-link-active" ><i class="fas fa-shopping-cart"></i></a>
+            <span class="h1"> {{ countProductFromLocal() }}</span>
         </form>
     </div>
 

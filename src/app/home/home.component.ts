@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogServiceService } from '../blog-service.service'
+import { ShoppingCartService } from '../shopping-cart.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,14 +7,25 @@ import { BlogServiceService } from '../blog-service.service'
 })
 export class HomeComponent implements OnInit {
   allProduct;
+ 
 
-  constructor(private productServices: BlogServiceService) { }
-
-  ngOnInit() {
-    this.productServices.getData().subscribe(data =>{
-      this.allProduct = data;
-      console.log(this.allProduct)
-    })
+  constructor(private productServices: ShoppingCartService) {
+  
   }
 
+  ngOnInit() {
+    this.productServices.getData().subscribe(data => {
+      this.allProduct = data
+    });
+    this.productServices.saveInLocalStorge();
+  }
+
+ 
+
+  addToCart(product) {
+    this.productServices.addCart(product);
+  }
+
+
 }
+
