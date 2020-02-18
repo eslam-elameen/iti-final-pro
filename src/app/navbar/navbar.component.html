@@ -3,7 +3,7 @@
     <div class="container">
         <a class="navbar-brand" href="#"><img src="../../assets/img/logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="droptoggle($event)">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -11,86 +11,109 @@
                 <li class="nav-item active">
                     <a class="nav-link" routerLink="/">Home</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
-                </li>
-    <li div class="btn-group" dropdown>
-                   
-        <button routerLink = "/dog" id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle" aria-controls="dropdown-basic" >
-            Dog <span class="caret"></span>
-        </button>
-
-<div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right" container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-    <a  routerLink = "/dog/Dry Food" role="menuitem"><a class="dropdown-item" href="#">dry</a>
-
-</a>
-    <a  role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
-    <a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
-    <a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
-    </a>
-</div>
-
-</li>
-    <li div class="btn-group" dropdown>
-                   
-        <button routerLink = "/cat" id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle" aria-controls="dropdown-basic" >
-            Cat <span class="caret"></span>
-        </button>
-<div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right" container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-    <a routerLink = "/products/cat/dry food"  role="menuitem"><a class="dropdown-item" href="#">Full Grooming</a></a>
-    <a role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
-    <a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
-    <a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
-    </a>
-</div>
-
-</li>
-<li div class="btn-group" dropdown>
-                   
-    <button routerLink = "/bird" id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle" aria-controls="dropdown-basic" >
-        Bird <span class="caret"></span>
-    </button>
-<div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right" container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-<a role="menuitem"><a class="dropdown-item" href="#">Full Grooming</a></a>
-<a role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
-<a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
-<!-- <a class="divider dropdown-divider"></a> -->
-<a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
-</a>
-</div>
-
-</li>
+                </li> -->
                 <li div class="btn-group" dropdown>
-                   
-                        <button id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle" aria-controls="dropdown-basic" >
-                            Services <span class="caret"></span>
-                        </button>
-                <div id="dropdown-basic" role="menuitem" dropdown triggers="mouseover" placement="right" container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-                    <a role="menuitem"><a class="dropdown-item" href="#">Full Grooming</a></a>
-                    <a role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
-                    <a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
-                    <a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
-                    </a>
+
+                    <button routerLink="/dog" id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
+                        aria-controls="dropdown-basic">
+                        Dog <span class="caret"></span>
+                    </button>
+
+                    <div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right"
+                        container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+                        <a routerLink="/dog/Dry Food" role="menuitem"><a class="dropdown-item" href="#">dry</a>
+
+                        </a>
+                        <a role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
+                        <a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
+                        <a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
+                        </a>
+                    </div>
+
+                </li>
+                <li div class="btn-group" dropdown>
+
+                    <button routerLink="/cat" id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
+                        aria-controls="dropdown-basic">
+                        Cat <span class="caret"></span>
+                    </button>
+                    <div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right"
+                        container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+                        <a routerLink="/products/cat/dry food" role="menuitem"><a class="dropdown-item" href="#">Full
+                                Grooming</a></a>
+                        <a role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
+                        <a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
+                        <a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
+                        </a>
+                    </div>
+
+                </li>
+                <li div class="btn-group" dropdown>
+
+                    <button routerLink="/bird" id="button-basic" dropdownToggle type="button"
+                        class="btn dropdown-toggle" aria-controls="dropdown-basic">
+                        Bird <span class="caret"></span>
+                    </button>
+                    <div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right"
+                        container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+                        <a role="menuitem"><a class="dropdown-item" href="#">Full Grooming</a></a>
+                        <a role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
+                        <a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
+                        <a class="divider dropdown-divider"></a>
+                        <a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
+                        </a>
+                    </div>
+
+                </li>
+                <li div class="btn-group" dropdown>
+
+                    <button id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
+                        aria-controls="dropdown-basic">
+                        Services <span class="caret"></span>
+                    </button>
+                    <div id="dropdown-basic" role="menuitem" dropdown triggers="mouseover" placement="right"
+                        container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+                        <a role="menuitem"><a class="dropdown-item" href="#">Full Grooming</a></a>
+                        <a role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
+                        <a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
+                        <a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
+                        </a>
+                    </div>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/blog">Blog</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="far fa-user"></i></button>
+
+
+                <!-- <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button> -->
+                <div class="btn-group" dropdown>
+                    <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                        aria-controls="dropdown-basic">
+                        <i class="fas fa-search"></i> <span class="caret"></span>
+                    </button>
+                    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu"
+                        aria-labelledby="button-basic">
+                        <form [formGroup]="mySearch" (ngSubmit)="onSubmit(mySearch.value.search)">
+                            <input type="search" formControlName="search" placeholder="Your name">
+                            <button routerLink="/result" type="submit">
+                                Send
+                            </button>
+                        </form>
+                    </ul>
                 </div>
 
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/blog">Blog</a>
-        </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="far fa-user"></i></button>
-            <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-            <form [formGroup]="mySearch" (ngSubmit)="onSubmit(mySearch.value.search)">
-                <input type="search" formControlName="search" placeholder="Your name">
-                <button  routerLink="/result" type="submit" >
-                    Send
-                </button>
+
+                <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-shopping-cart"></i></button>
             </form>
-            <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-shopping-cart"></i></button>
-        </form>
-    </div>
+        </div>
 
     </div>
 </nav>
 
+  

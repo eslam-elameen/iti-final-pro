@@ -26,11 +26,11 @@
   "products": [
     {
       "id": "20",
-      "category":"dog",
+      "category": "dog",
       "storeName": "Mr.pets",
       "kind": "Dry Food",
       "productTitle": "ALPHA Adult Dog Dry Food 20 KG",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/download-1-1.jpg",
+      "img": "https://cf3.s3.souqcdn.com/item/2019/06/17/55/18/64/99/item_L_55186499_dbb559c04257d.jpg",
       "price": "400.00",
       "quantity": "0"
     },
@@ -82,21 +82,11 @@
     },
     {
       "id": "26",
-      "category":"dog",
-      "storeName": "Mr.pets",
       "kind": "Dry Food",
       "productTitle": "Bavaro Work 18 KG",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/06/image-2.png",
-      "price": "620.00"
-    },
-    {
-      "id": "27",
       "category":"dog",
-      "storeName": "Mr.pets",
-      "kind": "Dry Food",
-      "productTitle": "Crancy Dental Snack 180 g*7p",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/image-1-27-600x600.jpg",
-      "price": "85.00"
+      "img" : "https://hovawartpincebolt.unas.hu/img/5321/BAV-0003/BAV-0003.jpg?time=1553630145",
+      "price": "400.00"
     },
     {
       "id": "28",
@@ -113,7 +103,7 @@
       "category":"dog",
       "storeName": "Mr.pets",
       "kind": "Wet Food",
-      "productTitle": "MERA Pure Sensitive with Poultry Hearts 400g DOG Can",
+      "productTitle": "MERA Pure Sensitive",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/05/image-9-600x600.jpg",
       "price": "35.00",
       "quantity": "0",
@@ -134,7 +124,7 @@
       "category":"dog",
       "storeName": "Mr.pets",
       "kind": "Wet Food",
-      "productTitle": "Purina Felix Wet Cat Food100g-Chicken in Jelly",
+      "productTitle": "Felix Cat Food100g-Chicken",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/image-25-600x600.jpg",
       "price": "15.00",
       "quantity": "0"
@@ -155,7 +145,7 @@
       "storeName": "Pet Yard",
       "kind": "Dry Food",
       "productTitle": "Belcando",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/83944490_3332054136808664_7419963411552796672_o.jpg?_nc_cat=109&_nc_ohc=mTbQ0TTL5x0AX_AJsF7&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=b3c7c8c303dfd5761b9b85abafa3d50b&oe=5ED1275C",
+      "img": "https://petsegypt.com/web/image/product.template/5046/image/300x300?unique=23d1d8d",
       "price": "210.00",
       "quantity": "0"
     },
@@ -165,30 +155,11 @@
       "storeName": "pet Yard",
       "kind": "Dry Food",
       "productTitle": "Earthborn Holistic 12 KG",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/82480595_3317149824965762_3661883722090676224_n.jpg?_nc_cat=107&_nc_ohc=zEreIY3OIZ8AX-tbG6e&_nc_ht=scontent-hbe1-1.xx&oh=659e490c94ccd5483d22fc9ee692107f&oe=5F00BAFD",
+      "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/06/image-1-2.jpg",
       "price": "200.00",
       "quantity": "0"
     },
-    {
-      "id": "34",
-      "category":"dog",
-      "storeName": "pet Yard",
-      "kind": "Dry Food",
-      "productTitle": "Earthborn Holistic 12 KG",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/82480595_3317149824965762_3661883722090676224_n.jpg?_nc_cat=107&_nc_ohc=zEreIY3OIZ8AX-tbG6e&_nc_ht=scontent-hbe1-1.xx&oh=659e490c94ccd5483d22fc9ee692107f&oe=5F00BAFD",
-      "price": "200.00",
-      "quantity": "0"
-    },
-    {
-      "id": "35",
-      "category":"dog",
-      "storeName": "pet Yard",
-      "kind": "Dry Food",
-      "productTitle": "Troopy Puppy",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/80099745_3254402431240502_9016641143340793856_n.jpg?_nc_cat=100&_nc_ohc=XFHDCQMyBjAAX9g7Lwp&_nc_ht=scontent-hbe1-1.xx&oh=3cc106086843492b8b54a5b3ef18e832&oe=5ED1A535",
-      "price": "200.00",
-      "quantity": "0"
-    },
+
     {
       "id": "35",
       "category":"dog",
@@ -214,7 +185,7 @@
       "category":"dog",
       "storeName": "pet Yard",
       "kind": "Dry Food",
-      "productTitle": "Royal Canin (GoldenRetriever)",
+      "productTitle": "Royal Canin Dog",
       "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/79534165_3210841548929924_2949115456729907200_n.jpg?_nc_cat=103&_nc_ohc=EbiPW42cSwYAX-8lDYP&_nc_ht=scontent-hbe1-1.xx&oh=0b5c494bf762468c855c96845cc7b655&oe=5EC0D37D",
       "price": "500.00",
       "quantity": "0"
@@ -229,23 +200,14 @@
       "price": "500.00",
       "quantity": "0"
     },
-    {
-      "id": "38",
-      "category":"dog",
-      "storeName": "Pettix",
-      "kind":"gromming",
-      "productTitle": "HARTZ Shampoo ",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/84068763_491847674833243_8713206608731045888_o.jpg?_nc_cat=105&_nc_ohc=JiiIxbgiGGYAX9XENHJ&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=022ad7074d9579c780b658298344d657&oe=5EB55B9A",
-      "price": "300.00",
-      "quantity": "0"
-    },
+
     {
       "id": "39",
       "category":"dog",
       "storeName": "Pettix",
       "kind":"gromming",
-      "productTitle": "#Josera 'Made In Germany' ",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/86372575_495490657802278_5776258768580902912_o.jpg?_nc_cat=101&_nc_ohc=uCIk_xmtu8wAX93BKXo&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=b108e70675e155034a78a0d7799edc53&oe=5EBE92EE",
+      "productTitle": "Josera 'Made In Germany' ",
+      "img": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/13/381141/1.jpg?7850",
       "price": "400.00",
       "quantity": "0"
     },
@@ -255,7 +217,7 @@
       "storeName": "Pettix",
       "kind": "Tool",
       "productTitle": "Pet food container",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/84075412_491844491500228_4054016074461478912_o.jpg?_nc_cat=107&_nc_ohc=LgH1biJy_zcAX-jqB_C&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=f7890216fd77473ba81e29a3b9c24977&oe=5ED3D0FF",
+      "img": "https://www.containerstore.com/catalogimages/128396/PetFoodContainer45lbs_x.jpg",
       "price": "400.00",
       "quantity": "0"
     },
@@ -264,8 +226,8 @@
       "category":"dog",
       "storeName": "Pettix",
       "kind": "Food",
-      "productTitle": "Vitaday Active 25-11",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/80832978_464471614237516_1903077254120865792_o.jpg?_nc_cat=109&_nc_ohc=0csAxcgqnpsAX8YRF9M&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=6401d6f30738027b82b032869e4a16ff&oe=5EC55629",
+      "productTitle": "Vitaday Active",
+      "img": "https://cdn.shopify.com/s/files/1/0017/3037/9887/products/vitaday-crocchette-10kg_300x300.jpg?v=1544532252",
       "price": "400.00",
       "quantity": "0"
     },
@@ -275,7 +237,7 @@
       "storeName": "Pettix",
       "kind": "Treat",
       "productTitle": "Snacks Treat",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/69131069_383791602305518_1219523150149058560_o.jpg?_nc_cat=111&_nc_ohc=dYNNGl5B0xoAX9FKJKe&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=8a19cfb29050f93bcafa3686a31d617f&oe=5EBCE9CD",
+      "img": "https://barkpost.com/wp-content/uploads/2019/03/are-milk-bones-safe-jar.png",
       "price": "90.00",
       "quantity": "0"
     },
@@ -291,41 +253,32 @@
     },
     {
       "id": "44",
-      "category":"dog",
+      "category": "dog",
       "storeName": "Pinky Pet Shop",
-      "kind": "Dry Food ",
+      "kind": "Dry Food",
       "productTitle": "Miglior Cane 15 Kg",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p720x720/70986463_2152353085065375_3358140984922734592_o.jpg?_nc_cat=109&_nc_ohc=sYTMTRTcBJ0AX8YSKhG&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=5c1d53b38390fa50eb335b276212d214&oe=5EB505FD",
+      "img": "https://www.rumahguguk.com/image/cache/data/Dog%20Food/Miglior%20cane/migliorcane_puppy_-500x500.jpg",
       "price": "370.00",
       "quantity": "0"
     },
     {
       "id": "45",
-      "category":"dog",
+      "category": "dog",
       "storeName": "Pinky Pet Shop",
-      "kind":"gromming",
+      "kind": "Shampoo ",
       "productTitle": "Anti-insect shampoo 250ml / 60ml",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/65511018_2098095557157795_4792274085960744960_n.jpg?_nc_cat=111&_nc_ohc=tWH4-YhY0P8AX-IQKZZ&_nc_ht=scontent-hbe1-1.xx&oh=653a0c8713de1f53bf562bd9c7b4edf8&oe=5EC02F94",
+      "img": "https://just4petsegypt.com/wp-content/uploads/2019/09/shampo-blue-1-removebg-preview.png",
       "price": "370.00",
       "quantity": "0"
     },
-    {
-      "id": "46",
-      "category":"dog",
-      "storeName": "Pinky Pet Shop",
-      "kind": "gromming",
-      "productTitle": "Friskies Dog(Jouner /Active) 3kg",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/65511018_2098095557157795_4792274085960744960_n.jpg?_nc_cat=111&_nc_ohc=tWH4-YhY0P8AX-IQKZZ&_nc_ht=scontent-hbe1-1.xx&oh=653a0c8713de1f53bf562bd9c7b4edf8&oe=5EC02F94",
-      "price": "150 .00",
-      "quantity": "0"
-    },
+    
     {
       "id": "47",
       "category":"dog",
       "storeName": "Pinky Pet Shop",
       "kind": "gromming",
-      "productTitle": "Puppy Trainer",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-0/p640x640/65306177_2096194947347856_5668380850941591552_o.jpg?_nc_cat=107&_nc_ohc=OksCyg8z-GMAX915EUW&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=455c11b8cec5273813945498e7cecb77&oe=5EC7CD4B",
+      "productTitle": "Puppy Trainer spray",
+      "img": "https://static.jumia.com.eg/unsafe/fit-in/220x220/filters:fill(white)/product/49/2986/1.jpg?1849",
       "price": "120 .00",
       "quantity": "0"
     },
@@ -335,7 +288,7 @@
       "storeName": "Pinky Pet Shop",
       "kind": "Tool",
       "productTitle": "Furba & Catzone",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/65306526_2095569927410358_2678503010656583680_o.jpg?_nc_cat=110&_nc_ohc=rOOynXNA4cYAX830EKi&_nc_ht=scontent-hbe1-1.xx&oh=5cb71742d07286c98a9e361c6edda0b6&oe=5EBBE45F",
+      "img": "https://s3.eu-central-1.amazonaws.com/cnj-img/images/sk/sk60v5BvTLeP",
       "price": "120 .00",
       "quantity": "0"
     },
@@ -374,7 +327,7 @@
       "category": "cat",
       "storeName": "Mr.pets",
       "kind": "Dry Food",
-      "productTitle": "Friskies For cats Chicken INDOOR 1.5kg",
+      "productTitle": "Friskies For cats Chicken 1.5kg",
       "description": "ESPECIALLY FORMULATED FOR CATS INDOORS * FRISKIES ® Indoor Cats is a tasty and 100% complete food that helps reduce the formation of hairballs, and with added garden vegetables that cats like to chew on. FRISKIES ® Indoor Cats supports the good health, vitality, and happiness of your indoor cat; so that he can continue to surprise you and make you happy, every day, in your home! * Complete food for adult cats. * Control of hairballs :With fibers to help reduce the formation of hairballs and allow their smooth passage through the digestive system. *Weight management :supports with a suitable energy intake. * Reduces litter odors :Contains chicory, a vegetable, to help reduce litter odors.",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/09/friskies-indoor-15.png",
       "price": "110.00",
@@ -459,7 +412,7 @@
       "category": "cat",
       "storeName": "Mr.pets",
       "kind": "Wet Food",
-      "productTitle": "Purina Felix Wet Cat Food-100g -Junior Chicken in Jelly",
+      "productTitle": "friskies dry food",
       "description": "With Chicken In Gravy 100% Complete & Balanced for the Growth of Kittens and Maintenance of Adult Cats Manufactured in Purina-owned plants in the United States",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/05/image-2-600x600.jpg",
       "price": "15.00",
@@ -470,7 +423,7 @@
       "category": "cat",
       "storeName": "Mr.pets",
       "kind": "Wet Food",
-      "productTitle": "Purina Felix Wet Cat Food-100g -Junior Chicken in Jelly",
+      "productTitle": "Felix Wet Food-100g Chicken",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/image-23-600x600.jpg",
       "price": "15.00",
       "quantity": "0"
@@ -480,7 +433,7 @@
       "category": "cat",
       "storeName": "Mr.pets",
       "kind": "Wet Food",
-      "productTitle": "Royal Canin INSTINCTIVE +7 JELLY-GELATINA-GELE 85g",
+      "productTitle": "ProDog 85g",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/10/WhatsApp-Image-2018-10-25-at-9.07.28-PM1-600x418-2.jpeg",
       "price": "22.00",
       "quantity": "0",
@@ -502,7 +455,7 @@
       "storeName": "pet Yard",
       "kind":"gromming",
       "productTitle": "Foaming Shampoo 250 ml",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/83280485_3332043583476386_7316167048579514368_o.jpg?_nc_cat=101&_nc_ohc=6Ogr6p1S5FAAX-PN7he&_nc_ht=scontent-hbe1-1.xx&oh=34b0dee9618c04a7cdfb477ef3e4acc8&oe=5EFCEC4B",
+      "img": "https://www.hair-shop.com/en/media/catalog/product/cache/4/image/1400x1400/9df78eab33525d08d6e5fb8d27136e95/j/o/john-paul-pet-oatmeal-waterless-foam-shampoo-250ml.jpg",
       "price": "40.00",
       "quantity": "0"
     },
@@ -512,7 +465,7 @@
       "storeName": "pet Yard",
       "kind": "Dry Food",
       "productTitle": "SaniCat 5 Liter",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/82516314_3321513677862710_7849238469300715520_o.jpg?_nc_cat=106&_nc_ohc=8XmWLLovaTMAX-aXAJL&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=6533dee18a80b934c819e814f9fa40ad&oe=5EC94345",
+      "img": "https://petsegypt.com/web/image/product.template/3462/image/300x300?unique=eb846a8",
       "price": "70.00",
       "quantity": "0"
     },
@@ -522,7 +475,7 @@
       "storeName": "pet Yard",
       "kind": "Dry Food",
       "productTitle": "Catzone 5 kilos",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/80099745_3254402431240502_9016641143340793856_n.jpg?_nc_cat=100&_nc_ohc=XFHDCQMyBjAAX9g7Lwp&_nc_ht=scontent-hbe1-1.xx&oh=3cc106086843492b8b54a5b3ef18e832&oe=5ED1A535",
+      "img": "https://cf2.s3.souqcdn.com/item/2015/09/02/89/86/15/0/item_L_8986150_9253203.jpg",
       "price": "65.00",
       "quantity": "0"
     },
@@ -531,8 +484,8 @@
       "category": "cat",
       "storeName": "pet Yard",
       "kind": "Dry Food",
-      "productTitle": "Katz Menu Flavour 7,5 kg",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/82344897_3301253643222047_4472391896781553664_n.jpg?_nc_cat=108&_nc_ohc=Qiu4EMz-E5QAX_nlU34&_nc_ht=scontent-hbe1-1.xx&oh=215354531ca10a56d65e4bb8a88b0087&oe=5ED0A90E",
+      "productTitle": "Katz 7,5 kg",
+      "img": "https://d2be8yqg602pkp.cloudfront.net/media/catalog/product/cache/1/image/1200x630/9df78eab33525d08d6e5fb8d27136e95/2/0/20100250_katz_flavour_2kg-20cm.jpg",
       "price": "200.00",
       "quantity": "0"
     },
@@ -542,7 +495,7 @@
       "storeName": "pet Yard",
       "kind": "Dry Food",
       "productTitle": "ProCat",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/81958038_3290905920923486_5432658614646996992_n.jpg?_nc_cat=107&_nc_ohc=Mvv9cN250o0AX_s0_dj&_nc_ht=scontent-hbe1-1.xx&oh=1c66c2cfc6e09e34dbc8af312e4597bb&oe=5EBB3052",
+      "img": "https://amypetstore.com/DataImages/Products/PROCAT%20Pate%20With%20Salmon%20415g.jpg",
       "price": "20.00",
       "quantity": "0"
     },
@@ -562,7 +515,7 @@
       "storeName": "pet Yard",
       "kind": "Dry Food",
       "productTitle": "LindoCat",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/73324999_3084270234920390_7664010630201868288_n.jpg?_nc_cat=102&_nc_ohc=OugrE4yRBvsAX_Ouh8J&_nc_ht=scontent-hbe1-1.xx&oh=dae5e7ea02f2826ed15dd36b2958c4f9&oe=5EC98F7D",
+      "img": "https://aleef.com/media/cache/sylius_shop_product_large_thumbnail/0c/31/298375404878b375be719a7e0b36.png",
       "price": "100.00",
       "quantity": "0"
     },
@@ -572,7 +525,7 @@
       "storeName": "Pettix",
       "kind":"gromming",
       "productTitle": "HARTZ Shampoo ",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/84138847_491847711499906_5542211049840705536_o.jpg?_nc_cat=104&_nc_ohc=-q5ua56h1rAAX92iZFJ&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=e72b35294ec364af6169e085f6c5bfd9&oe=5EB96A73",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/81VlsOQUPZL._SY679_.jpg",
       "price": "300.00",
       "quantity": "0"
     },
@@ -582,7 +535,7 @@
       "storeName": "Pettix",
       "kind":"gromming",
       "productTitle": "Revolution for Cats (Single dose)",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/84190342_491845751500102_6439738319965257728_o.jpg?_nc_cat=101&_nc_ohc=3lrjjpKW2skAX9MdNb0&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=6c2b1de443db88c12ac23fd85918a92e&oe=5F013DBF",
+      "img": "https://cf4.s3.souqcdn.com/item/2017/07/08/23/32/40/26/item_L_23324026_33189085.jpg",
       "price": "50.00"
     },
     {
@@ -591,7 +544,7 @@
       "storeName": "Pettix",
       "kind": "Tool",
       "productTitle": "Lindo Cat Litter",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/83131831_486255108725833_4188493587853344768_o.jpg?_nc_cat=109&_nc_ohc=n_TFnhnnsb8AX8ZTlIX&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=09302ceedff40d02e426067ebe2d8ab4&oe=5EC7117F",
+      "img": "https://www.mygreenchapter.com/media/catalog/product/cache/4/image/1170x/9df78eab33525d08d6e5fb8d27136e95/l/i/lindocat_smell_good_8l.jpg",
       "price": "60.00"
     },
     {
@@ -609,7 +562,7 @@
       "storeName": "Pettix",
       "kind": "Treat",
       "productTitle": "Mera Cat",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/80527607_464513277566683_5734218073909493760_o.jpg?_nc_cat=110&_nc_ohc=QyFnGk5h86YAX8Orjxv&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=ef15d4a459225c8825c08125bfee4929&oe=5EFC7C2C",
+      "img": "https://meradog.co.za/wp-content/uploads/2016/05/mera-cat.jpg",
       "price": "90.00"
     },
     {
@@ -618,7 +571,7 @@
       "storeName": "Pettix",
       "kind": "Food ",
       "productTitle": "Orgo Cat Litter",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/81224952_464495974235080_2351303807817744384_o.jpg?_nc_cat=103&_nc_ohc=e8myi5MtSr4AX8C8c-4&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=688dd3fe4b1993a8bcb958faace07468&oe=5EB9193C",
+      "img": "https://images.yaoota.com/elsKCPzHaHCX39UBrQdPnXS5U74=/trim/yaootaweb-production/media/crawledproductimages/cc22e57294a0d3fd2dff823d3c11711d446316ae.jpg",
       "price": "50.00"
     },
     {
@@ -626,8 +579,8 @@
       "category": "cat",
       "storeName": "Pinky Pet Shop",
       "kind": "Acs",
-      "productTitle": "Amazing Boxes Made In 'ITALY' For Cats",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/78458651_448885065796171_1844518686459691008_o.jpg?_nc_cat=105&_nc_ohc=-YbF5c7LC14AX_a8FEj&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=d0d24cf0e76b3b27bd781514c59213fa&oe=5ECFAB98",
+      "productTitle": "Amazing Boxes For Cats 'ITALY'",
+      "img": "https://atlas-content-cdn.pixelsquid.com/stock-images/enclosed-litter-box-tray-lOwDMoA-600.jpg",
       "price": "370.00"
     },
     {
@@ -636,7 +589,7 @@
       "storeName": "Pinky Pet Shop",
       "kind":"gromming",
       "productTitle": "FrontLine Shampoo ",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/79116278_445992362752108_903823868274147328_o.jpg?_nc_cat=109&_nc_ohc=H7eo2blQGG4AX9L5PU0&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=2256352c3af11621aeec552552dc516a&oe=5ECA1EB9",
+      "img": "https://www.kimispetemporium.co.uk/ekmps/shops/d5e0a4/images/frontline-pet-care-sensitive-skin-dog-shampoo-4530-1-p.jpg",
       "price": "70.00"
     },
     {
@@ -644,8 +597,8 @@
       "category": "cat",
       "storeName": "Pinky Pet Shop",
       "kind": "Food",
-      "productTitle": " Royal Canin ",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/77428467_444571616227516_1581521273236750336_o.jpg?_nc_cat=111&_nc_ohc=nkr-48esPDQAX8ctS7g&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=6ece742d9148da744707b0b8494e2af1&oe=5EB75537",
+      "productTitle": " Royal Canin Cat",
+      "img": "https://k.nooncdn.com/t_desktop-pdp-v1/v1539088931/N12272129A_1.jpg",
       "price": "150 .00"
     },
     {
@@ -654,7 +607,7 @@
       "storeName": "Pinky Pet Shop",
       "kind": "Food",
       "productTitle": "Friskies Cat Food",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/75557533_425679878116690_884288467226329088_o.jpg?_nc_cat=104&_nc_ohc=QRFYVMmfheAAX-1CX2K&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=c5f1c18d77befe46fa47d60503e30ce9&oe=5EC37065",
+      "img": "https://www.purina.com/sites/g/files/auxxlc196/files/00050000171224_3.15_FRONT_0.png",
       "price": "20 .00"
     },
     {
@@ -663,7 +616,7 @@
       "storeName": "Pinky Pet Shop",
       "kind": "Tool",
       "productTitle": "Purina Felix Pouch ",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/65306526_2095569927410358_2678503010656583680_o.jpg?_nc_cat=110&_nc_ohc=rOOynXNA4cYAX830EKi&_nc_ht=scontent-hbe1-1.xx&oh=5cb71742d07286c98a9e361c6edda0b6&oe=5EBBE45F",
+      "img": "https://shop-cdn-m.mediazs.com/bilder/bac/litire/trixie/berto/pour/chat/1/400/82361_pla_trixie_katzentoilette_berto_hs_01_1.jpg",
       "price": "120 .00"
     },
     {
@@ -672,7 +625,7 @@
       "storeName": "Pinky Pet Shop",
       "kind":"gromming",
       "productTitle": "Safeline Anti Fleas ",
-      "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/71404791_408015379883140_7263809189628084224_n.jpg?_nc_cat=104&_nc_ohc=7GKeuYFqk-4AX9WhZE8&_nc_ht=scontent-hbe1-1.xx&oh=e6ef1149d796e84e085ff413c7ec03a8&oe=5EC56819",
+      "img": "https://apollo-ireland.akamaized.net/v1/files/4yyp5txjtprn2-EG/image;s=644x461;olx-st/_1_.jpg",
       "price": "120 .00"
     },
     {
@@ -684,26 +637,6 @@
       "description": "It is a dried pasteurized whole egg powder and egg white with energy-enhancing nutritional additives and is used as a safe alternative to eggs Fresh. The manufacturing process is the same as for making powdered milk powder It contains all the nutritional benefits of fresh eggs. It contains the highest level of protein and also contains immune system-enhancing properties as well as anti-bacterial properties",
       "img": "https://just4petsegypt.com/wp-content/uploads/2019/09/47011-removebg-preview.png",
       "price": "40.00"
-    },
-    {
-      "id": "84",
-      "category": "bird",
-      "storeName": "Just 4 pets",
-      "kind": "Dry Food",
-      "productTitle": "MIGMA BIRDS ENERGY SEEDS MIX 800G",
-      "description": "It has the full nutritional value that the bird needs, based on the latest international ratios, to get the maximum benefit for both Falars / Between you / oats / Niger / flax / yellow mustard / turnip / clover A balanced mixture of ... carbohydrates / oils / protein",
-      "img": " https://just4petsegypt.com/wp-content/uploads/2019/09/47011-removebg-preview-240x265.png ",
-      "price": "28.00"
-    },
-    {
-      "id": "85",
-      "category": "bird",
-      "storeName": "Just 4 pets",
-      "kind": "Dry Food",
-      "productTitle": "MIGMA BIRDS MORINGA OLEIFERA 250G",
-      "description": "Moringa leaf powder is used for all kinds of decorative birds It is a nutritional supplement from nature that eliminates all vitamins and chemotherapy treatments It strengthens the immune system of the bird and provides the birds with vigor and vitality, as it increases and increases the percentage of fertilized eggs The proportion of milk in mammals",
-      "img": "https://just4petsegypt.com/wp-content/uploads/2019/09/47010-removebg-preview.png",
-      "price": "EGP28.00"
     },
     {
       "id": "86",
@@ -774,7 +707,8 @@
       "category": "bird",
       "storeName": "pets Office",
       "kind": "accessories",
-      "productTitle": "NOBBY CAGE TOY, SITTING ROPE MULTI-COLOUR MIDDLE; L:64 CM; Ø 20 MM",
+      "productTitle": "NOBBY SITTING ROPE MULTI-COLOUR",
+      "description": "MIDDLE; L:64 CM; Ø 20 MM",
       "img": "https://cdn.shopify.com/s/files/1/0698/6527/products/5926dbf6991d776b93c880b1b98708a453dcd7c6_1024x1024.jpg?v=1563618100",
       "price": "130.00"
     },
@@ -793,7 +727,7 @@
       "category": "bird",
       "storeName": "petsOffice",
       "kind": "accessories",
-      "productTitle": "NOBBY CAGE TOY, SITTING ROPE MULTI-COLOUR",
+      "productTitle": "NOBBY SITTING ROPE MULTI-COLOUR",
       "description": "LARGE; L:72 CM; Ø 30 MM",
       "img": "https://cdn.shopify.com/s/files/1/0698/6527/products/a41a2283098652e42f42ddd45b321c1f257e43a3_1024x1024.jpg?v=1563618100",
       "price": "230.00"
@@ -803,7 +737,7 @@
       "category": "bird",
       "storeName": "PetOffice",
       "kind": "accessories",
-      "productTitle": "NOBBY MIRROR WITH LANDING PLACE ",
+      "productTitle": "NOBBY WITH MIRROR ",
       "description": "10 X 10 CM",
       "img": "https://cdn.shopify.com/s/files/1/0698/6527/products/a0a098d2babc7948d41a481a602a93a14e203b10_1024x1024.jpg?v=1563618102",
       "price": "60.00"
@@ -823,9 +757,9 @@
       "category": "bird",
       "storeName": "petOffice",
       "kind": "accessories",
-      "productTitle": "NOBBY TRAPEZE DOUBLE, SWING WITH BELL",
+      "productTitle": "NOBBY SWING WITH BELL",
       "description": "12,5 X 20,5 CM",
-      "img": "https://cdn.shopify.com/s/files/1/0698/6527/products/94243de8803f7e43f0118c94991836fd2c726d30_1024x1024.jpg?v=1563618103",
+      "img": "https://www.zoo.se/media/catalog/product/cache/99ca9105211cbebfdfb3b930d9605af9/i/m/img_1118.jpg",
       "price": "50.00"
     },
     {

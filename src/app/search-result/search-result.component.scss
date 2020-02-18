@@ -1,0 +1,56 @@
+.sideBar-section {
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+.badge-primary {
+    background: none;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 0rem;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.card {
+    width: 250px;
+    height: 400px;
+    // margin-bottom: 20px;
+    // padding: 20px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.1);
+    // border-radius: 50px;
+    // border-top-left-radius: 0;
+    border: none;
+}
+img {
+    height: 260px;
+    padding: 10px;
+    border-radius: 50px;
+    border-top-left-radius: 0;
+}
+.card-body h5 {
+    font-size: 14px;
+    font-weight: 500;
+}
+p {
+    font-size: 12px;
+    font-weight: 400;
+}
+.btn-primary {
+    border-radius: 50px;
+    border-top-left-radius: 0;
+    background-color: #ee4143;
+    border: #ee4143;
+}
+.side-bar h5 {
+    color: #ee4143;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.card-body {
+    text-align: center;
+    padding: 2px;
+}
+.card-body p {
+    margin-bottom: 1px;
+}

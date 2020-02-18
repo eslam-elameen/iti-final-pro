@@ -24,6 +24,7 @@ export class BlogServiceService {
   getSingleData(id) {
     return this.HttpClin.get("http://localhost:3000/blogs/"+id)
   }
+  
 
   getCount() {
     this.count++;
