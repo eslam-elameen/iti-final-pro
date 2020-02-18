@@ -28,11 +28,11 @@ export class LoginComponent implements OnInit {
   onLoginSubmit(form) {
     if (form.valid) {
       for (let i = 0; i < this.checkDAta.length; i++) {
-        if (form.value.email != this.checkDAta[i].email) {
+        if (form.value.email != this.checkDAta[i].email ) {
           document.getElementById('submitAlert').style.display = 'block';
-          this.route.navigate(['/profile']);
         } else {
           console.log('not valid email');
+          this.route.navigate(['/profile']);
           document.getElementById('submitAlert').style.display = 'none';
         }
       }
