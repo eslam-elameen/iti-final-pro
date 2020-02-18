@@ -29,6 +29,8 @@ import { TestComponent } from './test/test.component';
 import { SignleProductComponent } from './signle-product/signle-product.component';
 import { RatingModule } from 'ngx-bootstrap/rating';
   
+import { FilterResultPipe } from './filter-result.pipe';
+
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { RatingModule } from 'ngx-bootstrap/rating';
     ProTypeComponent,
     SearchComponent,
     SearchResultComponent,
+    FilterResultPipe,
     
     HomeComponent,
     ServicesComponent,

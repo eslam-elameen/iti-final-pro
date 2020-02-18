@@ -103,5 +103,23 @@
         </div>
       </div>
     </div>
+ 
+
   </div>
+  <ng-template #empty>
+    <div class="card col-md-3" *ngFor = 'let i of filterdData   '  >
+      <img src="{{i.img}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{i.productTitle}}</h5>
+        <p class="card-text">{{i.kind}}</p>
+        <p class="card-text">{{i.storeName}}</p>
+  
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </ng-template >
+
+
 </div>
+
+  
