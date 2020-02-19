@@ -1,6 +1,7 @@
 import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-registeration',
   templateUrl: './registeration.component.html',
@@ -11,14 +12,14 @@ export class RegisterationComponent implements OnInit {
   flag;
   registrationForm: FormGroup;
   getFile: File;
-  
-  constructor(private registerBuild: FormBuilder, private http: ApiService) { }
-  
+
+  constructor(private registerBuild: FormBuilder, private http: ApiService, private route: Router) { }
+
   ngOnInit() {
 
     this.registrationForm = this.registerBuild.group({
       name: ['', [Validators.required, Validators.pattern(/^(?=.*\w)[A-z0-9]{6,10}$/)]],
-      email: ['', [Validators.required, Validators.pattern(/\w{1,}@[a-z]{1,}\.com/)]],
+      email: ['', [Validators.required, Validators.pattern(/\w{1,}@[a-z]{3,}\.com/)]],
       password: ['', [Validators.required, Validators.pattern(/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[A-z0-9]{8,}[\W]{0,}$/)]],
       confirmPassword: ['', Validators.required]
     }, {
@@ -47,16 +48,15 @@ export class RegisterationComponent implements OnInit {
     }
   }
   onregisterSubmit(registrationForm) {
-    
+
     if (registrationForm.valid == true) {
       this.flag = false;
-      // console.log('json data')
-      // console.log(this.allDataOfUsers);
       for (let i = 0; i < this.allDataOfUsers.length; i++) {
-        if (registrationForm.value.name === this.allDataOfUsers[i].name) {
+        if (registrationForm.value.email === this.allDataOfUsers[i].email) {
           this.flag = true
-        } else {
+
         }
+
       }
       this.test(registrationForm)
     }
@@ -68,6 +68,8 @@ export class RegisterationComponent implements OnInit {
       this.http.postData("http://localhost:3000/users", registrationForm.value, headers).subscribe(data => {
       })
       this.allDataOfUsers.push(registrationForm.value);
+      this.route.navigate(['/profile']);
+
     }
   }
 }

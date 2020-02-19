@@ -1,26 +1,6 @@
 {
   "users": [
-    {
-      "name": "sdasddsad",
-      "email": "sad@sad.com",
-      "password": "aminion92W",
-      "confirmPassword": "aminion92W",
-      "id": 1
-    },
-    {
-      "name": "eslam22",
-      "email": "sad@sad.com",
-      "password": "aminion92W",
-      "confirmPassword": "aminion92W",
-      "id": 2
-    },
-    {
-      "name": "sdasddsa",
-      "email": "asdads@asd.com",
-      "password": "aminion92W",
-      "confirmPassword": "aminion92W",
-      "id": 3
-    }
+  
   ],
   "profile": [],
   "products": [

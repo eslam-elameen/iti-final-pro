@@ -1,0 +1,43 @@
+.img-container {
+  background-color: blue;
+  padding: 30px 0;
+}
+
+.fileInput input {
+  display: none;
+}
+
+.fileInput label {
+  width: 164px;
+  height: 34px;
+  background: #ffffff;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+}
+
+.fileInput label:hover {
+  background: #7e3030;
+  border-color: #1975ff;
+}
+
+.fileInput label:after {
+  content: "+";
+  color: #757575;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+  font-size: 1.5rem;
+}
+.file-preview{
+    width: 120px;
+    height: 100px;
+}
+.file-preview img{
+width: 100%;
+}

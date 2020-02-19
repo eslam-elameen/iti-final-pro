@@ -7,6 +7,9 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
+  editData(url, body, headers){
+    return this.http.post<any>(url.id, body, headers);
+  }
   postData(url, body, headers) {
     return this.http.post<any>(url, body, headers);
   };

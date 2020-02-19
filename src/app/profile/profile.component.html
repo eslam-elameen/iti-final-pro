@@ -1,7 +1,19 @@
-<!-- <div [formGroup]="myGroup">
-<input type="file" id="imageUpload" accept=".png, .jpg, .jpeg" (change)="onFileChange($event)">
-    <label for="imageUpload"></label>
-
-    <img [src]="imageSrc" #sotringToJson>
-    <input type="text" formControlName='image' [value]='sotringToJson.src'>
-</div> -->
+<div class="container-fluid img-container">
+    <div class="row">
+        <div class="container">
+            <div [formGroup]="profile">
+            <div class="col-md-3">
+                <div class="fileInput">
+                    <label for="imageUpload" class="btn btn-primary">Choose file </label>
+                    <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg" (change)="onFileChange($event)">
+                </div>
+                <div class="file-preview">
+                    <!-- <img src="./Venom.jpeg="> -->
+                <img id="imagePreview" [src]="imageSrc" #sotringToJson />
+                    <input type="text" formControlName='image' [value]='sotringToJson.src'>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
