@@ -4,7 +4,7 @@
             <h3> <span> Our </span>Products</h3>
             <p>best collection</p>
         </div>
-        <owl-carousel-o class="w-100" [options]="customOptions" #owlCat>
+        <!-- <owl-carousel-o class="w-100" [options]="customOptions" #owlCat>
             <ng-container *ngFor="let card of sets">
                 <ng-template carouselSlide>
                     <div class="card">
@@ -21,6 +21,38 @@
                     </div>
                 </ng-template>
             </ng-container>
+        </owl-carousel-o> -->
+    <owl-carousel-o class="w-100" [options]="customOptions" #owlCat>
+        <div class="row">
+            <ng-container *ngFor="let card of sets" class="col-md-2 col-xl-3">
+                <ng-template carouselSlide>
+                    <div class="card card-img hover06 mr-4">
+                        <div class="card-wrapper mr-2">
+                            <div class="img-wrapper">
+                                <img [src]="card.img" class="card-img-top" alt="...">
+                            </div>
+                         
+                            <div class="overlay ">
+                                <div class="text d-flex">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="far fa-eye" routerLink="/randomProduct/{{card.id}}"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{card.productTitle}}</h5>
+                                <span>{{card.price}} EGP</span>
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p> -->
+                                <!-- <a href="#" class="btn btn-primary">Add To Cart</a> -->
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </ng-template>
+            </ng-container>
+        </div>
         </owl-carousel-o>
     </div>
-</div>
+    </div>

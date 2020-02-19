@@ -57,7 +57,7 @@ export class ProuductRandomComponent implements OnInit {
         items: 2
       },
       940: {
-        items: 3
+        items: 4
       }
     },
     nav: true
