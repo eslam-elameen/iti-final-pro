@@ -21,21 +21,21 @@ h3 {
     font-size: 40px;
     margin-bottom: 0;
 }
-h3::before {
-    position: absolute;
-    content: "";
-    border-left: 4px solid #ee4143;;
-    height: 35px;
-    left: -8px;
-}
-p::before {
-    position: absolute;
-    content: "";
-    border-left: 4px solid #b7b7b7;
-    height: 35px;
-    left: -8px;
-    top: 35px;
-}
+// h3::before {
+//     position: absolute;
+//     content: "";
+//     border-left: 4px solid #ee4143;;
+//     height: 35px;
+//     left: -8px;
+// }
+// p::before {
+//     position: absolute;
+//     content: "";
+//     border-left: 4px solid #b7b7b7;
+//     height: 35px;
+//     left: -8px;
+//     top: 35px;
+// }
 h5 {
     font-size: 14px;
 }
