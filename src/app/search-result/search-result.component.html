@@ -1,14 +1,15 @@
 
-<input #check type="checkbox" name="Pettix" id="" value=""  [(ngModel)]="tex" (ngModelChange)='onClick(tex,check.name)' >
-<input #check2 type="checkbox" name="Mr.pets" id="" value="" [(ngModel)]="tex2" (ngModelChange)='onClick(tex2,check2.name)'>
+<input #check type="checkbox" name="Pettix" id="" value=""  [(ngModel)]="tex" >
+<input #check2 type="checkbox" name="Mr.pets" id="" value="" [(ngModel)]="tex2" >
+<input #check3 type="checkbox" name="gromming" id="" value="" [(ngModel)]="tex3" >
 
 
 <!-- <div  '>
 <p>{{item.name}}</p>    
-</div> -->
+</div> -->  
 <div class="row">
-  <div *ngIf="filterdData.length === 0; else empty" class="row" >
-    <div class="card col-md-3" *ngFor = 'let item of searchData   '  >
+  <!-- <div *ngIf="filterdData.length === 0; else empty" class="row" > -->
+    <div class="card col-md-3" *ngFor = 'let item of searchData | filterResult:tex:check.name:"storeName"'  >
       <img src="{{item.img}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{item.productTitle}}</h5>
@@ -21,7 +22,7 @@
  
 
   </div>
-  <ng-template #empty>
+  <!-- <ng-template #empty>
     <div class="card col-md-3" *ngFor = 'let i of filterdData   '  >
       <img src="{{i.img}}" class="card-img-top" alt="...">
       <div class="card-body">
@@ -37,4 +38,4 @@
 
 </div>
 
-  
+   -->

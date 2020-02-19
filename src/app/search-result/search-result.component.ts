@@ -20,7 +20,7 @@ export class SearchResultComponent implements OnInit {
   }
   onClick(tex, s) {
     console.log(tex, s)
-
+   if (this.filterdData.length === 0 ){
     for (let i = 0; i < this.searchData.length; i++) {
       if (this.searchData[i].storeName === s && tex === true) {
         this.filterdData.push(this.searchData[i])
@@ -35,10 +35,46 @@ export class SearchResultComponent implements OnInit {
       }
     }
 
+   }else{
+    for (let i = 0; i < this.filterdData.length; i++) {
+      if (this.searchData[i].storeName === s && tex === true) {
+        this.filterdData.push(this.searchData[i])
+
+      } else if (tex === false) {
+        for (let i = 0; i < this.filterdData.length; i++) {
+          if (this.filterdData[i].storeName === s) {
+            this.filterdData.splice(this.filterdData.indexOf(this.filterdData[i]), 1)
+
+          
+          }
+        }
+      }
+    }
+
+   }
+ 
+   
+
     //  this.filterdData=tex? this.searchData.filter( item => {
     //   item.storeName === s
     //  }):
 
     console.log(this.filterdData)
+  }
+  ongrom(che,b){
+    for (let i = 0; i < this.searchData.length; i++) {
+      if (this.searchData[i].kind === b && che === true) {
+        this.filterdData.push(this.searchData[i])
+
+      } else if (che === false) {
+        for (let i = 0; i < this.filterdData.length; i++) {
+          if (this.filterdData[i].kind === b) {
+            this.filterdData.splice(this.filterdData.indexOf(this.filterdData[i]), 1)
+
+          }
+        }
+      }
+      
+  }
   }
 }
