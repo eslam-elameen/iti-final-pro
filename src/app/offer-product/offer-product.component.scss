@@ -1,0 +1,160 @@
+.section-offers {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+img {
+    height: 230px;
+}
+.card {
+    position: relative;
+    height: 400px;
+    // border: 1px solid #000;
+
+}
+
+.header-section {
+    position: relative;
+}
+h3 {
+    color: #303030;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+.header-section h3::before {
+    position: absolute;
+    content: "";
+    border-left: 4px solid #ee4143;
+    height: 35px;
+    left: -8px;
+}
+.header-section p::before {
+    position: absolute;
+    content: "";
+    border-left: 4px solid #b7b7b7;
+    height: 35px;
+    left: -8px;
+    top: 35px;
+}
+span {
+    color: #ee4143;
+}
+.offer {
+    background: #ee4143 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 11px;
+    right: 16px;
+    padding: 3px 10px 3px 9px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 10px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+}
+.discount {
+    background: #ee4143 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 11px;
+    right: 16px;
+    padding: 3px 10px 3px 9px;
+    position: absolute;
+    text-transform: uppercase;
+    bottom: 20.5%;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.card-body p {
+    font-size: 12px;
+
+}
+.card-img {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border: none;
+    border-radius: 0;
+}
+.card-img img {
+    max-width: 100%;
+    transition: all 1s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    border-radius: 0;
+    height: 230px;
+    padding: 10px;
+}  
+.card-img:hover img {
+    transform: scale(1.1);
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 330px;
+    width: 270px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .hover06:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+  }
+
+  .text i:hover {
+      transition: .5s all ease-in-out;
+ 
+  }
+
+i {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ee4143;
+    background-color: #ee4143;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 2.4;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+.img-wrapper {
+    border: 1px solid rgba(82, 76, 76, 0.5);
+    border-radius: 10px;
+    border-bottom-right-radius:0 ;
+    border-bottom-left-radius: 0;
+}
+.card-body {
+    border: 1px solid rgba(0,0,0,.5);
+    padding: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    border-top-right-radius:0 ;
+    border-top-left-radius: 0;
+}

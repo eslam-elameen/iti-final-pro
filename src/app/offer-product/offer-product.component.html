@@ -1,0 +1,43 @@
+<section class="section-offers">
+    <div class="container">
+    <div class="header-section">
+        <h3> <span> Our </span>spical offer products</h3>
+        <p>best collection</p>
+    </div>
+    <owl-carousel-o class="w-100" [options]="customOptions" #owlCat>
+        <div class="row">
+        <ng-container *ngFor="let card of sets" class="col-md-3 col-12">
+            <ng-template carouselSlide>
+                <div class="card card-img hover06 mr-4">
+                    <div class="card-wrapper mr-2">
+                        <div class="img-wrapper">
+                            <img [src]="card.img" class="card-img-top" alt="...">
+                        </div>
+                        <span class="offer">Offer</span>
+                        <span class="discount">20%</span>
+                        <div class="overlay ">
+                            <div class="text d-flex">
+                                <i class="fas fa-shopping-cart"></i>
+                                <i class="far fa-eye" routerLink="/randomProduct/{{card.id}}"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{card.productTitle}}</h5>
+                            <del class="mr-3">{{card.price}} EGP</del>
+                            <span>100.00 EGP</span>
+                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p> -->
+                            <!-- <a href="#" class="btn btn-primary">Add To Cart</a> -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </ng-template>
+        </ng-container>
+    </div>
+    </owl-carousel-o>
+
+</div>
+</section>

@@ -24,6 +24,9 @@ export class BlogServiceService {
   getSingleData(id) {
     return this.HttpClin.get("http://localhost:3000/blogs/"+id)
   }
+  getSlider(){
+    return this.HttpClin.get(" http://localhost:3000/sliders");
+  }
   
 
   getCount() {

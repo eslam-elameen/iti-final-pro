@@ -1,7 +1,7 @@
 <!-- <p>navbar works!</p> -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="../../assets/img/logo.png" alt=""></a>
+        <a class="navbar-brand" href="#"><img src="../../assets/img/logo 1 .png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="droptoggle($event)">
             <span class="navbar-toggler-icon"></span>
@@ -97,18 +97,16 @@
                         aria-controls="dropdown-basic">
                         <i class="fas fa-search"></i> <span class="caret"></span>
                     </button>
-                    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu"
+                    <div id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu"
                         aria-labelledby="button-basic">
-                        <form [formGroup]="mySearch" (ngSubmit)="onSubmit(mySearch.value.search)">
-                            <input type="search" formControlName="search" placeholder="Your name">
-                            <button routerLink="/result" type="submit">
-                                Send
+                        <form [formGroup]="mySearch" (ngSubmit)="onSubmit(mySearch.value.search)" class="d-flex">
+                            <input type="search" formControlName="search" placeholder="Your name" class="form-control">
+                            <button routerLink="/result" type="submit" class="btn btn-primary one" >
+                                <i class="fas fa-search"></i>
                             </button>
                         </form>
-                    </ul>
+                    </div>
                 </div>
-
-
                 <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-shopping-cart"></i></button>
             </form>
         </div>

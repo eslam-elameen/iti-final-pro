@@ -1,29 +1,26 @@
 <div class="single-product">
-<div class="container">
-    <div class="header-section">
-        <h3> <span> Our </span>Products</h3>
-        <p>best collection</p>
-    </div>
-    <owl-carousel-o class="w-100" [options]="customOptions" #owlCat>
-        <ng-container *ngFor="let card of sets">
-            <ng-template carouselSlide>
-                        <div class="card">
-                            <div class="card-img">
+    <div class="container">
+        <div class="header-section">
+            <h3> <span> Our </span>Products</h3>
+            <p>best collection</p>
+        </div>
+        <owl-carousel-o class="w-100" [options]="customOptions" #owlCat>
+            <ng-container *ngFor="let card of sets">
+                <ng-template carouselSlide>
+                    <div class="card">
+                        <div class="card-img">
                             <img class="card-img-top image" [src]="card.img" alt="Card image cap">
                             <div class="content-overlay">
-                            <div class="card-body content-details fadeIn-left">
-                                <!-- <h5 class="card-title">{{ card.productTitle }}</h5>
-                                <p>{{card.price}}</p> -->
-
-                                <a href="#" class=""><i class="fas fa-shopping-cart"></i></a>
-                                <a routerLink="/randomProduct/{{card.id}}"><i class="far fa-eye"></i>
-                                </a>
-                            </div>
+                                <div class="card-body content-details fadeIn-left">
+                                    <a href="#" class=""><i class="fas fa-shopping-cart"></i></a>
+                                    <a routerLink="/randomProduct/{{card.id}}"><i class="far fa-eye"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-            </ng-template>
-        </ng-container>
-    </owl-carousel-o>
-</div>
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
 </div>

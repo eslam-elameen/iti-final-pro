@@ -20,12 +20,9 @@ export class ProuductRandomComponent implements OnInit {
 
     this.http.getData().subscribe(res => {
       this.posts = res;
-      console.log(this.posts);
+      // console.log(this.posts);
 
     });
-
-
-
     this.http.getData().subscribe(res => {
       this.cards = res;
       for (let item of this.cards) {
@@ -34,7 +31,7 @@ export class ProuductRandomComponent implements OnInit {
           this.ranarr.push(this.random)
         }
         this.sets = [...new Set(this.ranarr)]
-        console.log(this.random);
+        // console.log(this.random);
       }
 
     });
@@ -60,7 +57,7 @@ export class ProuductRandomComponent implements OnInit {
         items: 2
       },
       940: {
-        items: 4
+        items: 3
       }
     },
     nav: true

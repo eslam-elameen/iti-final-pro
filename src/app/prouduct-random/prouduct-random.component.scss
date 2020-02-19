@@ -1,35 +1,34 @@
 .single-product {
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 .card {
     height: 300px;
     margin-right: .5rem;
-    border-radius: 10px;
-    
+    border-radius: 10px; 
 }
 .owl-item {
     box-shadow: 0 10px 30px rgba(0,0,0,.1);
 }
 img {
     height: 300px;
+    padding: 50px;
 }
 .header-section {
     position: relative;
 }
-
 h3 {
     color: #303030;
     font-size: 40px;
     margin-bottom: 0;
 }
-.header-section h3::before {
+h3::before {
     position: absolute;
     content: "";
     border-left: 4px solid #ee4143;;
     height: 35px;
     left: -8px;
 }
-.header-section p::before {
+p::before {
     position: absolute;
     content: "";
     border-left: 4px solid #b7b7b7;
@@ -101,3 +100,4 @@ h5 {
     opacity: 1;
     line-height: 2.2;
   }
+

@@ -27,6 +27,7 @@
 img {
     background-size: cover;
     background-repeat: no-repeat;
+    // background-position: center;
 }
 
 .carousel-captionTwo__title {
@@ -67,4 +68,8 @@ p {
     border-width: 0;
     border-color: rgb(255,255,255);
     margin: 0;
+}
+
+.card {
+    margin-top: 99px;
 }

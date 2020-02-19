@@ -30,6 +30,9 @@ import { SignleProductComponent } from './signle-product/signle-product.componen
 import { RatingModule } from 'ngx-bootstrap/rating';
   
 import { FilterResultPipe } from './filter-result.pipe';
+import { RandomBlogComponent } from './random-blog/random-blog.component';
+import { GalaryComponent } from './galary/galary.component';
+import { OfferProductComponent } from './offer-product/offer-product.component';
 
 
 @NgModule({
@@ -51,7 +54,10 @@ import { FilterResultPipe } from './filter-result.pipe';
     ServicesComponent,
     ProuductRandomComponent,
     TestComponent,
-    SignleProductComponent
+    SignleProductComponent,
+    RandomBlogComponent,
+    GalaryComponent,
+    OfferProductComponent
   ],
   imports: [
     BrowserModule,
