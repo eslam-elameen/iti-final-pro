@@ -1,10 +1,9 @@
 <section class="section-login">
     <div class="section-login__wapper">
-        <div class="container">
-
+        <div class="container ">
             <form [formGroup]="login" (ngSubmit)="onLoginSubmit(login)">
-                <div class="row justify-content-center">
-                    <div class="col-xl-5 col-md-8 col-sm-8 col-8">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8 col-8">
                         <div class="form-design align-items-center">
                             <div class="header-signUp text-center">
                                 <h2>log In</h2>
@@ -25,7 +24,7 @@
 
                             <div class="form-group col-xl-9 col-md-8 col-sm-8 col-8">
                                 <label>Password</label>
-                                <input type="password" class="form-control input100" formControlName="password">
+                                <input type="password" class="form-control input100 mb-5" formControlName="password">
                                 <div class="alert alert-danger mt-2" role="alert"
                                     *ngIf="login.controls.password.hasError('pattern') && login.controls.password.touched">
                                     *pawword include spacial @ capital A lowercase a number 0-9
