@@ -8,27 +8,25 @@ import { FileUploadModule } from 'ng2-file-upload';//import this package for pro
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterationComponent } from './registeration/registeration.component';
-import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { DiplayimgprofileComponent } from './diplayimgprofile/diplayimgprofile.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
-import { DisplayComponent } from './display/display.component';
 import { Profile1Component } from './profile1/profile1.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import { LoginComponent } from './login/login.component';
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterationComponent,
-    ProfileComponent,
     DiplayimgprofileComponent,
     NavComponent,
     HomeComponent,
-    DisplayComponent,
     Profile1Component,
-    UserprofileComponent
-
+    UserprofileComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +34,9 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    FileUploadModule    ],
+    FileUploadModule ,  
+    RouterModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

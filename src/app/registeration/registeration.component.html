@@ -33,7 +33,7 @@
                             </div>
                             <div
                                 *ngIf='registrationForm.controls.email.hasError("required")&&registrationForm.controls.email.touched' class="alert alert-danger" role="alert">
-                                confirm password is required
+                                confirm email is required
                             </div>
                         </div>
 
@@ -63,7 +63,7 @@
                                 *ngIf='registrationForm.controls.confirmPassword.hasError("required")&&registrationForm.controls.confirmPassword.touched' class="alert alert-danger" role="alert">
                                 confirm password is required
                             </div>
-                            <button routerLink="/profile" type="submit" class="btn btn-primary" [disabled]="!registrationForm.valid">Submit</button>
+                            <button type="submit" class="btn btn-primary" [disabled]="!registrationForm.valid">Submit</button>
 
                         </div>
                     </div>
