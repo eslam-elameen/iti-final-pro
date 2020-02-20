@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProudctsService } from './../proudcts.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ActivatedRoute, Router } from "@angular/router";
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Component({
   selector: 'app-prouduct-random',
@@ -9,6 +11,8 @@ import { ActivatedRoute, Router } from "@angular/router";
   styleUrls: ['./prouduct-random.component.scss']
 })
 export class ProuductRandomComponent implements OnInit {
+  bsModalRef: BsModalRef;
+  userId : number;
   ranarr = []
   sets;
   postItem;
@@ -43,29 +47,29 @@ export class ProuductRandomComponent implements OnInit {
 
 
   }
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    navSpeed: 700,
-    navText: ['', ''],
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 1
-      },
-      740: {
-        items: 2
-      },
-      940: {
-        items: 4
-      }
-    },
-    nav: true
-  }
+  // customOptions: OwlOptions = {
+  //   loop: true,
+  //   mouseDrag: false,
+  //   touchDrag: false,
+  //   pullDrag: false,
+  //   dots: false,
+  //   navSpeed: 700,
+  //   navText: ['', ''],
+  //   responsive: {
+  //     0: {
+  //       items: 1
+  //     },
+  //     400: {
+  //       items: 1
+  //     },
+  //     740: {
+  //       items: 2
+  //     },
+  //     940: {
+  //       items: 4
+  //     }
+  //   },
+  //   nav: true
+  // }
 
 }

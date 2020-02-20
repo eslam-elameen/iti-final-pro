@@ -929,20 +929,27 @@
   ],
   "sliders": [
     {
-      "id":"300",
+      "id":"slide",
       "num" : "slide1",
-      "img": "https://demo.fieldthemes.com/ps_petshop/home1/modules/fieldslideshow/images/slider-111.jpg"
+      "img": "https://demo.fieldthemes.com/ps_petshop/home1/modules/fieldslideshow/images/slider-111.jpg",
+      "header" : "NEW ARRIVALS",
+      "description" : "SALE UP TO 40% OFF"
     },
     {
-      "id":"301",
+      "id":"slide2",
       "num" : "slide1",
-      "img": "https://demo.fieldthemes.com/ps_petshop/home1/modules/fieldslideshow/images/slider-222.jpg"
+      "img": "https://scontent.fcai1-2.fna.fbcdn.net/v/t1.0-9/86853632_1125558217793275_4051862457600180224_o.jpg?_nc_cat=108&_nc_ohc=zOOTikgiWMIAX9qxh5h&_nc_ht=scontent.fcai1-2.fna&oh=61e5beaf1dffa9809757df2f481f95c5&oe=5EFC4C71",
+      "header" : "NEW ARRIVALS",
+      "description" : "SALE UP TO 40% OFF"
     },
     {
-      "id":"301",
+      "id":"slide3",
       "num" : "slide1",
-      "img": "https://demo.fieldthemes.com/ps_petshop/home1/modules/fieldslideshow/images/slider-333.jpg"
+      "img": "https://demo.fieldthemes.com/ps_petshop/home1/modules/fieldslideshow/images/slider-333.jpg",
+      "header" : "NEW ARRIVALS",
+      "description" : "SALE UP TO 40% OFF"
     }
+    
   ]
 
 }
