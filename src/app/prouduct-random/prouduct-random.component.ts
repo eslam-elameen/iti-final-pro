@@ -12,6 +12,11 @@ export class ProuductRandomComponent implements OnInit {
   ranarr = []
   sets;
   postItem;
+  max: number = 5;
+  rate: number = 4.4;
+  isReadonly: boolean = true;
+
+
   constructor(private http: ProudctsService, private dataServ: ProudctsService, private single: ActivatedRoute, private _router: Router, private blogService: ProudctsService) { }
   cards;
   random;
@@ -27,7 +32,7 @@ export class ProuductRandomComponent implements OnInit {
       this.cards = res;
       for (let item of this.cards) {
         this.random = this.cards[Math.floor(Math.random() * this.cards.length)];
-        if (this.ranarr.length < 5) {
+        if (this.ranarr.length < 4) {
           this.ranarr.push(this.random)
         }
         this.sets = [...new Set(this.ranarr)]
@@ -44,7 +49,7 @@ export class ProuductRandomComponent implements OnInit {
     touchDrag: false,
     pullDrag: false,
     dots: false,
-    navSpeed: 100,
+    navSpeed: 700,
     navText: ['', ''],
     responsive: {
       0: {

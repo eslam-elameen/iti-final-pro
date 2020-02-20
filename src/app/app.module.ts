@@ -33,6 +33,7 @@ import { FilterResultPipe } from './filter-result.pipe';
 import { RandomBlogComponent } from './random-blog/random-blog.component';
 import { GalaryComponent } from './galary/galary.component';
 import { OfferProductComponent } from './offer-product/offer-product.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -72,6 +73,7 @@ import { OfferProductComponent } from './offer-product/offer-product.component';
     NgxStarRatingModule,
     RatingModule.forRoot(),
     BsDropdownModule.forRoot(),
+    ModalModule.forRoot(),
 
   ],
 

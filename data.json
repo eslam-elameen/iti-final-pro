@@ -29,7 +29,7 @@
       "category": "dog",
       "storeName": "Mr.pets",
       "kind": "Dry Food",
-      "productTitle": "ALPHA Adult Dog Dry Food 20 KG",
+      "productTitle": "ALPHA Adult Dog 20 KG",
       "img": "https://cf3.s3.souqcdn.com/item/2019/06/17/55/18/64/99/item_L_55186499_dbb559c04257d.jpg",
       "price": "400.00",
       "quantity": "0"
@@ -124,7 +124,7 @@
       "category":"dog",
       "storeName": "Mr.pets",
       "kind": "Wet Food",
-      "productTitle": "Felix Cat Food100g-Chicken",
+      "productTitle": "Felix Cat 100g-Chicken",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/image-25-600x600.jpg",
       "price": "15.00",
       "quantity": "0"
@@ -134,7 +134,7 @@
       "category":"dog",
       "storeName": "Mr.pets",
       "kind": "Wet Food",
-      "productTitle": "Pro Dog Mousse for Puppies 85g",
+      "productTitle": "Pro Dog for Puppies 85g",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/10/WhatsApp-Image-2018-10-25-at-9.07.28-PM1-600x418-2.jpeg",
       "price": "20.00",
       "quantity": "0"
@@ -245,7 +245,7 @@
       "category": "dog",
       "storeName": "Pinky Pet Shop",
       "kind": "Shampoo ",
-      "productTitle": "Anti-insect shampoo 250ml / 60ml",
+      "productTitle": "Anti-insect 250ml/60ml",
       "img": "https://just4petsegypt.com/wp-content/uploads/2019/09/shampo-blue-1-removebg-preview.png",
       "price": "370.00",
       "quantity": "0"
@@ -286,7 +286,7 @@
       "category": "cat",
       "storeName": "Mr.pets",
       "kind": "Dry Food",
-      "productTitle": "Bewi Cat food 20kg Adult",
+      "productTitle": "Bewi Cat 20kg Adult",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/05/image-10-1-600x600.jpg",
       "price": "825.00",
       "quantity": "0"
@@ -296,7 +296,7 @@
       "category": "cat",
       "storeName": "Mr.pets",
       "kind": "Dry Food",
-      "productTitle": "Cat Chow For Cats all Ages 1.42KG",
+      "productTitle": "Chow all Ages 1.42KG",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/11/image-600x600.jpg",
       "price": "130.00",
       "quantity": "0"
@@ -306,7 +306,7 @@
       "category": "cat",
       "storeName": "Mr.pets",
       "kind": "Dry Food",
-      "productTitle": "Friskies For cats Chicken 1.5kg",
+      "productTitle": "Friskies cats Chicken 1.5kg",
       "description": "ESPECIALLY FORMULATED FOR CATS INDOORS * FRISKIES ® Indoor Cats is a tasty and 100% complete food that helps reduce the formation of hairballs, and with added garden vegetables that cats like to chew on. FRISKIES ® Indoor Cats supports the good health, vitality, and happiness of your indoor cat; so that he can continue to surprise you and make you happy, every day, in your home! * Complete food for adult cats. * Control of hairballs :With fibers to help reduce the formation of hairballs and allow their smooth passage through the digestive system. *Weight management :supports with a suitable energy intake. * Reduces litter odors :Contains chicory, a vegetable, to help reduce litter odors.",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/09/friskies-indoor-15.png",
       "price": "110.00",
@@ -348,7 +348,7 @@
       "category": "cat",
       "storeName": "Mr.pets",
       "kind": "Dry Food",
-      "productTitle": "friskies for cats salmon 7.5kg",
+      "productTitle": "friskies cats salmon 7.5kg",
       "description": "* A 100% complete and balanced nutrition developed with selected quality ingredients to give your cat the meals he likes and needs.* Typical composition of the product:75% of red and brown croquettes; 25% of green, orange and white croquettes.* Complete food for adult cats.* Tonic muscles* Healthy urinary system* Healthy teeth and bones",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/09/image-3.png",
       "price": "350.00",
@@ -423,7 +423,7 @@
       "category": "cat",
       "storeName": "Pet Yard",
       "kind": "Dry Food",
-      "productTitle": "Blubo 415Gram Chicken and Beef",
+      "productTitle": "Blubo Chicken and Beef",
       "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/83940777_3351404128206998_6692850410689921024_n.jpg?_nc_cat=111&_nc_ohc=bgw2vdO_VC4AX9Wl9dO&_nc_ht=scontent-hbe1-1.xx&oh=b31a78b6b6b0cd909083b2eb5e2993b0&oe=5EBE913B",
       "price": "15.00",
       "quantity": "0"
@@ -513,7 +513,7 @@
       "category": "cat",
       "storeName": "Pettix",
       "kind":"gromming",
-      "productTitle": "Revolution for Cats (Single dose)",
+      "productTitle": "Revolution (Single dose)",
       "img": "https://cf4.s3.souqcdn.com/item/2017/07/08/23/32/40/26/item_L_23324026_33189085.jpg",
       "price": "50.00"
     },
@@ -531,7 +531,7 @@
       "category": "cat",
       "storeName": "Pettix",
       "kind": "Food",
-      "productTitle": "drontal Worming Tablets for Cats",
+      "productTitle": "drontal Worming Tablets",
       "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/82166949_475790369772307_3633584375850860544_n.jpg?_nc_cat=107&_nc_ohc=27iyhDVOr8YAX84_mk9&_nc_ht=scontent-hbe1-1.xx&oh=b2480e92d969329a29e4486b99b9a3ee&oe=5EFE4903",
       "price": "30.00"
     },
@@ -558,7 +558,7 @@
       "category": "cat",
       "storeName": "Pinky Pet Shop",
       "kind": "Acs",
-      "productTitle": "Amazing Boxes For Cats 'ITALY'",
+      "productTitle": "Amazing Boxes 'ITALY'",
       "img": "https://atlas-content-cdn.pixelsquid.com/stock-images/enclosed-litter-box-tray-lOwDMoA-600.jpg",
       "price": "370.00"
     },
@@ -614,7 +614,7 @@
       "kind": "Food",
       "productTitle": "MIGMA BIRDS EGGSTRA 200G",
       "description": "It is a dried pasteurized whole egg powder and egg white with energy-enhancing nutritional additives and is used as a safe alternative to eggs Fresh. The manufacturing process is the same as for making powdered milk powder It contains all the nutritional benefits of fresh eggs. It contains the highest level of protein and also contains immune system-enhancing properties as well as anti-bacterial properties",
-      "img": "https://just4petsegypt.com/wp-content/uploads/2019/09/47011-removebg-preview.png",
+      "img": "https://just4petsegypt.com/wp-content/uploads/2019/09/47011-removebg-preview-240x265.png",
       "price": "40.00"
     },
     {
@@ -622,7 +622,7 @@
       "category": "bird",
       "storeName": "7 pets",
       "kind": "Dry Food",
-      "productTitle": "pablo budgie family food blend 400g",
+      "productTitle": "pablo budgie blend 400g",
       "img": "https://i0.wp.com/7pets.net/wp-content/uploads/2019/10/16.jpg?fit=600%2C600&ssl=1",
       "price": "25.00"
     },
@@ -640,7 +640,7 @@
       "category": "bird",
       "storeName": "7 pets",
       "kind": "Dry Food",
-      "productTitle": "pablo canary seed food blend 900g",
+      "productTitle": "pablo canary blend 900g",
       "img": "https://i0.wp.com/7pets.net/wp-content/uploads/2019/10/12.jpg?fit=600%2C600&ssl=1",
       "price": "50.00"
     },
@@ -649,7 +649,7 @@
       "category": "bird",
       "storeName": "7 pets",
       "kind": "Dry Food",
-      "productTitle": "pablo Cocktail food blend 400g",
+      "productTitle": "pablo Cocktail 400g",
       "img": "https://i0.wp.com/7pets.net/wp-content/uploads/2019/10/5.jpg?fit=600%2C600&ssl=1",
       "price": "20.00"
     },
@@ -658,7 +658,7 @@
       "category": "bird",
       "storeName": "7 pets",
       "kind": "Dry Food",
-      "productTitle": "pablo zebra food blend 900g",
+      "productTitle": "pablo zebra 900g",
       "img": "https://i1.wp.com/7pets.net/wp-content/uploads/2019/10/11.jpg?fit=600%2C600&ssl=1",
       "price": "35.00"
     },
@@ -667,7 +667,7 @@
       "category": "bird",
       "storeName": "7 pets",
       "kind": "Dry Food",
-      "productTitle": "pablo zebra food blend 400g",
+      "productTitle": "pablo zebra 400g",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/06/image-1-2-600x560.jpg",
       "price": "20.00"
     },
@@ -676,7 +676,7 @@
       "category": "bird",
       "storeName": "pets Office",
       "kind": "accessories",
-      "productTitle": "NOBBY CLIMBING ROPE COTTON",
+      "productTitle": "NOBBY CLIMBING ROPE",
       "img": "https://cdn.shopify.com/s/files/1/0698/6527/products/e649a4c62584dc99819ec514da85a06de1c424f2_1024x1024.png?v=1563618100",
       "price": "145.00",
       "description": "Weight In gm :658 | Dimensions :l:67 cm; Ø 25 mm; 4 knots"
@@ -706,8 +706,8 @@
       "category": "bird",
       "storeName": "petsOffice",
       "kind": "accessories",
-      "productTitle": "NOBBY SITTING ROPE MULTI-COLOUR",
-      "description": "LARGE; L:72 CM; Ø 30 MM",
+      "productTitle": "NOBBY SITTING ROPE",
+      "description": "LARGE; L:72 CM; Ø 30 MM MULTI-COLOUR",
       "img": "https://cdn.shopify.com/s/files/1/0698/6527/products/a41a2283098652e42f42ddd45b321c1f257e43a3_1024x1024.jpg?v=1563618100",
       "price": "230.00"
     },
@@ -785,7 +785,7 @@
     {
       "id": "151",
       "blogId":"dog",
-      "title": "Dog Playtime:Tips for Safe Family Play",
+      "title": "Dog Playtime:Tips Play",
       "img": "https://images.unsplash.com/photo-1576686271442-c10befe0b77c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80",
       "smallDesc": "Although a game of tag may seem like a good idea, and dogs love to chase, they may nip or bite if they get too excited. Consider a game",
       "descrtion": "Although a game of tag may seem like a good idea, and dogs love to chase, they may nip or bite if they get too excited. Consider a game of hide-and-seek instead. The dog is “it” in this game. To begin, have the child hide in fairly easy places. Hold the dog until the child has hidden and then tell him to find her. Occasionally, a child may need to make a noise to help direct the dog, but dogs generally catch on very quickly and have no trouble finding the children. Toys offer interactive fun as well. Many dogs love to retrieve balls, and retrieving is good, safe exercise. Make sure that the ball fits the dog; a Chihuahua can’t manage a tennis ball, and some balls may be a choking hazard for big dogs. The Four Paws® Crunch & Crackle Tug can work as both an interactive toy and one that a dog may play with by himself. Many dogs enjoy tug-of-war, but again, be ready to stop the game if the dog becomes too serious. Teach your child to drop the toy if the game becomes too rough."
