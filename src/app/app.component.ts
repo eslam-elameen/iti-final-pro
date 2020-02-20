@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'iti-final-pro';
+  public editEnabled = true;
+public picurl: string;
+
+constructor() {}
+
+public clear() {
+  this.picurl = '';
 }
+ngOnInit() {
+}
+}
+

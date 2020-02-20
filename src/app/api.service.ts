@@ -10,12 +10,20 @@ export class ApiService {
   postData(url, body, headers) {
     return this.http.post<any>(url, body, headers);
   };
-  getUserData(){
-    return this.http.get('http://localhost:3000/users');
+  // getUserData(id,body) {
+  //   return this.http.get('http://localhost:3000/users'+id,body);
+  // }
+
+  getSingleUser(id){
+    return this.http.get('http://localhost:3000/users/'+id);
   }
-  getProfileData(){
-    return this.http.get('http://localhost:3000/profile');
+  // getProfileData() {
+  //   return this.http.get('http://localhost:3000/profile');
+  // }
+  updateUser(id, body) {
+    return this.http.put("http://localhost:3000/users/" + id, body);
   }
+
 
 }
 
