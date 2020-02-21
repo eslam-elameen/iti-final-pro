@@ -12,10 +12,10 @@
                     <a class="nav-link" routerLink="/">Home</a>
                 </li>
 
-                <li class="btn-group" dropdown #dropdown="bs-dropdown" [autoClose]="false" [insideClick]="true">
+                <div class="btn-group" dropdown>
 
-                    <button id="dropdown-basic sub-menu" role="menuitem" dropdown  placement="right"
-                    container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+                    <button id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
+                        aria-controls="dropdown-basic">
                         Dog <span class="caret"></span>
                     </button>
                     <div id="dropdown-triggers-manual" *dropdownMenu class="dropdown-menu" role="menu"
@@ -29,7 +29,7 @@
                         </a>
                     </div>
 
-                </li>
+                </div>
                 <li class="btn-group" dropdown>
 
                     <button routerLink="/cat" id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
@@ -80,11 +80,12 @@
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/blog">Blog</a>
                 </li>
-                
+
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <div class="btn-group" dropdown #dropdown="bs-dropdown" [autoClose]="false">
-                    <button class="btn btn-success search-icons dropdown-toggle my-2 my-sm-0" type="submit"><i class="far fa-user"></i></button>
+                    <button class="btn btn-success search-icons dropdown-toggle my-2 my-sm-0" type="submit"><i
+                            class="far fa-user"></i></button>
                     <!-- <button id="button-basic" dropdownToggle type="button" class="btn btn-primary search-icons dropdown-toggle"
                         aria-controls="dropdown-basic"> -->
                     <!-- </button> -->
@@ -97,8 +98,8 @@
 
                 <!-- <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button> -->
                 <div class="btn-group" dropdown #dropdown="bs-dropdown" [autoClose]="false">
-                    <button id="button-basic" dropdownToggle type="button" class="btn btn-primary search-icons dropdown-toggle"
-                        aria-controls="dropdown-basic">
+                    <button id="button-basic" dropdownToggle type="button"
+                        class="btn btn-primary search-icons dropdown-toggle" aria-controls="dropdown-basic">
                         <i class="fas fa-search"></i> <span class="caret"></span>
                     </button>
                     <div id="dropdown-basic" *dropdownMenu class="dropdown-menu body-menu" role="menu"

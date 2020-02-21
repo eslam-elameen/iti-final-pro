@@ -85,23 +85,52 @@
 
       <div class="col-md-9">
         <div class="row">
-          <div class="col-md-4 mb-4 col-sm-12" *ngFor='let item of searchData'>
+          <!-- <div class="col-md-4 mb-4 col-sm-12" *ngFor='let item of searchData'>
             <div class="card">
               <img src="{{item.img}}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">{{item.productTitle}}</h5>
                 <div>
                   <p class="card-text">{{item.kind}}</p>
-                  <!-- <span class="card-text">{{item.storeName}}</span> -->
                   <span class="card-text">price : {{item.price}}</span>
                 </div>
                 <a href="#" class="btn btn-primary">Add To Cart <i class="fas fa-shopping-cart"></i></a>
               </div>
             </div>
-          </div>
+          </div> -->
+
+          <div class="col-md-4 col-sm-12" *ngFor='let item of searchData'>
+            <div class="card mb-3 mt-5">
+                <div class="card-wrapper">
+                    <div class="icons-heart">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="img-wrapper" (click)="staticModal.show()">
+                        <img [src]="item.img" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <div class="header-wapper"> 
+                      <h5 class="card-title">{{item.productTitle}}</h5>
+                        <span class="storeName">{{item.storeName}}</span>
+                      </div>
+                        <div class="card-body-detail ">
+                            <rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"></rating>
+                            <span class="price">{{item.price}} EGP</span>
+                        </div>
+                    </div>
+                    <div class="cart-section">
+                        <button class="btn btn-primary p3" style="width: 100%;"><i
+                                class="fas fa-shopping-cart mr-3"></i>Add To cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         </div>
       </div>
+
+
+
     </div>
  
 
