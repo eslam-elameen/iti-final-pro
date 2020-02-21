@@ -13,8 +13,10 @@
                         <div class="card-img">
                             <img class="card-img-top image" [src]="card.img" alt="Card image cap">
                         </div>
+                        <div class="card-body">
                             <h5>{{card.title}}</h5>
                             <p class="lead">{{card.smallDesc}}</p>
+                        </div>
                             <div class="content-overlay">
                                 <div class="card-body content-details">
                                     <button class="btn btn-primary"><a routerLink="/randomProduct/{{card.id}}"></a>Learn More</button>
