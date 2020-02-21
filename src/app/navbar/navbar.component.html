@@ -107,7 +107,12 @@
                         </form>
                     </div>
                 </div>
-                <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                <button class="btn btn-success my-2 my-sm-0" type="submit">
+                    <a routerLink="/shoppingCart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge badge-warning">{{ getAllQuantityProduct() }}</span>
+                    </a>
+                </button>
             </form>
         </div>
 

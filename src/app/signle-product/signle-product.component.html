@@ -9,23 +9,23 @@
                 <h5 class="card-title my-4">{{postItem.productTitle}}</h5>
                 <div class="card-bodys">
                     <p class="lead">{{postItem.descrtion}}</p>
-                    <!-- <ngx-star-rating [formControl]="rating" [id]="'rating'" [disabled]="true"></ngx-star-rating> -->
-
                     <p>price : {{postItem.price}}</p>
                     <p>store Name : {{ postItem.storeName }}</p>
-                    <div class="">
-                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="20" controls>
-                  <div class="product-icons">
-                   <button type="submit" class="btn btn-outline-success mr-4"><i class="fas fa-plus"></i></button>
-                   <button type="submit" class="btn btn-outline-success "><i class="fas fa-minus"></i></button>
-                    
-                    
-                </div>
-            </div>
-                    <input type="submit" class="btn btn-primary mt-5">
-                    
-                </div>
+                    <button class="btn btn-primary mr-2" type="button" (click)="onDecrease()">-</button>
+                    <span>{{quantity}}</span>
+                    <button type="button" class="btn btn-primary ml-2" (click)="onIncrease()">+</button>
+
+                    <button class="btn btn-success d-block mt-3" (click)="onAddToCart(postItem)">Add To Cart</button>
             </div>
         </div>
     </div>
     </div>
+
+
+
+
+
+
+       
+    
+   

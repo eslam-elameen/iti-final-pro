@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   filterd;
   searchResult;
   toggle
+  shoppingCartProduct;
 
   public constructor(private fb: FormBuilder, private searchServer: ProudctsService) {
     this.searchServer.getData().subscribe(res => this.searchResult = this.productsData = res)
@@ -46,7 +47,19 @@ export class NavbarComponent implements OnInit {
     this.mySearch = this.fb.group({
       search: ''
     });
+  }
 
+  // Count all Product quantity in navbar Shopping cart
+  getAllQuantityProduct(){
+    let shoppingCartProduct = JSON.parse(localStorage.getItem('shoppingCart'))
+    let total = 0;
+    if(shoppingCartProduct){
+      for(let item of shoppingCartProduct){
+        total += item.qty;
+      }
+    }
+    
+    return total;
   }
 
 }

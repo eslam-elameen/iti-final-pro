@@ -15,3 +15,13 @@ border-color: #ee4143;
     border-color: #ee4143; 
     color: #fff;
 }
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    appearance: none;
+    margin: 0;
+}
+
+
+
