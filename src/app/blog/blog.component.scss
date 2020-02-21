@@ -1,10 +1,19 @@
 .blog {
     padding-bottom: 100px;
+    padding-top: 50px;
 }
 .cards {
+    margin-bottom: 20px;
     display: flex;
     margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+    width: 100%;
+    justify-content: center;
+    // border-radius: 20px;
+  
 }
+
 .line-down {
     height:1px;
     border-bottom:1px solid gray;
@@ -15,10 +24,11 @@
 
 .lead {
     color: #6f6f6f;
-    font-size: 16px;
+    font-family: Raleway;
+    font-size: 14px;
 }
 .card-img-top {
-    height: 200px;
+    height: 100%;
     border: none;
 }
 .btn-primary {
@@ -35,3 +45,39 @@
     color: #fff;
 
 }
+.col-md-4,.col-md-10 {
+    padding-left: 0;
+}
+.card-parghrph {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.rate-wapper {
+    display: flex;
+    justify-content: space-between;
+}
+.cards:hover {
+    transform: translate(0, -4px);
+    transition: .5s all ease-in-out;
+  }
+.icons-heart {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 1;
+  background-color: #000;
+  background-color: rgba(0,0,0,0.1);
+  padding: 9px 10px;
+  display: inline-block;
+  color: #555;
+  line-height: 1;
+  border-radius: 3px;
+  
+  }
+
+  @media (max-width: 575.98px) { 
+    .cards{
+        display: block;
+    }
+  }

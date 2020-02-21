@@ -6,7 +6,7 @@
         </div>
         <owl-carousel-o class="w-100" [options]="customOptions" #owlCat>
             <div class="row">
-            <ng-container *ngFor="let card of sets" class="col-md-4 col-sm-12">
+            <ng-container *ngFor="let card of sets" class="col-md-4">
                 <ng-template carouselSlide>
                     <div class="card mr-3">
 
@@ -18,7 +18,7 @@
                             <div class="content-overlay">
                                 <div class="card-body content-details">
                                     <button class="btn btn-primary"><a routerLink="/randomProduct/{{card.id}}"></a>Learn More</button>
-                                   
+                                    
                                 </div>
                             </div>
                         

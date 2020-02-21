@@ -34,6 +34,7 @@ import { RandomBlogComponent } from './random-blog/random-blog.component';
 import { GalaryComponent } from './galary/galary.component';
 import { OfferProductComponent } from './offer-product/offer-product.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -74,6 +75,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     NgxStarRatingModule,
     RatingModule.forRoot(),
     BsDropdownModule.forRoot(),
+    ModalModule.forRoot(),
 
   ],
 

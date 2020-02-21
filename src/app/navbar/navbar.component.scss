@@ -55,10 +55,15 @@
     white-space: nowrap;
   }
 
+  .dropdown-menu {
+    padding: 1.5rem 1.5rem;
+  }
+
+
   .form-inline .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
+    // left: 0;
     z-index: 1000;
     display: none;
     float: left;
@@ -74,7 +79,7 @@
     border: 1px solid rgba(0,0,0,.15);
     border-radius: .25rem;
   }
-  .dropdown-toggle::after {
+  .search-icons::after {
     display: inline-block;
     content: "";
     border-top: none;
@@ -95,4 +100,7 @@
   #dropdown-basic i {
     color: #fff;
 
+  }
+  .body-menu {
+    left: -245px !important;
   }

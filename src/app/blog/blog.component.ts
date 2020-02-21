@@ -17,6 +17,8 @@ export class BlogComponent implements OnInit {
   Cart = [];
   cards;
   post1;
+  x: number = 5;
+  y: number = 4;
   ngOnInit() {
 
     this.http.getData().subscribe(res => {
