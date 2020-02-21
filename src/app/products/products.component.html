@@ -16,10 +16,10 @@
                           <img [src]="item.img" class="card-img-top" alt="...">
                       </div>
                       <div class="card-body">
-                          <h5 class="card-title">{{card.productTitle}}</h5>
+                          <h5 class="card-title">{{item.productTitle}}</h5>
                           <div class="card-body-detail ">
                               <rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"></rating>
-                              <span class="price">{{card.price}} EGP</span>
+                              <span class="price">{{item.price}} EGP</span>
                           </div>
                       </div>
                       <div class="cart-section">

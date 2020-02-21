@@ -43,10 +43,13 @@ export class RandomBlogComponent implements OnInit {
 
   customOptions: OwlOptions = {
     loop: true,
+    autoplay:false,
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
-    dots: false,
+    dots: true,
+    nav: false,
+    items: 4,
     navSpeed: 700,
     navText: ['', ''],
     responsive: {
@@ -63,7 +66,6 @@ export class RandomBlogComponent implements OnInit {
         items: 3
       }
     },
-    nav: true
   }
 
 }

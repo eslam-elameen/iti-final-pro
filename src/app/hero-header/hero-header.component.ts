@@ -14,8 +14,7 @@ export class HeroHeaderComponent implements OnInit {
   images;
   id :any;
 
-  constructor(private http: BlogServiceService, private dataServ: BlogServiceService, private _router: Router) { }
-
+  constructor(private http: BlogServiceService, private dataServ: BlogServiceService, private _router: Router) { }  
   ngOnInit() {
 
     this.http.getSlider().subscribe(res => {
@@ -40,11 +39,13 @@ export class HeroHeaderComponent implements OnInit {
   customOptions: OwlOptions = {
     loop: true,
     autoplay:true,
+    nav:false,
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
-    dots: false,
+    dots: true,
     navSpeed: 700,
+    items: 3,
     navText: ['', ''],
     responsive: {
       0: {
@@ -60,6 +61,5 @@ export class HeroHeaderComponent implements OnInit {
         items: 1
       }
     },
-    nav: true
   }
 }
