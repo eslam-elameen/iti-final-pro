@@ -4,6 +4,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ActivatedRoute, Router } from "@angular/router";
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-prouduct-random',
@@ -11,22 +12,24 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
   styleUrls: ['./prouduct-random.component.scss']
 })
 export class ProuductRandomComponent implements OnInit {
+  
+  x: number = 5;
+  y: number = 2;
   bsModalRef: BsModalRef;
   userId : number;
   ranarr = []
   sets;
   postItem;
-  max: number = 5;
-  rate: number = 4.4;
   isReadonly: boolean = true;
 
 
-  constructor(private http: ProudctsService, private dataServ: ProudctsService, private single: ActivatedRoute, private _router: Router, private blogService: ProudctsService) { }
+  constructor(private wowService: NgwWowService,private http: ProudctsService, private dataServ: ProudctsService, private single: ActivatedRoute, private _router: Router, private blogService: ProudctsService) { }
+  
   cards;
   random;
   posts;
   ngOnInit() {
-
+    this.wowService.init();
     this.http.getData().subscribe(res => {
       this.posts = res;
       // console.log(this.posts);

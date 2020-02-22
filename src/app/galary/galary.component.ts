@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NgwWowService } from 'ngx-wow';
 @Component({
   selector: 'app-galary',
   templateUrl: './galary.component.html',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalaryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private wowService: NgwWowService) { }
 
   ngOnInit() {
+    this.wowService.init();
   }
 
 }

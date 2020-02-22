@@ -16,7 +16,10 @@
                           <img [src]="item.img" class="card-img-top" alt="...">
                       </div>
                       <div class="card-body">
-                          <h5 class="card-title">{{item.productTitle}}</h5>
+                        <div class="header-wapper"> 
+                            <h5 class="card-title">{{item.productTitle}}</h5>
+                              <span class="storeName">{{item.storeName}}</span>
+                            </div>
                           <div class="card-body-detail ">
                               <rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"></rating>
                               <span class="price">{{item.price}} EGP</span>

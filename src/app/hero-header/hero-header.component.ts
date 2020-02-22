@@ -3,7 +3,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { BlogServiceService } from '../blog-service.service';
 import { ActivatedRoute, Router } from "@angular/router";
 import { CLASS_NAME } from 'ngx-bootstrap/modal/modal-options.class';
-
+import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-hero-header',
@@ -14,13 +14,14 @@ export class HeroHeaderComponent implements OnInit {
   images;
   id :any;
 
-  constructor(private http: BlogServiceService, private dataServ: BlogServiceService, private _router: Router) { }  
+  constructor(private http: BlogServiceService, private dataServ: BlogServiceService, private _router: Router,private wowService: NgwWowService) { }  
   ngOnInit() {
-
+    this.wowService.init();
     this.http.getSlider().subscribe(res => {
       this.images = res;
       this.id = this.images[1];
       console.log(this.id);
+
       
     //  this.id = document.getElementById('slide2');
       console.log(this.images[1]);
@@ -35,10 +36,11 @@ export class HeroHeaderComponent implements OnInit {
 
         
     });
+   
   }
   customOptions: OwlOptions = {
     loop: true,
-    autoplay:true,
+    // autoplay:true,
     nav:false,
     mouseDrag: false,
     touchDrag: false,

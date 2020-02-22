@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProudctsService } from '../proudcts.service';
+import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +16,7 @@ export class NavbarComponent implements OnInit {
   searchResult;
   toggle
 
-  public constructor(private fb: FormBuilder, private searchServer: ProudctsService) {
+  public constructor(private wowService: NgwWowService,private fb: FormBuilder, private searchServer: ProudctsService) {
     this.searchServer.getData().subscribe(res => this.searchResult = this.productsData = res)
 
   }
@@ -43,6 +44,8 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.wowService.init();
+
     this.mySearch = this.fb.group({
       search: ''
     });

@@ -3,6 +3,7 @@ import {ProudctsService} from '../proudcts.service';
 import { ActivatedRoute, Router } from "@angular/router";
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-offer-product',
@@ -13,11 +14,12 @@ export class OfferProductComponent implements OnInit {
   ranarr = []
   sets;
   postItem;
-  constructor(private http: ProudctsService,  private dataServ: ProudctsService, private _router: Router,private productData: ProudctsService) { }
+  constructor(private wowService: NgwWowService,private http: ProudctsService,  private dataServ: ProudctsService, private _router: Router,private productData: ProudctsService) { }
   cards;
   random;
   posts;
   ngOnInit() {
+    this.wowService.init();
     this.http.getData().subscribe(res => {
       this.posts = res;
       // console.log(this.posts);
