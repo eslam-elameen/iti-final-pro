@@ -17,11 +17,11 @@ export class ProductsComponent implements OnInit {
     // this.dogData = this.productsData.filter(item => 
     //   item.category =="dog")
     //   console.log(this.dogData)  ;
-         console.log(this.productsData);
+        //  console.log(this.productsData);
     this.route.params.subscribe( params => { this.dogData = this.productsData.filter(item => item.category.includes( params.category));
   this.item.mydata(this.dogData)
 
-      console.log( this.dogData )
+      // console.log( this.dogData )
   })
    
     
@@ -35,7 +35,7 @@ ngOnInit() {
 
     //   console.log(this.data);
     //  for(item of this.productsData)  
-    console.log( this.dogData ); 
+    // console.log( this.dogData ); 
 }
 getDogsData(){
 

@@ -8,11 +8,14 @@ import { BlogServiceService } from './blog-service.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  // title = 'iti-final-pro';
-  posts;
+ posts;
+  title = 'iti-final-pro';
+  public editEnabled = true;
+public picurl: string;
+
 
   constructor(private http: BlogServiceService, private dataServ: BlogServiceService) { }
-  title = 'myNewApp';
+  // title = 'myNewApp';
   count = 0;
   Cart = [];
   res;
@@ -25,6 +28,9 @@ export class AppComponent implements OnInit{
       this.dataServ.currentMessage.subscribe(message => this.message = message);
     });
 }
+public clear() {
+  this.picurl = '';
+}
 newMessage() {
   this.message = this.Cart.length + 1;
   this.dataServ.changeMessage(this.message)
@@ -35,3 +41,5 @@ getCount() {
   return this.count++;
 }
 }
+
+

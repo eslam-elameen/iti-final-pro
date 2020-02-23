@@ -1,0 +1,139 @@
+<section class="container-fluid">
+  <div class="row">
+
+   <div class="container col-md-6" id="any">
+   
+   <!-- <div class="col-md-6 offset-md-3"></div> -->
+   <h4 class=" logo__text heading-1">PetObey</h4>
+  
+   
+.
+
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" class="col-md-10 offset-md-1">
+      <h6 class="breadcrumb__text">Contact Information</h6>
+
+      
+      <input formControlName="email" class="form-control" placeholder="Please Enter Email">
+      <div *ngIf="myForm.get('email').hasError('pattern')"> </div>
+     
+      <input formControlName="mobile" placeholder="Your email" class="form-control" placeholder="Please Enter Mobile">
+      <div *ngIf="myForm.controls.mobile.hasError('pattern')"></div>
+     
+     
+      <h6 class="breadcrumb__text">Shipping Address</h6>
+     
+    <div class="selection">
+      <input formControlName="fName" type="text" class="form-control" placeholder="First name" class="col-md-6">
+      <div *ngIf="myForm.get('fName').hasError('pattern')"></div>
+      <input formControlName="lName" class="form-control" placeholder="Last Name" class="col-md-6">
+      <div *ngIf="myForm.get('lName').hasError('pattern')">   </div>
+    </div>
+     
+     
+      <input formControlName="address"  class="form-control" placeholder="Please enter Your address">
+      <div *ngIf="myForm.get('address').hasError('pattern')"> </div>
+
+    
+      <input formControlName="city"  class="form-control" placeholder="Please enter Your City">
+      <div *ngIf="myForm.get('city').hasError('pattern')"> </div>
+
+      <div class="selection">
+
+    <select  class="form-control" required class="col-md-6">
+      <option>select your city</option>
+      <option>Cario</option>
+      <option>Alexandria</option>
+      <option>Asuet</option>
+      <option>Geza</option>
+      <option>Mansoura</option>
+      <option>Damanhour</option>
+      <option>Tanta</option>
+      <option>Banha</option>
+      <option>Menia</option>
+  </select>
+  
+  <input formControlName="postalCode"  class="form-control" placeholder="Postal code" class="col-md-6">
+  <div *ngIf="myForm.get('postalCode').hasError('pattern')"> </div>
+  </div>
+
+<button type="submit" [disabled]="myForm.invalid" class="btn btn-primary">
+Checkout
+</button>
+<!--  -->
+      </form>
+   </div>
+    <div class="container col-md-6 right">
+    <div class="content col-md-10 offset-md-1">
+      
+        <div class="media content-item">
+          <img src="assets/img/1.jpg" class="mr-3"  width="100px" height="100px">
+          <div class="media-body">
+            <h5 class="mt-0">Media heading</h5>
+            Cras sit amet nibh libero
+          </div>
+        </div>
+      
+      <div class="content-item">
+     <p>90$</p>
+      </div>
+    </div>
+    <div class="content  col-md-10 offset-md-1">
+      <div class="content-item">
+         <p>ay 7aja</p>
+         <p>aya 7aja</p>
+
+      </div>
+      <div class="content-item">
+        <p>aya 7aja</p>
+        <p>aya 7aja</p>
+
+     </div>
+    </div>
+    <div class="content  col-md-10 offset-md-1">
+      <div class="content-item">
+         <p>total</p>
+      </div>
+      <div class="content-item">
+        <p>1000$</p>
+     </div>
+    </div>
+  </div> 
+</div>
+</section> 
+
+<!-- <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    <input formControlName="name" class="form-control" placeholder="Please enter Your fuul name">
+  
+    
+    <div *ngIf="myForm.get('name').hasError('required')">
+     
+    </div>
+  
+    <input formControlName="email" placeholder="Your email" class="form-control" placeholder="Please enter Your fuul email">
+  
+    <div *ngIf="myForm.controls.email.hasError('pattern')">
+   
+    </div>
+    <select  class="form-control" required>
+        <option>select your city</option>
+        <option>Cario</option>
+        <option>Alexandria</option>
+        <option>Asuet</option>
+        <option>Geza</option>
+        <option>Mansoura</option>
+        <option>Damanhour</option>
+        <option>Tanta</option>
+        <option>Banha</option>
+        <option>Menia</option>
+    </select><br>
+  
+    <input formControlName="address"  class="form-control" placeholder="Please enter Your full address">
+  
+    <input formControlName="number"  class="form-control" placeholder="Please enter Your number">
+    <input formControlName="postalCode"  class="form-control" placeholder="Please enter Your postal ode">
+
+    <button type="submit" [disabled]="myForm.invalid">
+      Send
+    </button>
+  </form>
+ -->
