@@ -7,8 +7,12 @@ import { ProudctsService } from '../proudcts.service';
   styleUrls: ['./search-result.component.scss']
 })
 export class SearchResultComponent implements OnInit {
+  // x: number = 5;
+  y: number = 2;
+  max: number = 5;
   searchData;
-  constructor(private resultServer:ProudctsService) { }
+  filterdData = [];
+  constructor(private resultServer: ProudctsService) { }
 
   ngOnInit() {
     this.resultServer.getSearch.subscribe((data) => {
@@ -17,5 +21,27 @@ export class SearchResultComponent implements OnInit {
       // console.log(this.dog)
     });
   }
+  onClick(tex, s) {
+    console.log(tex, s)
 
+    for (let i = 0; i < this.searchData.length; i++) {
+      if (this.searchData[i].storeName === s && tex === true) {
+        this.filterdData.push(this.searchData[i])
+
+      } else if (tex === false) {
+        for (let i = 0; i < this.filterdData.length; i++) {
+          if (this.filterdData[i].storeName === s) {
+            this.filterdData.splice(this.filterdData.indexOf(this.filterdData[i]), 1)
+
+          }
+        }
+      }
+    }
+
+    //  this.filterdData=tex? this.searchData.filter( item => {
+    //   item.storeName === s
+    //  }):
+
+    console.log(this.filterdData)
+  }
 }

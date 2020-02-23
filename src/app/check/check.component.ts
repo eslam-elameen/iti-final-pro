@@ -18,11 +18,12 @@ export class CheckComponent implements OnInit {
 
   ngOnInit() {
     this.myForm = this.fb.group({
-      fName: ['', [Validators.required,Validators.pattern('[a-z]')]],
-      lName: ['', [Validators.required,Validators.pattern('[a-z]')]],
-      city: ['', [Validators.required,Validators.pattern('[a-z]')]],
-      email: ['', Validators.required],
-      mobile: ['', [Validators.required, Validators.pattern('[0-9]{2}')]],
+      fName: ['', [Validators.required,Validators.pattern('[a-z]{2,12}')]],
+      lName: ['', [Validators.required,Validators.pattern('[a-z]{2,12}')]],
+      city: ['', [Validators.required,Validators.pattern('[a-z]{2,12}')]],
+      email: ['', [Validators.required,Validators.pattern('^[a-zA-Z0-9]+@(hotmail|yahoo|gmail|)\.com$')]],
+      // [Validators.required,Validators.pattern('[a-zA-Z0-9@a-z.com]')]
+      mobile: ['', [Validators.required, Validators.pattern('[0-9]{11}')]],
       address: ['', Validators.required],
        postalCode:["",[Validators.required,Validators.pattern('[0-9]{6}')]]
     });
@@ -31,7 +32,7 @@ export class CheckComponent implements OnInit {
     console.log(form.value) 
     this.checkoutData=form.value
     this.checkout.sendgetdata(form.value)
-    this.router.navigate(['/pay'])
+    this.router.navigate(['pay'])
     console.log(form.value)
   }
 
