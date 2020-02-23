@@ -7,6 +7,9 @@ import { ProudctsService } from '../proudcts.service';
   styleUrls: ['./search-result.component.scss']
 })
 export class SearchResultComponent implements OnInit {
+  // x: number = 5;
+  y: number = 2;
+  max: number = 5;
   searchData;
   filterdData = [];
   constructor(private resultServer: ProudctsService) { }

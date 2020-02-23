@@ -137,3 +137,15 @@ img {
     .storeName {
       font-size: 10px;
     }
+    .btn-warning {
+      background: none;
+      color: #d39e00;
+      border: none;
+      padding: 0;
+    }
+  
+  .btn-warning:not(:disabled):not(.disabled).active, .btn-warning:not(:disabled):not(.disabled):active, .show>.btn-warning.dropdown-toggle {
+      color: #d39e00;
+      background: none;
+      border-color: none;
+  }

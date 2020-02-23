@@ -28,13 +28,15 @@ import { ProuductRandomComponent } from './prouduct-random/prouduct-random.compo
 import { TestComponent } from './test/test.component';
 import { SignleProductComponent } from './signle-product/signle-product.component';
 import { RatingModule } from 'ngx-bootstrap/rating';
-  
+import { NgxSpinnerModule } from "ngx-spinner";
 import { FilterResultPipe } from './filter-result.pipe';
 import { RandomBlogComponent } from './random-blog/random-blog.component';
 import { GalaryComponent } from './galary/galary.component';
 import { OfferProductComponent } from './offer-product/offer-product.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { NgwWowModule } from 'ngx-wow';
+import { OurServicesComponent } from './our-services/our-services.component';
 
 
 @NgModule({
@@ -60,7 +62,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     RandomBlogComponent,
     GalaryComponent,
     OfferProductComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    OurServicesComponent
   ],
   imports: [
     BrowserModule,
@@ -76,6 +79,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     RatingModule.forRoot(),
     BsDropdownModule.forRoot(),
     ModalModule.forRoot(),
+    NgwWowModule,
+    NgxSpinnerModule
 
   ],
 

@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {ProudctsService} from '../proudcts.service';
+import { ProudctsService } from '../proudcts.service';
 import { ActivatedRoute, Router } from "@angular/router";
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ShoppingCartService } from '../shopping-cart.service';
+import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-offer-product',
@@ -16,15 +17,18 @@ export class OfferProductComponent implements OnInit {
   postItem;
   constructor(
     private http: ProudctsService,
-      private dataServ: ProudctsService,
-       private _router: Router,
-       private productData: ProudctsService,
-       private shoppingCart: ShoppingCartService
-       ) { }
+    private dataServ: ProudctsService,
+    private _router: Router,
+    private productData: ProudctsService,
+    private shoppingCart: ShoppingCartService,
+    private wowService: NgwWowService,
+  ) { }
+
   cards;
   random;
   posts;
   ngOnInit() {
+    this.wowService.init();
     this.http.getData().subscribe(res => {
       this.posts = res;
       // console.log(this.posts);
@@ -43,8 +47,8 @@ export class OfferProductComponent implements OnInit {
 
     });
 
- // Save Product in local Storage 
- this.shoppingCart.saveInLocalStorge();
+    // Save Product in local Storage 
+    this.shoppingCart.saveInLocalStorge();
   }
   customOptions: OwlOptions = {
     loop: true,
@@ -72,8 +76,8 @@ export class OfferProductComponent implements OnInit {
     nav: true
   }
 
- // Add Product to Shopping Cart
- onAddToCart(product) {
-  this.shoppingCart.addCart(product)
-}
+  // Add Product to Shopping Cart
+  onAddToCart(product) {
+    this.shoppingCart.addCart(product)
+  }
 }

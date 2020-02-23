@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BlogServiceService } from '../blog-service.service';
 import { ActivatedRoute, Router } from "@angular/router";
 import { OwlOptions } from 'ngx-owl-carousel-o';
-
+import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-random-blog',
@@ -16,9 +16,10 @@ export class RandomBlogComponent implements OnInit {
   postItem;
   cards;
   random;
-  constructor(private http: BlogServiceService, private dataServ: BlogServiceService, private _router: Router) { }
+  constructor(private wowService: NgwWowService,private http: BlogServiceService, private dataServ: BlogServiceService, private _router: Router) { }
 
   ngOnInit() {
+    this.wowService.init();
     this.http.getData().subscribe(res => {
       this.posts = res;
       // console.log(this.posts);
@@ -43,10 +44,13 @@ export class RandomBlogComponent implements OnInit {
 
   customOptions: OwlOptions = {
     loop: true,
+    autoplay:false,
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
-    dots: false,
+    dots: true,
+    nav: false,
+    items: 4,
     navSpeed: 700,
     navText: ['', ''],
     responsive: {
@@ -63,7 +67,6 @@ export class RandomBlogComponent implements OnInit {
         items: 3
       }
     },
-    nav: true
   }
 
 }

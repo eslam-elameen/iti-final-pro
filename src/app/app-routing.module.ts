@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { ProuductRandomComponent } from './prouduct-random/prouduct-random.component';
 import { SignleProductComponent } from './signle-product/signle-product.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { OurServicesComponent } from './our-services/our-services.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
     component: BlogComponent
   },
   { path: "shoppingCart", component:  ShoppingCartComponent},
+  { path: "ourServices", component:  OurServicesComponent},
   { path: 'shipping', component: ShippingAreaComponent },
   { path: 'blog/:id', component: SingleBlogComponent },
   { path: 'result', component: SearchResultComponent },

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProudctsService } from '../proudcts.service';
+import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-navbar',
@@ -17,8 +18,7 @@ export class NavbarComponent implements OnInit {
   shoppingCartProduct;
 
   public constructor(
-    private fb: FormBuilder,
-    private searchServer: ProudctsService
+    private searchServer: ProudctsService, private wowService: NgwWowService, private fb: FormBuilder
   ) {
     this.searchServer.getData().subscribe(res => this.searchResult = this.productsData = res)
 
@@ -28,7 +28,6 @@ export class NavbarComponent implements OnInit {
     if (this.toggle.style.display === "none") {
       this.toggle.style.display = "block";
     }
-
     else {
       this.toggle.style.display = "none";
     }
@@ -47,6 +46,8 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.wowService.init();
+
     this.mySearch = this.fb.group({
       search: ''
     });

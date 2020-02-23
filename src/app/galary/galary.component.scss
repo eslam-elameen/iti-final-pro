@@ -22,7 +22,7 @@ h3 {
     transition: all 1s;
     display: block;
     width: 100%;
-    height: auto;
+    height: 400px;
     transform: scale(1);
     border-radius: 0;
 }  
@@ -54,8 +54,8 @@ h3 {
     left: 50%;
     width: 40px;
     height: 40px;
-    border: 1px solid #ee4143;
-    background-color: #ee4143;
+    border: 1px solid #262b48;
+    background-color: #262b48;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -63,9 +63,30 @@ h3 {
     line-height: 1.7;
   }
   .text:hover {
-      border: 1px solid #ee4143;
+      border: 1px solid #262b48;
     transition: .5s all ease-in-out;
   }
   .text i:hover {
       transition: .5s all ease-in-out;
+  }
+  .modal-body img{
+    width: 100%;
+  }
+  .modal {
+    text-align: center;
+    padding: 0!important;
+  }
+  
+  .modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+  }
+  
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
   }

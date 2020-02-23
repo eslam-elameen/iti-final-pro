@@ -1,9 +1,12 @@
 <main class="blog">
   <div class="container">
-    <h2 class="text-center pt-5 pb-5">Our Tips</h2>
+    <div class="header-section wow fadeInRight">
+      <h3> <span> Our </span>Tips</h3>
+      <p>best collection</p>
+  </div>
     <div class="row">
       <div>
-        <div *ngFor="let item of posts" [id]="item.id" class="cards style-card">
+        <div *ngFor="let item of posts" [id]="item.id" class="cards style-card wow fadeInUp">
       
           <div class="col-md-4">
             <img class="card-img-top" src="{{ item.img }}" alt="Card image cap">
@@ -11,12 +14,12 @@
           <div class="col-md-8">
            
             <div class="card-parghrph">
-              <h6 class="card-title">{{ item.title }}</h6>
+              <h5 class="card-title">{{ item.title }}</h5>
 
               <p class="lead mb-5 mt-4">{{ item.descrtionDog }}</p>
               <div class="rate-wapper">
                 <div class="dtn-details">
-                  <button class="card-link btn btn-primary" routerLink="/blog/{{item.id}}">Learn More</button>
+                  <button class="card-link btn btn-primary" routerLink="/blog/{{item.id}}">Read More</button>
                 </div>
                
               </div>

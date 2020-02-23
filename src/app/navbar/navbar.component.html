@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="../../assets/img/logo 1 .png" alt=""></a>
+        <a class="navbar-brand wow fadeInLeft" href="#"><img src="../../assets/img/logo12.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
             (click)="droptoggle($event)">
@@ -8,18 +8,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" routerLink="/">Home</a>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"
+                        routerLink="/">Home</a>
                 </li>
 
                 <div class="btn-group" dropdown>
 
-                    <button id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
-                        aria-controls="dropdown-basic">
+                    <button id="button-basic" routerLinkActive="active-link" routerLink="/dog" dropdownToggle
+                        type="button" class="btn dropdown-toggle" aria-controls="dropdown-basic">
                         Dog <span class="caret"></span>
                     </button>
-                    <div id="dropdown-triggers-manual" *dropdownMenu class="dropdown-menu" role="menu"
-                        aria-labelledby="button-triggers-manual">
+                    <div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right"
+                        container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic"
+                        routerLinkActive="active-link">
                         <a routerLink="/dog/Dry Food" role="menuitem"><a class="dropdown-item" href="#">dry</a>
 
                         </a>
@@ -32,8 +34,8 @@
                 </div>
                 <li class="btn-group" dropdown>
 
-                    <button routerLink="/cat" id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
-                        aria-controls="dropdown-basic">
+                    <button routerLink="/cat" id="button-basic" routerLinkActive="active-link" dropdownToggle
+                        type="button" class="btn dropdown-toggle" aria-controls="dropdown-basic">
                         Cat <span class="caret"></span>
                     </button>
                     <div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right"
@@ -49,8 +51,8 @@
                 </li>
                 <li class="btn-group" dropdown>
 
-                    <button routerLink="/bird" id="button-basic" dropdownToggle type="button"
-                        class="btn dropdown-toggle" aria-controls="dropdown-basic">
+                    <button routerLink="/bird" id="button-basic" routerLinkActive="active-link" dropdownToggle
+                        type="button" class="btn dropdown-toggle" aria-controls="dropdown-basic">
                         Bird <span class="caret"></span>
                     </button>
                     <div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right"
@@ -63,53 +65,42 @@
                         </a>
                     </div>
                 </li>
-                <li div class="btn-group" dropdown>
-                    <button id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
-                        aria-controls="dropdown-basic">
-                        Services <span class="caret"></span>
-                    </button>
-                    <div id="dropdown-basic" role="menuitem" dropdown triggers="mouseover" placement="right"
-                        container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-                        <a role="menuitem"><a class="dropdown-item" href="#">Full Grooming</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
-                        </a>
-                    </div>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/blog">Blog</a>
+                    <a class="nav-link" routerLink="/ourServices">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/blog" routerLinkActive="active-link">Blog</a>
                 </li>
 
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <form class="form-inline my-2 my-lg-0 wow fadeInLeft">
                 <div class="btn-group" dropdown #dropdown="bs-dropdown" [autoClose]="false">
                     <button class="btn btn-success search-icons dropdown-toggle my-2 my-sm-0" type="submit"><i
                             class="far fa-user"></i></button>
-                    <!-- <button id="button-basic" dropdownToggle type="button" class="btn btn-primary search-icons dropdown-toggle"
-                        aria-controls="dropdown-basic"> -->
-                    <!-- </button> -->
                     <div id="dropdown-basic" role="menuitem" dropdown triggers="mouseover" placement="right"
                         container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
                         <a role="menuitem"><a class="dropdown-item" href="#">Sign In</a></a>
                         <a role="menuitem"><a class="dropdown-item" href="#">Sign Up</a></a>
                     </div>
-                </div>
 
-                <!-- <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button> -->
-                <div class="btn-group" dropdown #dropdown="bs-dropdown" [autoClose]="false">
-                    <button id="button-basic" dropdownToggle type="button"
-                        class="btn btn-primary search-icons dropdown-toggle" aria-controls="dropdown-basic">
-                        <i class="fas fa-search"></i> <span class="caret"></span>
-                    </button>
-                    <div id="dropdown-basic" *dropdownMenu class="dropdown-menu body-menu" role="menu"
-                        aria-labelledby="button-basic">
-                        <form [formGroup]="mySearch" (ngSubmit)="onSubmit(mySearch.value.search)" class="d-flex">
-                            <input type="search" formControlName="search" placeholder="Your name" class="form-control">
-                            <button routerLink="/result" type="submit" class="btn btn-primary one">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </form>
+                    <div class="btn-group" dropdown #dropdown="bs-dropdown" [autoClose]="false">
+                        <button id="button-basic" dropdownToggle type="button"
+                            class="btn btn-primary search-icons dropdown-toggle" aria-controls="dropdown-basic">
+                            <i class="fas fa-search"></i> <span class="caret"></span>
+                        </button>
+                        <div id="dropdown-basic" *dropdownMenu class="dropdown-menu body-menu" role="menu"
+                            aria-labelledby="button-basic">
+                            <form [formGroup]="mySearch" (ngSubmit)="onSubmit(mySearch.value.search)" class="d-flex">
+                                <input type="search" formControlName="search" placeholder="Your name"
+                                    class="form-control">
+                                <button routerLink="/result" type="submit" class="btn btn-primary one">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <!-- <button class="btn btn-success my-2 my-sm-0" type="submit"><i
+                                class="fas fa-shopping-cart"></i></button> -->
                     </div>
                 </div>
                 <button class="btn btn-success my-2 my-sm-0" type="submit">
