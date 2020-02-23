@@ -3,6 +3,7 @@ import {ProudctsService} from '../proudcts.service';
 import { ActivatedRoute, Router } from "@angular/router";
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ShoppingCartService } from '../shopping-cart.service';
 
 @Component({
   selector: 'app-offer-product',
@@ -13,7 +14,13 @@ export class OfferProductComponent implements OnInit {
   ranarr = []
   sets;
   postItem;
-  constructor(private http: ProudctsService,  private dataServ: ProudctsService, private _router: Router,private productData: ProudctsService) { }
+  constructor(
+    private http: ProudctsService,
+      private dataServ: ProudctsService,
+       private _router: Router,
+       private productData: ProudctsService,
+       private shoppingCart: ShoppingCartService
+       ) { }
   cards;
   random;
   posts;
@@ -27,7 +34,7 @@ export class OfferProductComponent implements OnInit {
       this.cards = res;
       for (let item of this.cards) {
         this.random = this.cards[Math.floor(Math.random() * this.cards.length)];
-        if (this.ranarr.length < 4) {
+        if (this.ranarr.length <= 4) {
           this.ranarr.push(this.random)
         }
         this.sets = [...new Set(this.ranarr)]
@@ -36,7 +43,8 @@ export class OfferProductComponent implements OnInit {
 
     });
 
-
+ // Save Product in local Storage 
+ this.shoppingCart.saveInLocalStorge();
   }
   customOptions: OwlOptions = {
     loop: true,
@@ -64,5 +72,8 @@ export class OfferProductComponent implements OnInit {
     nav: true
   }
 
-
+ // Add Product to Shopping Cart
+ onAddToCart(product) {
+  this.shoppingCart.addCart(product)
+}
 }

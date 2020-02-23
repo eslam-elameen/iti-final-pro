@@ -4,6 +4,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ActivatedRoute, Router } from "@angular/router";
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { ShoppingCartService } from '../shopping-cart.service';
+
 
 @Component({
   selector: 'app-prouduct-random',
@@ -12,7 +14,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 })
 export class ProuductRandomComponent implements OnInit {
   bsModalRef: BsModalRef;
-  userId : number;
+  userId: number;
   ranarr = []
   sets;
   postItem;
@@ -21,11 +23,20 @@ export class ProuductRandomComponent implements OnInit {
   isReadonly: boolean = true;
 
 
-  constructor(private http: ProudctsService, private dataServ: ProudctsService, private single: ActivatedRoute, private _router: Router, private blogService: ProudctsService) { }
+  constructor(
+    private http: ProudctsService,
+    private dataServ: ProudctsService,
+    private single: ActivatedRoute,
+    private _router: Router,
+    private blogService: ProudctsService,
+    private shoppingCart: ShoppingCartService
+  ) { }
   cards;
   random;
   posts;
   ngOnInit() {
+    // Save Product in local Storage 
+    this.shoppingCart.saveInLocalStorge();
 
     this.http.getData().subscribe(res => {
       this.posts = res;
@@ -71,5 +82,11 @@ export class ProuductRandomComponent implements OnInit {
   //   },
   //   nav: true
   // }
+
+
+  // Add Product to Shopping Cart
+  onAddToCart(product) {
+    this.shoppingCart.addCart(product)
+  }
 
 }

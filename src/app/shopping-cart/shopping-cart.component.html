@@ -1,4 +1,5 @@
-<div class="container my-5">
+<div class="shoppin-cart">
+  <div class="container">
     <div class="row">
         <div class="col-8">
             <table class="table" *ngIf="productFromLocal.length > 0"> 
@@ -29,11 +30,16 @@
                 </tbody>
               </table>
 
-              <div class="alert alert-danger" role="alert" *ngIf="productFromLocal.length == 0">
+              <div class="alert alert-danger " role="alert" *ngIf="productFromLocal.length == 0">
                 <h4 class="alert-heading">No Product yet</h4>
                 <p>Please go to shop and add Product Here <strong><a class="link" routerLink="/">Go To Shop</a></strong></p>
               </div>
         </div>
     </div>
 </div>
+
+
+</div>
+
+
 

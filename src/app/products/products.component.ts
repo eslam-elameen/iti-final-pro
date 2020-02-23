@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ProudctsService } from '../proudcts.service'
 import { ActivatedRoute } from "@angular/router";
 import { ItemsKindService } from '../items-kind.service';
-import { ShoppingCartService } from '../shopping-cart.service';
 
 @Component({
   selector: 'app-products',
@@ -18,7 +17,7 @@ export class ProductsComponent implements OnInit {
     private dogServe: ProudctsService,
     private route: ActivatedRoute,
     private item: ItemsKindService,
-    private shoppingCart: ShoppingCartService
+    
   ) {
     this.dogServe.getData().subscribe(data => {
       this.productsData = data;
@@ -40,7 +39,6 @@ export class ProductsComponent implements OnInit {
 
 
   ngOnInit() {
-    this.shoppingCart.saveInLocalStorge();
     //   console.log(this.data);
     //  for(item of this.productsData)  
     console.log(this.dogData);
@@ -50,9 +48,6 @@ export class ProductsComponent implements OnInit {
 
   }
 
-  // Add Product to Shopping Cart
-  onAddCart(product) {
-    this.shoppingCart.addCart(product)
-  }
+  
 
 }

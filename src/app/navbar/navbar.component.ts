@@ -16,7 +16,10 @@ export class NavbarComponent implements OnInit {
   toggle
   shoppingCartProduct;
 
-  public constructor(private fb: FormBuilder, private searchServer: ProudctsService) {
+  public constructor(
+    private fb: FormBuilder,
+    private searchServer: ProudctsService
+  ) {
     this.searchServer.getData().subscribe(res => this.searchResult = this.productsData = res)
 
   }
@@ -50,15 +53,16 @@ export class NavbarComponent implements OnInit {
   }
 
   // Count all Product quantity in navbar Shopping cart
-  getAllQuantityProduct(){
+  getAllQuantityProduct() {
+    // get product from localStorage 
     let shoppingCartProduct = JSON.parse(localStorage.getItem('shoppingCart'))
     let total = 0;
-    if(shoppingCartProduct){
-      for(let item of shoppingCartProduct){
+    // check if shopping cart in local storage or not 
+    if (shoppingCartProduct) {
+      for (let item of shoppingCartProduct) {
         total += item.qty;
       }
     }
-    
     return total;
   }
 
