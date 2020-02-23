@@ -25,7 +25,6 @@ export class NavbarComponent implements OnInit {
     if (this.toggle.style.display === "none") {
       this.toggle.style.display = "block";
     }
-
     else {
       this.toggle.style.display = "none";
     }
