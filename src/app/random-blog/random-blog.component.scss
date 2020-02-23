@@ -13,12 +13,12 @@ h3 {
     margin-bottom: 30px;
 }
 span {
-    color: #ee4143;
+    color: #425575;
 }
 .header-section h3::before {
     position: absolute;
     content: "";
-    border-left: 4px solid #ee4143;;
+    border-left: 4px solid #425575;
     height: 35px;
     left: -8px;
 }
@@ -31,8 +31,8 @@ span {
     top: 35px;
 }
 h5 {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 620;
     margin-top: 5px;
 }
 .lead {
@@ -58,14 +58,15 @@ h5 {
 .btn-primary {
     border-radius: 50px;
     border-top-left-radius: 0;
-    background-color: #ee4143;
-    border-color: #ee4143;
+    background-color: #425575;
+    border-color: #425575;
     padding: 10px 20px;
 } 
 .btn-primary:hover {
     background-color: #fff;
-    color: #ee4143;
+    color: #425575;
 }
 .card-body {
-    padding: 10px;
+    padding: 12px;
+    padding-left: 20px;
 }

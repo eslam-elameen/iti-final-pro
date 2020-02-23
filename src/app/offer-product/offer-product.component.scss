@@ -1,6 +1,7 @@
 .section-offers {
     padding-top: 20px;
     padding-bottom: 100px;
+    // background-color: #f4f2f3;
 }
 .card {
     position: relative;
@@ -18,7 +19,7 @@ h3 {
 .header-section h3::before {
     position: absolute;
     content: "";
-    border-left: 4px solid #ee4143;
+    border-left: 4px solid #425575;
     height: 35px;
     left: -8px;
 }
@@ -31,10 +32,10 @@ h3 {
     top: 35px;
 }
 span {
-    color: #ee4143;
+    color: #425575;
 }
 .offer {
-    background: #ee4143 none repeat scroll 0 0;
+    background: #981a1e none repeat scroll 0 0;
     color: #fff;
     font-size: 11px;
     right: 16px;
@@ -46,8 +47,8 @@ span {
     border-top-left-radius: 0;
 }
 .discount {
-    background: #fff;
-    color: #7367f0;
+    background: #981a1e;
+    color: #fff;
     font-size: 11px;
     right: 16px;
     padding: 3px 10px 3px 9px;
@@ -119,7 +120,7 @@ h5 {
     justify-content: center;
   }  
   .card-body {
-    background-color: #10163a;
+    background-color: #9297ab;
     margin-top: 1rem;
     color: #fff;
   }  
@@ -137,7 +138,7 @@ h5 {
     border: none;
   }
   .btn-primary {
-    background-color: #7367f0;
+    background-color: #1f365c;
   }
   
   .card-wrapper {
@@ -187,7 +188,7 @@ justify-content: space-between;
       border-radius: 3px;
     }
     .icons-heart:hover {
-      color: #7367f0;
+      color: #1f365c;
       transition: .5s all ease-in-out;
   
     }

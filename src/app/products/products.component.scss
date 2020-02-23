@@ -15,7 +15,7 @@ img {
   h3::before {
       position: absolute;
       content: "";
-      border-left: 4px solid #ee4143;;
+      border-left: 4px solid #425575;;
       height: 35px;
       left: -8px;
   }
@@ -39,7 +39,7 @@ img {
   }
   
   .card-body {
-    background-color: #10163a;
+    background-color: #9297ab;
     margin-top: 1rem;
     color: #fff;
   }
@@ -58,7 +58,7 @@ img {
     border: none;
   }
   .btn-primary {
-    background-color: #7367f0;
+    background-color: #1f365c;
   }
   
   .card-wrapper {
@@ -67,8 +67,9 @@ img {
   .icons-heart{
   position: absolute;
       top: 6px;
-      left: 10px;
+      // left: 10px;
       top: 15px;
+      right: 10px;
       z-index: 1;
       background-color: rgba(0,0,0,0.6);
       padding: 9px 10px;
@@ -81,7 +82,7 @@ img {
       border-radius: 3px;
     }
     .icons-heart:hover {
-      color: #7367f0;
+      color: #1f365c;
       transition: .5s all ease-in-out;
   
     }

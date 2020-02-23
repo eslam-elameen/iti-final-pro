@@ -1,7 +1,41 @@
 .blog {
     padding-bottom: 100px;
-    padding-top: 50px;
+    padding-top: 100px;
 }
+.header-section {
+    position: relative;
+    padding-bottom: 40px;
+}
+h3 {
+    color: #303030;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+.card {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  transition: .5s all ease-in-out;
+}
+
+h3::before {
+    position: absolute;
+    content: "";
+    border-left: 4px solid #425575;
+    height: 35px;
+    left: -8px;
+}
+p::before {
+    position: absolute;
+    content: "";
+    border-left: 4px solid #b7b7b7;
+    height: 35px;
+    left: -8px;
+    top: 35px;
+}
+.header-section span {
+    color: #425575;
+  }
+  
+
 .cards {
     margin-bottom: 20px;
     display: flex;
@@ -10,37 +44,37 @@
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
     width: 100%;
     justify-content: center;
-    // border-radius: 20px;
-  
-}
+  }
 
 .line-down {
     height:1px;
     border-bottom:1px solid gray;
     margin-top: 20px;
     width: 100%;
-
 }
 
 .lead {
-    color: #6f6f6f;
+    color: #303030;
     font-family: Raleway;
     font-size: 14px;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 1px;
 }
 .card-img-top {
     height: 100%;
     border: none;
 }
 .btn-primary {
-    background: none;
-    border: 1px solid #dd611e;
-    border-radius: 0;
-    color: #333;
+    background-color: #425575;
+    border: 1px solid #425575;
+    
+    color: #fff;
     transition: .5s all ease-in-out;
 }
 .btn-primary:hover {
-    background: #dd611e;
-    border: 1px solid #dd611e;
+    background: #425575;
+    border: 1px solid #425575;
     border-radius: 0;
     color: #fff;
 

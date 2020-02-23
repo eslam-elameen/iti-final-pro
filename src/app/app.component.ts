@@ -25,9 +25,8 @@ export class AppComponent implements OnInit{
     this.spinner.show();
  
     setTimeout(() => {
-      /** spinner ends after 5 seconds */
       this.spinner.hide();
-    }, 3000);
+    }, 2000);
   
     this.http.getData().subscribe(res => {
       this.posts = res;
