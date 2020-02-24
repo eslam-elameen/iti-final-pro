@@ -1,6 +1,7 @@
 .register {
-  // background: linear-gradient(to top,#fbc2eb 0%,#a18cd1 100%);
-  background: url("https://images.pexels.com/photos/350748/pexels-photo-350748.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  background: linear-gradient(to top,#fbc2eb 0%,#a18cd1 100%);
+  // background: url("https://images.pexels.com/photos/350748/pexels-photo-350748.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+ 
   // background: url('https://images.pexels.com/photos/1686790/pexels-photo-1686790.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
   background-size: cover;
   background-repeat: no-repeat;
@@ -28,11 +29,11 @@
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
-  padding-bottom: 30px;
-  border-radius: 0 30px 0 30px;
+  // padding-bottom: 30px;
+  // border-radius: 0 30px 0 30px;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.4), 0 20px 50px 0 rgba(0, 0, 0, 0.2);
   background-color: #fff;
-  margin-top: 30%;
+  // margin-top: 100px;
   opacity: 1;
 }
 .header-signUp {
@@ -40,7 +41,7 @@
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
-  border-radius: 0 30px 0 0;
+  // border-radius: 0 30px 0 0;
   color: #fff;
   margin-bottom: 20px;
   font-weight: 700;
@@ -54,7 +55,7 @@
   margin-bottom: 3px;
   padding: 0.75rem 1.25rem;
 
-  color: #fff;
+  color: #303030;
   background-color: #fff;
   border-color: #303030;
   border-radius: 0 20px 20px 20px;
@@ -115,4 +116,27 @@ button.btn-primary:hover {
 }
 .haveAccount {
     text-decoration: underline;
+}
+.signup-wrapper {
+  background-color: #fff;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.4), 0 20px 50px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.col-md-6 {
+  padding-left: 0;
+}
+// .img-wrapper {
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   height: 446px;
+// }
+img {
+  height: 446px;
+  width: 100%;
+}
+.row-inputs {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.4), 0 20px 50px 0 rgba(0, 0, 0, 0.2);
+
 }
