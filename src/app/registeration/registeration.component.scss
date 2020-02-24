@@ -1,5 +1,5 @@
 .register {
-  background: linear-gradient(to top,#fbc2eb 0%,#a18cd1 100%);
+  background: linear-gradient(to top,#547bb5 0%,#a18cd1 100%);
   // background: url("https://images.pexels.com/photos/350748/pexels-photo-350748.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
  
   // background: url('https://images.pexels.com/photos/1686790/pexels-photo-1686790.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
@@ -37,7 +37,7 @@
   opacity: 1;
 }
 .header-signUp {
-  background-color: #16a085;
+  background-color: #1f365c;
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -74,14 +74,14 @@
 
 button.btn-primary {
   width: 100%;
-  background-color: #16a085;
+  background-color: #1f365c;
   border-radius: 50px;
   border-top-left-radius: 0%;
   padding: 1em 1.5em;
   font-weight: 700;
   font-size: 0.9em;
   margin-top: 20px;
-  border: 1px solid #16a085;
+  border: 1px solid #1f365c;
   text-transform: uppercase;
   line-height: 1;
   opacity: 1;
@@ -94,9 +94,9 @@ button.btn-primary:hover {
   cursor: pointer;
   text-transform: uppercase;
   transition: all 300ms ease;
-  color: #ee4143;
+  color: #1f365c;
   background-color: #fff;
-  border: 1px solid #16a085;
+  border: 1px solid #1f365c;
 }
 .alert-danger {
   color: #303030;
