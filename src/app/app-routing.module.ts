@@ -16,6 +16,7 @@ import { SingleBlogComponent } from './single-blog/single-blog.component';
 import { HomeComponent } from './home/home.component';
 import { ProuductRandomComponent } from './prouduct-random/prouduct-random.component';
 import { SignleProductComponent } from './signle-product/signle-product.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -24,7 +25,7 @@ import { SignleProductComponent } from './signle-product/signle-product.componen
 
 
 const routes: Routes = [
-  {path:'',component: HomeComponent},
+  {path:'',component: LoginComponent},
   {path:'blog', component : BlogComponent },
   {path:'shipping', component:ShippingAreaComponent},
   {path:'blog/:id',component: SingleBlogComponent},
@@ -33,22 +34,17 @@ const routes: Routes = [
  {path : 'randomProduct',component:ProuductRandomComponent},
   {path:":category",component:ProductsComponent},
   {path:":category/:kind",component:ProTypeComponent},
-  
   {path:"check",component:CheckComponent},
   {path:"pay",component:PayComponent},
+  {path:'userProfile',component:UserprofileComponent},
+  {path:'register',component:RegisterationComponent},
 
   // {path:"cats/:kind",component:DogsComponent},
   // {path:"birds/:kind",component:DogsComponent},
-  // {
-  //   path:'userProfile',component:UserprofileComponent
-  // },
  
   
   // {
   //   path:'home',component:HomeComponent
-  // },
-  // {
-  //   path:'register',component:RegisterationComponent
   // },
   
  

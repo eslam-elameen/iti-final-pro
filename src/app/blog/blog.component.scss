@@ -16,14 +16,14 @@ h3 {
   transition: .5s all ease-in-out;
 }
 
-h3::before {
+.header-section h3::before {
     position: absolute;
     content: "";
     border-left: 4px solid #425575;
     height: 35px;
     left: -8px;
 }
-p::before {
+.header-section p::before {
     position: absolute;
     content: "";
     border-left: 4px solid #b7b7b7;
@@ -68,9 +68,9 @@ p::before {
 .btn-primary {
     background-color: #425575;
     border: 1px solid #425575;
-    
     color: #fff;
     transition: .5s all ease-in-out;
+    border-radius: 0 20px 20px 20px;
 }
 .btn-primary:hover {
     background: #425575;
