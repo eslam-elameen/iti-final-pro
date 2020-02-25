@@ -10,33 +10,24 @@ export class UserprofileComponent implements OnInit {
   fileData: File = null;
   userImg;
   user;
-  
+
   userEmail;
   userName
-  url="assets/profile-placeholder.png"
-  constructor(private api: ApiService) { 
+  url = "assets/profile-placeholder.png"
+  constructor(private api: ApiService) {
 
     this.user = this.api.getSingleUser(1).subscribe(data => {
       this.user = data
-    console.log(this.user);
-    this.userImg = this.user.image;
-
-
+      console.log(this.user);
+      this.userEmail = this.user.email;
+      this.userName = this.user.name;
+      this.userImg = this.user.img;
     });
-    this.user = this.api.getSingleUser(1).subscribe(data => {
-      this.user = data
     console.log(this.user);
-    this.userName = this.user.name;
+    
+    console.log(this.user.image);
 
 
-    });
-    this.user = this.api.getSingleUser(2).subscribe(data => {
-      this.user = data
-    console.log(this.user);
-    this.userEmail = this.user.email;
-
-
-    });
   }
 
   ngOnInit() {

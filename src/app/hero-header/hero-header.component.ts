@@ -40,7 +40,7 @@ export class HeroHeaderComponent implements OnInit {
   }
   customOptions: OwlOptions = {
     loop: true,
-    // autoplay:true,
+    autoplay:true,
     nav:false,
     mouseDrag: false,
     touchDrag: false,
