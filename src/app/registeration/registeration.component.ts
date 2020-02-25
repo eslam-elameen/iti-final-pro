@@ -28,18 +28,12 @@ export class RegisterationComponent implements OnInit {
 
     this.http.getUserData().subscribe(data => {
       this.allDataOfUsers = data
-      // console.log(this.allDataOfUsers);
-
     })
   }
-
-
   match(password, confirmPassword) {
     return (registrationForm: FormGroup) => {
-
       let validPassword = registrationForm.controls[password];
       let validConfirmPassword = registrationForm.controls[confirmPassword];
-
       if (validPassword.value !== validConfirmPassword.value) {
         validConfirmPassword.setErrors({ match: true });
       } else {
@@ -54,9 +48,7 @@ export class RegisterationComponent implements OnInit {
       for (let i = 0; i < this.allDataOfUsers.length; i++) {
         if (registrationForm.value.email === this.allDataOfUsers[i].email) {
           this.flag = true
-
         }
-
       }
       this.test(registrationForm)
     }
@@ -69,7 +61,6 @@ export class RegisterationComponent implements OnInit {
       })
       this.allDataOfUsers.push(registrationForm.value);
       this.route.navigate(['/profile']);
-
     }
   }
 }

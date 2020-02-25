@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   login: FormGroup;
   checkDAta;
   err;
-  constructor(private formBulider: FormBuilder, private validData: ApiService,private route:Router) { }
+  constructor(private formBulider: FormBuilder, private validData: ApiService, private route: Router) { }
 
   ngOnInit() {
     this.login = this.formBulider.group({
@@ -23,12 +23,10 @@ export class LoginComponent implements OnInit {
       this.checkDAta = data
     })
   }
-
-
   onLoginSubmit(form) {
     if (form.valid) {
       for (let i = 0; i < this.checkDAta.length; i++) {
-        if (form.value.email != this.checkDAta[i].email ) {
+        if (form.value.email != this.checkDAta[i].email) {
           document.getElementById('submitAlert').style.display = 'block';
         } else {
           console.log('not valid email');
