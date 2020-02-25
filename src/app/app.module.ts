@@ -34,9 +34,9 @@ import { NgwWowModule } from 'ngx-wow';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { LoginComponent } from './login/login.component';
 import { FileUploadModule } from 'ng2-file-upload';//import this package for profile img
-
+import { RegisterationComponent } from './registeration/registeration.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -65,7 +65,7 @@ import { PayComponent } from './pay/pay.component';
     PayComponent,
     CheckComponent,
     FilterResultPipe,
-    
+    RegisterationComponent,
     HomeComponent,
     ServicesComponent,
     ProuductRandomComponent,
@@ -73,7 +73,8 @@ import { PayComponent } from './pay/pay.component';
     SignleProductComponent,
     RandomBlogComponent,
     GalaryComponent,
-    OfferProductComponent
+    OfferProductComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -96,7 +97,6 @@ import { PayComponent } from './pay/pay.component';
     ModalModule.forRoot(),
     NgwWowModule,
     NgxSpinnerModule
-
   ],
 
   providers: [],
