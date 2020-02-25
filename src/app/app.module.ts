@@ -39,11 +39,9 @@ import { FileUploadModule } from 'ng2-file-upload';//import this package for pro
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegisterationComponent } from './registeration/registeration.component';
 import { FormsModule } from '@angular/forms';
 import { NavComponent } from './nav/nav.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
-import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CheckComponent } from './check/check.component';
 import { PayComponent } from './pay/pay.component';
@@ -61,11 +59,9 @@ import { PayComponent } from './pay/pay.component';
     ProTypeComponent,
     SearchComponent,
     SearchResultComponent,
-    RegisterationComponent,
     NavComponent,
     HomeComponent,
     UserprofileComponent,
-    LoginComponent,
     PayComponent,
     CheckComponent,
     FilterResultPipe,
