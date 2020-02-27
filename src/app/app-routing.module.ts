@@ -14,45 +14,39 @@ import { ProuductRandomComponent } from './prouduct-random/prouduct-random.compo
 import { SignleProductComponent } from './signle-product/signle-product.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterationComponent } from './registeration/registeration.component'
-
+import { OfferProductComponent } from'./offer-product/offer-product.component';
+import { from } from 'rxjs';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'shipping', component: ShippingAreaComponent },
-  { path: 'blog/:id', component: SingleBlogComponent },
   { path: 'result', component: SearchResultComponent },
-  { path: 'randomProduct/:id', component: SignleProductComponent },
   { path: 'randomProduct', component: ProuductRandomComponent },
+  { path: 'OfferProduct', component: OfferProductComponent },
   { path: ":category", component: ProductsComponent },
-  { path: ":category/:kind", component: ProTypeComponent },
   { path: "check", component: CheckComponent },
   { path: "pay", component: PayComponent },
   { path: 'userProfile', component: UserprofileComponent },
-
+  { path: "re", component: RegisterationComponent },
+  { path: 'signin', component: LoginComponent },
+  
+  { path: 'blog/:id', component: SingleBlogComponent },
+  { path: 'result/:id', component: SignleProductComponent },
+  { path: 'randomProduct/:id', component: SignleProductComponent },
+  { path: 'OfferProduct/:id', component: SignleProductComponent },
+  { path: ":category/:kind", component: ProTypeComponent },
   // {path:"cats/:kind",component:DogsComponent},
   // {path:"birds/:kind",component:DogsComponent},
-
-
-  // {
-  //   path:'home',component:HomeComponent
-  // },
-
-
+  // {path:'home',component:HomeComponent },
   // {path:'',redirectTo:'home',pathMatch:'full'},
   // {path:'result',component:SearchResultComponent},
   // {path:'blog',component:BlogComponent},
   // {path:'blog/:id',component:SingleBlogComponent},
-
   // {path:":category",component:ProductsComponent},
   // {path:":category/:kind",component:ProTypeComponent},
-
-  // // {path:"cats/:kind",component:DogsComponent},
-  // // {path:"birds/:kind",component:DogsComponent},
-
-
-  { path: "re", component: RegisterationComponent },
-  { path: 'signin', component: LoginComponent }
+  // {path:"cats/:kind",component:DogsComponent},
+  // {path:"birds/:kind",component:DogsComponent}, 
 ];
 
 @NgModule({

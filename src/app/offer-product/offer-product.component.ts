@@ -11,6 +11,8 @@ import { NgwWowService } from 'ngx-wow';
   styleUrls: ['./offer-product.component.scss']
 })
 export class OfferProductComponent implements OnInit {
+  x: number = 5;
+  y: number = 4;
   ranarr = []
   sets;
   postItem;

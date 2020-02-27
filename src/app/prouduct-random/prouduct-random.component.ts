@@ -14,7 +14,7 @@ import { NgwWowService } from 'ngx-wow';
 export class ProuductRandomComponent implements OnInit {
   
   x: number = 5;
-  y: number = 2;
+  y: number = 4;
   bsModalRef: BsModalRef;
   userId : number;
   ranarr = []

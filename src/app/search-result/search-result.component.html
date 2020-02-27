@@ -105,7 +105,7 @@
                 <div class="icons-heart">
                   <i class="far fa-heart"></i>
                 </div>
-                <div class="img-wrapper" (click)="staticModal.show()">
+                <div class="img-wrapper" routerLink="/OfferProduct/{{item.id}}">
                   <img [src]="item.img" class="card-img-top" alt="...">
                 </div>
                 <div class="card-body">
@@ -114,13 +114,16 @@
                     <span class="storeName">{{item.storeName}}</span>
                   </div>
                   <div class="card-body-detail ">
-                    <rating [max]="5" [(ngModel)]="y" [customTemplate]="tt"></rating>
-         
-                    <ng-template #tt let-i="index" let-v="value">
-                      <button class="btn btn-{{i < v ? 'warning' : 'fontawesome'}}">
-                        {{i < v ? '&#9733;' : '&#9734;'}}
-                      </button>
-                    </ng-template>
+                    <div class="rating-product">
+                      <rating [max]="5" [(ngModel)]="y" [customTemplate]="tt"></rating>
+                   
+                      <ng-template #tt let-i="index" let-v="value">
+                        <button class="btn btn-{{i < v ? 'warning' : 'default'}}">
+                          {{i < v ? '&#9733;' : '&#9734;'}}
+                        </button>
+                      </ng-template>
+                    </div>
+
                     <span class="price">{{item.price}} EGP</span>
                   </div>
                 </div>

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {ProudctsService} from '../proudcts.service';
+import { ProudctsService } from '../proudcts.service';
 import { ActivatedRoute, Router } from "@angular/router";
 import { NgxStarRatingModule } from 'ngx-star-rating';
+import { RatingModule } from 'ngx-bootstrap/rating';
+
 
 import { from } from 'rxjs';
 @Component({
@@ -11,20 +13,22 @@ import { from } from 'rxjs';
 })
 export class SignleProductComponent implements OnInit {
   postItem;
-  
 
-  constructor(private http: ProudctsService,  private dataServ: ProudctsService, private single: ActivatedRoute, private _router: Router,private productData: ProudctsService) { }
-
+  constructor(private http: ProudctsService, private dataServ: ProudctsService, private single: ActivatedRoute, private _router: Router, private productData: ProudctsService) { }
+  y: number = 4;
+  max: number = 5;
   ngOnInit() {
+
     this.single.paramMap.subscribe(param => {
       this.getSinglePost(param.get('id'));
       console.log(param)
-    }) 
+    });
   }
   getSinglePost(postId) {
-    this.productData.getSingleData(postId).subscribe(postObj => {
+      this.productData.getSingleData(postId).subscribe(postObj => {
       this.postItem = postObj;
       console.log(this.postItem);
     })
   }
+
 }

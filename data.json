@@ -1,17 +1,12 @@
 {
   "users": [
-<<<<<<< HEAD
     {
       "name": "sdasddsad",
       "email": "sad@sad.com",
       "password": "aminion92W",
       "confirmPassword": "aminion92W",
-      "id": 1,
-      "img": ""
+      "id": 1
     }
-=======
-  
->>>>>>> signup
   ],
   "profile": [],
   "products": [
@@ -31,8 +26,8 @@
       "storeName": "Mr.pets",
       "kindFood": "Dry Food",
       "productTitle": "Bavaro Force 18 KG",
-      "img": " https://mrpets.com.eg/new/wp-content/uploads/2019/06/image-1.png",
-      "price": "400.00",
+      "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/06/image-1.png",
+      "price": "670.00",
       "quantity": "0"
     },
     {

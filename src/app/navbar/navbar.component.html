@@ -74,23 +74,17 @@
                 </li>
 
             </ul>
-            <form class="form-inline my-2 my-lg-0 wow fadeInLeft">
-                <div class="btn-group" dropdown #dropdown="bs-dropdown" [autoClose]="false">
-                    <button class="btn btn-success search-icons dropdown-toggle my-2 my-sm-0" type="submit"><i
-                            class="far fa-user"></i></button>
-                    <div id="dropdown-basic" role="menuitem" dropdown triggers="mouseover" placement="right"
-                        container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-                        <a role="menuitem"><a class="dropdown-item" href="#">Sign In</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Sign Up</a></a>
-                    </div>
+            <form class="form-inline my-2 my-lg-0">
+                <div class="btn-group" dropdown #dropdown="bs-dropdown" >
+                    
 
-                    <div class="btn-group" dropdown #dropdown="bs-dropdown" [autoClose]="false">
-                        <button id="button-basic" dropdownToggle type="button"
-                            class="btn btn-primary search-icons dropdown-toggle" aria-controls="dropdown-basic">
-                            <i class="fas fa-search"></i> <span class="caret"></span>
-                        </button>
-                        <div id="dropdown-basic" *dropdownMenu class="dropdown-menu body-menu" role="menu"
-                            aria-labelledby="button-basic">
+                    <div class="btn-group">
+                        <!-- <button type="button" class="btn btn-primary search-icons"
+                            (click)="divToggle($event)">
+                            <i class="fas fa-search" aria-controls="search" data-target="#search"></i>
+                        </button> -->
+
+                        <div id="search" class="search-hidden">
                             <form [formGroup]="mySearch" (ngSubmit)="onSubmit(mySearch.value.search)" class="d-flex">
                                 <input type="search" formControlName="search" placeholder="Your name"
                                     class="form-control">
@@ -99,8 +93,18 @@
                                 </button>
                             </form>
                         </div>
+                        <!-- <div id="dropdown-basic" *dropdownMenu class="dropdown-menu body-menu" role="menu"
+                            aria-labelledby="button-basic">
+                        </div> -->
+                        <button class="btn btn-success search-icons dropdown-toggle my-2 my-sm-0" (click)="divToggle1($event)" type="button">
+                            <i class="far fa-user"></i></button>
+                        <div *ngIf="toggle3" role="menu" aria-labelledby="button-basic" triggers="mouseover" class="list-user">
+                            <a role="menuitem"><a class="dropdown-item" href="#">Sign In</a></a>
+                            <a role="menuitem"><a class="dropdown-item" href="#">Sign Up</a></a>
+                        </div>
                         <button class="btn btn-success my-2 my-sm-0" type="submit"><i
                                 class="fas fa-shopping-cart"></i></button>
+                                
                     </div>
                 </div>
             </form>

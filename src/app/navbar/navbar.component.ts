@@ -14,8 +14,9 @@ export class NavbarComponent implements OnInit {
   productsData;
   filterd;
   searchResult;
-  toggle
-
+  toggle;
+  // toggle2 = false;
+  toggle3 = false;
   public constructor(private wowService: NgwWowService,private fb: FormBuilder, private searchServer: ProudctsService) {
     this.searchServer.getData().subscribe(res => this.searchResult = this.productsData = res)
 
@@ -30,7 +31,9 @@ export class NavbarComponent implements OnInit {
       this.toggle.style.display = "none";
     }
   }
-
+  divToggle1(event) {
+    this.toggle3 = !this.toggle3;
+  }
 
 
   onSubmit(formGroup) {
