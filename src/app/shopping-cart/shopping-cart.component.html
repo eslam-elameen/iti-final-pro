@@ -26,14 +26,12 @@
                     <td><button class="btn btn-danger" (click)="onDelete(item.id)" >Delete</button></td>
                   </tr>
                 </tbody>
-
+                <h1>Total Price: {{totalAllProductPrice()}}</h1> 
+                <button class="btn btn-success">Checkout</button>
 
               </table>
 
-                  <h1>Total Price: {{totalAllProductPrice()}}</h1> 
-                  <button class="btn btn-success">Checkout</button>
-                </tbody>
-              </table>
+                  
 
               <div class="alert alert-danger " role="alert" *ngIf="productFromLocal.length == 0">
                 <h4 class="alert-heading">No Product yet</h4>
