@@ -29,8 +29,11 @@ import { FilterResultPipe } from './filter-result.pipe';
 import { RandomBlogComponent } from './random-blog/random-blog.component';
 import { GalaryComponent } from './galary/galary.component';
 import { OfferProductComponent } from './offer-product/offer-product.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { NgwWowModule } from 'ngx-wow';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -74,7 +77,9 @@ import { PayComponent } from './pay/pay.component';
     RandomBlogComponent,
     GalaryComponent,
     OfferProductComponent,
-    LoginComponent
+    LoginComponent,
+    ShoppingCartComponent,
+    OurServicesComponent
   ],
   imports: [
     BrowserModule,
@@ -96,7 +101,9 @@ import { PayComponent } from './pay/pay.component';
     BsDropdownModule.forRoot(),
     ModalModule.forRoot(),
     NgwWowModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    BsDatepickerModule.forRoot()
+
   ],
 
   providers: [],

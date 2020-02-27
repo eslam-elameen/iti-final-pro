@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand wow fadeInLeft" href="#"><img src="../../assets/img/logo12.png" alt=""></a>
+        <a class="navbar-brand" href="#"><img src="../../assets/img/logo12.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
             (click)="droptoggle($event)">
@@ -66,7 +66,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">Services</a>
+                    <a class="nav-link" routerLink="/ourServices">Services</a>
                 </li>
 
                 <li class="nav-item">
@@ -102,8 +102,14 @@
                             <a role="menuitem"><a class="dropdown-item" href="#">Sign In</a></a>
                             <a role="menuitem"><a class="dropdown-item" href="#">Sign Up</a></a>
                         </div>
-                        <button class="btn btn-success my-2 my-sm-0" type="submit"><i
-                                class="fas fa-shopping-cart"></i></button>
+                        <!-- <button class="btn btn-success my-2 my-sm-0" type="submit"><i
+                                class="fas fa-shopping-cart"></i></button> -->
+                                <button class="btn btn-success my-2 my-sm-0" type="submit">
+                                    <a routerLink="/shoppingCart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span class="badge badge-warning">{{ getAllQuantityProduct() }}</span>
+                                    </a>
+                                </button>
                                 
                     </div>
                 </div>

@@ -152,6 +152,19 @@ line-height: 22px;
   transition: 0.5s all ease-in-out;
 }
 
+//     border-radius: 10px;
+//     border-top-left-radius: 0;
+//     background-color: #ee4143;
+//     border-color: #ee4143; 
+//     color: #fff;
+// }
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    appearance: none;
+    margin: 0;
+}
 
 
 

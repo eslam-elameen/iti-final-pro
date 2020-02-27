@@ -1,0 +1,43 @@
+<div class="shoppin-cart">
+  <div class="container">
+    <div class="row">
+        <div class="col-8">
+            <table class="table" *ngIf="productFromLocal.length > 0"> 
+                <thead>
+                  <tr >
+                    <th scope="col">Product Title</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">price</th>
+                    <th scope="col">Total Price</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+
+                <tbody >
+                  <tr *ngFor="let item of  productFromLocal">
+                    <td>{{item.productTitle}}</td>
+                    <td>
+                      <button class="btn btn-primary btn-sm" (click)="onDecrease(item)">-</button>
+                      {{item.qty}}
+                      <button class="btn btn-primary btn-sm" (click)="onIncrease(item)">+</button>
+                    </td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.totalPrice}}</td>
+                    <td><button class="btn btn-danger" (click)="onDelete(item.id)" >Delete</button></td>
+                  </tr>
+                </tbody>
+                <h1>Total Price: {{totalAllProductPrice()}}</h1>
+                <button class="btn btn-success" routerLink="/check">Checkout</button>
+
+              </table>
+
+                  
+
+              <div class="alert alert-danger " role="alert" *ngIf="productFromLocal.length == 0">
+                <h4 class="alert-heading">No Product yet</h4>
+                <p>Please go to shop and add Product Here <strong><a class="link" routerLink="/">Go To Shop</a></strong></p>
+              </div>
+        </div>
+    </div>
+</div>
+

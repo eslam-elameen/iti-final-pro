@@ -16,9 +16,8 @@
       "storeName": "Mr.pets",
       "kind": "Dry Food",
       "productTitle": "ALPHA Adult Dog 20 KG",
-      "img": "https://cf3.s3.souqcdn.com/item/2019/06/17/55/18/64/99/item_L_55186499_dbb559c04257d.jpg",
-      "price": "400.00",
-      "quantity": "0"
+      "img": "https://cf5.s3.souqcdn.com/item/2019/06/17/54/58/04/69/item_XL_54580469_31ef7d7ccff14.jpg",
+      "price": "400.00"
     },
     {
       "id": "21",
@@ -26,9 +25,9 @@
       "storeName": "Mr.pets",
       "kindFood": "Dry Food",
       "productTitle": "Bavaro Force 18 KG",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/06/image-1.png",
-      "price": "670.00",
-      "quantity": "0"
+      "img": "https://cf1.s3.souqcdn.com/item/2017/11/22/28/28/58/01/item_XL_28285801_73456297.jpg",
+      "price": "400.00"
+       
     },
     {
       "id": "22",
@@ -81,8 +80,7 @@
       "kindFood": "Dry Food",
       "productTitle": "Earthborn Holistic 12 KG",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/06/image-1-2-600x560.jpg",
-      "price": "1,210.00",
-      "quantity": "0"
+      "price": "1,210.00"
     },
     {
       "id": "29",
@@ -92,7 +90,6 @@
       "productTitle": "MERA Pure Sensitive",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/05/image-9-600x600.jpg",
       "price": "35.00",
-      "quantity": "0",
       "description": "100% Animal Protein for Sensitive Adult DogsMERA Pure Sensitive Can with Poultry Hearts is a particularly tasty moist food for sensitive dogs with allergies or intolerance to feed. "
     },
     {
@@ -102,8 +99,7 @@
       "kindFood": "Wet Food",
       "productTitle": "Pro Dog Chicken 415g",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/10/prodog3-310x310-2.png",
-      "price": "21.99",
-      "quantity": "0"
+      "price": "21.99"
     },
     {
       "id": "31",
@@ -112,8 +108,7 @@
       "kind": "Wet Food",
       "productTitle": "Felix Cat 100g-Chicken",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/image-25-600x600.jpg",
-      "price": "15.00",
-      "quantity": "0"
+      "price": "15.00"
     },
     {
       "id": "32",
@@ -122,8 +117,7 @@
       "kind": "Wet Food",
       "productTitle": "Pro Dog for Puppies 85g",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/10/WhatsApp-Image-2018-10-25-at-9.07.28-PM1-600x418-2.jpeg",
-      "price": "20.00",
-      "quantity": "0"
+      "price": "20.00"
     },
     {
       "id": "33",
@@ -132,8 +126,7 @@
       "kindFood": "Dry Food",
       "productTitle": "Belcando",
       "img": "https://petsegypt.com/web/image/product.template/5046/image/300x300?unique=23d1d8d",
-      "price": "210.00",
-      "quantity": "0"
+      "price": "210.00"
     },
     {
       "id": "34",
@@ -142,8 +135,7 @@
       "kindFood": "Dry Food",
       "productTitle": "Earthborn Holistic 12 KG",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/06/image-1-2.jpg",
-      "price": "200.00",
-      "quantity": "0"
+      "price": "200.00"
     },
     {
       "id": "36",
@@ -152,8 +144,7 @@
       "kind": "Dry Food",
       "productTitle": "Royal Canin Dog",
       "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/79534165_3210841548929924_2949115456729907200_n.jpg?_nc_cat=103&_nc_ohc=EbiPW42cSwYAX-8lDYP&_nc_ht=scontent-hbe1-1.xx&oh=0b5c494bf762468c855c96845cc7b655&oe=5EC0D37D",
-      "price": "500.00",
-      "quantity": "0"
+      "price": "500.00"    
     },
     {
       "id": "37",
@@ -342,11 +333,11 @@
       "id": "27",
       "category": "10",
       "storeName": "Mr.pets",
-      "kind": "Dry Food",
-      "productTitle": "Crancy Dental Snack 180",
+      "kindFood": "Dry Food",
+      "productTitle": "Crancy Dental 180",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/image-1-27-600x600.jpg",
-      "price": "85.00",
-      "quantity": "0"
+      "price": "85.00"
+       
     },
     {
       "id": "58",
@@ -356,8 +347,8 @@
       "productTitle": "friskies salmon 300g",
       "description": "A 100% complete and balanced nutrition developed with selected quality ingredients to give your cat the meals he likes and needs.* Typical composition of the product:75% of red and brown croquettes; 25% of green orange and white croquettes.* Complete food for adult cats.* Tonic muscles* Healthy urinary system* Healthy teeth and bones",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/09/image-3-600x600.jpg",
-      "price": "25.00",
-      "quantity": "0"
+      "price": "25.00"
+       
     },
     {
       "id": "59",
@@ -367,39 +358,39 @@
       "productTitle": "Friskies Beef 100gm",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/09/0064212_7613035885141jpg-600x600.jpeg",
       "description": "VALUEPACK – PURINA FRISKIES WITH BEEF IN GRAVY ( CAT FOOD ) 100 G (5 PIECES) ♦ Friskies products are formulated with cats in mind at every step to deliver just the right balance of tasty nutrition in cats’ favorite varieties. From delicious treats to nutritious meals, every Friskies product entices and excites a cat’s senses. Unlock a tasty magical world for your cat with Friskies treats. Friskies provides taste adventures that feed a cat’s playfulness and curiosity. With a wide variety of wet foods, Friskies feeds the senses ",
-      "price": "12.50",
-      "quantity": "0"
+      "price": "12.50"
+       
     },
     {
       "id": "60",
       "category": "cats",
       "storeName": "Mr.pets",
-      "kind": "Wet Food",
-      "productTitle": "friskies dry food",
+      "kindFood": "Wet Food",
+      "productTitle": "Purina Chicken 100g",
       "description": "With Chicken In Gravy 100% Complete & Balanced for the Growth of Kittens and Maintenance of Adult Cats Manufactured in Purina-owned plants in the United States",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/05/image-2-600x600.jpg",
-      "price": "15.00",
-      "quantity": "0"
+      "price": "15.00"
+       
     },
     {
       "id": "61",
       "category": "cats",
       "storeName": "Mr.pets",
-      "kind": "Wet Food",
-      "productTitle": "Felix Wet -100g Chicken",
+      "kindFood": "Wet Food",
+      "productTitle": "Purina Cat Food-100g",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/image-23-600x600.jpg",
-      "price": "15.00",
-      "quantity": "0"
+      "price": "15.00"
+       
     },
     {
       "id": "62",
       "category": "cats",
       "storeName": "Mr.pets",
-      "kind": "Wet Food",
-      "productTitle": "ProDog 85g",
+      "kindFood": "Wet Food",
+      "productTitle": "Royal Canin 85g",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/10/WhatsApp-Image-2018-10-25-at-9.07.28-PM1-600x418-2.jpeg",
       "price": "22.00",
-      "quantity": "0",
+       
       "description": "Royal canin INSTINCTIVE +7 JELLY-GELATINA-GELE 85gProduct Description Complete feed for cats Over 7 years old (thin slices in gravy) YOUTH CAPITAL Helps neutralise free radicals thanks to an exclusive antioxidant complex. Ingredients COMPOSITION:meat and animal derivatives. cereals vegetable protein extracts derivatives of vegetable origin minerals, oils and fats, molluscs and crustaceans, various sugars. ADDITIVES (per kg):Nutritional additives:Vitamin D3:265 IU, E1 (Iron):1.8 mg, E2 (Iodine):0.02 mg E4 (Copper):0.2 mg, E5 (Manganese):0.6 mg, E6 (Zinc):6 mg. ANALYTICAL CONSTITUENTS:Protein:11% – Fat content:2.2% – Crude ash:1% – Crude fibres:1.1% – Moisture:80% – Phosphorus:0.19%. MineralsAmount Copper (mg/kg)4.0 Iodine (mg/kg)0.3 Iron (mg/kg)29.0 Magnesium (%)0.012 Manganese (mg/kg)4.0 Potassium (%)0.15 Selenium (mg/kg)0.2 Sodium (%)0.05 Zinc (mg/kg)18.0 "
     },
     {
@@ -417,7 +408,7 @@
       "category": "cats",
       "storeName": "pet Yard",
       "kind": "gromming",
-      "productTitle": "Foaming Shampoo 250 ml",
+      "productTitle": "Shampoo 250ml",
       "img": "https://www.hair-shop.com/en/media/catalog/product/cache/4/image/1400x1400/9df78eab33525d08d6e5fb8d27136e95/j/o/john-paul-pet-oatmeal-waterless-foam-shampoo-250ml.jpg",
       "price": "40.00",
       "quantity": "0"
@@ -598,7 +589,7 @@
       "kind": "Food",
       "productTitle": " Migma Birds 200G",
       "description": "It is a dried pasteurized whole egg powder and egg white with energy-enhancing nutritional additives and is used as a safe alternative to eggs Fresh. The manufacturing process is the same as for making powdered milk powder It contains all the nutritional benefits of fresh eggs. It contains the highest level of protein and also contains immune system-enhancing properties as well as anti-bacterial properties",
-      "img": "https://just4petsegypt.com/wp-content/uploads/2019/09/42495-removebg-preview.png",
+      "img": "https://just4petsegypt.com/wp-content/uploads/2019/09/47011-removebg-preview-240x265.png",
       "price": "40.00"
     },
     {

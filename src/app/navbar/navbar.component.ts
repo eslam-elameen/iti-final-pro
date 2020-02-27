@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingCartService } from '../shopping-cart.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProudctsService } from '../proudcts.service';
 import { NgwWowService } from 'ngx-wow';
@@ -14,10 +15,12 @@ export class NavbarComponent implements OnInit {
   productsData;
   filterd;
   searchResult;
-  toggle;
-  // toggle2 = false;
-  toggle3 = false;
-  public constructor(private wowService: NgwWowService,private fb: FormBuilder, private searchServer: ProudctsService) {
+  toggle
+  shoppingCartProduct;
+
+  public constructor(
+    private searchServer: ProudctsService, private wowService: NgwWowService, private fb: FormBuilder
+  ) {
     this.searchServer.getData().subscribe(res => this.searchResult = this.productsData = res)
 
   }
@@ -26,14 +29,11 @@ export class NavbarComponent implements OnInit {
     if (this.toggle.style.display === "none") {
       this.toggle.style.display = "block";
     }
-
     else {
       this.toggle.style.display = "none";
     }
   }
-  divToggle1(event) {
-    this.toggle3 = !this.toggle3;
-  }
+
 
 
   onSubmit(formGroup) {
@@ -52,7 +52,20 @@ export class NavbarComponent implements OnInit {
     this.mySearch = this.fb.group({
       search: ''
     });
+  }
 
+  // Count all Product quantity in navbar Shopping cart
+  getAllQuantityProduct() {
+    // get product from localStorage 
+    let shoppingCartProduct = JSON.parse(localStorage.getItem('shoppingCart'))
+    let total = 0;
+    // check if shopping cart in local storage or not 
+    if (shoppingCartProduct) {
+      for (let item of shoppingCartProduct) {
+        total += item.qty;
+      }
+    }
+    return total;
   }
 
 }
