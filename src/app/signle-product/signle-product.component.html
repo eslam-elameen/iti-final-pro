@@ -1,0 +1,31 @@
+
+<div class="container" *ngIf="postItem">
+    <div class="cards">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="card-img-top" src="{{ postItem.img }}" alt="Card image cap">
+            </div>
+            <div class="col-md-6">
+                <h5 class="card-title my-4">{{postItem.productTitle}}</h5>
+                <div class="card-bodys">
+                    <p class="lead">{{postItem.descrtion}}</p>
+                    <!-- <ngx-star-rating [formControl]="rating" [id]="'rating'" [disabled]="true"></ngx-star-rating> -->
+
+                    <p>price : {{postItem.price}}</p>
+                    <p>store Name : {{ postItem.storeName }}</p>
+                    <div class="">
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="20" controls>
+                  <div class="product-icons">
+                   <button type="submit" class="btn btn-outline-success mr-4"><i class="fas fa-plus"></i></button>
+                   <button type="submit" class="btn btn-outline-success "><i class="fas fa-minus"></i></button>
+                    
+                    
+                </div>
+            </div>
+                    <input type="submit" class="btn btn-primary mt-5">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
