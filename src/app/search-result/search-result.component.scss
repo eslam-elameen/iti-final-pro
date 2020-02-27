@@ -1,0 +1,151 @@
+.sideBar-section {
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+.badge-primary {
+    background: none;
+}
+// .list-group-item {
+//     position: relative;
+//     display: block;
+//     padding: .75rem 0rem;
+//     background-color: #fff;
+//     border-bottom: 1px solid rgba(0,0,0,.125);
+// }
+// .card {
+//     width: 250px;
+//     height: 400px;
+
+//     box-shadow: 0 5px 5px rgba(0,0,0,.1);
+   
+//     border: none;
+// }
+// img {
+//     height: 260px;
+//     padding: 10px;
+//     border-radius: 50px;
+//     border-top-left-radius: 0;
+// }
+// .card-body h5 {
+//     font-size: 14px;
+//     font-weight: 500;
+// }
+// p {
+//     font-size: 12px;
+//     font-weight: 400;
+// }
+// .btn-primary {
+//     border-radius: 50px;
+//     border-top-left-radius: 0;
+//     background-color: #ee4143;
+//     border: #ee4143;
+// }
+// .side-bar h5 {
+//     color: #ee4143;
+//     margin-top: 30px;
+//     margin-bottom: 30px;
+// }
+// .card-body {
+//     text-align: center;
+//     padding: 2px;
+// }
+// .card-body p {
+//     margin-bottom: 1px;
+// }
+
+img {
+    padding: 38px;
+  height: 300px;
+  width: 300px;
+  }
+  h3 {
+      color: #303030;
+      font-size: 40px;
+      margin-bottom: 0;
+  }
+  .card {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  h5 {
+      font-size: 14px;
+  }
+  .img-wrapper {
+    height: 16rem;
+    // padding: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-body {
+    background-color: #10163a;
+    margin-top: 1rem;
+    color: #fff;
+  }
+    
+  .price {
+    font-weight: 500; 
+  }
+  
+  .card-body-detail {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-primary {
+    border-top-left-radius:0;
+    border-top-right-radius: 0;
+    border: none;
+  }
+  .btn-primary {
+    background-color: #7367f0;
+  }
+  
+  .card-wrapper {
+    position: relative;
+  }
+  .icons-heart{
+  position: absolute;
+      top: 6px;
+      left: 10px;
+      top: 15px;
+      z-index: 1;
+      background-color: rgba(0,0,0,0.6);
+      padding: 9px 10px;
+      display: inline-block;
+      color: #fff;
+      line-height: 1;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px;
+    }
+    .icons-heart:hover {
+      color: #7367f0;
+      transition: .5s all ease-in-out;
+  
+    }
+    .card:hover {
+      transform: translate(0, -4px);
+      transition: .5s all ease-in-out;
+    }
+    .header-wapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .storeName {
+      font-size: 10px;
+    }
+    .btn-warning {
+      background: none;
+      color: #d39e00;
+      border: none;
+      padding: 0;
+    }
+  
+  .btn-warning:not(:disabled):not(.disabled).active, .btn-warning:not(:disabled):not(.disabled):active, .show>.btn-warning.dropdown-toggle {
+      color: #d39e00;
+      background: none;
+      border-color: none;
+  }

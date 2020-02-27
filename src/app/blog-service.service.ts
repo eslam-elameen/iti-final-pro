@@ -6,12 +6,36 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class BlogServiceService {
+  posts;
+  count = 0;
+  num: Number;
+  myArr = [];
+  private messageSource = new BehaviorSubject(0);
+  currentMessage = this.messageSource.asObservable();
+  
+  constructor(private HttpClin: HttpClient) { }
+   getData() {
+    return this.HttpClin.get(" http://localhost:3000/blogs")
+  
+  }
+  getRandom(){
+    return this.HttpClin.get("http://localhost:3000/blogs");
+  }
+  getSingleData(id) {
+    return this.HttpClin.get("http://localhost:3000/blogs/"+id)
+  }
+  getSlider(){
+    return this.HttpClin.get(" http://localhost:3000/sliders");
+  }
+  // getGalary(){
+  //   return this.HttpClin.get("http://localhost:3000/galary");
+  // }
 
-
-  private behaviorSubject = new BehaviorSubject([]);
-  countItem = this.behaviorSubject.asObservable();
-
-  constructor(private http: HttpClient) {}
-
+  getCount() {
+    this.count++;
+  }
+  changeMessage(count: number) {
+    this.messageSource.next(count)
+  }
 
 }

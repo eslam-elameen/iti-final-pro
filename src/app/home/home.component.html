@@ -1,13 +1,15 @@
-<div class="container my-5">
-    <div class="row">
-        <div class="col-md-3" *ngFor="let product of allProduct">
-            <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">{{ product.productTitle }}</h5>
-                  <p class="card-text"></p>
-                  <button type="button" class="btn btn-primary" (click)="addToCart(product)">Add To Cart</button>
-                </div>
-              </div>
-        </div>
-    </div>
-</div>
+<main class="main-body">
+<app-hero-header></app-hero-header>
+
+<app-services></app-services>
+
+<app-shipping-area></app-shipping-area>
+
+<app-prouduct-random></app-prouduct-random>
+
+<app-random-blog></app-random-blog>
+
+<app-offer-product></app-offer-product>
+
+<app-galary></app-galary>
+</main>
