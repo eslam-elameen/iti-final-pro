@@ -14,7 +14,7 @@ import { NgwWowService } from 'ngx-wow';
   styleUrls: ['./prouduct-random.component.scss']
 })
 export class ProuductRandomComponent implements OnInit {
-
+  
   x: number = 5;
   y: number = 2;
   bsModalRef: BsModalRef;

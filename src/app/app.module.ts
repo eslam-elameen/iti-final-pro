@@ -37,6 +37,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { NgwWowModule } from 'ngx-wow';
 import { OurServicesComponent } from './our-services/our-services.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 @NgModule({
@@ -80,7 +81,8 @@ import { OurServicesComponent } from './our-services/our-services.component';
     BsDropdownModule.forRoot(),
     ModalModule.forRoot(),
     NgwWowModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    BsDatepickerModule.forRoot()
 
   ],
 
