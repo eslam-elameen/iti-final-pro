@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="../../assets/img/logo12.png" alt=""></a>
+        <a class="navbar-brand wow fadeInLeft" href="#"><img src="../../assets/img/logo12.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
             (click)="droptoggle($event)">
@@ -66,7 +66,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/ourServices">Services</a>
+                    <a class="nav-link">Services</a>
                 </li>
 
                 <li class="nav-item">
@@ -75,47 +75,40 @@
 
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <div class="btn-group" dropdown #dropdown="bs-dropdown">
-                    <div class="btn-group">
-                        <div id="search" class="search-hidden">
-                            <form class="d-flex">
-                                <mat-form-field class="example-full-width">
-                                    <input list="browsers" type="search" placeholder="Search" class="form-control"
-                                        matInput aria-label="State" [matAutocomplete]="auto" [formControl]="mySearch">
-                                    <mat-autocomplete #auto="matAutocomplete">
-                                        <mat-option *ngFor="let product of filterAutoComplete | async"
-                                            [value]="product.productTitle">
-                                            <img class="example-option-img" aria-hidden [src]="product.img" height="25">
-                                            <span>{{product.productTitle}}</span> |
-                                            <small>{{product.storeName}}</small>
-                                        </mat-option>
-                                    </mat-autocomplete>
-                                </mat-form-field>
+                <div class="btn-group" dropdown #dropdown="bs-dropdown" >
+                    
 
-                                <button routerLink="/result" type="submit" [disabled]="mySearch.invalid"
-                                    class="btn btn-primary one" (click)=onSubmit(mySearch)>
+                    <div class="btn-group">
+                        <!-- <button type="button" class="btn btn-primary search-icons"
+                            (click)="divToggle($event)">
+                            <i class="fas fa-search" aria-controls="search" data-target="#search"></i>
+                        </button> -->
+
+                        <div id="search" class="search-hidden">
+                            <form [formGroup]="mySearch" (ngSubmit)="onSubmit(mySearch.value.search)" class="d-flex">
+                                <input type="search" formControlName="search" placeholder="Your name"
+                                    class="form-control">
+                                <button routerLink="/result" type="submit" class="btn btn-primary one">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </form>
                         </div>
-                        
-                        <button class="btn btn-success search-icons dropdown-toggle my-2 my-sm-0"
-                            (click)="divToggle1($event)" type="button">
+                        <!-- <div id="dropdown-basic" *dropdownMenu class="dropdown-menu body-menu" role="menu"
+                            aria-labelledby="button-basic">
+                        </div> -->
+                        <button class="btn btn-success search-icons dropdown-toggle my-2 my-sm-0" (click)="divToggle1($event)" type="button">
                             <i class="far fa-user"></i></button>
-                        <div *ngIf="toggle3" role="menu" aria-labelledby="button-basic" triggers="mouseover"
-                            class="list-user">
+                        <div *ngIf="toggle3" role="menu" aria-labelledby="button-basic" triggers="mouseover" class="list-user">
                             <a role="menuitem"><a class="dropdown-item" href="#">Sign In</a></a>
                             <a role="menuitem"><a class="dropdown-item" href="#">Sign Up</a></a>
                         </div>
-                        <button class="btn btn-success my-2 my-sm-0" type="submit">
-                            <a routerLink="/shoppingCart">
-                                <i class="fas fa-shopping-cart"></i>
-                                <span class="badge badge-warning">{{ getAllQuantityProduct() }}</span>
-                            </a>
-                        </button>
+                        <button class="btn btn-success my-2 my-sm-0" type="submit"><i
+                                class="fas fa-shopping-cart"></i></button>
+                                
                     </div>
                 </div>
             </form>
         </div>
+
     </div>
 </nav>

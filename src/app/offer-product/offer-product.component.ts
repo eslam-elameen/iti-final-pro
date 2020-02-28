@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ProudctsService } from '../proudcts.service';
-import { Router } from "@angular/router";
-// import { NgxStarRatingModule } from 'ngx-star-rating';
-// import { OwlOptions } from 'ngx-owl-carousel-o';
-import { ShoppingCartService } from '../shopping-cart.service';
+import {ProudctsService} from '../proudcts.service';
+import { ActivatedRoute, Router } from "@angular/router";
+import { NgxStarRatingModule } from 'ngx-star-rating';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 import { NgwWowService } from 'ngx-wow';
 
 @Component({
@@ -17,15 +16,7 @@ export class OfferProductComponent implements OnInit {
   ranarr = []
   sets;
   postItem;
-  constructor(
-    private http: ProudctsService,
-    private dataServ: ProudctsService,
-    private _router: Router,
-    private productData: ProudctsService,
-    private shoppingCart: ShoppingCartService,
-    private wowService: NgwWowService,
-  ) { }
-
+  constructor(private wowService: NgwWowService,private http: ProudctsService,  private dataServ: ProudctsService, private _router: Router,private productData: ProudctsService) { }
   cards;
   random;
   posts;
@@ -49,37 +40,33 @@ export class OfferProductComponent implements OnInit {
 
     });
 
-    // Save Product in local Storage 
-    this.shoppingCart.saveInLocalStorge();
-  }
-  // customOptions: OwlOptions = {
-  //   loop: true,
-  //   // margin: 10,
-  //   mouseDrag: false,
-  //   touchDrag: false,
-  //   pullDrag: false,
-  //   dots: false,
-  //   navSpeed: 700,
-  //   navText: ['', ''],
-  //   responsive: {
-  //     0: {
-  //       items: 0
-  //     },
-  //     400: {
-  //       items: 2
-  //     },
-  //     740: {
-  //       items: 2
-  //     },
-  //     940: {
-  //       items: 4
-  //     }
-  //   },
-  //   nav: true
-  // }
 
-  // Add Product to Shopping Cart
-  onAddToCart(product) {
-    this.shoppingCart.addCart(product)
   }
+  customOptions: OwlOptions = {
+    loop: true,
+    // margin: 10,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 0
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 2
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
+  }
+
+
 }

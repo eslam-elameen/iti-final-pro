@@ -8,31 +8,33 @@
       "id": 1
     }
   ],
-  
+  "profile": [],
   "products": [
     {
       "id": "20",
       "category": "dog",
       "storeName": "Mr.pets",
       "kind": "Dry Food",
-      "productTitle": "ALPHA Adult Dog Dry Food 20 KG",
+      "productTitle": "ALPHA Adult Dog 20 KG",
       "img": "https://cf3.s3.souqcdn.com/item/2019/06/17/55/18/64/99/item_L_55186499_dbb559c04257d.jpg",
-      "price": "400.00" 
+      "price": "400.00",
+      "quantity": "0"
     },
     {
       "id": "21",
       "category": "dog",
       "storeName": "Mr.pets",
-      "kind": "Dry Food",
+      "kindFood": "Dry Food",
       "productTitle": "Bavaro Force 18 KG",
-      "img": "https://petsegypt.com/web/image/product.template/4831/image?unique=19586cb",
-      "price": "400.00" 
+      "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/06/image-1.png",
+      "price": "670.00",
+      "quantity": "0"
     },
     {
       "id": "22",
       "category": "dog",
       "storeName": "Mr.pets",
-      "kind": "Dry Food",
+      "kindFood": "Dry Food",
       "productTitle": "Bavaro Solid 18 KG",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/06/image.png",
       "price": "520.00"
@@ -41,7 +43,7 @@
       "id": "23",
       "category": "dog",
       "storeName": "Mr.pets",
-      "kind": "Dry Food",
+      "kindFood": "Dry Food",
       "productTitle": "Bavaro Task 18KG",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/06/image-2.jpg",
       "price": "580.00"
@@ -50,23 +52,22 @@
       "id": "24",
       "category": "dog",
       "storeName": "Mr.pets",
-      "kind": "Dry Food",
+      "kindFood": "Dry Food",
       "productTitle": "Bewi Dog Puppy 3kg",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/06/image-2-6.jpg",
       "price": "170.00"
     },
     {
       "id": "25",
-      "category":"dog",
-      "storeName": "Pet Yard",
-      "kind": "Dry Food",
+      "category": "dog",
+      "storeName": "Mr.pets",
+      "kindFood": "Dry Food",
       "productTitle": "Belcando Puppy Gray",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/10/0001624_belcando-puppy-gravy-5-kg_550.jpeg",
       "price": "170.00"
     },
     {
       "id": "26",
-      "storeName": "Pet Yard",
       "kind": "Dry Food",
       "productTitle": "Bavaro Work 18 KG",
       "category": "dog",
@@ -75,12 +76,13 @@
     },
     {
       "id": "28",
-      "category":"dog",
-      "storeName": "Pet Yard",
-      "kind": "Dry Food",
+      "category": "dog",
+      "storeName": "Mr.pets",
+      "kindFood": "Dry Food",
       "productTitle": "Earthborn Holistic 12 KG",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/06/image-1-2-600x560.jpg",
-      "price": "1,210.00" 
+      "price": "1,210.00",
+      "quantity": "0"
     },
     {
       "id": "29",
@@ -89,17 +91,19 @@
       "kind": "Wet Food",
       "productTitle": "MERA Pure Sensitive",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/05/image-9-600x600.jpg",
-      "price": "35.00" ,
+      "price": "35.00",
+      "quantity": "0",
       "description": "100% Animal Protein for Sensitive Adult DogsMERA Pure Sensitive Can with Poultry Hearts is a particularly tasty moist food for sensitive dogs with allergies or intolerance to feed. "
     },
     {
       "id": "30",
       "category": "dog",
       "storeName": "Mr.pets",
-      "kind": "Wet Food",
+      "kindFood": "Wet Food",
       "productTitle": "Pro Dog Chicken 415g",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/10/prodog3-310x310-2.png",
-      "price": "21.99" 
+      "price": "21.99",
+      "quantity": "0"
     },
     {
       "id": "31",
@@ -108,7 +112,8 @@
       "kind": "Wet Food",
       "productTitle": "Felix Cat 100g-Chicken",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/image-25-600x600.jpg",
-      "price": "15.00" 
+      "price": "15.00",
+      "quantity": "0"
     },
     {
       "id": "32",
@@ -117,135 +122,148 @@
       "kind": "Wet Food",
       "productTitle": "Pro Dog for Puppies 85g",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/10/WhatsApp-Image-2018-10-25-at-9.07.28-PM1-600x418-2.jpeg",
-      "price": "20.00" 
+      "price": "20.00",
+      "quantity": "0"
     },
     {
       "id": "33",
       "category": "dog",
       "storeName": "Pet Yard",
-      "kind": "Dry Food",
+      "kindFood": "Dry Food",
       "productTitle": "Belcando",
       "img": "https://petsegypt.com/web/image/product.template/5046/image/300x300?unique=23d1d8d",
-      "price": "210.00" 
+      "price": "210.00",
+      "quantity": "0"
     },
     {
       "id": "34",
-      "category":"dog",
-      "storeName": "Pettix",
-      "kind": "Dry Food",
+      "category": "dog",
+      "storeName": "pet Yard",
+      "kindFood": "Dry Food",
       "productTitle": "Earthborn Holistic 12 KG",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/06/image-1-2.jpg",
-      "price": "200.00" 
+      "price": "200.00",
+      "quantity": "0"
     },
     {
       "id": "36",
-      "category":"dog",
-      "storeName": "Pettix",
+      "category": "dog",
+      "storeName": "pet Yard",
       "kind": "Dry Food",
       "productTitle": "Royal Canin Dog",
       "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/79534165_3210841548929924_2949115456729907200_n.jpg?_nc_cat=103&_nc_ohc=EbiPW42cSwYAX-8lDYP&_nc_ht=scontent-hbe1-1.xx&oh=0b5c494bf762468c855c96845cc7b655&oe=5EC0D37D",
-      "price": "500.00" 
+      "price": "500.00",
+      "quantity": "0"
     },
     {
       "id": "37",
-      "category":"dog",
-      "storeName": "Pet Yard",
-      "kind": "Dry Food",
+      "category": "dog",
+      "storeName": "pet Yard",
+      "kindFood": "Dry Food",
       "productTitle": "PEDIGREE Chicken",
       "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/79184279_3210817162265696_5559894551184801792_n.jpg?_nc_cat=101&_nc_ohc=J9rM3PJj6GkAX-Dq9PI&_nc_ht=scontent-hbe1-1.xx&oh=185c2bc2d81dfef19e5741f7660ab6e6&oe=5EFE331F",
-      "price": "500.00" 
+      "price": "500.00",
+      "quantity": "0"
     },
     {
       "id": "39",
       "category": "dog",
       "storeName": "Pettix",
-      "kind":"Dry Food",
+      "kind": "gromming",
       "productTitle": "Josera 'Made In Germany' ",
       "img": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/13/381141/1.jpg?7850",
-      "price": "400.00" 
+      "price": "400.00",
+      "quantity": "0"
     },
     {
       "id": "40",
       "category": "dog",
       "storeName": "Pettix",
-      "kind": "accessories",
+      "kindFood": "Tool",
       "productTitle": "Pet food container",
       "img": "https://www.containerstore.com/catalogimages/128396/PetFoodContainer45lbs_x.jpg",
-      "price": "400.00" 
+      "price": "400.00",
+      "quantity": "0"
     },
     {
       "id": "41",
       "category": "dog",
       "storeName": "Pettix",
-      "kind": "Dry Food",
+      "kind": "Food",
       "productTitle": "Vitaday Active",
       "img": "https://cdn.shopify.com/s/files/1/0017/3037/9887/products/vitaday-crocchette-10kg_300x300.jpg?v=1544532252",
-      "price": "400.00" 
+      "price": "400.00",
+      "quantity": "0"
     },
     {
       "id": "42",
       "category": "dog",
       "storeName": "Pettix",
-      "kind": "Treat",
+      "kindFood": "Treat",
       "productTitle": "Snacks Treat",
       "img": "https://barkpost.com/wp-content/uploads/2019/03/are-milk-bones-safe-jar.png",
-      "price": "90.00" 
+      "price": "90.00",
+      "quantity": "0"
     },
     {
       "id": "43",
       "category": "dog",
       "storeName": "Pettix",
-      "kind":"Treat",
+      "kind": "gromming",
       "productTitle": "FrontLine Dogs",
       "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/p960x960/69131069_383791602305518_1219523150149058560_o.jpg?_nc_cat=111&_nc_ohc=dYNNGl5B0xoAX9FKJKe&_nc_ht=scontent-hbe1-1.xx&_nc_tp=6&oh=8a19cfb29050f93bcafa3686a31d617f&oe=5EBCE9CD",
-      "price": "100.00"
-      
+      "price": "100.00",
+      "quantity": "0"
     },
     {
       "id": "44",
       "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
+      "storeName": "Pinky Pet ",
       "kind": "Dry Food",
       "productTitle": "Miglior Cane 15 Kg",
       "img": "https://www.rumahguguk.com/image/cache/data/Dog%20Food/Miglior%20cane/migliorcane_puppy_-500x500.jpg",
-      "price": "370.00"
-      
+      "price": "370.00",
+      "quantity": "0"
     },
     {
       "id": "45",
       "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind": "Shampoo",
-      "productTitle": "Anti-insect shampoo 250ml / 60ml",
-      "img": "https://shop.rawfoodforpets.com/wp-content/uploads/Spencers_Shampoo_for_Dogs.jpg",
-      "price": "370.00" 
+      "storeName": "Pinky Pet",
+      "kind": "Shampoo ",
+      "productTitle": "Anti-insect 250ml/60ml",
+      "img": "https://www.snowcountry.eu/media/catalog/product/cache/2/image/1200x/9df78eab33525d08d6e5fb8d27136e95/c/a/care-plus-anti-naturel-spray-citriodiol-60ml_1_1.jpg",
+      "price": "170.00",
+      "quantity": "0"
     },
     {
       "id": "47",
-      "category":"dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind": "spray",
+      "category": "dog",
+      "storeName": "Pinky Pet ",
+      "kind": "gromming",
       "productTitle": "Puppy Trainer spray",
       "img": "https://static.jumia.com.eg/unsafe/fit-in/220x220/filters:fill(white)/product/49/2986/1.jpg?1849",
-      "price": "120 .00" 
+      "price": "120 .00",
+      "quantity": "0"
     },
     {
       "id": "48",
-      "category":"dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind": "accessories",
+      "category": "dog",
+      "storeName": "Pinky Pet ",
+      "kind": "Tool",
       "productTitle": "Furba & Catzone",
       "img": "https://s3.eu-central-1.amazonaws.com/cnj-img/images/sk/sk60v5BvTLeP",
-      "price": "120 .00" 
+      "price": "120 .00",
+      "quantity": "0"
     },
     {
-      "id": "49", 
-      "category":"dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Shampoo",
+      "id": "49",
+      "category": "dog",
+      "storeName": "Pinky Pet ",
+      "kind": "gromming",
       "productTitle": "Fuzzy",
       "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/s960x960/65310091_2095567257410625_68422591416631296_o.jpg?_nc_cat=110&_nc_ohc=XLwd6LtjeeoAX8nJcaN&_nc_ht=scontent-hbe1-1.xx&oh=1c8dff481c27653f7018c013527c0884&oe=5EB9BFFE",
-      "price": "120 .00" 
+      "price": "120 .00",
+      "quantity": "0"
     },
     {
       "id": "50",
@@ -254,7 +272,8 @@
       "kind": "Dry Food",
       "productTitle": "Bewi Cat 20kg Adult",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/05/image-10-1-600x600.jpg",
-      "price": "825.00" 
+      "price": "825.00",
+      "quantity": "0"
     },
     {
       "id": "51",
@@ -263,7 +282,8 @@
       "kind": "Dry Food",
       "productTitle": "Chow all Ages 1.42KG",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/11/image-600x600.jpg",
-      "price": "130.00" 
+      "price": "130.00",
+      "quantity": "0"
     },
     {
       "id": "52",
@@ -273,7 +293,8 @@
       "productTitle": "Friskies cats Chicken 1.5kg",
       "description": "ESPECIALLY FORMULATED FOR CATS INDOORS * FRISKIES ® Indoor Cats is a tasty and 100% complete food that helps reduce the formation of hairballs, and with added garden vegetables that cats like to chew on. FRISKIES ® Indoor Cats supports the good health, vitality, and happiness of your indoor cat; so that he can continue to surprise you and make you happy, every day, in your home! * Complete food for adult cats. * Control of hairballs :With fibers to help reduce the formation of hairballs and allow their smooth passage through the digestive system. *Weight management :supports with a suitable energy intake. * Reduces litter odors :Contains chicory, a vegetable, to help reduce litter odors.",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/09/friskies-indoor-15.png",
-      "price": "110.00" 
+      "price": "110.00",
+      "quantity": "0"
     },
     {
       "id": "53",
@@ -282,26 +303,29 @@
       "kind": "Dry Food",
       "productTitle": "friskies chicken milk 300g",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/09/ShotType1_540x540-2.jpg",
-      "price": "25.00" 
+      "price": "25.00",
+      "quantity": "0"
     },
     {
       "id": "54",
       "category": "cats",
       "storeName": "Mr.pets",
-      "kind": "Dry Food",
+      "kindFood": "Dry Food",
       "productTitle": "friskies chicken 1.7 kg",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/09/image-11-600x600.jpg",
-      "price": "130.00" 
+      "price": "130.00",
+      "quantity": "0"
     },
     {
       "id": "55",
       "category": "cats",
       "storeName": "Mr.pets",
-      "kind": "Dry Food",
+      "kindFood": "Dry Food",
       "productTitle": "Cat Chow Indoor 1.42 KG",
       "description": "Give your indoor cat the nutrition she needs at dinnertime when you serve her Cat Chow Indoor Dry Cat Food. Formulated with an indoor cats activity level in mind, this recipe contains fewer calories than Cat Chow Complete to help promote a healthy weight. Natural or added fiber in every serving helps control hairballs, giving you both something to feel good about at meal time. She‘ll gobble up the delicious taste and crunchy texture of this recipe made with accents of garden greens, while you rest easy knowing shes getting 100% complete and balanced nutrition in each bowlful.",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/image-1-1.png",
-      "price": "125.00" 
+      "price": "125.00",
+      "quantity": "0"
     },
     {
       "id": "56",
@@ -310,65 +334,72 @@
       "kind": "Dry Food",
       "productTitle": "friskies cats salmon 7.5kg",
       "description": "* A 100% complete and balanced nutrition developed with selected quality ingredients to give your cat the meals he likes and needs.* Typical composition of the product:75% of red and brown croquettes; 25% of green, orange and white croquettes.* Complete food for adult cats.* Tonic muscles* Healthy urinary system* Healthy teeth and bones",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/09/image-3.png",
-      "price": "350.00" 
+      "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/06/image-2.png",
+      "price": "350.00",
+      "quantity": "0"
     },
     {
       "id": "27",
-      "category": "dog",
+      "category": "10",
       "storeName": "Mr.pets",
       "kind": "Dry Food",
-      "productTitle": "Crancy Dental 180",
+      "productTitle": "Crancy Dental Snack 180",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/image-1-27-600x600.jpg",
-      "price": "85.00" 
+      "price": "85.00",
+      "quantity": "0"
     },
     {
       "id": "58",
       "category": "cats",
       "storeName": "Mr.pets",
-      "kind": "Dry Food",
+      "kindFood": "Dry Food",
       "productTitle": "friskies salmon 300g",
       "description": "A 100% complete and balanced nutrition developed with selected quality ingredients to give your cat the meals he likes and needs.* Typical composition of the product:75% of red and brown croquettes; 25% of green orange and white croquettes.* Complete food for adult cats.* Tonic muscles* Healthy urinary system* Healthy teeth and bones",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/09/image-3-600x600.jpg",
-      "price": "25.00" 
+      "price": "25.00",
+      "quantity": "0"
     },
     {
       "id": "59",
       "category": "cats",
       "storeName": "Mr.pets",
-      "kind": "Wet Food",
+      "kindFood": "Wet Food",
       "productTitle": "Friskies Beef 100gm",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/09/0064212_7613035885141jpg-600x600.jpeg",
       "description": "VALUEPACK – PURINA FRISKIES WITH BEEF IN GRAVY ( CAT FOOD ) 100 G (5 PIECES) ♦ Friskies products are formulated with cats in mind at every step to deliver just the right balance of tasty nutrition in cats’ favorite varieties. From delicious treats to nutritious meals, every Friskies product entices and excites a cat’s senses. Unlock a tasty magical world for your cat with Friskies treats. Friskies provides taste adventures that feed a cat’s playfulness and curiosity. With a wide variety of wet foods, Friskies feeds the senses ",
-      "price": "12.50" 
+      "price": "12.50",
+      "quantity": "0"
     },
     {
       "id": "60",
       "category": "cats",
       "storeName": "Mr.pets",
       "kind": "Wet Food",
-      "productTitle": "friskies Dry Food",
+      "productTitle": "friskies dry food",
       "description": "With Chicken In Gravy 100% Complete & Balanced for the Growth of Kittens and Maintenance of Adult Cats Manufactured in Purina-owned plants in the United States",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/05/image-2-600x600.jpg",
-      "price": "15.00" 
+      "price": "15.00",
+      "quantity": "0"
     },
     {
       "id": "61",
       "category": "cats",
       "storeName": "Mr.pets",
       "kind": "Wet Food",
-      "productTitle": "Purina Cat Food-100g",
+      "productTitle": "Felix Wet -100g Chicken",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/image-23-600x600.jpg",
-      "price": "15.00" 
+      "price": "15.00",
+      "quantity": "0"
     },
     {
       "id": "62",
       "category": "cats",
       "storeName": "Mr.pets",
       "kind": "Wet Food",
-      "productTitle": "Royal Canin 85g",
+      "productTitle": "ProDog 85g",
       "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/10/WhatsApp-Image-2018-10-25-at-9.07.28-PM1-600x418-2.jpeg",
-      "price": "22.00" ,
+      "price": "22.00",
+      "quantity": "0",
       "description": "Royal canin INSTINCTIVE +7 JELLY-GELATINA-GELE 85gProduct Description Complete feed for cats Over 7 years old (thin slices in gravy) YOUTH CAPITAL Helps neutralise free radicals thanks to an exclusive antioxidant complex. Ingredients COMPOSITION:meat and animal derivatives. cereals vegetable protein extracts derivatives of vegetable origin minerals, oils and fats, molluscs and crustaceans, various sugars. ADDITIVES (per kg):Nutritional additives:Vitamin D3:265 IU, E1 (Iron):1.8 mg, E2 (Iodine):0.02 mg E4 (Copper):0.2 mg, E5 (Manganese):0.6 mg, E6 (Zinc):6 mg. ANALYTICAL CONSTITUENTS:Protein:11% – Fat content:2.2% – Crude ash:1% – Crude fibres:1.1% – Moisture:80% – Phosphorus:0.19%. MineralsAmount Copper (mg/kg)4.0 Iodine (mg/kg)0.3 Iron (mg/kg)29.0 Magnesium (%)0.012 Manganese (mg/kg)4.0 Potassium (%)0.15 Selenium (mg/kg)0.2 Sodium (%)0.05 Zinc (mg/kg)18.0 "
     },
     {
@@ -378,94 +409,103 @@
       "kind": "Dry Food",
       "productTitle": "Blubo Chicken and Beef",
       "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/83940777_3351404128206998_6692850410689921024_n.jpg?_nc_cat=111&_nc_ohc=bgw2vdO_VC4AX9Wl9dO&_nc_ht=scontent-hbe1-1.xx&oh=b31a78b6b6b0cd909083b2eb5e2993b0&oe=5EBE913B",
-      "price": "15.00" 
+      "price": "15.00",
+      "quantity": "0"
     },
     {
       "id": "64",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"Shampoo",
+      "category": "cats",
+      "storeName": "pet Yard",
+      "kind": "gromming",
       "productTitle": "Foaming Shampoo 250 ml",
       "img": "https://www.hair-shop.com/en/media/catalog/product/cache/4/image/1400x1400/9df78eab33525d08d6e5fb8d27136e95/j/o/john-paul-pet-oatmeal-waterless-foam-shampoo-250ml.jpg",
-      "price": "40.00" 
+      "price": "40.00",
+      "quantity": "0"
     },
     {
       "id": "65",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind": "Dry Food",
+      "category": "cats",
+      "storeName": "pet Yard",
+      "kindFood": "Dry Food",
       "productTitle": "SaniCat 5 Liter",
       "img": "https://petsegypt.com/web/image/product.template/3462/image/300x300?unique=eb846a8",
-      "price": "70.00" 
+      "price": "70.00",
+      "quantity": "0"
     },
     {
       "id": "66",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind": "Dry Food",
+      "category": "10",
+      "storeName": "pet Yard",
+      "kindFood": "Dry Food",
       "productTitle": "Catzone 5 kilos",
       "img": "https://cf2.s3.souqcdn.com/item/2015/09/02/89/86/15/0/item_L_8986150_9253203.jpg",
-      "price": "65.00" 
+      "price": "65.00",
+      "quantity": "0"
     },
     {
       "id": "67",
-      "category": "cat",
-      "storeName": "Pet Yard",
+      "category": "cats",
+      "storeName": "pet Yard",
       "kind": "Dry Food",
       "productTitle": "Katz 7,5 kg",
       "img": "https://d2be8yqg602pkp.cloudfront.net/media/catalog/product/cache/1/image/1200x630/9df78eab33525d08d6e5fb8d27136e95/2/0/20100250_katz_flavour_2kg-20cm.jpg",
-      "price": "200.00" 
+      "price": "200.00",
+      "quantity": "0"
     },
     {
       "id": "68",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind": "Dry Food",
+      "category": "cats",
+      "storeName": "pet Yard",
+      "kindFood": "Dry Food",
       "productTitle": "ProCat",
       "img": "https://amypetstore.com/DataImages/Products/PROCAT%20Pate%20With%20Salmon%20415g.jpg",
-      "price": "20.00" 
+      "price": "20.00",
+      "quantity": "0"
     },
     {
       "id": "69",
       "category": "cats",
       "storeName": "pet Yard",
-      "kind": "Dry Food",
+      "kindFood": "Dry Food",
       "productTitle": "Felix",
       "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/75588275_3092937930720287_2655225374538989568_o.jpg?_nc_cat=111&_nc_ohc=3Xld3pJ93IoAX-rL2sc&_nc_ht=scontent-hbe1-1.xx&oh=786a9c30c49fa07e0f06ab07f6933110&oe=5EBD06E0",
-      "price": "15.00" 
+      "price": "15.00",
+      "quantity": "0"
     },
     {
       "id": "70",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind": "Dry Food",
+      "category": "cats",
+      "storeName": "pet Yard",
+      "kindFood": "Dry Food",
       "productTitle": "LindoCat",
       "img": "https://aleef.com/media/cache/sylius_shop_product_large_thumbnail/0c/31/298375404878b375be719a7e0b36.png",
-      "price": "100.00" 
+      "price": "100.00",
+      "quantity": "0"
     },
     {
       "id": "71",
       "category": "cats",
       "storeName": "Pettix",
-      "kind":"Shampoo",
+      "kind": "gromming",
       "productTitle": "HARTZ Shampoo ",
       "img": "https://images-na.ssl-images-amazon.com/images/I/81VlsOQUPZL._SY679_.jpg",
-      "price": "300.00" 
+      "price": "300.00",
+      "quantity": "0"
     },
     {
       "id": "72",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"box",
-      "productTitle": "Cat Cave",
-      "img": "https://scontent-mrs2-1.xx.fbcdn.net/v/t1.0-9/86259990_3383513784996032_8720983059337314304_n.jpg?_nc_cat=100&_nc_ohc=EMyla3uhUXEAX_xy2gy&_nc_ht=scontent-mrs2-1.xx&oh=7f99c8f6f19dddd097f08ed792f04673&oe=5EB72AF8",
-      "price": "295"
+      "category": "cats",
+      "storeName": "Pettix",
+      "kind": "gromming",
+      "productTitle": "Revolution (Single dose)",
+      "img": "https://cf4.s3.souqcdn.com/item/2017/07/08/23/32/40/26/item_L_23324026_33189085.jpg",
+      "price": "50.00"
     },
     {
       "id": "73",
       "category": "cats",
       "storeName": "Pettix",
-      "kind": "Litter",
+      "kindFood": "Tool",
       "productTitle": "Lindo Cat Litter",
       "img": "https://www.mygreenchapter.com/media/catalog/product/cache/4/image/1170x/9df78eab33525d08d6e5fb8d27136e95/l/i/lindocat_smell_good_8l.jpg",
       "price": "60.00"
@@ -474,8 +514,8 @@
       "id": "74",
       "category": "cats",
       "storeName": "Pettix",
-      "kind": "Dry Food",
-      "productTitle": "drontal Worming Tablets for Cats",
+      "kind": "Food",
+      "productTitle": "drontal Worming Tablets",
       "img": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/82166949_475790369772307_3633584375850860544_n.jpg?_nc_cat=107&_nc_ohc=27iyhDVOr8YAX84_mk9&_nc_ht=scontent-hbe1-1.xx&oh=b2480e92d969329a29e4486b99b9a3ee&oe=5EFE4903",
       "price": "30.00"
     },
@@ -483,7 +523,7 @@
       "id": "75",
       "category": "cats",
       "storeName": "Pettix",
-      "kind": "Treat",
+      "kindFood": "Treat",
       "productTitle": "Mera Cat",
       "img": "https://meradog.co.za/wp-content/uploads/2016/05/mera-cat.jpg",
       "price": "90.00"
@@ -492,61 +532,61 @@
       "id": "76",
       "category": "cats",
       "storeName": "Pettix",
-      "kind": "litter ",
+      "kindFood": "Food ",
       "productTitle": "Orgo Cat Litter",
       "img": "https://images.yaoota.com/elsKCPzHaHCX39UBrQdPnXS5U74=/trim/yaootaweb-production/media/crawledproductimages/cc22e57294a0d3fd2dff823d3c11711d446316ae.jpg",
       "price": "50.00"
     },
     {
       "id": "77",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind": "cage",
-      "productTitle": "Amazing Boxes For Cats 'ITALY'",
+      "category": "cats",
+      "storeName": "Pinky Pet Shop",
+      "kind": "Acs",
+      "productTitle": "Amazing Boxes 'ITALY'",
       "img": "https://atlas-content-cdn.pixelsquid.com/stock-images/enclosed-litter-box-tray-lOwDMoA-600.jpg",
       "price": "370.00"
     },
     {
       "id": "78",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"shampoo",
+      "category": "cats",
+      "storeName": "Pinky Pet Shop",
+      "kind": "gromming",
       "productTitle": "FrontLine Shampoo ",
       "img": "https://www.kimispetemporium.co.uk/ekmps/shops/d5e0a4/images/frontline-pet-care-sensitive-skin-dog-shampoo-4530-1-p.jpg",
       "price": "70.00"
     },
     {
       "id": "79",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind": "Dry Food",
+      "category": "cats",
+      "storeName": "Pinky Pet Shop",
+      "kind": "Food",
       "productTitle": " Royal Canin Cat",
       "img": "https://k.nooncdn.com/t_desktop-pdp-v1/v1539088931/N12272129A_1.jpg",
       "price": "150 .00"
     },
     {
       "id": "80",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind": "Wet Food",
+      "category": "cats",
+      "storeName": "Pinky Pet Shop",
+      "kindFood": "Food",
       "productTitle": "Friskies Cat Food",
       "img": "https://www.purina.com/sites/g/files/auxxlc196/files/00050000171224_3.15_FRONT_0.png",
       "price": "20 .00"
     },
     {
       "id": "81",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind": "cage",
+      "category": "cats",
+      "storeName": "Pinky Pet Shop",
+      "kindFood": "Tool",
       "productTitle": "Purina Felix Pouch ",
       "img": "https://shop-cdn-m.mediazs.com/bilder/bac/litire/trixie/berto/pour/chat/1/400/82361_pla_trixie_katzentoilette_berto_hs_01_1.jpg",
       "price": "120 .00"
     },
     {
       "id": "82",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"spray",
+      "category": "cats",
+      "storeName": "Pinky Pet Shop",
+      "kind": "gromming",
       "productTitle": "Safeline Anti Fleas ",
       "img": "https://apollo-ireland.akamaized.net/v1/files/4yyp5txjtprn2-EG/image;s=644x461;olx-st/_1_.jpg",
       "price": "120 .00"
@@ -555,10 +595,10 @@
       "id": "83",
       "category": "birds",
       "storeName": "Just 4 pets",
-      "kind": "Dry Food",
-      "productTitle": "MIGMA BIRDS EGGSTRA 200G",
+      "kind": "Food",
+      "productTitle": " Migma Birds 200G",
       "description": "It is a dried pasteurized whole egg powder and egg white with energy-enhancing nutritional additives and is used as a safe alternative to eggs Fresh. The manufacturing process is the same as for making powdered milk powder It contains all the nutritional benefits of fresh eggs. It contains the highest level of protein and also contains immune system-enhancing properties as well as anti-bacterial properties",
-      "img": "https://just4petsegypt.com/wp-content/uploads/2019/09/47011-removebg-preview-240x265.png",
+      "img": "https://just4petsegypt.com/wp-content/uploads/2019/09/42495-removebg-preview.png",
       "price": "40.00"
     },
     {
@@ -714,1195 +754,7 @@
       "description": "26 X 7 CM",
       "img": "https://cdn.shopify.com/s/files/1/0698/6527/products/7e6821075a54f29eee816821fb5e3769c97f42bd_1024x1024.jpg?v=1563618104",
       "price": "40.00"
-    },
-    {
-      "id": "102",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"box",
-      "productTitle": "Cat Cave",
-      "img": "https://scontent-mrs2-1.xx.fbcdn.net/v/t1.0-9/86187549_3383513848329359_7073673495695065088_n.jpg?_nc_cat=103&_nc_ohc=GESnp0dG9Q8AX_ZYtz8&_nc_ht=scontent-mrs2-1.xx&oh=15dd749aa5f80ee69473a14b586f9daf&oe=5EB4CA8F",
-      "price": "295"
-    },   {
-      "id": "103",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"toys",
-      "productTitle": "Rainbow rubber ball",
-      "img": "https://cf5.s3.souqcdn.com/item/2017/02/23/22/09/62/32/item_XL_22096232_29196562.jpg",
-      "price": "30.00",
-      "description":"Rainbow rubber ball toy for Dogs" 
-    },
-    {
-      "id": "104",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"toys",
-      "productTitle": "Dogs Interactive Squeaky Giggle Quack Dog Toy Ball Pet Food Dispenser Dog Pet Products-Medium",
-      "img": "https://cf3.s3.souqcdn.com/item/2018/07/12/36/48/97/90/item_XL_36489790_143200000.jpg",
-      "price": "75.00",
-      "description":"Dogs Interactive Squeaky Giggle Quack Dog Toy Ball Pet Food Dispenser Dog Pet Products-Medium" 
-    },
-    {
-      "id": "105",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"toys",
-      "productTitle": "Futurekart Dog Treat Dispensing Ball Toy",
-      "img": "https://cf2.s3.souqcdn.com/item/2018/11/13/40/76/81/30/item_XL_40768130_8342ae97519c0.jpg",
-      "price": "70.00",
-      "description":"Futurekart Dog Treat Dispensing Ball Toy" 
-    },
-    {
-      "id": "106",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"toys",
-      "productTitle": "Futurekart Dog Treat Dispensing Ball Toy",
-      "img": "https://cf2.s3.souqcdn.com/item/2018/11/13/40/76/81/30/item_XL_40768130_8342ae97519c0.jpg",
-      "price": "70.00",
-      "description":"Futurekart Dog Treat Dispensing Ball Toy" 
-    },
-    {
-      "id": "107",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Dry Food",
-      "productTitle": "Royal Canin ' the super dry food'",
-      "img": "https://cf1.s3.souqcdn.com/item/2019/03/22/48/88/97/71/item_XL_48889771_7ed8e53cf79d3.jpg",
-      "price": "700.00",
-      "description":"Royal Canin ' the super dry food'" 
-    },
-    {
-      "id": "108",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Dry Food",
-      "productTitle": "Bungee's Puppy Dry Food for Dogs 3KG",
-      "img": "https://cf5.s3.souqcdn.com/item/2017/11/16/28/08/09/82/item_XL_28080982_71807151.jpg",
-      "price": "160.00",
-      "description":"Bungee's is Egyptian brand packed with 33% real chicken for its very high digestibility as well as the richness of its vitamins and mineral. Its ingredients are made of all natural fresh vegetables, antibiotic free and have no fillers" 
-    },
-    {
-      "id": "109",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Dry Food",
-      "productTitle": "Happy Dog Dry Food For Dogs, Profi Line High Energy – 30/20 - 20kg",
-      "img": "https://cf4.s3.souqcdn.com/item/2016/09/19/11/56/09/69/item_XL_11560969_16457622.jpg",
-      "price": "785.00",
-      "description":"Our energy-rich feed 30-20 HIGH ENERGY provides all dogs at high physical exertionvery important structural protein recovery of blood and muscle protein for muscle growth.High concentration of nutrients provides dogs already active in a small volume of feed rich and quick supply of sufficient amounts of protein and fat and thereby burdens the digestive " 
-    },
-    {
-      "id": "110",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Wet Food",
-      "productTitle": "Happy Dog Rind Pure Wet Food For Dogs - 400 gm",
-      "img": "https://cf5.s3.souqcdn.com/item/2018/09/24/38/81/42/86/item_XL_38814286_151454391.jpg",
-      "price": "60.00",
-      "description":"Pure Beef wet food is a complete food for adult dogs " 
-    },
-    {
-      "id": "111",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Wet Food",
-      "productTitle": "PRODOG Wet Food For Dogs Soft Chunks in Gravy Duck - 415g",
-      "img": "https://cf3.s3.souqcdn.com/item/2018/07/14/36/55/38/45/item_XL_36553845_143370180.jpg",
-      "price": "30.00",
-      "description":"PRODOG Wet Food For Dogs Soft Chunks in Gravy Duck - 415g " 
-    },
-    {
-      "id": "112",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Wet Food",
-      "productTitle": "BewiDog Poultry Wet Food For Dogs - 400g",
-      "img": "https://cf3.s3.souqcdn.com/item/2018/07/14/36/55/38/45/item_XL_36553845_143370180.jpg",
-      "price": "40.00",
-      "description":"BewiDog Poultry Wet Food For Dogs - 400g " 
-    },
-    {
-      "id": "113",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Wet Food",
-      "productTitle": "Royal Canin Mini Junior Appetite Stimulation Wet Food",
-      "img": "https://cf5.s3.souqcdn.com/item/2017/09/06/23/98/51/84/item_XL_23985184_34938954.jpg",
-      "price": "299.00",
-      "description":"For small dogs up to 10 months, which are still growing. Easy to digest, appetising wet dog food with just the amount of nutrients your little dog needs. 100% healthy food. " 
-    },
-    {
-      "id": "114",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"Wet Food",
-      "productTitle": "Happy Dog Buffalo Pure Wet Food For Dogs - 400 gm",
-      "img": "https://cf1.s3.souqcdn.com/item/2018/09/24/38/81/42/75/item_XL_38814275_151454368.jpg",
-      "price": "55.00",
-      "description":"Happy Dog Buffalo Pure Wet Food For Dogs - 400 gm " 
-    },
-    {
-      "id": "115",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"Wet Food",
-      "productTitle": "Teddy Pet Food Active Beef - 400 gm",
-      "img": "https://cf5.s3.souqcdn.com/item/2017/02/12/22/03/79/53/item_XL_22037953_28597837.jpg",
-      "price": "22.00",
-      "description":"Extremely Rich In Protein And Calories For Dogs With High Activity Levels " 
-    },
-    {
-      "id": "116",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"Wet Food",
-      "productTitle": "BLUBO Wet Dog food with Beef chunks, 415 g",
-      "img": "https://cf5.s3.souqcdn.com/item/2017/10/17/25/83/32/04/item_XL_25833204_45758302.jpg",
-      "price": "28.00",
-      "description":"Tasty chunks in gravy, Complete and balanced food for adult Dogs, Rich in vitamins and minerals, Can 415 g, Origin: Polish manufacturer of dog and cat food. PUPIL Foods Ltd. " 
-    },
-    {
-      "id": "117",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"Wet Food",
-      "productTitle": "Miglior Cane 405g Chicken & Turkey Can for Dogs",
-      "img": "https://cf2.s3.souqcdn.com/item/2017/08/01/23/65/99/57/item_XL_23659957_33989862.jpg",
-      "price": "21.00",
-      "description":"Miglior Cane 405g Chicken & Turkey Can for Dogs " 
-    },
-     {
-      "id": "118",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"Wet Food",
-      "productTitle": "Royal Canin Baby Dog Milk 400g",
-      "img": "https://cf5.s3.souqcdn.com/item/2017/05/05/22/65/76/96/item_XL_22657696_31351057.jpg",
-      "price": "999.00",
-      "description":"Royal Canin Baby Dog Milk 400g " 
-    },
-    {
-      "id": "119",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"Wet Food",
-      "productTitle": "Bandit Adult Dog Food 5 KG",
-      "img": "https://cf1.s3.souqcdn.com/item/2018/10/09/39/29/42/86/item_XL_39294286_152795314.jpg",
-      "price": "140.00",
-      "description":"Bandit Adult Dog Food 5 KG " 
-    },
-    {
-      "id": "120",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"Wet Food",
-      "productTitle": "Mera Dog Beef 400gm",
-      "img": "https://cf3.s3.souqcdn.com/item/2019/05/16/54/05/43/14/item_XL_54054314_53a72af94f8ab.jpg",
-      "price": "50.00",
-      "description":"MERA Pure Sensitive with Rind - Beef 400g DOG Can 100% animal protein for sensitive adult dogs MERA Pure Sensitive canned beef is particularly tasty moist food for sensitive dogs with allergies or intolerance to feed.  ► Moist food for everyday use  ► Clean - 100% animal protein  ► Cereal free formula  ► Highest digestibility Contains no cereals, exotic sources of meat, colorings, flavors ... " 
-    },
-    {
-      "id": "121",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"Wet Food",
-      "productTitle": "MIGLIOR CANE Wellness system With Chicken And Turkey, 400 Gm",
-      "img": "https://cf2.s3.souqcdn.com/item/2017/04/22/22/53/82/30/item_XL_22538230_30852585.jpg",
-      "price": "40.00",
-      "description":"Meat and meat products 30% (5% chicken, turkey 5%), cereals, minerals." 
-    },
-    {
-      "id": "122",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"Wet Food",
-      "productTitle": "Mera Dog Wild Boar 400gm",
-      "img": "https://cf5.s3.souqcdn.com/item/2019/05/16/54/05/43/18/item_XL_54054318_d82c932c5ccd4.jpg",
-      "price": "60.00",
-      "description":"MERA Pure Sensitive with Rind - Beef 400g DOG Can 100% animal protein for sensitive adult dogs MERA Pure Sensitive canned beef is particularly tasty moist food for sensitive dogs with allergies or intolerance to feed.  ► Moist food for everyday use  ► Clean - 100% animal protein  ► Cereal free formula  ► Highest digestibility Contains no cereals, exotic sources of meat, colorings, flavors ..." 
-    },
-    {
-      "id": "123",
-      "category": "dog",
-      "storeName": "Mr.pets",
-      "kind":"Treats",
-      "productTitle": "Bega Chew Bone Munchy Mixed High Protien – Mini Sticks",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/06/image-6-3.jpg",
-      "price": "40.00",
-      "description":"Bega Chew Bone Munchy Mixed High Protien – Mini Sticks" 
-    },
-    {
-      "id": "124",
-      "category": "dog",
-      "storeName": "Mr.pets",
-      "kind":"Treats",
-      "productTitle": "Bega Dog Bone 20 Cm",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/06/image-5-2.jpg",
-      "price": "30.00",
-      "description":"Bega Dog Bone 20 Cm" 
-    },
-    {
-      "id": "125",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"Treats",
-      "productTitle": "Bega Chew Bone Munchy Raw Hide High Protien – Natural Flavor 4Bag",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/06/image-9-6.jpg",
-      "price": "145.00",
-      "description":"Bega Chew Bone Munchy Raw Hide High Protien – Natural Flavor 4Bag" 
-    },
-    {
-      "id": "126",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"Treats",
-      "productTitle": "Treats for Dog with Beaf flavor",
-      "img": "https://cf3.s3.souqcdn.com/item/2018/01/14/29/98/96/02/item_XL_29989602_89723011.jpg",
-      "price": "50.00",
-      "description":"Treats for Dog with Beaf flavor" 
-    },
-    {
-      "id": "127",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Treats",
-      "productTitle": "Rawhide Rolls Dog Treats bone 25 cm long",
-      "img": "https://cf5.s3.souqcdn.com/item/2019/05/26/54/54/72/80/item_XL_54547280_89180043436d4.jpg",
-      "price": "66.00",
-      "description":"Rawhide Rolls Dog Treats bone 25 cm long" 
-    },
-    {
-      "id": "128",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Treats",
-      "productTitle": "Gourmet Liver Biscuits Dog Treats for all types and sizes of dogs",
-      "img": "https://cf5.s3.souqcdn.com/item/2019/02/09/45/11/11/28/item_XL_45111128_0f266d1efcbe5.jpg",
-      "price": "60.00",
-      "description":"Biscuits are treats & should be given in addition to regular daily meals" 
-    },
-    {
-      "id": "129",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"Dry Food",
-      "productTitle": "Purina 1.43 Kg Cat Chow Complete Dry Food",
-      "img": "https://cf5.s3.souqcdn.com/item/2017/05/21/10/60/26/59/item_XL_10602659_31837594.jpg",
-      "price": "145.00",
-      "description":"It starts with the four cornerstones of nutrition: High-quality protein for strong, lean muscles, healthy carbs for vital energy, essential fatty acids for a shiny coat and 25 vitamins and minerals for immune health. With Purina Cat Chow Complete Formula, you’re feeding them the foundation for a long, healthy life." 
-    },
-    {
-      "id": "130",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"Dry Food",
-      "productTitle": "Keke Sterilizzati Ricetta Leggera Cat Dry Food - 2k",
-      "img": "https://cf3.s3.souqcdn.com/item/2018/11/01/40/06/67/53/item_XL_40066753_02765ff13146d.jpg",
-      "price": "120.00",
-      "description":"Keke Sterilizzati Ricetta Leggera Cat Dry Food - 2k" 
-    },
-    {
-      "id": "131",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"Dry Food",
-      "productTitle": "Mi Gatto Adult 0.2 Chicken & Rice 400g Dry",
-      "img": "https://cf1.s3.souqcdn.com/item/2019/08/07/64/90/80/45/item_XL_64908045_ac69aae773b2d.jpg",
-      "price": "46.00",
-      "description":"Mi Gatto Adult 0.2 Chicken & Rice 400g Dry" 
-    },
-    {
-      "id": "132",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Dry Food",
-      "productTitle": "Purina 1.43 Kg Kitten Chow Nurture Dry Food",
-      "img": "https://cf2.s3.souqcdn.com/item/2017/05/21/10/60/26/57/item_XL_10602657_31837548.jpg",
-      "price": "135.00",
-      "description":"Nurture your kitten with lots of love and our complete nutrition. Rich in flavor, protein and other nutrients kittens need—like those found in mother's milk—our formula encourages a healthy appetite. Helps fuel healthy brain and body developmentPurina Kitten Chow Nurturing Formula Kitten Food contains bite-size morsels that your kitten will love. This food is high in protein and other " 
-    },
-    {
-      "id": "133",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Dry Food",
-      "productTitle": "Royal Canin-Dry cats food-Indoor Long hair 2 KG",
-      "img": "https://cf4.s3.souqcdn.com/item/2016/12/28/12/08/83/70/item_XL_12088370_18193414.jpg",
-      "price": "418.00",
-      "description":"Royal Canin-Dry cats food-Indoor Long hair 2 KG " 
-    },
-    {
-      "id": "134",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Dry Food",
-      "productTitle": "Mera cat Dry Food 10 kg",
-      "img": "https://cf5.s3.souqcdn.com/item/2018/09/06/38/17/43/55/item_XL_38174355_148160243.jpg",
-      "price": "485.00",
-      "description":"Mera cat Dry Food 10 kg " 
-    },
-    {
-      "id": "135",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Dry Food",
-      "productTitle": "1KG Vita'day CAT DRY FOOD",
-      "img": "https://cf3.s3.souqcdn.com/item/2017/02/19/22/06/43/09/item_XL_22064309_28709921.jpg",
-      "price": "69.00",
-      "description":"Delicious food for cats from the age of two months and more 29% protein is an integrated, balanced and contains all the ideal elements which affect the growth and health of the animal.Made from high-quality raw materials it contains salts private strengthen and activate the immune system " 
-    },
-    {
-      "id": "136",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Wet Food",
-      "productTitle": "Royal Canin Wet Food Cat FHN Ageing +12 85gm x 12 pcs",
-      "img": "https://cf2.s3.souqcdn.com/item/2018/10/22/39/69/13/80/item_XL_39691380_156110583.jpg",
-      "price": "350.00",
-      "description":"FHN Ageing +12. Size 85gm. 12 Pouches. Ideal for cats > 12 years old. Special formula for renal & joint health. Helps support renal health with an adapted phosphorus content" 
-    },
-    {
-      "id": "137",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Wet Food",
-      "productTitle": "Purina Fancy Feast Grilled Tuna Wet Cat Food 85g (24 Cans)",
-      "img": "https://cf5.s3.souqcdn.com/item/2016/06/30/93/77/18/5/item_XL_9377185_15115065.jpg",
-      "price": "615.00",
-      "description":"Purina Fancy Feast Grilled Tuna Wet Cat Food 85g (24 Cans)" 
-    },
-    {
-      "id": "138",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Wet Food",
-      "productTitle": "Purina Fancy Feast Flaked Chicken & Tuna Wet Cat Food 85g (24 Cans)",
-      "img": "https://cf1.s3.souqcdn.com/item/2016/06/30/93/77/29/8/item_XL_9377298_15115045.jpg",
-      "price": "620.00",
-      "description":"Purina Fancy Feast Flaked Chicken & Tuna Wet Cat Food 85g (24 Cans)" 
-    },
-    {
-      "id": "139",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"Wet Food",
-      "productTitle": "Blubo Beef Wet Food For Dogs - 415 gm",
-      "img": "https://cf3.s3.souqcdn.com/item/2018/04/04/30/58/99/40/item_XL_30589940_126267539.jpg",
-      "price": "30.00",
-      "description":"Blubo Beef Wet Food For Dogs - 415 gm" 
-    },
-    {
-      "id": "140",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"Wet Food",
-      "productTitle": "ROYAL CANIN ADULT STERILISED 12 POUCHES x 85 GM SPAYED NEUTERED CAT WET FOOD SLICES IN GRAVY",
-      "img": "https://cf4.s3.souqcdn.com/item/2018/11/19/11/71/18/23/item_XL_11711823_552b6c2f6c23e.jpg",
-      "price": "699.00",
-      "description":"Royal Canin Sterilised wet food Thin slices in gravy to help cats to maintain their ideal weight. Supports a healthy urinary system. For adult cats over 1 year.Weight supportFeatures a moderate energy level to help adult cats over 1 year maintain their ideal weight.Healthy urinary systemHelps maintain a healthy urinary system by reducing the concentration of the minerals which can lea" 
-    },
-    {
-      "id": "141",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"Wet Food",
-      "productTitle": "Royal Canin Persian Adult Pouch Cat Wet Food 85 gm",
-      "img": "https://cf1.s3.souqcdn.com/item/2018/03/04/32/16/57/65/item_XL_32165765_115831938.jpg",
-      "price": "99.00",
-      "description":"Royal Canin Persian Adult Pouch Cat Wet Food 85 gm" 
-    },
-    {
-      "id": "142",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"Wet Food",
-      "productTitle": "Blubo Chicken Wet Food For Cats - 415 gm",
-      "img": "https://cf3.s3.souqcdn.com/item/2018/04/04/30/59/00/67/item_XL_30590067_126267490.jpg",
-      "price": "28.00",
-      "description":"Blubo Chicken Wet Food For Cats - 415 gm" 
-    },
-    {
-      "id": "143",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"Wet Food",
-      "productTitle": "Mera Cat Finest Fit Kitten Wet Food - 85g",
-      "img": "https://cf5.s3.souqcdn.com/item/2019/04/18/52/39/65/48/item_XL_52396548_e4651acddc9f4.jpg",
-      "price": "30.00",
-      "description":"Mera Cat Finest Fit Kitten Wet Food - 85g" 
-    },
-    {
-      "id": "144",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"Wet Food",
-      "productTitle": "Purina 12x Felix Wet Cat Single Serve As Good as it Looks Favorites Selection, 100g Sachet - Pack of 12",
-      "img": "https://cf2.s3.souqcdn.com/item/2018/04/23/22/41/65/97/item_XL_22416597_131339725.jpg",
-      "price": "290.00",
-      "description":"As Good as it Looks is a range of nutritionally balanced and delicious meals which look and smell so meaty, it is like food you might have cooked yourself. A delicious meal of tender meaty pieces in a succulent jelly your cat will find irresistable." 
-    },
-    {
-      "id": "145",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"Wet Food",
-      "productTitle": "Royal Canin Digest Sensitive In Gravy Wet Food",
-      "img": "https://cf1.s3.souqcdn.com/item/2017/09/06/23/98/52/29/item_XL_23985229_34939014.jpg",
-      "price": "99.00",
-      "description":"Royan canin maintain that a cat's diet should take into account all parameters of life, such as age, breed, life style, physiology and individual circumstances. The health diet of royal canin digest sensitive cat food is based on royal canin's includes the macro nutrient profile instinctively preferred by adult cats ." 
-    },
-    {
-      "id": "146",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"Treats",
-      "productTitle": "Miglior Gatto 400g Chicken Treats for Cats",
-      "img": "https://cf4.s3.souqcdn.com/item/2017/08/01/23/66/00/64/item_XL_23660064_33990004.jpg",
-      "price": "35.00",
-      "description":"Miglior Gatto 400g Chicken Treats for Cats" 
-    },
-    {
-      "id": "147",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"Treats",
-      "productTitle": "Orgo Diced salmon Cat treats",
-      "img": "https://cf4.s3.souqcdn.com/item/2019/10/20/78/50/87/10/item_XL_78508710_b9bb3e4b81891.jpg",
-      "price": "101.00",
-      "description":"Orgo Diced salmon Cat treats" 
-    },
-    {
-      "id": "148",
-      "category": "cat",
-      "storeName": "Mr.pets",
-      "kind":"Treats",
-      "productTitle": "Orgo cat treats poultry liver",
-      "img": "https://cf1.s3.souqcdn.com/item/2019/10/20/78/50/87/64/item_XL_78508764_2209ef7a8898b.jpg",
-      "price": "101.00",
-      "description":"Orgo cat treats poultry liver" 
-    },
-    {
-      "id": "149",
-      "category": "cat",
-      "storeName": "Mr.pets",
-      "kind":"Treats",
-      "productTitle": "Miglior Gatto 400g Pate Chicken and Turkey Treats",
-      "img": "https://cf2.s3.souqcdn.com/item/2017/08/01/23/66/04/26/item_XL_23660426_33990559.jpg",
-      "price": "21.00",
-      "description":"Contents: Meat and by-products (4.1% chicken, 4.1% turkey), grain, shrimp and salmon varieties, minerals. The colorants contained are suitable for European Union norms" 
-    },
-    {
-      "id": "150",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"Treats",
-      "productTitle": "Wahre Liebe 400 g Sensible Katze Treats for Cats",
-      "img": "https://cf5.s3.souqcdn.com/item/2017/08/01/23/66/06/36/item_XL_23660636_33991146.jpg",
-      "price": "101.00",
-      "description":"The nutrition of cats, which react sensitively to their cat food, requires a particularly digestible and easily digestible food, which brings the necessary sensitiveness. Therefore, the true love cat food formula for sensitive cats combines turkey and salmon with gentle, easily digestible rice. In addition to light yogurt and fruity wild berries, chicory also provides the extra portion" 
-    },
-    {
-      "id": "151",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"Treats",
-      "productTitle": "Friskies Veal Pate and Vegetables Food",
-      "img": "https://cf1.s3.souqcdn.com/item/2017/07/26/23/55/81/09/item_XL_23558109_33732717.jpg",
-      "price": "54.00",
-      "description":"Friskies Veal Pate and Vegetables Food" 
-    },
-    {
-      "id": "152",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Treats",
-      "productTitle": "Purina Cat Chow Indoor Food - 1.42 kg",
-      "img": "https://cf3.s3.souqcdn.com/item/2019/01/10/43/13/07/74/item_XL_43130774_92b6402600ac0.jpg",
-      "price": "144.00",
-      "description":"Purina cat chow indoor formula is for adult cats. It is made of a selective blend of proteins, carbs, and fat. Promotes healthy weight in indoor cats (lower calories) and features extra fiber to help control hairballs. It is high quality protein for strong and lean muscles, healthy carbs for vital energy, essential fatty acids for a shiny coat, and vitamins and minerals for a healthy immune" 
-    },
-    {
-      "id": "153",
-      "category": "dog",
-      "storeName": "Mr.pets",
-      "kind":"toys",
-      "productTitle": "georplast slurpy toy",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/WhatsApp-Image-2020-01-08-at-6.07.17-PM.jpeg",
-      "price": "45.00",
-      "description":"georplast slurpy toy" 
-    },
-    {
-      "id": "154",
-      "category": "dog",
-      "storeName": "Mr.pets",
-      "kind":"toys",
-      "productTitle": "Rope Dog Toy 8",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/1Pcs-18cm-Pets-Dogs-Pet-Supplies-Pet-Dog-Cotton-8-shape-Rope-Chew-Knot-Toy-Durable-600x600.jpg",
-      "price": "75.00",
-      "description":"Rope Dog Toy 8" 
-    },
-    {
-      "id": "155",
-      "category": "dog",
-      "storeName": "Mr.pets",
-      "kind":"toys",
-      "productTitle": "Freedom Rubber Football Small ( 7 cm )",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/05/image-1-79.jpg",
-      "price": "35.00",
-      "description":"Freedom Rubber Football Small ( 7 cm )" 
-    },
-    {
-      "id": "156",
-      "category": "dog",
-      "storeName": "Mr.pets",
-      "kind":"toys",
-      "productTitle": "Rope Knots Ring – Large Dog Toy",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/16256_7_Nuts_for_Knots_Rope_Ring_Blue__92179.1453557177.1280.1280-600x736.jpg",
-      "price": "75.00",
-      "description":"Rope Knots Ring – Large Dog Toy" 
-    },
-    {
-      "id": "157",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"toys",
-      "productTitle": "Giant Chew Dog Toy",
-      "img": "https://cf4.s3.souqcdn.com/item/2018/08/04/36/90/98/85/item_XL_36909885_144367933.jpg",
-      "price": "60.00",
-      "description":"Giant Chew Dog Toy" 
-    },
-    {
-      "id": "158",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"toys",
-      "productTitle": "Soft Reflective Nylon Mesh Padded Dog Collar for Night Safety medium dog 45 cm long",
-      "img": "https://cf5.s3.souqcdn.com/item/2019/10/30/82/52/28/33/item_XL_82522833_c251f962e1a23.jpg",
-      "price": "100.00",
-      "description":"https://cf5.s3.souqcdn.com/item/2019/10/30/82/52/28/33/item_XL_82522833_c251f962e1a23.jpg" 
-    },
-    {
-      "id": "159",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"toys",
-      "productTitle": "Soft Reflective Nylon Mesh Padded Dog Collar for Night Safety medium dog 45 cm long",
-      "img": "https://cf5.s3.souqcdn.com/item/2019/10/30/82/52/28/33/item_XL_82522833_c251f962e1a23.jpg",
-      "price": "100.00",
-      "description":"Soft Reflective Nylon Mesh Padded Dog Collar for Night Safety medium dog 45 cm long" 
-    },
-    {
-      "id": "160",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"toys",
-      "productTitle": "Squeeze Shrilling Screaming Chicken Squawking Chicken Fun Dog Toy 17cm S Size",
-      "img": "https://cf5.s3.souqcdn.com/item/2018/01/02/29/83/92/38/item_XL_29839238_87109555.jpg",
-      "price": "25.00",
-      "description":"Squeeze Shrilling Screaming Chicken Squawking Chicken Fun Dog Toy 17cm S Size" 
-    },
-    {
-      "id": "161",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"toys",
-      "productTitle": "Dog love it Rubber Basketball Squeaker Dog Toy,Orange Large",
-      "img": "https://cf5.s3.souqcdn.com/item/2018/03/28/32/94/16/99/item_XL_32941699_125481366.jpg",
-      "price": "50.00",
-      "description":"Dog love it Rubber Basketball Squeaker Dog Toy,Orange Large" 
-    },
-    {
-      "id": "162",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"toys",
-      "productTitle": "Dog Cat Dispenser Ball Pet Squeaker Chew Toys Squeaky Sound Leakage Food Ball For Training",
-      "img": "https://cf4.s3.souqcdn.com/item/2017/07/02/23/25/44/65/item_XL_23254465_33010605.jpg",
-      "price": "70.00",
-      "description":"Dog Cat Dispenser Ball Pet Squeaker Chew Toys Squeaky Sound Leakage Food Ball For Training" 
-    },
-    {
-      "id": "163",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"toys",
-      "productTitle": "Dog Toothbrush Dog Brushing Stick Tooth Cleaning",
-      "img": "https://cf4.s3.souqcdn.com/item/2019/01/23/43/82/60/19/item_XL_43826019_077f9806eb890.jpg",
-      "price": "115.00",
-      "description":"Dog Toothbrush Dog Brushing Stick Tooth Cleaning" 
-    },
-    {
-      "id": "164",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"toys",
-      "productTitle": "Bone Print Adjustable Pet Cat Dog Neck Collar With Bell 01 cm Width Nylon Collar for Puppy Small Dogs Cats Collar pink",
-      "img": "https://cf1.s3.souqcdn.com/item/2019/04/12/51/69/76/48/item_XL_51697648_2688dce554d10.jpg",
-      "price": "115.00",
-      "description":"Bone Print Adjustable Pet Cat Dog Neck Collar With Bell 01 cm Width Nylon Collar for Puppy Small Dogs Cats Collar pink" 
-    },
-    {
-      "id": "165",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"toys",
-      "productTitle": "Yellow Screaming Rubber Chicken Pet Dog Toy Squeaker Chew Gift",
-      "img": "https://cf2.s3.souqcdn.com/item/2017/05/11/22/71/73/48/item_XL_22717348_31543853.jpg",
-      "price": "45.00",
-      "description":"Yellow Screaming Rubber Chicken Pet Dog Toy Squeaker Chew Gift" 
-    },
-    {
-      "id": "166",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"toys",
-      "productTitle": "Motorized bunny ball with rat for cat dog play",
-      "img": "https://cf1.s3.souqcdn.com/item/2018/07/29/36/81/20/94/item_XL_36812094_144119832.jpg",
-      "price": "45.00",
-      "description":"Motorized bunny ball with rat for cat dog play" 
-    },
-    {
-      "id": "167",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"toys",
-      "productTitle": "Cat Toy Interactive Play 2 in 1 Mouse Teaser Ball Track Chase Wand Motion Toys for Cats Kitten Pink",
-      "img": "https://cf1.s3.souqcdn.com/item/2018/09/23/38/77/58/34/item_XL_38775834_151405891.jpg",
-      "price": "120.00",
-      "description":"Cat Toy Interactive Play 2 in 1 Mouse Teaser Ball Track Chase Wand Motion Toys for Cats Kitten Pink" 
-    },
-    {
-      "id": "168",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"toys",
-      "productTitle": "Scratching toy for cats with spring toy -two levels- grey",
-      "img": "https://cf1.s3.souqcdn.com/item/2019/03/12/47/72/10/92/item_XL_47721092_0a507d456d2be.jpg",
-      "price": "250.00",
-      "description":"Scratching toy for cats with spring toy -two levels- grey" 
-    },
-    {
-      "id": "169",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"toys",
-      "productTitle": "Small cats toy - scratching post",
-      "img": "https://cf4.s3.souqcdn.com/item/2018/10/10/39/39/26/63/item_XL_39392663_153309302.jpg",
-      "price": "64.00",
-      "description":"Small cats toy - scratching post" 
-    },
-    {
-      "id": "170",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"toys",
-      "productTitle": "Scratching post for adult cats -pink",
-      "img": "https://cf2.s3.souqcdn.com/item/2019/10/25/80/93/87/55/item_XL_80938755_4d72b641a0bd7.jpg",
-      "price": "75.00",
-      "description":"Scratching post for adult cats -pink" 
-    },
-    {
-      "id": "171",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"toys",
-      "productTitle": "Scratching toy for cats with spring toy - two levels- red",
-      "img": "https://cf3.s3.souqcdn.com/item/2019/03/12/47/72/07/51/item_XL_47720751_5f07522aeff33.jpg",
-      "price": "300.00",
-      "description":"Scratching toy for cats with spring toy - two levels- red" 
-    },
-    {
-      "id": "172",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"toys",
-      "productTitle": "Cat Toy Interactive Play 2 in 1 Mouse Teaser Ball Track Chase Wand Motion Toys for Cats Kitten Yellow",
-      "img": "https://cf3.s3.souqcdn.com/item/2018/09/23/38/77/58/99/item_XL_38775899_151405973.jpg",
-      "price": "125.00",
-      "description":"Cat Toy Interactive Play 2 in 1 Mouse Teaser Ball Track Chase Wand Motion Toys for Cats Kitten Yellow" 
-    },
-    {
-      "id": "173",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"toys",
-      "productTitle": "Nunbell catnip balls for cats",
-      "img": "https://cf3.s3.souqcdn.com/item/2019/04/15/52/05/43/75/item_XL_52054375_441507c5a6a74.jpg",
-      "price": "35.00",
-      "description":"Nunbell catnip balls for cats" 
-    },
-    {
-      "id": "174",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"toys",
-      "productTitle": "Cat collar Toy cats Accessories bells purple",
-      "img": "https://cf3.s3.souqcdn.com/item/2019/01/11/43/31/23/52/item_XL_43312352_dbfa26e685018.jpg",
-      "price": "30.00",
-      "description":"Cat collar Toy cats Accessories bells purple" 
-    },
-    {
-      "id": "175",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"toys",
-      "productTitle": "Cat Toy Interactive Play 2 in 1 Mouse Teaser Ball Track Chase Wand Motion Toys for Cats Kitten 20.6X25.3CM",
-      "img": "https://cf2.s3.souqcdn.com/item/2018/04/20/33/43/77/41/item_XL_33437741_130831061.jpg",
-      "price": "150.00",
-      "description":"Cat Toy Interactive Play 2 in 1 Mouse Teaser Ball Track Chase Wand Motion Toys for Cats Kitten 20.6X25.3CM" 
-    },
-    {
-      "id": "176",
-      "category": "cat",
-      "storeName": "Mr.pets",
-      "kind":"toys",
-      "productTitle": "Vertigo Cat Toy With anti-slip",
-      "img": "https://cf2.s3.souqcdn.com/item/2018/04/20/33/43/77/41/item_XL_33437741_130831061.jpg",
-      "price": "125.00",
-      "description":"Vertigo Cat Toy With anti-slip" 
-    },
-    {
-      "id": "177",
-      "category": "cat",
-      "storeName": "Mr.pets",
-      "kind":"toys",
-      "productTitle": "Rubber Basket (7 cm)",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/05/image-2-50-600x410.jpg",
-      "price": "35.00",
-      "description":"Rubber Basket (7 cm)" 
-    },
-    {
-      "id": "178",
-      "category": "cat",
-      "storeName": "Mr.pets",
-      "kind":"toys",
-      "productTitle": "Rope With Hand & Ball",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/05/image-8.jpg",
-      "price": "65.00",
-      "description":"Rope With Hand & Ball" 
-    },
-    {
-      "id": "178",
-      "category": "cat",
-      "storeName": "Mr.pets",
-      "kind":"toys",
-      "productTitle": "Rope With Hand & Ball",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/05/image-8.jpg",
-      "price": "65.00",
-      "description":"Rope With Hand & Ball" 
-    },
-    {
-      "id": "179",
-      "category": "dog",
-      "storeName": "Mr.pets",
-      "kind":"Shampoo",
-      "productTitle": "Pets Republic Dry Shampoo Powder 200 g",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/12/image-1-1-600x600.jpg",
-      "price": "35.00",
-      "description":"Pets Republic Dry Shampoo Powder 200 g" 
-    },
-    {
-      "id": "180",
-      "category": "dog",
-      "storeName": "Mr.pets",
-      "kind":"Shampoo",
-      "productTitle": "PR Dry Shampoo Powder 500 g",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/04/image-2-1-600x600.jpg",
-      "price": "55.00",
-      "description":"PR Dry Shampoo Powder 500 g" 
-    },
-    {
-      "id": "181",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"Shampoo",
-      "productTitle": "BARS Insecticide Cat & Dog Anti Parasite Shampoo - 250 ml",
-      "img": "https://cf4.s3.souqcdn.com/item/2018/02/11/30/63/92/13/item_XL_30639213_110346560.jpg",
-      "price": "100.00",
-      "description":"BARS Insecticide Cat & Dog Anti Parasite Shampoo - 250 ml" 
-    },
-    {
-      "id": "182",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"Shampoo",
-      "productTitle": "ORGO Rottweiler Dog Shampoo 450ml",
-      "img": "https://cf5.s3.souqcdn.com/item/2018/01/16/30/04/90/81/item_XL_30049081_90819984.jpg",
-      "price": "55.00",
-      "description":"ORGO Rottweiler Dog Shampoo 450ml" 
-    },
-    {
-      "id": "183",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"Shampoo",
-      "productTitle": "OMNIGUARD Vital Hair & Scalp Complex Shampoo For Cats & Dogs 250m",
-      "img": "https://cf3.s3.souqcdn.com/item/2018/05/04/34/01/00/25/item_XL_34010025_132605186.jpg",
-      "price": "70.00",
-      "description":"OMNIGUARD Vital Hair & Scalp Complex Shampoo For Cats & Dogs 250m" 
-    },
-    {
-      "id": "184",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"Shampoo",
-      "productTitle": "OMNI GUARD DRY SHAMPOO 300 GM FOR DOGS AND CATS",
-      "img": "https://cf3.s3.souqcdn.com/item/2018/10/18/39/56/69/68/item_XL_39566968_154666498.jpg",
-      "price": "62.00",
-      "description":"OMNI GUARD DRY SHAMPOO 300 GM FOR DOGS AND CATS" 
-    },
-    {
-      "id": "185",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"Shampoo",
-      "productTitle": "Pets Republic Foam Dry Shampoo with Keratin 520 ml Foe Cats And Dogs",
-      "img": "https://cf3.s3.souqcdn.com/item/2016/12/06/11/97/97/16/item_XL_11979716_17909033.jpg",
-      "price": "62.00",
-      "description":"Pets Republic Foam Dry Shampoo with Keratin 520 ml Foe Cats And Dogs" 
-    },
-    {
-      "id": "186",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"Shampoo",
-      "productTitle": "Meli - Cats Shampoo 400 ml",
-      "img": "https://cf5.s3.souqcdn.com/item/2018/07/22/36/69/58/34/item_XL_36695834_143761506.jpg",
-      "price": "55.00",
-      "description":"Meli - Cats Shampoo 400 ml" 
-    },
-    {
-      "id": "187",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"Shampoo",
-      "productTitle": "Shampoo for dogs and cats with lemon grass 500 ml",
-      "img": "https://cf1.s3.souqcdn.com/item/2019/06/05/54/89/41/84/item_XL_54894184_20534a6c4a61d.jpg",
-      "price": "75.00",
-      "description":"Shampoo for dogs and cats with lemon grass 500 ml" 
-    },
-    {
-      "id": "188",
-      "category": "cat",
-      "storeName": "Mr.pets",
-      "kind":"Shampoo",
-      "productTitle": "Pets Republic Dry Shampoo Powder 200 g",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/12/image-1-1-600x600.jpg",
-      "price": "35.00",
-      "description":"https://mrpets.com.eg/new/wp-content/uploads/2019/12/image-1-1-600x600.jpg" 
-    },
-    {
-      "id": "189",
-      "category": "cat",
-      "storeName": "Mr.pets",
-      "kind":"Shampoo",
-      "productTitle": "ORGO Anti Allergen Cats & Kittens Shampoo 450ml",
-      "img": "https://cf1.s3.souqcdn.com/item/2018/01/16/30/04/91/05/item_XL_30049105_90826030.jpg",
-      "price": "88.00",
-      "description":"ORGO Anti Allergen Cats & Kittens Shampoo 450ml" 
-    },
-    {
-      "id": "190",
-      "category": "cat",
-      "storeName": "Mr.pets",
-      "kind":"spray",
-      "productTitle": "Urine Off 236M",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/11/urine-600x600.jpg",
-      "price": "75.00",
-      "description":"Urine Off 236M" 
-    },
-    {
-      "id": "191",
-      "category": "cat",
-      "storeName": "Mr.pets",
-      "kind":"spray",
-      "productTitle": "PETS republic Perfume ( Flowery) ",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2018/11/pets-republic-600x899.jpeg",
-      "price": "65.00",
-      "description":"PETS republic Perfume ( Flowery )" 
-    },
-    {
-      "id": "192",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"spray",
-      "productTitle": "Pets Republic Anti Scratch - Cats Spray 250ml",
-      "img": "https://cf5.s3.souqcdn.com/item/2018/01/12/29/97/87/37/item_XL_29978737_89694605.jpg",
-      "price": "69.00",
-      "description":"Pets Republic Anti Scratch - Cats Spray 250ml" 
-    },
-    {
-      "id": "193",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"spray",
-      "productTitle": "Omni Guard Cats & Dogs Deodorizing Freshner Spray - 225ml",
-      "img": "https://cf5.s3.souqcdn.com/item/2018/07/10/36/43/62/55/item_XL_36436255_143058112.jpg",
-      "price": "85.00",
-      "description":"Omni Guard Cats & Dogs Deodorizing Freshner Spray - 225ml" 
-    },
-    {
-      "id": "194",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"spray",
-      "productTitle": "Safe line Flea & Tick Spray For Cats - 100ml",
-      "img": "https://cf4.s3.souqcdn.com/item/2019/04/20/52/58/49/29/item_XL_52584929_468d85bbcaf38.jpg",
-      "price": "69.00",
-      "description":"Safe line Flea & Tick Spray For Cats - 100ml" 
-    },
-    {
-      "id": "195",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"spray",
-      "productTitle": "Pets Republic Anti-Scratch Spray For Cats, 250Ml",
-      "img": "https://cf2.s3.souqcdn.com/item/2018/08/04/36/90/99/14/item_XL_36909914_144367962.jpg",
-      "price": "115.00",
-      "description":"Pets Republic Anti-Scratch Spray For Cats, 250Ml" 
-    },
-    {
-      "id": "196",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"spray",
-      "productTitle": "Pets Republic Anti-Scratch Spray For Cats, 250Ml",
-      "img": "https://cf2.s3.souqcdn.com/item/2018/08/04/36/90/99/14/item_XL_36909914_144367962.jpg",
-      "price": "115.00",
-      "description":"Pets Republic Anti-Scratch Spray For Cats, 250Ml" 
-    },
-    {
-      "id": "197",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"spray",
-      "productTitle": "Frontline Spray For Dogs, 100Ml",
-      "img": "https://cf5.s3.souqcdn.com/item/2018/08/04/36/90/99/58/item_XL_36909958_144368007.jpg",
-      "price": "580.00",
-      "description":"Frontline Spray For Dogs, 100Ml" 
-    },
-    {
-      "id": "198",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"spray",
-      "productTitle": "Omni Guard Vital Hair Tonic Spray for Dogs - 220ml",
-      "img": "https://cf4.s3.souqcdn.com/item/2018/07/10/36/44/01/07/item_XL_36440107_143063728.jpg",
-      "price": "86.00",
-      "description":"Omni Guard Vital Hair Tonic Spray for Dogs - 220ml" 
-    },
-    {
-      "id": "199",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"spray",
-      "productTitle": "Puppy Trainer Spray - 236ml",
-      "img": "https://cf2.s3.souqcdn.com/item/2018/01/14/29/97/88/14/item_XL_29978814_89729276.jpg",
-      "price": "79.00",
-      "description":"Puppy Trainer Spray - 236ml" 
-    },
-    {
-      "id": "200",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"spray",
-      "productTitle": "OMNI GUARD Deodorizing Pet Spray 225 ml",
-      "img": "https://cf2.s3.souqcdn.com/item/2018/07/15/36/56/12/50/item_XL_36561250_143387490.jpg",
-      "price": "92.00",
-      "description":"OMNI GUARD Deodorizing Pet Spray 225 ml" 
-    },
-    {
-      "id": "201",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"spray",
-      "productTitle": "Safe Line Flea & Tick Spray For Dogs 200ml",
-      "img": "https://cf3.s3.souqcdn.com/item/2019/03/31/50/39/29/08/item_XL_50392908_bd1c83f5d153d.jpg",
-      "price": "89.00",
-      "description":"Safe Line Flea & Tick Spray For Dogs 200ml" 
-    },
-    {
-      "id": "202",
-      "category": "dog",
-      "storeName": "Mr.pets",
-      "kind":"spray",
-      "productTitle": "Pets Republic 236 ml Urine Off!! Pro Spray for Dogs",
-      "img": "https://cf1.s3.souqcdn.com/item/2017/08/01/23/65/96/65/item_XL_23659665_33989319.jpg",
-      "price": "70.00",
-      "description":"Pets Republic 236 ml Urine Off!! Pro Spray for Dogs" 
-    },
-    {
-      "id": "204",
-      "category": "dog",
-      "storeName": "Mr.pets",
-      "kind":"spray",
-      "productTitle": "DermaPharm Moskilex Spray",
-      "img": "https://cf3.s3.souqcdn.com/item/2017/08/01/23/65/97/11/item_XXL_23659711_33989395.jpg",
-      "price": "140.00",
-      "description":"DermaPharm Moskilex Spray" 
-    },
-    {
-      "id": "205",
-      "category": "dog",
-      "storeName": "Mr.pets",
-      "kind":"cage",
-      "productTitle": "Skude 3 60x40x39h cm metal door",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2020/01/s-l640.jpg",
-      "price": "350.00",
-      "description":"Skude 3 60x40x39h cm metal door" 
-    },
-    {
-      "id": "206",
-      "category": "dog",
-      "storeName": "Mr.pets",
-      "kind":"cage",
-      "productTitle": "dog carrier",
-      "img": "https://mrpets.com.eg/new/wp-content/uploads/2019/07/item_XL_32818939_124300053.jpg",
-      "price": "280.00",
-      "description":"dog carrier" 
-    },
-    {
-      "id": "207",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"cage",
-      "productTitle": "Carriers & Cages for Cats & Dogs",
-      "img": "https://cf5.s3.souqcdn.com/item/2018/09/14/38/56/09/30/item_XL_38560930_150332824.jpg",
-      "price": "120.00",
-      "description":"Carriers & Cages for Cats & Dogs" 
-    },
-    {
-      "id": "208",
-      "category": "dog",
-      "storeName": "Pet Yard",
-      "kind":"cage",
-      "productTitle": "Foldable Metal Dog Cage Small",
-      "img": "https://cf2.s3.souqcdn.com/item/2016/08/08/11/34/70/45/item_XL_11347045_15798192.jpg",
-      "price": "120.00",
-      "description":"This fold-able dog cage will be a great help in training and containing your canine friend. The unique layout, with its durable and secure features, makes this the perfect cage for almost any location in your home.   The cage features a smart, fold-able design, which takes up only a little storage space when not in use.  The heavy-duty steel frame provides maximum strength and stability" 
-    },
-    {
-      "id": "209",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"cage",
-      "productTitle": "doggy fasion Carriers & Cages Cats & Dogs",
-      "img": "https://cf3.s3.souqcdn.com/item/2020/01/02/10/29/32/24/5/item_XL_102932245_f128df3d8ea8b.jpg",
-      "price": "146.00",
-      "description":"kitties will love this portable pet carrier with a large entry side. 2. Equipped with an adjustable shoulder strap and durable handles, you can use it at home or take with you when going to vet appointments. 3. Wherever you go with your pets, our dog carrier bag will " 
-    },
-    {
-      "id": "210",
-      "category": "dog",
-      "storeName": "Pettix",
-      "kind":"cage",
-      "productTitle": "Dogs cage - Carriers & Cages",
-      "img": "https://cf1.s3.souqcdn.com/item/2019/12/11/94/42/91/80/item_XL_94429180_8ec2c483c3bc7.jpg",
-      "price": "2.500.00",
-      "description":"Dogs cage - Carriers & Cages" 
-    },
-    {
-      "id": "211",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"cage",
-      "productTitle": "Plastic cage portable for cats and dogs 30x47 cm - Pink",
-      "img": "https://cf3.s3.souqcdn.com/item/2018/11/07/40/21/91/04/item_XL_40219104_6f44e06f69a50.jpg",
-      "price": "190.00",
-      "description":"Plastic cage portable for cats and dogs 30x47 cm - Pink" 
-    },
-    {
-      "id": "212",
-      "category": "dog",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"cage",
-      "productTitle": "Dogs and cats portable plastic cage 30x47 cm - Brown",
-      "img": "https://cf1.s3.souqcdn.com/item/2018/06/07/35/75/87/91/item_XL_35758791_139180803.jpg",
-      "price": "200.00",
-      "description":"Dogs and cats portable plastic cage 30x47 cm - Brown" 
-    },
-    {
-      "id": "213",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"cage",
-      "productTitle": "Carriers & Cages for Cats & Dogs",
-      "img": "https://cf1.s3.souqcdn.com/item/2018/09/14/38/56/08/28/item_XL_38560828_150332547.jpg",
-      "price": "170.00",
-      "description":"Carriers & Cages for Cats & Dogs" 
-    },
-    {
-      "id": "214",
-      "category": "cat",
-      "storeName": "Bow Wow Pet Shop",
-      "kind":"cage",
-      "productTitle": "Mps Cage For Cats",
-      "img": "https://cf4.s3.souqcdn.com/item/2018/04/16/33/37/98/42/item_XXL_33379842_130687252.jpg",
-      "price": "275.00",
-      "description":"Cage for catsBrand: MPSTarget group: CatsDimensions57.5x 39.5 x 40.5 cmWeight: 600 gramsMaximum animal weight: 6/5 kg" 
-    },
-    {
-      "id": "215",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"cage",
-      "productTitle": "iron cage for cats (pink)",
-      "img": "https://cf1.s3.souqcdn.com/item/2019/10/21/78/66/84/09/item_XL_78668409_34434cea086ac.jpg",
-      "price": "600.00",
-      "description":"iron cage for cats (pink)" 
-    },
-    {
-      "id": "216",
-      "category": "cat",
-      "storeName": "Pet Yard",
-      "kind":"cage",
-      "productTitle": "MPS Transporter neyo hamster and cats small animals puppy cage 30x23x23cm green",
-      "img": "https://cf1.s3.souqcdn.com/item/2019/05/25/54/54/63/09/item_XL_54546309_faeca27de319d.jpg",
-      "price": "150.00",
-      "description":"MPS Transporter neyo hamster and cats small animals puppy cage 30x23x23cm green" 
-    },
-    {
-      "id": "217",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"cage",
-      "productTitle": "Green Folding Metal animal Crate for Dogs&Cats&Rabits",
-      "img": "https://cf5.s3.souqcdn.com/item/2017/09/25/24/26/13/76/item_XL_24261376_35509792.jpg",
-      "price": "690.00",
-      "description":"Animal crate with double-door design for convenient front and side entryTwo slide-bolt latches on each door for increased safety and securitySturdy metal construction; folds flat for easy storage/portabilityDog crate with double-door design for convenient front and side entrySize:70cm*50cm*60cm3.5cm between each barInclude one food tray" 
-    },
-    {
-      "id": "218",
-      "category": "cat",
-      "storeName": "Pettix",
-      "kind":"cage",
-      "productTitle": "Carriers & Cages",
-      "img": "https://cf1.s3.souqcdn.com/item/2017/06/04/22/98/85/93/item_XL_22988593_32276586.jpg",
-      "price": "690.00",
-      "description":"Portable Folding Soft Sided Pet Carrier Airline Travel Cat Dog Kitten Puppy Crate Kennel Small Animals Tote Bag, 21-inch, for Pets up to 16 Pound" 
-    },
-    {
-      "id": "219",
-      "category": "cat",
-      "storeName": "Mr.pets",
-      "kind":"cage",
-      "productTitle": "Pet Travel Portable Carrier Bag ",
-      "img": "https://cf4.s3.souqcdn.com/item/2019/06/27/55/24/29/68/item_XL_55242968_23dc2e26539cc.jpg",
-      "price": "255.00",
-      "description":"Pet Carrier Airline Approved Pet Travel Portable Carrier Bag Soft Sided Pet Travel Carrier Perfect For Small Dogs And Cats"
-    },
-    {
-      "id": "220",
-      "category": "cat",
-      "storeName": "Mr.pets",
-      "kind":"cage",
-      "productTitle": "Cat and puppy box ",
-      "img": "https://cf4.s3.souqcdn.com/item/2018/05/07/33/65/62/28/item_XL_33656228_132682953.jpg",
-      "price": "275.00",
-      "description":"Cat and puppy box"
-    }  
+    }
   ],
   "blogs": [
     {

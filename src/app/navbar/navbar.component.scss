@@ -2,13 +2,11 @@
   padding-left: 0;
 }
 .navbar {
+  position: fixed;
   width: 100%;
-  z-index: 9;
+  z-index: 9999;
   background-color: #fff;
   padding: 10px;
-  position: fixed;
-  // padding-bottom: 10rem;
-  background: transparent;
 }
 .bg-light {
   background-color: #f4f2f3 !important;
@@ -153,44 +151,4 @@
   padding: 15px;
   border-radius: 5px;
   right: 0;
-}
-  
-  .body-menu {
-    left: -245px !important;
-  }
-  
-  .active-link {
-    color: #981a1e !important; /* Note: You could also use a custom theme */
-  }
-  .navbar-nav {
-    position: relative;
-  }
-  .navbar-light .navbar-nav .nav-link:hover,.dropdown-toggle:hover {
-    
-    color: #981a1e ;
-    transition: all .5s ease-in-out;
-  }
-  // .active-link::after {
-  //   position: absolute;
-  //   content: "";
-  //   width: 30px;
-  //   height: 2px;
-  //   top: 28px;
-  //   background-color: #425575;
-  //   left: 22px;
-  // }
-  .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
-    background:none;
-  }
-  #dropdown-basic i {
-    color: #fff;
-  }
- .example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-}
-
-.example-full-width {
-  width: 100%;
 }

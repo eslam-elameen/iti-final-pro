@@ -7,7 +7,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 // import { NgxNavbarModule } from 'ngx-bootstrap-navbar';                                  
-import {MaterialAnglur} from './material'
+
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeroHeaderComponent } from './hero-header/hero-header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -24,20 +24,13 @@ import { ProuductRandomComponent } from './prouduct-random/prouduct-random.compo
 import { TestComponent } from './test/test.component';
 import { SignleProductComponent } from './signle-product/signle-product.component';
 import { RatingModule } from 'ngx-bootstrap/rating';
-// import { BrowserModule } from '@angular/platform-browser';
-
-
 import { NgxSpinnerModule } from "ngx-spinner";
 import { FilterResultPipe } from './filter-result.pipe';
 import { RandomBlogComponent } from './random-blog/random-blog.component';
 import { GalaryComponent } from './galary/galary.component';
 import { OfferProductComponent } from './offer-product/offer-product.component';
-import { from } from 'rxjs';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { NgwWowModule } from 'ngx-wow';
-import { OurServicesComponent } from './our-services/our-services.component';
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -81,9 +74,7 @@ import { PayComponent } from './pay/pay.component';
     RandomBlogComponent,
     GalaryComponent,
     OfferProductComponent,
-    LoginComponent,
-    ShoppingCartComponent,
-    OurServicesComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -103,13 +94,9 @@ import { PayComponent } from './pay/pay.component';
     NgxStarRatingModule,
     RatingModule.forRoot(),
     BsDropdownModule.forRoot(),
-    BrowserModule,
-    MaterialAnglur,
     ModalModule.forRoot(),
     NgwWowModule,
-    NgxSpinnerModule,
-    BsDatepickerModule.forRoot()
-
+    NgxSpinnerModule
   ],
 
   providers: [],
