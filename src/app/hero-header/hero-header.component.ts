@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { BlogServiceService } from '../blog-service.service';
 import { ActivatedRoute, Router } from "@angular/router";
-import { CLASS_NAME } from 'ngx-bootstrap/modal/modal-options.class';
 import { NgwWowService } from 'ngx-wow';
 
 @Component({
@@ -13,10 +12,10 @@ import { NgwWowService } from 'ngx-wow';
 export class HeroHeaderComponent implements OnInit {
   images;
   id :any;
-
-  constructor(private http: BlogServiceService, private dataServ: BlogServiceService, private _router: Router,private wowService: NgwWowService) { }  
+  // private wowService: NgwWowService
+  constructor(private wowService: NgwWowService,private http: BlogServiceService, private dataServ: BlogServiceService, private _router: Router) { }  
   ngOnInit() {
-    this.wowService.init();
+    // this.wowService.init();
     this.http.getSlider().subscribe(res => {
       this.images = res;
       this.id = this.images[1];

@@ -16,7 +16,8 @@ export class RandomBlogComponent implements OnInit {
   postItem;
   cards;
   random;
-  constructor(private wowService: NgwWowService,private http: BlogServiceService, private dataServ: BlogServiceService, private _router: Router) { }
+  // private wowService: NgwWowService
+  constructor(private http: BlogServiceService, private wowService: NgwWowService,private dataServ: BlogServiceService, private _router: Router) { }
 
   ngOnInit() {
     this.wowService.init();

@@ -7,7 +7,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 // import { NgxNavbarModule } from 'ngx-bootstrap-navbar';                                  
-
+import {MaterialAnglur} from './material'
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeroHeaderComponent } from './hero-header/hero-header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -25,12 +25,16 @@ import { TestComponent } from './test/test.component';
 import { SignleProductComponent } from './signle-product/signle-product.component';
 import { RatingModule } from 'ngx-bootstrap/rating';
 import { NgxSpinnerModule } from "ngx-spinner";
+// import { BrowserModule } from '@angular/platform-browser';
+
+
 import { FilterResultPipe } from './filter-result.pipe';
 import { RandomBlogComponent } from './random-blog/random-blog.component';
 import { GalaryComponent } from './galary/galary.component';
 import { OfferProductComponent } from './offer-product/offer-product.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { NgwWowModule } from 'ngx-wow';
+// import { NgwWowModule } from 'ngx-wow';
+import { from } from 'rxjs';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -95,8 +99,12 @@ import { PayComponent } from './pay/pay.component';
     RatingModule.forRoot(),
     BsDropdownModule.forRoot(),
     ModalModule.forRoot(),
-    NgwWowModule,
-    NgxSpinnerModule
+    // NgwWowModule,
+    NgxSpinnerModule,
+    BrowserModule,
+    MaterialAnglur
+    
+
   ],
 
   providers: [],

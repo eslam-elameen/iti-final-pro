@@ -11,7 +11,7 @@ import { NgwWowService } from 'ngx-wow';
   styleUrls: ['./single-blog.component.scss']
 })
 export class SingleBlogComponent implements OnInit {
-
+  // 
   constructor(private wowService: NgwWowService,private single: ActivatedRoute, private blogService: BlogServiceService) { }
   cards;
   postItem;

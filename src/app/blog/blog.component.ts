@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogServiceService } from '../blog-service.service';
 import { ActivatedRoute, Router } from "@angular/router";
-import { NgwWowService } from 'ngx-wow';
+// import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-blog',
@@ -9,8 +9,8 @@ import { NgwWowService } from 'ngx-wow';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
-
-  constructor(private wowService: NgwWowService, private http: BlogServiceService, private dataServ: BlogServiceService, private _router: Router) { }
+  // private wowService: NgwWowService
+  constructor( private http: BlogServiceService, private dataServ: BlogServiceService, private _router: Router) { }
   title = 'myNewApp';
   counter;
   count: number;
@@ -21,7 +21,7 @@ export class BlogComponent implements OnInit {
   x: number = 5;
   y: number = 4;
   ngOnInit() {
-    this.wowService.init();
+    // this.wowService.init();
     this.http.getData().subscribe(res => {
     this.posts = res;
     this.dataServ.currentMessage.subscribe(message =>
