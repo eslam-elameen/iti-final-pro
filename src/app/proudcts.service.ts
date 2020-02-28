@@ -14,8 +14,12 @@ export class ProudctsService {
   getData() {
     return this.http.get("http://localhost:3000/products")
   }
+  getSingleData(id) {
+    return this.http.get("http://localhost:3000/products/"+id)
+  }
+  
   getResult(data:[]) {
-    console.log(data); 
+    console.log(data);          
 
     this.sendSearchResult.next(data);
   }

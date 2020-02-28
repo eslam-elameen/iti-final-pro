@@ -1,41 +1,48 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProudctsService } from '../proudcts.service';
-
+import {FormControl} from '@angular/forms';
+import {Observable} from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
+export interface Product {
+  category: string;
+  kind: string;
+  storeName: string;
+}
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
-  mySearch:FormGroup
+  mySearch = new FormControl('', Validators.required);
+  filterAutoComolete: Observable<Product[]>;
   productsData;
   filterd;
   searchResult;
-  
-  
-  public constructor(private fb: FormBuilder,private searchServer:ProudctsService) {
+  toggle
+  public constructor(private fb: FormBuilder, private searchServer: ProudctsService) {
     this.searchServer.getData().subscribe(res => this.searchResult = this.productsData = res)
-    
+    this.filterAutoComolete = this.mySearch.valueChanges
+    .pipe(
+      startWith(''),
+      map(product => product ? this._filterStates(product) : this.filterd)
+    );
+}
+private _filterStates(value: string): Product[] {
+  const filterValue = value.toLowerCase();
+  return this.productsData.filter(product => product.kind.toLowerCase().includes(filterValue) || product.productTitle.toLowerCase().includes(filterValue) );
   }
-  onSubmit(formGroup){
-    this.searchResult = (formGroup)?
-    this.productsData.filter(item =>  item.productTitle.toLowerCase().includes(formGroup.toLowerCase()) ) :
-    this.productsData;
-    console.log( this.searchResult)
-  
+  onSubmit(form) {
+    this.searchResult = (form.value) ?
+      this.productsData.filter(item => item.productTitle.toLowerCase().includes(form.value.toLowerCase()) || item.kind.toLowerCase().includes(form.value.toLowerCase())) :
+      this.searchResult ;
+    console.log(this.searchResult)
     this.searchServer.getResult(this.searchResult)
-    
+    console.log(form.value)
+    this.mySearch.setValue('')
   }
-    
-    ngOnInit() {
-      this.mySearch = this.fb.group({
-      search:''
-      });
-  
-    }
-  
+  ngOnInit() {
+   
   }
-  
-  
+}
