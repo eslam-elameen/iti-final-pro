@@ -1,0 +1,84 @@
+<section class="container">
+  <div class="row">
+
+    <div class="col-md-6" id="any">
+
+      <h4 class=" logo__text heading-1">PetObey</h4>
+
+
+      .
+
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" class="col-md-10 offset-md-1">
+        <h6 class="breadcrumb__text">Contact Information</h6>
+
+
+        <input formControlName="email" class="form-control" placeholder="Please Enter Email">
+        <div *ngIf="myForm.get('email').hasError('pattern')"> </div>
+
+        <input formControlName="mobile" placeholder="Your email" class="form-control" placeholder="Please Enter Mobile">
+        <div *ngIf="myForm.controls.mobile.hasError('pattern')"></div>
+
+
+        <h6 class="breadcrumb__text">Shipping Address</h6>
+
+        <div class="selection">
+          <input formControlName="fName" type="text" class="form-control" placeholder="First name" class="col-md-6">
+          <div *ngIf="myForm.get('fName').hasError('pattern')"></div>
+          <input formControlName="lName" class="form-control" placeholder="Last Name" class="col-md-6">
+          <div *ngIf="myForm.get('lName').hasError('pattern')"> </div>
+        </div>
+
+
+        <input formControlName="address" class="form-control" placeholder="Please enter Your address">
+        <div *ngIf="myForm.get('address').hasError('pattern')"> </div>
+
+
+        <input formControlName="city" class="form-control" placeholder="Please enter Your City">
+        <div *ngIf="myForm.get('city').hasError('pattern')"> </div>
+
+        <div class="selection">
+
+          <select class="form-control" required class="col-md-6">
+            <option>select your city</option>
+            <option>Cario</option>
+            <option>Alexandria</option>
+            <option>Asuet</option>
+            <option>Geza</option>
+            <option>Mansoura</option>
+            <option>Damanhour</option>
+            <option>Tanta</option>
+            <option>Banha</option>
+            <option>Menia</option>
+          </select>
+
+          <input formControlName="postalCode" class="form-control" placeholder="Postal code" class="col-md-6">
+          <div *ngIf="myForm.get('postalCode').hasError('pattern')"> </div>
+        </div>
+
+        <button type="submit" [disabled]="myForm.invalid" class="btn btn-primary">
+          Checkout
+        </button>
+      </form>
+    </div> 
+
+
+
+    <div class="col-md-6">
+      <ul class="list-unstyled">
+        <div class="media-style">
+        <li class="media col-md-12"  *ngFor="let card of productFromLocal">
+          <img class="mr-3 img-fluid" src="{{card.img}}" alt="Generic placeholder image">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">{{card.productTitle}}</h5>
+            <p>{{card.price}}</p>
+            <p>{{card.totalPrice}}</p>
+          </div>
+        </li>
+        <h1>Total Price: {{totalAllProductPrice()}}</h1>
+      </div>
+    </ul>
+    </div>
+    <!-- <h1>Total Price: {{totalAllProductPrice()}}</h1> -->
+    
+  </div>
+</section>

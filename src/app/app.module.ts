@@ -1,12 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule} from '@angular/common/http'
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
 // import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxStarRatingModule } from 'ngx-star-rating';
@@ -31,12 +27,31 @@ import { RatingModule } from 'ngx-bootstrap/rating';
 // import { BrowserModule } from '@angular/platform-browser';
 
 
+import { NgxSpinnerModule } from "ngx-spinner";
 import { FilterResultPipe } from './filter-result.pipe';
 import { RandomBlogComponent } from './random-blog/random-blog.component';
 import { GalaryComponent } from './galary/galary.component';
 import { OfferProductComponent } from './offer-product/offer-product.component';
 import { from } from 'rxjs';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { NgwWowModule } from 'ngx-wow';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { FileUploadModule } from 'ng2-file-upload';//import this package for profile img
+import { RegisterationComponent } from './registeration/registeration.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { NavComponent } from './nav/nav.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { RouterModule, Routes } from '@angular/router';
+import { CheckComponent } from './check/check.component';
+import { PayComponent } from './pay/pay.component';
 
 @NgModule({
   declarations: [
@@ -51,8 +66,13 @@ import { from } from 'rxjs';
     ProTypeComponent,
     SearchComponent,
     SearchResultComponent,
+    NavComponent,
+    HomeComponent,
+    UserprofileComponent,
+    PayComponent,
+    CheckComponent,
     FilterResultPipe,
-    
+    RegisterationComponent,
     HomeComponent,
     ServicesComponent,
     ProuductRandomComponent,
@@ -60,7 +80,10 @@ import { from } from 'rxjs';
     SignleProductComponent,
     RandomBlogComponent,
     GalaryComponent,
-    OfferProductComponent
+    OfferProductComponent,
+    LoginComponent,
+    ShoppingCartComponent,
+    OurServicesComponent
   ],
   imports: [
     BrowserModule,
@@ -71,13 +94,21 @@ import { from } from 'rxjs';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule,
+    FileUploadModule,
+    RouterModule,
     CarouselModule,
     NgxStarRatingModule,
     RatingModule.forRoot(),
     BsDropdownModule.forRoot(),
     BrowserModule,
-    MaterialAnglur
-    
+    MaterialAnglur,
+    ModalModule.forRoot(),
+    NgwWowModule,
+    NgxSpinnerModule,
+    BsDatepickerModule.forRoot()
 
   ],
 

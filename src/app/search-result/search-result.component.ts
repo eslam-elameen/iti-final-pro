@@ -9,6 +9,9 @@ import { ProudctsService } from '../proudcts.service';
   styleUrls: ['./search-result.component.scss']
 })
 export class SearchResultComponent implements OnInit {
+  // x: number = 5;
+  y: number = 4;
+  max: number = 5;
   searchData;
   count = 0;
   storeName = [];

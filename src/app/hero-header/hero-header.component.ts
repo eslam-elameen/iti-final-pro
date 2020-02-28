@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { BlogServiceService } from '../blog-service.service';
 import { ActivatedRoute, Router } from "@angular/router";
-
+import { CLASS_NAME } from 'ngx-bootstrap/modal/modal-options.class';
+import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-hero-header',
@@ -11,23 +12,42 @@ import { ActivatedRoute, Router } from "@angular/router";
 })
 export class HeroHeaderComponent implements OnInit {
   images;
-  constructor(private http: BlogServiceService, private dataServ: BlogServiceService, private _router: Router) { }
+  id :any;
 
+  constructor(private http: BlogServiceService, private dataServ: BlogServiceService, private _router: Router,private wowService: NgwWowService) { }  
   ngOnInit() {
-
+    this.wowService.init();
     this.http.getSlider().subscribe(res => {
       this.images = res;
-      // console.log(this.posts);
+      this.id = this.images[1];
+      // console.log(this.id);
 
+      
+    //  this.id = document.getElementById('slide2');
+      // console.log(this.images[1]);
+      // this.images[1] = Object.assign(this.images[1], {class: "slideTwo"});
+      // console.log( this.images[1]);
+      
+      // console.log(this.id.class);
+      
+      
+
+      
+
+        
     });
+   
   }
   customOptions: OwlOptions = {
     loop: true,
+    autoplay:true,
+    nav:false,
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
-    dots: false,
+    dots: true,
     navSpeed: 700,
+    items: 3,
     navText: ['', ''],
     responsive: {
       0: {
@@ -43,6 +63,5 @@ export class HeroHeaderComponent implements OnInit {
         items: 1
       }
     },
-    nav: true
   }
 }

@@ -1,0 +1,143 @@
+<section class="userProfile">
+  <div class="container">
+    <!-- <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="media">
+          <img class="mr-1" alt="Generic placeholder image" width="300px" height="300px" [src]="userImg">
+          <div class="choose-img">
+            <input type="file" (change)="readUrl($event)">
+            <button class="btn btn-primary" type="button">choose</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="media-body">
+          <h5 class="mt-0">Name:{{userName}}</h5>
+          <h5 class="mt-0">Email:{{userEmail}}</h5>
+        </div>
+      </div>
+    </div>
+  </div> -->
+    <div id="sidebar-main" class="sidebar sidebar-default sidebar-separate">
+      <div class="sidebar-content">
+        <div class="row no-gutters">
+          <div class="col-md-3 pr-3">
+            <div class="sidebar-category sidebar-default">
+              <div class="sidebar-user">
+                <div class="category-content">
+                  <div class="image-upload">
+                    <img class="mr-1"  width="300px" height="300px" [src]="userImg">
+                    <label for="file-input" class="file-icons">
+                      <i class="fas fa-camera"></i>
+                    </label>
+                    <input id="file-input" type="file" accept=".jpg,.jpeg" (change)="readUrl($event)" />
+                  </div>
+                  <div class="media-body">
+                    <h5 class="mt-0">Name:{{user.name}}</h5>
+                    <p class="mt-0">Email:{{user.email}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-category sidebar-default">
+              <div class="category-title">
+                <h5>User Detail</h5>
+              </div>
+              <div class="category-content">
+                <ul id="sidebar-editable-nav" class="nav flex-column">
+                  <li class="nav-item">
+                    <a href="/admin/customers" class="nav-link active">
+                      <i class="far fa-user"></i>
+                      My account
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/admin/resettest" class="nav-link">
+                      <i class="far fa-clipboard"></i>
+                      Orders
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/admin/usersprofiles" class="nav-link">
+                      <i class="far fa-heart"></i>
+                      Saved Items
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/admin/logout" class="nav-link">
+                      <i class="fas fa-sign-out-alt"></i>
+                      Log out
+                    </a>
+                  </li>
+                </ul>
+                <!-- /Nav -->
+              </div>
+              <!-- /Category Content -->
+            </div>
+            <!-- /Sidebar Category -->
+          </div>
+
+          <div class="col-md-9">
+            <div class="content-wapper py-5">
+
+              <div class="row d-flex justify-content-center">
+                <div class="col-md-5">
+                  <div class="card mb-3">
+                    <div class="header-card">
+
+                      <div class="card-header">
+                        <span>Account Details</span>
+                        <i class="fas fa-pen"></i>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="media-body">
+                        <h6 class="card-title">Name:{{user.name}}</h6>
+                        <p class="card-text">Email:{{user.email}}</p>
+                        <button type="button" class="btn btn-primary px-5">Edit</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-md-6">
+                  <div class="card mb-3">
+                    <div class="card-header">
+                      <span> Orders</span>
+                      <i class="fab fa-opencart"></i>
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">You have placed no orders yet!</h6>
+                      <p class="card-text">All your orders will be saved here for you.</p>
+                      <button type="button" class="btn btn-primary">CONTINUE SHOPPING</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card mb-3">
+                    <div class="header-card">
+                      <div class="card-header">
+                        <span>Saved Items</span>
+                        <i class="fas fa-heart"></i>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">You have no orders waiting for feedback</h6>
+                      <p class="card-text">Found something you like? the item to add it
+                        to your wishlist! All items your will items here.</p>
+                      <button type="button" class="btn btn-primary">CONTINUE SHOPPING</button>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-offer-product></app-offer-product>

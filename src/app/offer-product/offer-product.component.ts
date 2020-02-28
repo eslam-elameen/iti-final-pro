@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {ProudctsService} from '../proudcts.service';
-import { ActivatedRoute, Router } from "@angular/router";
-import { NgxStarRatingModule } from 'ngx-star-rating';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ProudctsService } from '../proudcts.service';
+import { Router } from "@angular/router";
+// import { NgxStarRatingModule } from 'ngx-star-rating';
+// import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ShoppingCartService } from '../shopping-cart.service';
+import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-offer-product',
@@ -10,14 +12,25 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./offer-product.component.scss']
 })
 export class OfferProductComponent implements OnInit {
+  x: number = 5;
+  y: number = 4;
   ranarr = []
   sets;
   postItem;
-  constructor(private http: ProudctsService,  private dataServ: ProudctsService, private _router: Router,private productData: ProudctsService) { }
+  constructor(
+    private http: ProudctsService,
+    private dataServ: ProudctsService,
+    private _router: Router,
+    private productData: ProudctsService,
+    private shoppingCart: ShoppingCartService,
+    private wowService: NgwWowService,
+  ) { }
+
   cards;
   random;
   posts;
   ngOnInit() {
+    this.wowService.init();
     this.http.getData().subscribe(res => {
       this.posts = res;
       // console.log(this.posts);
@@ -27,7 +40,7 @@ export class OfferProductComponent implements OnInit {
       this.cards = res;
       for (let item of this.cards) {
         this.random = this.cards[Math.floor(Math.random() * this.cards.length)];
-        if (this.ranarr.length < 5) {
+        if (this.ranarr.length < 4) {
           this.ranarr.push(this.random)
         }
         this.sets = [...new Set(this.ranarr)]
@@ -36,22 +49,24 @@ export class OfferProductComponent implements OnInit {
 
     });
 
-
+    // Save Product in local Storage 
+    this.shoppingCart.saveInLocalStorge();
   }
   // customOptions: OwlOptions = {
   //   loop: true,
+  //   // margin: 10,
   //   mouseDrag: false,
   //   touchDrag: false,
   //   pullDrag: false,
   //   dots: false,
-  //   navSpeed: 100,
+  //   navSpeed: 700,
   //   navText: ['', ''],
   //   responsive: {
   //     0: {
-  //       items: 1
+  //       items: 0
   //     },
   //     400: {
-  //       items: 1
+  //       items: 2
   //     },
   //     740: {
   //       items: 2
@@ -63,5 +78,8 @@ export class OfferProductComponent implements OnInit {
   //   nav: true
   // }
 
-
+  // Add Product to Shopping Cart
+  onAddToCart(product) {
+    this.shoppingCart.addCart(product)
+  }
 }

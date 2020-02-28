@@ -11,14 +11,14 @@ export class ProudctsService {
   private sendSearchResult = new BehaviorSubject([]);
   getSearch = this.sendSearchResult.asObservable()
   constructor(private http:HttpClient) { }
-  getData() {
-    return this.http.get("http://localhost:3000/products")
+  getData():any {
+    return  this.http.get("http://localhost:3000/products")
   }
   getSingleData(id) {
     return this.http.get("http://localhost:3000/products/"+id)
   }
   
-  getResult(data:[]) {
+  getResult(data:any[]) {
     console.log(data);          
 
     this.sendSearchResult.next(data);
