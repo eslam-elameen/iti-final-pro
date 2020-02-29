@@ -4,6 +4,7 @@ import { ProudctsService } from '../proudcts.service';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import { CheckboxFilterService } from '../checkbox-filter.service';
 export interface Product {
   category: string;
   kind: string;
@@ -22,7 +23,7 @@ export class NavbarComponent implements OnInit {
   searchResult;
   toggle;
   toggle3
-  public constructor(private fb: FormBuilder, private searchServer: ProudctsService) {
+  public constructor(private fb: FormBuilder, private searchServer: ProudctsService,private check:CheckboxFilterService) {
     this.searchServer.getData().subscribe(res => this.searchResult = this.productsData = res)
     this.filterAutoComolete = this.mySearch.valueChanges
     .pipe(
@@ -38,11 +39,16 @@ private _filterStates(value: string): Product[] {
     this.toggle3 = !this.toggle3
   }
   onSubmit(form) {
+    if(this.check.checkCo){
+      !this.check.checkCo
+    } 
+    console.log(this.check.checkCo)
+   
     this.searchResult = (form.value) 
-     
     console.log(this.searchResult)
     this.searchServer.getResult(this.searchResult)
-    console.log(form.value)
+    console.log(form.value);
+    
     this.mySearch.setValue('')
   }
   ngOnInit() {

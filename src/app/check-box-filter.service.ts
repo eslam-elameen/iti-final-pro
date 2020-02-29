@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject} from 'rxjs'
 
+
+import {BehaviorSubject} from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
-export class CheckboxFilterService {
- checkCo;
+export class CheckBoxFilterService {
   private filterBehavior =  new BehaviorSubject([]);
   filterBehaviorSub =this.filterBehavior.asObservable()
-  
+
   searchDataResult =[];
   storeName =[];
   kind = [];
@@ -31,18 +31,14 @@ export class CheckboxFilterService {
       :console.log(this.filterdData);
       this.sendResult(this.filterdData)
     }
-    
-    
-    constructor() {
-      console.log(this.checkCo)
+
+  
+  constructor() {
    }
 
   ////// start///// add fiterd data to storeName array ////// 
   getStoreName = even => {
-    even.target.checked=this.checkCo 
-    
-    console.log(even.target.checked, even.target.name);
-
+    console.log(even.target.checked, even.target.name)
     for (let i in this.searchDataResult) {
       if (this.searchDataResult[i].storeName.toLowerCase() === even.target.name.toLowerCase() && even.target.checked === true) {
         this.storeName.push(this.searchDataResult[i])
