@@ -5,8 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 // import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxStarRatingModule } from 'ngx-star-rating';
@@ -31,6 +30,7 @@ import { RatingModule } from 'ngx-bootstrap/rating';
 import { NgwWowModule } from 'ngx-wow';
 
 
+import { NgxSpinnerModule } from "ngx-spinner";
 import { FilterResultPipe } from './filter-result.pipe';
 import { RandomBlogComponent } from './random-blog/random-blog.component';
 import { GalaryComponent } from './galary/galary.component';
@@ -38,6 +38,10 @@ import { OfferProductComponent } from './offer-product/offer-product.component';
 import { from } from 'rxjs';
 import { LoginComponent } from './login/login.component';
 import { RegisterationComponent } from './registeration/registeration.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 @NgModule({
@@ -63,7 +67,9 @@ import { RegisterationComponent } from './registeration/registeration.component'
     GalaryComponent,
     OfferProductComponent,
     LoginComponent,
-    RegisterationComponent
+    RegisterationComponent,
+    ShoppingCartComponent,
+    OurServicesComponent
   ],
   imports: [
     BrowserModule,
@@ -80,8 +86,11 @@ import { RegisterationComponent } from './registeration/registeration.component'
     BsDropdownModule.forRoot(),
     BrowserModule,
     MaterialAnglur,
-    NgwWowModule
-
+    NgwWowModule,
+    ModalModule.forRoot(),
+    NgwWowModule,
+    NgxSpinnerModule,
+    BsDatepickerModule.forRoot()
 
   ],
 
