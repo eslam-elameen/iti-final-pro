@@ -1,0 +1,109 @@
+<div class="register">
+    <div class="register-background">
+        <div class="container">
+            <div class="card card_container">
+                <div class="card_photo">
+
+
+
+
+                    <form class="form-group" [formGroup]='registrationForm'
+                        (ngSubmit)='onregisterSubmit(registrationForm)'>
+
+                        <div class="row justify-content-center no-gutters">
+                            <div class="signup-wrapper">
+                                <div class="col-md-6">
+                                    <div class="row-inputs">
+                                        <div class="form-design align-items-center">
+                                            <div class="header-signUp text-center">
+                                                <h3>Sign Up</h3>
+                                            </div>
+                                            <div class="form-group col-md-12">
+
+
+                                                <input type="text" class="form-control input100" id="userName"
+                                                    formControlName='name' placeholder="enter your name " id="uname">
+                                                <div *ngIf='registrationForm.controls.name.hasError("pattern")&&registrationForm.controls.name.touched'
+                                                    class="alert alert-danger" role="alert">
+                                                    *must contain 6 carchter between a-z 0-9
+                                                </div>
+                                                <div *ngIf='registrationForm.controls.name.hasError("required")&&registrationForm.controls.name.touched'
+                                                    class="alert alert-danger" role="alert">
+                                                    *confirm password is required
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group col-md-12">
+                                                <input type="text" class="form-control input100" formControlName='email'
+                                                    placeholder="enter your email ">
+                                                <div *ngIf='registrationForm.controls.email.hasError("pattern")&&registrationForm.controls.email.touched'
+                                                    class="alert alert-danger" role="alert">
+                                                    *the email should be ex : dsa@gmail.com
+                                                </div>
+                                                <div *ngIf='registrationForm.controls.email.hasError("required")&&registrationForm.controls.email.touched'
+                                                    class="alert alert-danger" role="alert">
+                                                    confirm password is required
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group col-md-12">
+                                                <input type="password" class="form-control input100"
+                                                    formControlName='password' placeholder="enter your password">
+                                                <div *ngIf='registrationForm.controls.password.hasError("pattern")&&registrationForm.controls.password.touched'
+                                                    class="alert alert-danger" role="alert">
+                                                    the password should contain ex :a-z,A-Z,0-9,!@#
+                                                </div>
+
+                                                <div *ngIf='registrationForm.controls.password.hasError("required")&&registrationForm.controls.password.touched'
+                                                    class="alert alert-danger" role="alert">
+                                                    confirm password is required
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group col-md-12">
+                                                <input type="password" class="form-control input100"
+                                                    formControlName='confirmPassword'
+                                                    placeholder="confirm your password ">
+                                                <div *ngIf='registrationForm.controls.confirmPassword.hasError("match")&&registrationForm.controls.confirmPassword.touched'
+                                                    class="alert alert-danger" role="alert">
+                                                    password dosen't match
+                                                </div>
+
+                                                <div *ngIf='registrationForm.controls.confirmPassword.hasError("required")&&registrationForm.controls.confirmPassword.touched'
+                                                    class="alert alert-danger" role="alert">
+                                                    confirm password is required
+                                                </div>
+                                                <div class="check-wapper">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="defaultChecked2">
+                                                        <label class="custom-control-label" for="defaultChecked2">you
+                                                            agree
+                                                            Conditions of Use and Privacy.</label>
+                                                    </div>
+                                                    <div class="haveAccount">
+                                                        <a routerLink="/signin" type="submit">I have an account</a>
+                                                    </div>
+                                                </div>
+                                                <button routerLink="/profile" type="submit" class="btn btn-primary"
+                                                    [disabled]="!registrationForm.valid">Submit</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="img-wrapper">
+                                        <img src="https://image.freepik.com/free-vector/people-stroll-with-pets-vector-illustration_82574-8739.jpg"
+                                            alt="" class="img-fluid">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

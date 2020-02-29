@@ -1,31 +1,53 @@
-
 <div class="container" *ngIf="postItem">
     <div class="cards">
-        <div class="row">
-            <div class="col-md-6">
-                <img class="card-img-top" src="{{ postItem.img }}" alt="Card image cap">
-            </div>
-            <div class="col-md-6">
-                <h5 class="card-title my-4">{{postItem.productTitle}}</h5>
-                <div class="card-bodys">
-                    <p class="lead">{{postItem.descrtion}}</p>
-                    <!-- <ngx-star-rating [formControl]="rating" [id]="'rating'" [disabled]="true"></ngx-star-rating> -->
-
-                    <p>price : {{postItem.price}}</p>
-                    <p>store Name : {{ postItem.storeName }}</p>
-                    <div class="">
-                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="20" controls>
-                  <div class="product-icons">
-                   <button type="submit" class="btn btn-outline-success mr-4"><i class="fas fa-plus"></i></button>
-                   <button type="submit" class="btn btn-outline-success "><i class="fas fa-minus"></i></button>
-                    
-                    
+        <div class="card-warpper">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="img-wrapper MagicZoom" data-options="zoomWidth:400px; zoomHeight:400px">
+                        <img class="card-img-top" src="{{ postItem.img }}" alt="Card image cap">
+                    </div>
                 </div>
-            </div>
-                    <input type="submit" class="btn btn-primary mt-5">
-                    
+                <div class="col-md-5">
+                    <h3 class="card-title my-2 mt-3">{{postItem.productTitle}}</h3>
+                    <div class="card-description">
+                        <div class="rating-warpper">
+                            <div class="rating-product mr-2">
+                                <rating [max]="5" [(ngModel)]="y" [customTemplate]="tt"></rating>
+
+                                <ng-template #tt let-i="index" let-v="value">
+                                    <button class="btn btn-{{i < v ? 'warning' : 'default'}}">
+                                        {{i < v ? '&#9733;' : '&#9734;'}}
+                                    </button>
+                                </ng-template>
+                            </div>
+                            <p>(5 customer review)</p>
+                        </div>
+                        <div class="Avilable">
+                            <i class="fas fa-check mr-2"></i>
+                            <h6>Availability : <span> 54 in stock</span></h6>
+                        </div>
+                    </div>
+
+                    <div class="card-bodys">
+                        <p class="lead">{{postItem.descrtion}}</p>
+
+                        <h2 class="mr-4">{{postItem.price}} EGP</h2>
+                        <div class="conut-quantity">
+                            <input type="number" id="quantity" name="quantity" value="1" min="1" max="20" controls>
+
+                            <button type="submit" class="btn btn-primary px-4"><i class="fas fa-cart-plus mr-2"></i>Add
+                                To cart</button>
+                        </div>
+                        <div class="btn-display mt-2">
+                            <button type="submit" class="btn btn-outline-primary mt-3 px-4 mr-2"><i
+                                    class="far fa-heart mr-2"></i>Add to Wishlist</button>
+                            <button type="submit" class="btn btn-outline-primary mt-3 px-4"><i
+                                    class="fas fa-retweet mr-2"></i>Add to compare</button>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+</div>

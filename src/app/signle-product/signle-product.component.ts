@@ -19,7 +19,7 @@ export class SignleProductComponent implements OnInit {
     this.single.paramMap.subscribe(param => {
       this.getSinglePost(param.get('id'));
       console.log(param)
-    }) 
+    });
   }
   getSinglePost(postId) {
     this.productData.getSingleData(postId).subscribe(postObj => {

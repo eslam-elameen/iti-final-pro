@@ -20,7 +20,8 @@ export class NavbarComponent implements OnInit {
   productsData;
   filterd;
   searchResult;
-  toggle
+  toggle;
+  toggle3
   public constructor(private fb: FormBuilder, private searchServer: ProudctsService) {
     this.searchServer.getData().subscribe(res => this.searchResult = this.productsData = res)
     this.filterAutoComolete = this.mySearch.valueChanges
@@ -32,6 +33,9 @@ export class NavbarComponent implements OnInit {
 private _filterStates(value: string): Product[] {
   const filterValue = value.toLowerCase();
   return this.productsData.filter(product => product.kind.toLowerCase().includes(filterValue) || product.productTitle.toLowerCase().includes(filterValue) );
+  }
+  divToggle1(event) {
+    this.toggle3 = !this.toggle3
   }
   onSubmit(form) {
     this.searchResult = (form.value) ?

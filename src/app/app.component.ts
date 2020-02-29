@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { BlogServiceService } from './blog-service.service';
+import { NgwWowService } from 'ngx-wow';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class AppComponent implements OnInit{
   // title = 'iti-final-pro';
   posts;
 
-  constructor(private http: BlogServiceService, private dataServ: BlogServiceService) { }
+  constructor(private wowService: NgwWowService,private http: BlogServiceService, private dataServ: BlogServiceService) { }
   title = 'myNewApp';
   count = 0;
   Cart = [];
@@ -19,6 +20,8 @@ export class AppComponent implements OnInit{
   message: number;
   cards;
   ngOnInit() {
+    this.wowService.init();
+
     this.http.getData().subscribe(res => {
       this.posts = res;
       // console.log(res);

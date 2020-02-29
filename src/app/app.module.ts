@@ -28,7 +28,7 @@ import { ProuductRandomComponent } from './prouduct-random/prouduct-random.compo
 import { TestComponent } from './test/test.component';
 import { SignleProductComponent } from './signle-product/signle-product.component';
 import { RatingModule } from 'ngx-bootstrap/rating';
-// import { BrowserModule } from '@angular/platform-browser';
+import { NgwWowModule } from 'ngx-wow';
 
 
 import { FilterResultPipe } from './filter-result.pipe';
@@ -36,6 +36,8 @@ import { RandomBlogComponent } from './random-blog/random-blog.component';
 import { GalaryComponent } from './galary/galary.component';
 import { OfferProductComponent } from './offer-product/offer-product.component';
 import { from } from 'rxjs';
+import { LoginComponent } from './login/login.component';
+import { RegisterationComponent } from './registeration/registeration.component';
 
 
 @NgModule({
@@ -52,7 +54,6 @@ import { from } from 'rxjs';
     SearchComponent,
     SearchResultComponent,
     FilterResultPipe,
-    
     HomeComponent,
     ServicesComponent,
     ProuductRandomComponent,
@@ -60,7 +61,9 @@ import { from } from 'rxjs';
     SignleProductComponent,
     RandomBlogComponent,
     GalaryComponent,
-    OfferProductComponent
+    OfferProductComponent,
+    LoginComponent,
+    RegisterationComponent
   ],
   imports: [
     BrowserModule,
@@ -76,8 +79,9 @@ import { from } from 'rxjs';
     RatingModule.forRoot(),
     BsDropdownModule.forRoot(),
     BrowserModule,
-    MaterialAnglur
-    
+    MaterialAnglur,
+    NgwWowModule
+
 
   ],
 

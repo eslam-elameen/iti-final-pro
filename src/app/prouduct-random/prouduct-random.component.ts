@@ -27,7 +27,7 @@ export class ProuductRandomComponent implements OnInit {
       this.cards = res;
       for (let item of this.cards) {
         this.random = this.cards[Math.floor(Math.random() * this.cards.length)];
-        if (this.ranarr.length < 5) {
+        if (this.ranarr.length < 4) {
           this.ranarr.push(this.random)
         }
         this.sets = [...new Set(this.ranarr)]
