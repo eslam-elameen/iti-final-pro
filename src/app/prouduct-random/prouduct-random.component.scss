@@ -84,17 +84,17 @@ h5 {
   left: 10px;
   top: 15px;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.6);
+  // background-color: rgba(0, 0, 0, 0.6);
   padding: 9px 10px;
   display: inline-block;
-  color: #fff;
+  color: #aab8c2;
   line-height: 1;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   border-radius: 3px;
 }
-.icons-heart:hover {
+.icons-heart i:hover {
   color: #1f365c;
   transition: 0.5s all ease-in-out;
 }

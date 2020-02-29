@@ -8,7 +8,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <!-- <li class="nav-item active">
                     <a class="nav-link" routerLink="/" routerLinkActive="router-link-active">Home <span
                             class="sr-only">(current)</span></a>
                 </li>
@@ -17,7 +17,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Dog</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"
                         routerLink="/">Home</a>
@@ -116,7 +116,11 @@
                 <button class="btn btn-success my-2 my-sm-0" type="submit">
                     <a routerLink="/shoppingCart">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="badge badge-warning">{{ getAllQuantityProduct() }}</span>
+                        <span class="badge badge-warning" *ngIf="total === 0">{{ totalQty }}</span> 
+                        <span class="badge badge-warning" *ngIf="total > 0">{{ total  }}</span> 
+                    </a>
+                    <a routerLink="/wishList">
+                        <i class="fas fa-heart ml-2"></i>
                     </a>
                 </button>
             </form>

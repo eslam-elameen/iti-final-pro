@@ -25,6 +25,7 @@ export class ProuductRandomComponent implements OnInit {
   isReadonly: boolean = true;
 
 
+
   constructor(
     private http: ProudctsService,
     private dataServ: ProudctsService,
@@ -41,6 +42,7 @@ export class ProuductRandomComponent implements OnInit {
   ngOnInit() {
     // Save Product in local Storage 
     this.shoppingCart.saveInLocalStorge();
+    
 
     this.wowService.init();
     this.http.getData().subscribe(res => {
@@ -68,5 +70,7 @@ export class ProuductRandomComponent implements OnInit {
   onAddToCart(product) {
     this.shoppingCart.addCart(product)
   }
+
+  
 
 }
