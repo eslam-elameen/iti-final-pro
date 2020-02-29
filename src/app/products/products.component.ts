@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProudctsService } from '../proudcts.service'
 import { ActivatedRoute } from "@angular/router";
 import { ItemsKindService } from '../items-kind.service';
+import { ShoppingCartService } from '../shopping-cart.service';
 
 @Component({
   selector: 'app-products',
@@ -17,6 +18,8 @@ export class ProductsComponent implements OnInit {
     private dogServe: ProudctsService,
     private route: ActivatedRoute,
     private item: ItemsKindService,
+    private shoppingCart: ShoppingCartService
+
     
   ) {
     this.dogServe.getData().subscribe(data => {
@@ -49,5 +52,9 @@ export class ProductsComponent implements OnInit {
   }
 
   
+
+  onAddToCart(product) {
+    this.shoppingCart.addCart(product)
+  }
 
 }

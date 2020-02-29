@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProudctsService } from '../proudcts.service';
 import { NgwWowService } from 'ngx-wow';
+import { ShoppingCartService } from '../shopping-cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -17,8 +18,17 @@ export class NavbarComponent implements OnInit {
   toggle
   shoppingCartProduct;
 
+  total;
+  totalQty;
+  // serviceTotal: number = 0;
+  // totalQty: number = 0;
+
   public constructor(
-    private searchServer: ProudctsService, private wowService: NgwWowService, private fb: FormBuilder
+    private searchServer: ProudctsService,
+    private wowService: NgwWowService,
+    private fb: FormBuilder,
+    private shoppingServices: ShoppingCartService
+
   ) {
     this.searchServer.getData().subscribe(res => this.searchResult = this.productsData = res)
 
@@ -51,21 +61,23 @@ export class NavbarComponent implements OnInit {
     this.mySearch = this.fb.group({
       search: ''
     });
+
+    this.totalQty = this.shoppingServices.getAllQuantityProduct()
+
+    this.shoppingServices.sendCountNumber.subscribe(number => {
+      this.total = number 
+    });
+
+    // this.shoppingServices.sendCountQtyServices.subscribe(number => {
+    //   this.serviceTotal = number;
+    // })
+
   }
 
-  // Count all Product quantity in navbar Shopping cart
-  getAllQuantityProduct() {
-    // get product from localStorage 
-    let shoppingCartProduct = JSON.parse(localStorage.getItem('shoppingCart'))
-    let total = 0;
-    // check if shopping cart in local storage or not 
-    if (shoppingCartProduct) {
-      for (let item of shoppingCartProduct) {
-        total += item.qty;
-      }
-    }
-    return total;
-  }
+
+
+
+
 
 }
 

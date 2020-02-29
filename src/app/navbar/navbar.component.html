@@ -106,7 +106,11 @@
                 <button class="btn btn-success my-2 my-sm-0" type="submit">
                     <a routerLink="/shoppingCart">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="badge badge-warning">{{ getAllQuantityProduct() }}</span>
+                        <span class="badge badge-warning" *ngIf="total === 0">{{ totalQty }}</span> 
+                        <span class="badge badge-warning" *ngIf="total > 0">{{ total  }}</span> 
+                    </a>
+                    <a routerLink="/wishList">
+                        <i class="fas fa-heart ml-2"></i>
                     </a>
                 </button>
             </form>
