@@ -1,5 +1,6 @@
 import { Component, OnInit, } from '@angular/core';
 import { ProudctsService } from '../proudcts.service';
+import {CheckboxFilterService} from '../checkbox-filter.service'
 
 
 
@@ -9,106 +10,84 @@ import { ProudctsService } from '../proudcts.service';
   styleUrls: ['./search-result.component.scss']
 })
 export class SearchResultComponent implements OnInit {
-  searchData;
-  count = 0;
-  storeName = [];
-  kind = [];
-  catogery = [];
-  allArr = [this.storeName, this.kind, this.catogery];
-  updateData = [];
-  filterdData = [];
-  
-  runs() {
-    for (let item of this.allArr) {
-      if (item.length > 0) {
-        this.updateData.push(item)
-        console.log(item)
-      }
-    }
-    for (let it of this.updateData) {
-      if (it.length === 0) {
-        this.updateData.splice(this.updateData.indexOf(it), 1)
-      }
-    }
-    if (this.count > 0) {
-      this.filterdData = this.updateData.reduce((a, c) => a.filter(i => c.includes(i)))
-      console.log(this.filterdData)
-    }
-  }
-  constructor(private resultServer: ProudctsService) { }
-  ngOnInit() {
+  searchValue:string
+  y: number = 4;
+  max: number = 5;
+  apiData = [];
+  searchData=[];
+  fiterCheck = [];
+  counter = this.filterService.count
+
+ 
+  checkBoxCat=[];
+  checkBoxkind=[];
+  checkBoxStore=[];
+ 
+  constructor(private resultServer: ProudctsService , private filterService:CheckboxFilterService) { 
     this.resultServer.getSearch.subscribe((data) => {
-      this.searchData = data; // And he have data here too!
-      console.log(data)
-      // console.log(this.dog)
+      console.log(data); // And he have data here too!
+      this.searchValue=data;
+        console.log(this.searchValue)
+        this.resultServer.getData().subscribe((res:[]) => {
+        console.log(res)
+        this.apiData = res;
+    this.filterService.searchDataResult =  this.searchData = (this.searchValue) ?
+        this.apiData.filter(item => item.productTitle.toLowerCase().includes(this.searchValue.toLowerCase()) ) :
+          this.searchData ;
+        console.log(this.searchData)
+        for(let item of this.apiData){
+          if(this.checkBoxCat.indexOf(item.category)=== -1){
+
+            this.checkBoxCat.push(item.category)
+          }
+          if(this.checkBoxkind.indexOf(item.kind)== -1){
+            this.checkBoxkind.push(item.kind)
+          }
+         
+          
+        } 
+      } )
     });
+    
+  // fiterCheck = this.filterService.filterdData;
   }
-  ////// start///// add fiterd data to storeName array ////// 
-  getStoreName(checked, value) {
-    console.log(checked, value)
-    for (let i = 0; i < this.searchData.length; i++) {
-      if (this.searchData[i].storeName.toLowerCase() === value.toLowerCase() && checked === true) {
-        this.storeName.push(this.searchData[i])
-        this.count++
-      } else if (checked === false) {
-        for (let i = 0; i < this.storeName.length; i++) {
-          if (this.storeName[i].storeName.toLowerCase() === value.toLowerCase()) {
-            this.storeName.splice(i, 1)
-            this.count--
-          }
-        }
+
+  
+  ngOnInit() {
+    console.log(this.counter) 
+      this.filterService.filterBehaviorSub.subscribe(dataa =>{ this.fiterCheck = dataa
+  console.log(this.fiterCheck)
+  console.log(this.fiterCheck)
+} )
+  }
+  filterGetKind = event=>{event.target.checked? this.counter++:this.counter--;
+    this.filterService.getKind(event)
+  }
+  filterGetCat = eve =>{eve.target.checked? this.counter++:this.counter--;
+this.filterService.getCatogery(eve);
+  }
+  filterGetStore = even =>{even.target.checked? this.counter++:this.counter--;
+    this.filterService.getStoreName(even);
+  }
+   sor(val){
+     console.log(val.target.value)
+     val.target.value==1?
+     this.fiterCheck.sort(function(a, b) {
+      var nameA = a.productTitle.toUpperCase(); // ignore upper and lowercase
+      var nameB = b.productTitle.toUpperCase(); // ignore upper and lowercase
+      if (nameA > nameB) {
+        return -1;
       }
-    }
-    this.runs()
-    console.log(this.searchData)
-    console.log(this.storeName)
-    console.log(this.allArr)
-  }
-///////////end/////////////////////
-
-/////////// start///// add fiterd data to kind array ////// 
-
-  getKind(chec, val) {
-    for (let i = 0; i < this.searchData.length; i++) {
-      if (this.searchData[i].kind.toLowerCase() === val.toLowerCase() && chec === true) {
-        this.kind.push(this.searchData[i])
-        this.count++
-      } else if (chec === false) {
-        for (let i = 0; i < this.kind.length; i++) {
-          if (this.kind[i].kind.toLowerCase() === val.toLowerCase()) {
-            this.kind.splice(i, 1)
-            this.count--
-          }
-        }
+      if (nameA < nameB) {
+        return 1;
       }
-    }
-    this.runs()
-    console.log(this.kind)
-    console.log(this.allArr)
-  }
-  ////////////////////////end//////////////////////////////
-
-  ////// start///// add fiterd data to catogery array ////// 
-
-  getCatogery(checked, value) {
-    console.log(checked, value)
-    for (let i = 0; i < this.searchData.length; i++) {
-      if (this.searchData[i].category.toLowerCase() === value.toLowerCase() && checked === true) {
-        this.catogery.push(this.searchData[i])
-        this.count++
-      } else if (checked === false) {
-        for (let i = 0; i < this.catogery.length; i++) {
-          if (this.catogery[i].category.toLowerCase() === value.toLowerCase()) {
-            this.catogery.splice(i, 1)
-            this.count--
-          }
-        }
-      }
-    }
-    this.runs()
-    console.log(this.catogery)
-    console.log(this.allArr)
-  }
-
-
+      return 0;
+    })
+    :val.target.value ==2? this.fiterCheck.sort((a, b)=> {
+      a =a.price
+      b =b.price
+      return b - a;
+    }):val.target.value==0? this.fiterCheck.sort(() => Math.random() - 0.5)
+:console.log(this.fiterCheck)
+   }
 }

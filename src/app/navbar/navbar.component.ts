@@ -38,9 +38,8 @@ private _filterStates(value: string): Product[] {
     this.toggle3 = !this.toggle3
   }
   onSubmit(form) {
-    this.searchResult = (form.value) ?
-      this.productsData.filter(item => item.productTitle.toLowerCase().includes(form.value.toLowerCase()) || item.kind.toLowerCase().includes(form.value.toLowerCase())) :
-      this.searchResult ;
+    this.searchResult = (form.value) 
+     
     console.log(this.searchResult)
     this.searchServer.getResult(this.searchResult)
     console.log(form.value)
