@@ -48,10 +48,10 @@ ngOnInit() {
    
   this.wowService.init();
   this.totalQty = this.shoppingServices.getAllQuantityProduct()
-console.log(this.totalQty)
+// console.log(this.totalQty)
   this.shoppingServices.sendCountNumber.subscribe(number => {
     this.total = number 
-console.log(this.total)
+// console.log(this.total)
 
   });
 

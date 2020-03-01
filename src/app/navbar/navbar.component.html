@@ -44,21 +44,6 @@
                         </a>
                     </div>
                 </li>
-                <li div class="btn-group" dropdown>
-                    <button routerLink="/bird" id="button-basic" dropdownToggle type="button"
-                        class="btn dropdown-toggle" aria-controls="dropdown-basic" routerLinkActive="active-link">
-                        Bird <span class="caret"></span>
-                    </button>
-                    <div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right"
-                        container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-                        <a role="menuitem"><a class="dropdown-item" href="#">Full Grooming</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
-                        <a class="divider dropdown-divider"></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
-                        </a>
-                    </div>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLinkActive="active-link" routerLink="/ourService">services</a>
                 </li>
@@ -71,7 +56,7 @@
                 <div class="btn-group" dropdown>
                     <div role="menu" aria-labelledby="button-basic">
                         <div id="search" class="search-hidden">
-                            <form class="d-flex">
+                            <form class="d-flex style-search">
                                 <mat-form-field class="example-full-width">
                                     <input list="browsers" type="search" placeholder="Search" class="form-control"
                                         matInput aria-label="State" [matAutocomplete]="auto" [formControl]="mySearch">
@@ -84,6 +69,7 @@
                                         </mat-option>
                                     </mat-autocomplete>
                                 </mat-form-field>
+
                                 <button routerLink="/result" type="submit" [disabled]="mySearch.invalid"
                                     class="btn btn-primary one" (click)=onSubmit(mySearch)>
                                     <i class="fas fa-search"></i>
@@ -93,7 +79,7 @@
                     </div>
                 </div>
                 <div class="user-sign">
-                    <button class="btn btn-success search-icons dropdown-toggle my-2 my-sm-0" (click)="divToggle1($event)"
+                    <button class="btn btn-success search-icons dropdown-toggle ml-3 my-sm-0" (click)="divToggle1($event)"
                         type="button">
                         <i class="far fa-user"></i></button>
                     <div *ngIf="toggle3" role="menu" aria-labelledby="button-basic" triggers="mouseover" class="list-user">

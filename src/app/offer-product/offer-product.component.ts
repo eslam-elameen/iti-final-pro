@@ -15,6 +15,7 @@ export class OfferProductComponent implements OnInit {
   ranarr = []
   sets;
   postItem;
+  modul;
   constructor(
     private http: ProudctsService,
     private dataServ: ProudctsService,
@@ -36,45 +37,32 @@ export class OfferProductComponent implements OnInit {
     });
     this.http.getData().subscribe(res => {
       this.cards = res;
+      
       for (let item of this.cards) {
         this.random = this.cards[Math.floor(Math.random() * this.cards.length)];
-        if (this.ranarr.length < 4) {
+       if (this.ranarr.length < 4) {
           this.ranarr.push(this.random)
         }
         this.sets = [...new Set(this.ranarr)]
         // console.log(this.random);
+        
       }
 
     });
+    // this.http.getData().subscribe( data =>{
+    //   this.cards = data
+    //   for (let i = 0; i < this.cards.length; i++) {
+        
+    //     console.log(this.modul);
+        
+      
+    //   }
+    // })
 
     // Save Product in local Storage 
     this.shoppingCart.saveInLocalStorge();
   }
-  customOptions: OwlOptions = {
-    loop: true,
-    // margin: 10,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    navSpeed: 700,
-    navText: ['', ''],
-    responsive: {
-      0: {
-        items: 0
-      },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 2
-      },
-      940: {
-        items: 4
-      }
-    },
-    nav: true
-  }
+
 
   // Add Product to Shopping Cart
   onAddToCart(product) {
