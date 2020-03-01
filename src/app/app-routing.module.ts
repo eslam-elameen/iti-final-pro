@@ -1,3 +1,4 @@
+import { ProfileComponent } from './profile/profile.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {ProductsComponent} from './products/products.component'
@@ -6,7 +7,6 @@ import { RegisterationComponent } from './registeration/registeration.component'
 import { BlogComponent } from './blog/blog.component';
 import { LoginComponent } from './login/login.component'
 import {SearchResultComponent} from './search-result/search-result.component'
-
 
 import { ShippingAreaComponent } from './shipping-area/shipping-area.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
@@ -23,6 +23,10 @@ const routes: Routes = [
   {path:'',component: HomeComponent},
   {path:'blog', component : BlogComponent },
   {path:'shoppingCart', component:ShoppingCartComponent},
+  {path:'profile', component:ProfileComponent},
+ 
+
+  
   {path:"signIn",component:LoginComponent },
   {path:"signUp",component:RegisterationComponent },
   {path:'blog/:id',component: SingleBlogComponent},

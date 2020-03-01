@@ -27,14 +27,7 @@ export class HeroHeaderComponent implements OnInit {
       console.log(this.images[1]);
       this.images[1] = Object.assign(this.images[1], {class: "slideTwo"});
       console.log( this.images[1]);
-      
       console.log(this.id.class);
-      
-      
-
-      
-
-        
     });
    
   }
