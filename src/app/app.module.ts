@@ -32,11 +32,11 @@ import { FilterResultPipe } from './filter-result.pipe';
 import { RandomBlogComponent } from './random-blog/random-blog.component';
 import { GalaryComponent } from './galary/galary.component';
 import { OfferProductComponent } from './offer-product/offer-product.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { NgwWowModule } from 'ngx-wow';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { ShoppingCartsComponent } from './shopping-carts/shopping-carts.component';
 
 
 @NgModule({
@@ -62,8 +62,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     RandomBlogComponent,
     GalaryComponent,
     OfferProductComponent,
-    ShoppingCartComponent,
-    OurServicesComponent
+    OurServicesComponent,
+    ShoppingCartsComponent
   ],
   imports: [
     BrowserModule,

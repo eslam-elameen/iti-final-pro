@@ -10,11 +10,12 @@ export class ShoppingCartService implements OnInit {
   flag: boolean;
   wishListProduct = [];
   wishflag: boolean;
-
+  shipping: number = 0;
 
   // send Quantity of product to navbar
   private countNumber = new BehaviorSubject(0);
   sendCountNumber = this.countNumber.asObservable()
+  showShipping: number;
 
   constructor() {
 
@@ -43,7 +44,7 @@ export class ShoppingCartService implements OnInit {
       if (item.id === product.id) {
         item.qty++
         product['totalPrice'] = product.qty * product.price;
-        console.log(this.products);
+        // console.log(this.products);
         localStorage.setItem('shoppingCart', JSON.stringify(this.products));
         this.getAllQuantityProduct()
       }
@@ -58,14 +59,14 @@ export class ShoppingCartService implements OnInit {
       this.products = []
     } else {
       this.products = JSON.parse(localStorage.getItem('shoppingCart'));
-      console.log(this.products);
+      // console.log(this.products);
     }
 
     if (localStorage.getItem('favouriteProduct') === null) {
       this.wishListProduct = []
     } else {
       this.wishListProduct = JSON.parse(localStorage.getItem('favouriteProduct'));
-      console.log(this.products);
+      // console.log(this.products);
     }
   }
 
@@ -99,17 +100,35 @@ export class ShoppingCartService implements OnInit {
 
 
   // count All Price in shopping cart
-  totalPrice() {
+  subTotalPrice() {
     let total = 0;
     let product = JSON.parse(localStorage.getItem('shoppingCart'));
-    if(product){
+    if(product !== null){
       for (let item of product) {
-        total += item.totalPrice;
-        // console.log(total);
+        total += Math.floor( item.totalPrice) + this.totalServicesPrice();
+       
       }
     }
-    
     return total;
+  }
+
+  totalPrice(){
+    if(this.subTotalPrice() >= 300){
+      this.showShipping = 0;
+
+      this.shipping = 0;
+      this.shipping += this.subTotalPrice();
+    }else{
+      this.showShipping = 50;
+
+      this.shipping = 50;
+      this.shipping += this.subTotalPrice()
+      
+    }
+    console.log(this.shipping);
+
+
+    return this.shipping
   }
 
   totalServicesPrice() {
