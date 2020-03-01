@@ -45,9 +45,7 @@ export class ShoppingCartComponent implements OnInit {
 
       }
     }
-
   }
-
   //  on Decrease button
   onDecrease(product) {
     for (let item of this.productFromLocal) {

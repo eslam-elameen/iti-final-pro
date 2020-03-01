@@ -39,9 +39,14 @@ import { from } from 'rxjs';
 import { LoginComponent } from './login/login.component';
 import { RegisterationComponent } from './registeration/registeration.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { ModalModule } from 'ngx-bootstrap/modal';
+// import { ModalModule } from 'ngx-bootstrap/modal';
+import { ModalModule } from 'ngx-bootstrap';
+
 import { OurServicesComponent } from './our-services/our-services.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { CheckComponent } from './check/check.component';
+import { PayComponent } from './pay/pay.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -69,7 +74,10 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     LoginComponent,
     RegisterationComponent,
     ShoppingCartComponent,
-    OurServicesComponent
+    OurServicesComponent,
+    CheckComponent,
+    PayComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

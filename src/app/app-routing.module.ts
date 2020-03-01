@@ -7,7 +7,6 @@ import { BlogComponent } from './blog/blog.component';
 import { LoginComponent } from './login/login.component'
 import {SearchResultComponent} from './search-result/search-result.component'
 
-
 import { ShippingAreaComponent } from './shipping-area/shipping-area.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
 import { HomeComponent } from './home/home.component';
@@ -16,6 +15,9 @@ import { SignleProductComponent } from './signle-product/signle-product.componen
 import { OfferProductComponent } from './offer-product/offer-product.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { OurServicesComponent } from './our-services/our-services.component';
+import { ProfileComponent } from './profile/profile.component';
+import { CheckComponent } from './check/check.component';
+import { PayComponent } from './pay/pay.component'
 import { from } from 'rxjs';
 
 const routes: Routes = [
@@ -23,6 +25,7 @@ const routes: Routes = [
   {path:'',component: HomeComponent},
   {path:'blog', component : BlogComponent },
   {path:'shoppingCart', component:ShoppingCartComponent},
+  {path:'profile', component:ProfileComponent},  
   {path:"signIn",component:LoginComponent },
   {path:"signUp",component:RegisterationComponent },
   {path:'blog/:id',component: SingleBlogComponent},
@@ -32,8 +35,10 @@ const routes: Routes = [
   {path: 'OfferProduct', component: OfferProductComponent },
   {path:'randomProduct/:id', component: SignleProductComponent },
   {path:'OfferProduct/:id', component: SignleProductComponent },
+  {path:"check", component:CheckComponent},
+  {path:'payment',component:PayComponent},
   {path:":category",component:ProductsComponent},
-  {path:":category/:kind",component:ProTypeComponent},
+  {path:":category/:kind",component:ProTypeComponent}
   
 ]
 
