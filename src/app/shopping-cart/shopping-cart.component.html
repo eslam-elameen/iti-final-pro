@@ -1,57 +1,105 @@
-<div class="shoppin-cart">
+
+<section class="shopping-cart mb-5">
+
   <div class="container">
     <div class="row">
-        <div class="col-8">
-            <table class="table" *ngIf="productFromLocal.length > 0 || services.length > 0 "> 
-                <thead>
-                  <tr >
-                    <th scope="col">Product Title</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">price</th>
-                    <th scope="col">Total Price</th>
-                    <th scope="col">Delete</th>
-                  </tr>
-                </thead>
+      <div class="col-md-9">
 
-                <tbody >
-                  <tr *ngFor="let item of  productFromLocal">
-                    <td>{{item.productTitle}}</td>
-                    <td>
-                      <button class="btn btn-primary btn-sm" (click)="onDecrease(item)">-</button>
-                      {{item.qty}}
-                      <button class="btn btn-primary btn-sm" (click)="onIncrease(item)">+</button>
-                    </td>
-                    <td>{{item.price}}</td>
-                    <td>{{item.totalPrice}}</td>
-                    <td><button class="btn btn-danger" (click)="onDelete(item.id)" >Delete</button></td>
-                  </tr>
-                  <tr *ngFor="let item of services">
-                    <td>
-                      <p *ngFor="let services of item.checkServeices">
-                        Service Name: {{services.name}}
-                      </p>
-                      <p>cat: {{ item.cat }}</p> 
-                      <p>dog: {{ item.dog }}</p> 
-                      <p>date: {{ item.date | date: 'dd/MM/yyyy' }}</p>
-                    </td>
-                    <td>
-                      {{ item.qty }}
-                    </td>
-                    <td>{{ item.totalPrice }}</td>
-                    <td>{{ item.totalPrice }}</td>
-                    <td><button class="btn btn-danger" (click)="onDeleteServices(item)" >Delete</button></td>
-                  </tr>
-                  <h1>Total Price: {{ total }}</h1> 
-                  <button class="btn btn-success">Checkout</button>
-                </tbody>
+        <table class="table " *ngIf="productFromLocal.length > 0 || services.length > 0 ">
+          <thead>
+            <tr>
+              <th scope="col">Product Details</th>
+              <th scope="col">Price</th>
+              <th scope="col" class="text-center">Quantity</th>
+              <th scope="col" class="text-center">Total Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of  productFromLocal">
+              <td class="w-50 ">
 
-              </table>
+                <div class="media">
+                  <img [src]="item.img" class="mr-3 w-25" [alt]="item.kind">
+                  <div class="media-body">
+                    <h5 class="my-1 ">{{ item.productTitle }}</h5>
+                    <ul>
+                      <li class="pb-1">Kind : <span>{{ item.kind }}</span> </li>
+                      <li class="pb-1">Store Name : <span>{{ item.storeName }}</span> </li>
+                      <li><button class="btn btn-danger btn-sm" (click)="onDelete(item.id)">Delete</button></li>
+                    </ul>
+                  </div><!-- End Media Body -->
+                </div><!-- End Media -->
 
-              <div class="alert alert-danger " role="alert" *ngIf="productFromLocal.length == 0 && services.length == 0 ">
-                <h4 class="alert-heading">No Product yet</h4>
-                <p>Please go to shop and add Product Here <strong><a class="link" routerLink="/">Go To Shop</a></strong></p>
-              </div>
-        </div>
-    </div>
-</div>
+              </td>
+              <td class="price">{{item.price}} EGP</td>
+              <td class="text-center ">
+                <button class="btns" (click)="onDecrease(item)">-</button>
+                <span class="qty">{{item.qty}}</span>
+                <button class="btns" (click)="onIncrease(item)">+</button>
+              </td>
+              <td class="price text-center">{{item.totalPrice}} EGP</td>
+            </tr>
 
+            <tr *ngFor="let service of services">
+                <td>
+                  <ul>
+                    <li class="pb-1" *ngFor="let serviceName of service.checkServeices">
+                        Service Name : <span>{{ serviceName.name }}</span> 
+                    </li>
+                    <li class="pb-1">Cat : <span>{{ service.cat }}</span> </li>
+                    <li class="pb-1">Dog : <span>{{ service.dog }}</span> </li>
+                    <li class="pb-1">Date : <span>{{ service.date | date: 'dd/MM/yyyy' }}</span> </li>
+                    <li class="pb-1">
+                        <button class="btn btn-danger btn-sm mt-2" (click)="onDeleteServices(service)" >Delete</button>
+                    </li>
+                  </ul>
+                </td>
+               
+                  <td class="font-weight-bold">{{ service.totalPrice }} EGP</td>
+                  <td class="text-center font-weight-bold">
+                    {{ service.qty }}
+                  </td>
+                  <td class="text-center font-weight-bold">{{ service.totalPrice }} EGP</td>
+              </tr>
+
+          </tbody>
+        </table> <!-- End Table -->
+
+        <div class="alert alert-danger " role="alert" *ngIf="productFromLocal.length == 0 && services.length == 0 ">
+            <h4 class="alert-heading">No Product yet</h4>
+            <p>Please go to shop and add Product Here <strong><a class="link" routerLink="/">Go To Shop</a></strong></p>
+          </div>
+
+      </div><!-- End Col 9 -->
+
+      <div class="col-md-3">
+        <div class="card" *ngIf="productFromLocal.length > 0 || services.length > 0 ">
+          <div class="card-body">
+            <button type="button" class="btn   btn-block mb-4">Continue Shopping</button>
+            <h5 class="card-title mb-4 ">Order Summary</h5>
+
+            <ul>
+              <li class="d-flex justify-content-between align-items-center">
+                Sub-Total:
+                <span >{{ subTotal }} EGP</span>
+              </li>
+              <li class="d-flex justify-content-between align-items-center">
+                Shipping:
+                <span>{{ shippingPrice }} EGP</span>
+
+              </li>
+              <li class="d-flex justify-content-between align-items-center font-weight-bold">
+                Total:
+                <span class=" font-weight-bold">{{ totalPrice }} EGP</span>
+              </li>
+            </ul>
+
+            <button type="button" class="btn   btn-block mt-2">Checkout</button>
+
+          </div>
+        </div><!-- End Card -->
+
+      </div><!-- End col-3 -->
+    </div> <!-- End Row -->
+  </div> <!-- End Container -->
+</section>

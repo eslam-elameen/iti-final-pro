@@ -10,6 +10,7 @@ import { Router } from '@angular/router'
   styleUrls: ['./our-services.component.scss']
 })
 export class OurServicesComponent implements OnInit, OnChanges {
+  minDate: Date;
   ngOnChanges() {
     this.totalPrice()
   }
@@ -36,6 +37,7 @@ export class OurServicesComponent implements OnInit, OnChanges {
     private services: ShoppingCartService,
     private route: Router
   ) {
+    this.minDate = new Date();
   }
 
   ngOnInit() {
