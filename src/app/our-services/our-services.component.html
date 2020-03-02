@@ -42,7 +42,7 @@
 
       <div class="form-group">
         <label class="ml-2">Choose Your Date</label>
-        <input formControlName="date" type="text"  placeholder="Choose Your Date" class="form-control w-25" bsDatepicker  [bsConfig]="{ adaptivePosition: true }">
+        <input formControlName="date" type="text"  placeholder="Choose Your Date" class="form-control w-25" bsDatepicker  [bsConfig]="{ adaptivePosition: true }" [minDate]="minDate">
       </div>
       <!-- <div class="alert alert-danger" role="alert" *ngIf="servicesForm.get('date').hasError('required') && servicesForm.get('date').touched">
           date is required.
@@ -54,7 +54,7 @@
    
   </div>
   <div class="card-footer">
-    <h5>Total Price : {{total}}</h5>
+    <h5>Total Price : {{total}} EGP</h5>
 
   </div>
 </div>

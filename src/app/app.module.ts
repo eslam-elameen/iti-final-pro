@@ -24,7 +24,6 @@ import { SearchResultComponent } from './search-result/search-result.component';
 import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { ProuductRandomComponent } from './prouduct-random/prouduct-random.component';
-import { TestComponent } from './test/test.component';
 import { SignleProductComponent } from './signle-product/signle-product.component';
 import { RatingModule } from 'ngx-bootstrap/rating';
 import { NgwWowModule } from 'ngx-wow';
@@ -66,7 +65,6 @@ import { ProfileComponent } from './profile/profile.component';
     HomeComponent,
     ServicesComponent,
     ProuductRandomComponent,
-    TestComponent,
     SignleProductComponent,
     RandomBlogComponent,
     GalaryComponent,

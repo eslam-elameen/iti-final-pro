@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ShoppingCartService } from '../shopping-cart.service';
 
-
 @Component({
   selector: 'app-shopping-cart',
   templateUrl: './shopping-cart.component.html',
   styleUrls: ['./shopping-cart.component.scss']
 })
 export class ShoppingCartComponent implements OnInit {
+
   productFromLocal: any = [];
-  total: number = 0;
   services: any = [];
+  shippingPrice: number;
+  totalPrice: number;
+  subTotal: number;
 
   constructor(private shoppingCart: ShoppingCartService) { }
 
@@ -18,13 +20,27 @@ export class ShoppingCartComponent implements OnInit {
 
     if (JSON.parse(localStorage.getItem('shoppingCart'))) {
       this.productFromLocal = JSON.parse(localStorage.getItem('shoppingCart'));
+      // console.log(this.productFromLocal);
+      
     }
 
     if (JSON.parse(sessionStorage.getItem('services'))) {
       this.services = JSON.parse(sessionStorage.getItem('services'));
     }
 
-    this.total = this.shoppingCart.totalPrice() + this.shoppingCart.totalServicesPrice()
+    // Show Sub Total price To user
+    this.shoppingCart.subTotalPrice()
+    this.subTotal = this.shoppingCart.subTotalPrice() + this.shoppingCart.totalServicesPrice();
+
+    // Show  Total price To user
+    this.shoppingCart.totalPrice();
+    this.totalPrice = this.shoppingCart.shipping + this.shoppingCart.totalServicesPrice();
+
+    // Show Shippnig Price
+    this.shippingPrice = this.shoppingCart.showShipping
+
+    // Save Product to Local Storage
+    this.shoppingCart.saveInLocalStorge()
 
   }
 
@@ -39,9 +55,17 @@ export class ShoppingCartComponent implements OnInit {
         // update quantity in navbar
         this.shoppingCart.getAllQuantityProduct();
 
-        // update total price in shopping cart
+        // Update Sub Total price To user
+        this.shoppingCart.subTotalPrice()
+        this.subTotal = this.shoppingCart.subTotalPrice() + this.shoppingCart.totalServicesPrice();
+
+        // Update  Total price To user
         this.shoppingCart.totalPrice();
-        this.total = this.shoppingCart.totalPrice() + this.shoppingCart.totalServicesPrice()
+        this.totalPrice = this.shoppingCart.shipping + this.shoppingCart.totalServicesPrice();
+
+        // Update Shippnig Price
+        this.shippingPrice = this.shoppingCart.showShipping
+
 
       }
     }
@@ -57,10 +81,16 @@ export class ShoppingCartComponent implements OnInit {
         // update quantity in navbar
         this.shoppingCart.getAllQuantityProduct();
 
-        // update total price in shopping cart
-        this.shoppingCart.totalPrice();
-        this.total = this.shoppingCart.totalPrice() + this.shoppingCart.totalServicesPrice()
+        // Update Sub Total price To user
+        this.shoppingCart.subTotalPrice()
+        this.subTotal = this.shoppingCart.subTotalPrice() + this.shoppingCart.totalServicesPrice();
 
+        // Update  Total price To user
+        this.shoppingCart.totalPrice();
+        this.totalPrice = this.shoppingCart.shipping + this.shoppingCart.totalServicesPrice();
+
+        // Update Shippnig Price
+        this.shippingPrice = this.shoppingCart.showShipping
       }
     }
   }
@@ -75,10 +105,16 @@ export class ShoppingCartComponent implements OnInit {
 
         // update quantity in navbar
         this.shoppingCart.getAllQuantityProduct();
+        // Update Sub Total price To user
+        this.shoppingCart.subTotalPrice()
+        this.subTotal = this.shoppingCart.subTotalPrice() + this.shoppingCart.totalServicesPrice();
 
-        // update total price in shopping cart
+        // Update  Total price To user
         this.shoppingCart.totalPrice();
-        this.total = this.shoppingCart.totalPrice() + this.shoppingCart.totalServicesPrice()
+        this.totalPrice = this.shoppingCart.shipping + this.shoppingCart.totalServicesPrice();
+
+        // Update Shippnig Price
+        this.shippingPrice = this.shoppingCart.showShipping
       }
     }
 
@@ -100,11 +136,17 @@ export class ShoppingCartComponent implements OnInit {
         this.services.splice(this.services.indexOf(item), 1);
         sessionStorage.setItem('services', JSON.stringify(this.services))
 
+        // Update Sub Total price To user
+        this.shoppingCart.subTotalPrice()
+        this.subTotal = this.shoppingCart.subTotalPrice() + this.shoppingCart.totalServicesPrice();
+
+        // Update  Total price To user
         this.shoppingCart.totalPrice();
-        this.total = this.shoppingCart.totalPrice() + this.shoppingCart.totalServicesPrice()
+        this.totalPrice = this.shoppingCart.shipping + this.shoppingCart.totalServicesPrice();
+
+        // Update Shippnig Price
+        this.shippingPrice = this.shoppingCart.showShipping
       }
     }
   }
-
-
 }

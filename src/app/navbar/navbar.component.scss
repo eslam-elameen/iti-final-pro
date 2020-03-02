@@ -52,39 +52,11 @@
   align-items: center;
   margin: 0 auto;
 }
-.dropdown-toggle {
-  background: none;
-  font-family: Montserrat;
-  padding: 0 100px;
-  color: #303030;
-  font-size: 16px;
-  font-weight: 800;
-  padding: 18px;
-  text-transform: uppercase;
-}
+
 .dropdown-menu {
   padding: 1.5rem 1.5rem;
 }
 
-.form-inline .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  // left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  min-width: 10rem;
-  padding: 1.5rem 1.5rem;
-  margin: 0.125rem 0 0;
-  font-size: 1rem;
-  color: #212529;
-  text-align: left;
-  list-style: none;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
-}
 .search-icons.btn-primary {
   background: none;
 }
@@ -132,12 +104,12 @@
 
 .list-user {
   position: absolute;
-  top: 57px;
+  top: 47px;
   background-color: #fff;
   border: 1px solid #ddd;
-  padding: 15px;
   border-radius: 5px;
-  right: 0;
+  right: -49px;
+  visibility: hidden;
 }
 
 .body-menu {
@@ -145,7 +117,7 @@
 }
 
 .active-link {
-  color: #981a1e !important; /* Note: You could also use a custom theme */
+  color: #981a1e !important;
 }
 .navbar-nav {
   position: relative;
@@ -175,25 +147,19 @@
   padding: 1.5rem 1.5rem;
 }
 
-.form-inline .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  // left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  min-width: 10rem;
-  padding: 1.5rem 1.5rem;
-  margin: 0.125rem 0 0;
-  font-size: 1rem;
-  color: #212529;
-  text-align: left;
-  list-style: none;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
+.btn-toggle {
+  background: none;
 }
+.btn-primary.dropdown-toggle {
+  background: none;
+  color: #303030;
+  font-size: 16px;
+    font-weight: 800;
+    border: none;
+    text-transform: uppercase;
+    font-family: Montserrat;
+}
+
 .search-icons::after {
   display: inline-block;
   content: "";
@@ -240,7 +206,7 @@ align-items: center;
 }
 
 .active-link {
-  color: #981a1e !important; /* Note: You could also use a custom theme */
+  color: #981a1e !important;
 }
 .navbar-nav {
   position: relative;
