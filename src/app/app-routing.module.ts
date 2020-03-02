@@ -1,3 +1,5 @@
+import { ProfileComponent } from './profile/profile.component';
+import { PayComponent } from './pay/pay.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductsComponent } from './products/products.component'
@@ -19,7 +21,11 @@ import { CheckComponent } from './check/check.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'pay', component: PayComponent },
+
   { path: 'signin', component: LoginComponent }, 
+  { path: 'profile', component:ProfileComponent }, 
+
   { path: 'signup', component: RegisterationComponent }, 
   { path: 'blog', component: BlogComponent },
   { path: "shoppingCart", component: ShoppingCartComponent },
@@ -27,15 +33,14 @@ const routes: Routes = [
   { path: 'blog/:id', component: SingleBlogComponent },
   { path: 'result', component: SearchResultComponent },
   { path: 'randomProduct/:id', component: SignleProductComponent },
-  {path:'ckeck',component:CheckComponent},
+  {path:'check',component:CheckComponent},
   { path: 'randomProduct', component: ProuductRandomComponent },
   { path: "ourServices", component: OurServicesComponent },
   {path:'shoppingCart', component:ShoppingCartComponent},
   {path:'OfferProduct/:id', component: SignleProductComponent },
-  // {path:":category/:id",component:SignleProductComponent},
-  // {path:":category",component:ProductsComponent},
-  // {path:":category/:kind",component:ProTypeComponent}
-
+  {path:"category/:category",component:ProductsComponent},
+  {path:"category/:category/:kind",component:ProTypeComponent},
+  {path:":category/:id",component:SignleProductComponent}
 ]
 
 

@@ -4,8 +4,11 @@ import { ProudctsService } from '../proudcts.service';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+// import { CheckboxFilterService } from '../checkbox-filter.service';
 import { NgwWowService } from 'ngx-wow';
 import { ShoppingCartService } from '../shopping-cart.service';
+import { CheckBoxFilterService } from '../check-box-filter.service';
+
 export interface Product {
   category: string;
   kind: string;
@@ -31,12 +34,12 @@ export class NavbarComponent implements OnInit {
   // serviceTotal: number = 0;
   // totalQty: number = 0;
 
-  public constructor(
+  public constructor(private fb: FormBuilder,
+    private checkFilter:CheckBoxFilterService,
     private searchServer: ProudctsService,
     private wowService: NgwWowService,
-    // private fb: FormBuilder,
     private shoppingServices: ShoppingCartService) {
-    this.searchServer.getData().subscribe(res => this.searchResult = this.productsData = res)
+    this.searchServer.getData().subscribe(res =>  this.productsData = res)
     this.filterAutoComolete = this.mySearch.valueChanges
       .pipe(
         startWith(''),
@@ -73,12 +76,11 @@ export class NavbarComponent implements OnInit {
     }
   }
   onSubmit(form) {
-    this.searchResult = (form.value) ?
-      this.productsData.filter(item => item.storeName.toLowerCase().includes(form.value.toLowerCase()) || item.productTitle.toLowerCase().includes(form.value.toLowerCase())) :
-      this.searchResult;
+    this.searchResult = (form.value)
     console.log(this.searchResult)
     this.searchServer.getResult(this.searchResult)
-    console.log(form.value)
+    console.log(form.value);
+
     this.mySearch.setValue('')
   }
 
@@ -92,6 +94,5 @@ export class NavbarComponent implements OnInit {
     // this.shoppingServices.sendCountQtyServices.subscribe(number => {
     //   this.serviceTotal = number;
     // })
-
 
 

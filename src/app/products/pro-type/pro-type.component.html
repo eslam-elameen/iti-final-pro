@@ -1,15 +1,112 @@
-<section class="container">
-    <div class="row">
-        <div class="card col-md-4" *ngFor = 'let item of mykind' >
-            <img src="{{item.img}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{item.productTitle}}</h5>
-              <p class="card-text">{{item.storeName}}</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="single-product">
+  <div class="container">
+    <div class="header-section">
+      <h3> <span> Our </span>Products</h3>
+      <p>best collection</p>
+    </div>
+    <div class="sideBar-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 side-bar">
+
+
+            <div class="card border-primary mb-3">
+              <h5 class="card-header">Store</h5>
+              <ul class="list-group list-group-flush" *ngFor='let stor of checkBoxStore'>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <input class="check" type="checkbox" name="{{stor}}" id="{{stor}}-9" value=""
+                    (change)=filterGetStore($event)>
+                  <label for="{{stor}}-9">{{stor}}</label>
+                </li>
+
+              </ul>
             </div>
           </div>
-        
+          <div class="col-md-9">
+            <select name="" id="" (change)='sortData($event)'>
+              <option value="0">
+                none
+              </option>
+              <option value="1">
+                A-Z
+              </option>
+              <option value="2">
+                Z-A
+              </option>
+              <option value="3">
+                price Low To High
+              </option>
+              <option value="4">
+                price High To low
+              </option>
+            </select>
+            <div class="row">
 
+              <div *ngIf="counter ===0 ; else empty" class="row">
+                <div class="col-md-4 mb-4 col-sm-12" *ngFor='let item of returnedArray'>
+
+
+                  <div class="card">
+                    <img src="{{item.img}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{item.productTitle}}</h5>
+                      <div>
+                        <p class="card-text">{{item.kind}}</p>
+                        <!-- <span class="card-text">{{item.storeName}}</span> -->
+                        <span class="card-text">price : {{item.price}}</span>
+                      </div>
+                      <button type="button" (click)="onAddToCart(item)" class="btn btn-primary">
+                        Add To Cart <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <ng-template #empty>
+                <div class="col-md-4 mb-4 col-sm-12" *ngFor='let item of returnedFilterArray'>
+                  <div class="card">
+                    <img src="{{item.img}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{item.productTitle}}</h5>
+                      <div>
+                        <p class="card-text">{{item.kind}}</p>
+                        <!-- <span class="card-text">{{item.storeName}}</span> -->
+                        <!-- <p class="card-text">{{item.kind}}</p> -->
+                        <span class="card-text">{{item.storeName}}</span>
+                        <span class="card-text">price : {{item.price}}</span>
+                      </div>
+                      <button type="button" (click)="onAddToCart(item)" class="btn btn-primary">
+                        Add To Cart <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div *ngIf='kindFilterData.length > 0 && counter ===0 ;else page'>
+        <div>
+          <pagination [totalItems]="kindFilterData.length" (pageChanged)="pageChanged($event)"></pagination>
+        </div>
+      </div>
+      <ng-template #page>
+        <div>
+          <pagination [totalItems]="fiterCheck.length" (pageChanged)="pageChanged($event)"></pagination>
+        </div>
+      </ng-template>
     </div>
 
-</section>
+
+
+
+
+
+  </div>
+</div>

@@ -16,7 +16,7 @@ export class ShoppingCartComponent implements OnInit {
   subTotal: number;
 
   constructor(
-    private shoppingCart: ShoppingCartService, 
+    private shoppingCart: ShoppingCartService,
     private route: Router
   ) { }
 
@@ -156,6 +156,6 @@ export class ShoppingCartComponent implements OnInit {
 
 
   continueShopping() {
-this.route.navigate(['/'])
+    this.route.navigate(["/category/dog"])
   }
 }
