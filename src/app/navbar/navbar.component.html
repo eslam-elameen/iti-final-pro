@@ -1,4 +1,3 @@
-<!-- <p>navbar works!</p> -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#"><img src="../../assets/img/logo12.png" alt=""></a>
@@ -14,35 +13,42 @@
                         routerLink="/">Home</a>
                 </li>
                 <li div class="btn-group" dropdown>
-                    <button routerLink="/dog" id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
+                    <button routerLink="category/dog" id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
                         aria-controls="dropdown-basic" routerLinkActive="active-link">
                         Dog <span class="caret"></span>
                     </button>
                     <div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right"
-                        container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-                        <a routerLink="/dog/Dry Food" role="menuitem"><a class="dropdown-item" href="#">dry</a>
-                        </a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
-                        </a>
+                        container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic"
+                        routerLinkActive="active-link">
+                        <a routerLink="category/dog/Dry Food" role="menuitem"><a class="dropdown-item" >Dry Food</a></a>
+                        <a routerLink="category/dog/Wet Food" role="menuitem"><a class="dropdown-item" >Wet Food</a></a>
+                        <a routerLink="category/dog/Treat" role="menuitem"><a class="dropdown-item" > Treat</a></a>
+                        <a routerLink="category/dog/gromming" role="menuitem"><a class="dropdown-item" >gromming</a></a>
+                        <a routerLink="category/dog/accessories" role="menuitem"><a class="dropdown-item" >accessories</a></a>
+                        <a routerLink="category/dog/Cages&Caves" role="menuitem"><a class="dropdown-item" >Cages&Caves</a></a>
+                        <a routerLink="category/dog/toys" role="menuitem"><a class="dropdown-item" >toys</a></a>
+
                     </div>
                 </li>
+ 
                 <li div class="btn-group" dropdown>
 
-                    <button routerLink="/cat" id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
+                    <button routerLink="category/cat" id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
                         aria-controls="dropdown-basic" routerLinkActive="active-link">
                         Cat <span class="caret"></span>
                     </button>
                     <div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right"
-                        container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-                        <a routerLink="/products/cat/dry food" role="menuitem"><a class="dropdown-item" href="#">Full
-                                Grooming</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
-                        </a>
-                    </div>
+                    container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic"
+                    routerLinkActive="active-link">
+                    <a routerLink="category/cat/Dry Food" role="menuitem"><a class="dropdown-item" >Dry Food</a></a>
+                    <a routerLink="category/cat/Wet Food" role="menuitem"><a class="dropdown-item" >Wet Food</a></a>
+                    <a routerLink="category/cat/Treat" role="menuitem"><a class="dropdown-item" > Treat</a></a>
+                    <a routerLink="category/cat/gromming" role="menuitem"><a class="dropdown-item" >gromming</a></a>
+                    <a routerLink="category/cat/accessories" role="menuitem"><a class="dropdown-item" >accessories</a></a>
+                    <a routerLink="category/cat/Cages&Caves" role="menuitem"><a class="dropdown-item" >Cages&Caves</a></a>
+                    <a routerLink="category/cat/toys" role="menuitem"><a class="dropdown-item" >toys</a></a>
+
+                </div>
                 </li>
                 <li div class="btn-group" dropdown>
                     <button routerLink="/bird" id="button-basic" dropdownToggle type="button"
@@ -60,47 +66,58 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active-link" routerLink="/blog">services</a>
+                    <a class="nav-link" routerLinkActive="active-link" routerLink="/ourService">services</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLinkActive="active-link" routerLink="/blog">Blog</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <div class="user-sign">
-                <button class="btn btn-success search-icons dropdown-toggle my-2 my-sm-0" (click)="divToggle1($event)"
-                    type="button">
-                    <i class="far fa-user"></i></button>
-                <div *ngIf="toggle3" role="menu" aria-labelledby="button-basic" triggers="mouseover" class="list-user">
-                    <a role="menuitem"><a class="dropdown-item" routerLink="/signIn">Sign In</a></a>
-                    <a role="menuitem"><a class="dropdown-item" routerLink="/signUp" signUp>Sign Up</a></a>
-                </div>
-            </div>
+
                 <div class="btn-group" dropdown>
                     <div role="menu" aria-labelledby="button-basic">
                         <div id="search" class="search-hidden">
-                            <form class="d-flex">
+                            <form   class="d-flex" >
                                 <mat-form-field class="example-full-width">
-                                    <input list="browsers" type="search" placeholder="Search" class="form-control"
-                                        matInput aria-label="State" [matAutocomplete]="auto" [formControl]="mySearch">
+                                    <input list="browsers" type="search"  placeholder="Search" class="form-control" matInput
+                                    aria-label="State"
+                                    [matAutocomplete]="auto"
+                                    [formControl]="mySearch"
+                                    
+                                        >
                                     <mat-autocomplete #auto="matAutocomplete">
-                                        <mat-option *ngFor="let product of filterAutoComplete | async"
-                                            [value]="product.productTitle">
+                                        <mat-option *ngFor="let product of filterAutoComolete | async" [value]="product.productTitle">
                                             <img class="example-option-img" aria-hidden [src]="product.img" height="25">
                                             <span>{{product.productTitle}}</span> |
                                             <small>{{product.storeName}}</small>
-                                        </mat-option>
+                                          </mat-option>
                                     </mat-autocomplete>
                                 </mat-form-field>
-
-                                <button routerLink="/result" type="submit" [disabled]="mySearch.invalid"
-                                    class="btn btn-primary one" (click)=onSubmit(mySearch)>
+                               
+                                <button routerLink="/result" type="submit" [disabled]="mySearch.invalid" class="btn btn-primary one" 
+                               (click) = onSubmit(mySearch)>
                                     <i class="fas fa-search"></i>
                                 </button>
                             </form>
                         </div>
                     </div>
                 </div>
+                <div class="user-sign">
+                    <button class="btn btn-success search-icons dropdown-toggle my-2 my-sm-0" (click)="divToggle1($event)"
+                        type="button">
+                        <i class="far fa-user"></i></button>
+                    <div *ngIf="toggle3" role="menu" aria-labelledby="button-basic" triggers="mouseover" class="list-user">
+                        <a role="menuitem"><a class="dropdown-item" routerLink="/signIn">Sign In</a></a>
+                        <a role="menuitem"><a class="dropdown-item" routerLink="/signUp" signUp>Sign Up</a></a>
+                    </div>
+                </div>
+                <button class="btn btn-success my-2 my-sm-0" type="submit">
+                    <a routerLink="/shoppingCart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge badge-warning" *ngIf="total === 0">{{ totalQty }}</span> 
+                        <span class="badge badge-warning" *ngIf="total > 0">{{ total  }}</span> 
+                    </a>
+                </button>
             </form>
         </div>
     </div>

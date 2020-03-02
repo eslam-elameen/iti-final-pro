@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
-
-
 import {BehaviorSubject} from 'rxjs'
-
 @Injectable({
   providedIn: 'root'
 })
@@ -15,6 +12,7 @@ export class CheckBoxFilterService {
   kind = [];
   catogery = [];
   count = 0;
+  checks = [];
 
   allArr = [this.storeName, this.kind, this.catogery];
   updateData = [];
@@ -23,7 +21,10 @@ export class CheckBoxFilterService {
   
   runs = () => {
     for (let item of this.allArr) {
-    item.length > 0? this.updateData.push(item):console.log(item)}
+      this.updateData.indexOf(item)!=-1? this.updateData.splice(this.updateData.indexOf(item),1,item):
+    item.length > 0? this.updateData.push(item):
+    console.log(this.updateData.indexOf(item))
+  }
     for (let it of this.updateData) {
       it.length === 0? this.updateData.splice(this.updateData.indexOf(it), 1)
       :console.log(this.updateData);}
@@ -31,21 +32,21 @@ export class CheckBoxFilterService {
       :console.log(this.filterdData);
       this.sendResult(this.filterdData)
     }
-
-  
   constructor() {
+    
    }
-
+ 
   ////// start///// add fiterd data to storeName array ////// 
   getStoreName = even => {
-    console.log(even.target.checked, even.target.name)
+    console.log(even, even.target.name)
+    
     for (let i in this.searchDataResult) {
       if (this.searchDataResult[i].storeName.toLowerCase() === even.target.name.toLowerCase() && even.target.checked === true) {
         this.storeName.push(this.searchDataResult[i])
         this.count++
       } else if (even.target.checked === false) {
-        let j:any;
-        for ( j in this.storeName) {
+      
+        for ( let j =0; j<this.storeName.length; j++) {
           console.log(typeof(j))
           if (this.storeName[j].storeName.toLowerCase() === even.target.name.toLowerCase()) {
             this.storeName.splice(j, 1)
@@ -78,6 +79,7 @@ export class CheckBoxFilterService {
     this.runs()
     console.log(this.kind)
     console.log(this.allArr)
+
   }
   ////////////////////////end//////////////////////////////
   ////// start///// add fiterd data to catogery array ////// 
@@ -100,5 +102,31 @@ export class CheckBoxFilterService {
     console.log(this.catogery)
     console.log(this.filterdData)
   }
-
+  fals(far){
+    for(let item of far){
+      item.checked = false
+      console.log(item.checked)
+    }
+  }
+  sor(val,arr){
+    console.log(val.target.value)
+    val.target.value==1?
+    arr.sort(function(a, b) {
+     var nameA = a.productTitle.toUpperCase(); // ignore upper and lowercase
+     var nameB = b.productTitle.toUpperCase(); // ignore upper and lowercase
+     if (nameA < nameB) {
+       return -1;
+     }
+     if (nameA > nameB) {
+       return 1;
+     }
+     return 0;
+   })
+   :val.target.value ==2? arr.sort((a, b)=> {
+     a =a.price
+     b =b.price
+     return a - b;
+   }):val.target.value==0? arr.sort(() => Math.random() - 0.5)
+:console.log(arr)
+  }
 }

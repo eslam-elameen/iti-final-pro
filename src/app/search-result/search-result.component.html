@@ -1,113 +1,53 @@
-<!-- <input #check type="checkbox" name="Pettix" id="" value="" [(ngModel)]="tex">
-<input #check2 type="checkbox" name="Mr.pets" id="" value="" [(ngModel)]="tex2"> -->
+
+
 <div class="sideBar-section">
   <div class="container">
     <div class="row">
-      <div class="col-md-3 side-bar">
-       
+      <div class="col-md-3 side-bar" >
         <h5>Categories</h5>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex justify-content-between align-items-center">dog
-            <span class="badge badge-primary badge-pill"><input  type="checkbox" name="dog" id=""
-              value="" (change)=filterGetCat($event)></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">cat
-            <span class="badge badge-primary badge-pill"><input #cat type="checkbox" name="cat" id=""
-              value=""  (change)=filterGetCat($event)></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">Bird
-            <span class="badge badge-primary badge-pill"><input #bird type="checkbox" name="bird" id=""
-              value=""  (change)=filterGetCat($event)></span>
+        <ul class="list-group list-group-flush "*ngFor='let cat of checkBoxCat'>
+          <li class="list-group-item d-flex justify-content-between align-items-center" (change)=filterGetCat($event)>{{cat}}
+            <span class="badge badge-primary badge-pill"><input class="check" type="checkbox" name="{{cat}}" id=""
+              value=""  ></span>
           </li>
         </ul>
         <h5>Food's Type</h5>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex justify-content-between align-items-center">Dry Food
-            <span class="badge badge-primary badge-pill"><input #dryFood type="checkbox" name="Dry Food" id=""
-              value=""  (change)=filterGetKind($event)></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">wet Food
-            <span class="badge badge-primary badge-pill"><input #wetFood type="checkbox" name="Wet Food" id=""
-                value="" (change)=filterGetKind($event)></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">Treat
-            <span class="badge badge-primary badge-pill"><input #treat type="checkbox" name="Treat" id=""
-                value=""  (change)=filterGetKind($event)></span>
-          </li>
-        </ul>
-        <select (change)=sor($event) >
-          <Option value="0">NONE</Option>
-          <option value="1" >a-z</option>
-          <option value="2" >price</option>
-
-        </select>
-
-        <h5>Gromming</h5>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex justify-content-between align-items-center">Shampoo
-            <span class="badge badge-primary badge-pill"><input #shampo  type="checkbox" name="shampoo" id=""
-                value="" (change)=filterGetKind($event)></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">toys
-            <span class="badge badge-primary badge-pill"><input #toys  type="checkbox" name="toys" id=""
-              value="" (change)=filterGetKind($event)></span>
-          </li>
-        </ul>
-
-        <h5>accessories</h5>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex justify-content-between align-items-center">toys
-            <span class="badge badge-primary badge-pill"><input #spray  type="checkbox" name="spray" id=""
-              value=""(change)=filterGetKind($event)></span>
+        <ul class="list-group list-group-flush" *ngFor='let kin of checkBoxkind'>
+          <li class="list-group-item d-flex justify-content-between align-items-center">{{kin}}
+            <span class="badge badge-primary badge-pill"><input  type="checkbox" name="{{kin}}" id=""
+              value="" class="check"   (change)=filterGetKind($event)></span>
           </li>
         </ul>
         <h5>Store</h5>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex justify-content-between align-items-center">Mr.pets
-            <span class="badge badge-primary badge-pill"><input #mrBet type="checkbox" name="Mr.pets" id=""
-                value=""(change)=filterGetStore($event)></span>
+        <ul class="list-group list-group-flush" *ngFor = 'let stor of checkBoxStore'>
+          <li class="list-group-item d-flex justify-content-between align-items-center">{{stor}}
+            <span class="badge badge-primary badge-pill"><input  type="checkbox" name="{{stor}}" id=""
+                value="" class="check"  (change)=filterGetStore($event)></span>
           </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">Pet Yard
-            <span class="badge badge-primary badge-pill"><input #petYard type="checkbox" name="Pet Yard" id=""
-                value="" (change)=filterGetStore($event)></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">Pettix
-            <span class="badge badge-primary badge-pill"><input #Pettix  type="checkbox" name="Pettix" id=""
-                value="" (change)=filterGetStore($event)></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">Pinky Pet Shop
-            <span class="badge badge-primary badge-pill"><input #pinkyShop  type="checkbox" name="Bow Wow Pet Shop" id=""
-                value="" (change)=filterGetStore($event)></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">7 pets
-            <span class="badge badge-primary badge-pill"><input #sevenPet  type="checkbox" name="7 pets" id=""
-                value="" (change)=filterGetStore($event)></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">pets Office
-            <span class="badge badge-primary badge-pill"><input #petOffice type="checkbox" name="pets Office" id=""
-                value="" (change)=filterGetStore($event)></span>
-          </li>
+         
         </ul>
       </div>
-
-<!-- <div  '>
-<p>{{item.name}}</p>    
-</div> -->  
-<!-- <div class="row"> -->
-  <!-- <div *ngIf="filterdData.length === 0; else empty" class="row" > -->
-    <!-- <div class="card col-md-3" *ngFor = 'let item of searchData | filterResult:tex:check.name:"storeName"'  >
-      <img src="{{item.img}}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{item.productTitle}}</h5>
-        <p class="card-text">{{item.kind}}</p>
-        <p class="card-text">{{item.storeName}}</p>
-  
-        <a href="#" class="btn btn-primary">Go somewhere</a> -->
       <div class="col-md-9">
+        <select name="" id="" (change)='sortData($event)'>
+          <option value="0">
+            none
+          </option>
+          <option value="1">
+            A-Z
+          </option>
+          <option value="2">
+            price Low To High
+          </option>
+        </select>
         <div class="row">
-          <div *ngIf = 'searchData.length ===0'>a7aa</div>
+          <div class="alert alert-danger" role="alert" *ngIf='searchData.length ==0'>
+           <h4>No Data Found</h4> 
+  
+        </div>
           <div  *ngIf="counter ===0 ; else empty" class="row">
-            <div class="col-md-4 mb-4 col-sm-12" *ngFor='let item of searchData'>
+            <div class="col-md-4 mb-4 col-sm-12" *ngFor='let item of returnedArray'>
+           
+            
               <div class="card">
                 <img src="{{item.img}}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -120,11 +60,11 @@
                   <a href="#" class="btn btn-primary">Add To Cart <i class="fas fa-shopping-cart"></i></a>
                 </div>
               </div>
+              
             </div>
           </div>
-        
           <ng-template #empty>
-            <div class="col-md-4 mb-4 col-sm-12" *ngFor='let item of fiterCheck'>
+            <div class="col-md-4 mb-4 col-sm-12" *ngFor='let item of returnedFilterArray'>
               <div class="card">
                 <img src="{{item.img}}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -138,29 +78,28 @@
                 </div>
               </div>
             </div>
+            
+
           </ng-template>
-     
+        </div>
         </div>
       </div>
     </div>
- 
-
-  </div>
-   <!-- <ng-template #empty>
-    <div class="card col-md-3" *ngFor = 'let i of filterdData   '  >
-      <img src="{{i.img}}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{i.productTitle}}</h5>
-        <p class="card-text">{{i.kind}}</p>
-        <p class="card-text">{{i.storeName}}</p>
-  
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </ng-template > -->
-
-
 </div>
+<div>
+  <div *ngIf='searchData.length > 0 && counter ===0 ;else page' >
+    <div>
+    <pagination [totalItems]="searchData.length" (pageChanged)="pageChanged($event)"></pagination>
+    </div>
+  </div>
+      <ng-template #page>
+        <div>
+          <pagination [totalItems]="fiterCheck.length" (pageChanged)="pageChanged($event)"></pagination>
+        </div>
+      </ng-template>
+</div>
+
+  
 
    
   

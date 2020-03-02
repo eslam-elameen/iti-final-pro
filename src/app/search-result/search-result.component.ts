@@ -1,6 +1,8 @@
 import { Component, OnInit, } from '@angular/core';
 import { ProudctsService } from '../proudcts.service';
-import {CheckboxFilterService} from '../checkbox-filter.service'
+// import {CheckboxFilterService} from '../checkbox-filter.service'
+import {CheckBoxFilterService} from '../check-box-filter.service'
+import { PageChangedEvent } from 'ngx-bootstrap/pagination';
 
 
 
@@ -11,23 +13,37 @@ import {CheckboxFilterService} from '../checkbox-filter.service'
 })
 export class SearchResultComponent implements OnInit {
   searchValue:string
+  returnedFilterArray;
   y: number = 4;
   max: number = 5;
   apiData = [];
   searchData=[];
-  fiterCheck = [];
-  counter = this.filterService.count
+  fiterCheck :any[]
+  counter = 0
+  
+  
+  // falseCheck=
 
- 
+  
   checkBoxCat=[];
   checkBoxkind=[];
   checkBoxStore=[];
- 
-  constructor(private resultServer: ProudctsService , private filterService:CheckboxFilterService) { 
+  returnedArray: any[];
+  
+  constructor(private resultServer: ProudctsService , private filterService:CheckBoxFilterService) { 
     this.resultServer.getSearch.subscribe((data) => {
+      let chh = Array.from(document.getElementsByClassName('check'));
+      if( this.searchValue){
+        for ( let i of chh){
+          this.counter = 0
+          i.checked = false
+       }
+       this.filterService.updateData.splice(0, this.filterService.updateData.length);
+      }
       console.log(data); // And he have data here too!
       this.searchValue=data;
         console.log(this.searchValue)
+
         this.resultServer.getData().subscribe((res:[]) => {
         console.log(res)
         this.apiData = res;
@@ -35,6 +51,8 @@ export class SearchResultComponent implements OnInit {
         this.apiData.filter(item => item.productTitle.toLowerCase().includes(this.searchValue.toLowerCase()) ) :
           this.searchData ;
         console.log(this.searchData)
+        this.returnedArray = this.searchData.slice(0, 9);
+  
         for(let item of this.apiData){
           if(this.checkBoxCat.indexOf(item.category)=== -1){
 
@@ -43,24 +61,41 @@ export class SearchResultComponent implements OnInit {
           if(this.checkBoxkind.indexOf(item.kind)== -1){
             this.checkBoxkind.push(item.kind)
           }
-         
-          
+          if(this.checkBoxStore.indexOf(item.storeName)=== -1){
+            this.checkBoxStore.push(item.storeName)
+          }  
         } 
       } )
     });
     
-  // fiterCheck = this.filterService.filterdData;
+  // this.fiterCheck = this.filterService.filterdData;
   }
 
   
   ngOnInit() {
     console.log(this.counter) 
-      this.filterService.filterBehaviorSub.subscribe(dataa =>{ this.fiterCheck = dataa
+      this.filterService.filterBehaviorSub.subscribe((dataa) =>{ this.fiterCheck = dataa
   console.log(this.fiterCheck)
+  console.log(typeof(this.fiterCheck)
+  )
+  this.returnedFilterArray = this.fiterCheck.slice(0, 9);
   console.log(this.fiterCheck)
+  console.log(this.returnedFilterArray )  
 } )
+
   }
+
+  pageChanged(event: PageChangedEvent): void {
+    const startItem = (event.page - 1) * event.itemsPerPage;
+    const endItem = event.page * event.itemsPerPage;
+    this.returnedArray = this.searchData.slice(startItem, endItem);
+    this.returnedFilterArray=this.fiterCheck.slice(startItem, endItem);
+  }
+  
+
+
   filterGetKind = event=>{event.target.checked? this.counter++:this.counter--;
+   
     this.filterService.getKind(event)
   }
   filterGetCat = eve =>{eve.target.checked? this.counter++:this.counter--;
@@ -69,25 +104,8 @@ this.filterService.getCatogery(eve);
   filterGetStore = even =>{even.target.checked? this.counter++:this.counter--;
     this.filterService.getStoreName(even);
   }
-   sor(val){
-     console.log(val.target.value)
-     val.target.value==1?
-     this.fiterCheck.sort(function(a, b) {
-      var nameA = a.productTitle.toUpperCase(); // ignore upper and lowercase
-      var nameB = b.productTitle.toUpperCase(); // ignore upper and lowercase
-      if (nameA > nameB) {
-        return -1;
-      }
-      if (nameA < nameB) {
-        return 1;
-      }
-      return 0;
-    })
-    :val.target.value ==2? this.fiterCheck.sort((a, b)=> {
-      a =a.price
-      b =b.price
-      return b - a;
-    }):val.target.value==0? this.fiterCheck.sort(() => Math.random() - 0.5)
-:console.log(this.fiterCheck)
+   sortData(val){
+    this.filterService.sor(val,this.returnedArray)
+    this.filterService.sor(val,this.returnedFilterArray)
    }
 }
