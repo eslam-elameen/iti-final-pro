@@ -43,8 +43,9 @@ export class OfferProductComponent implements OnInit {
        if (this.ranarr.length < 4) {
           this.ranarr.push(this.random)
         }
+        
         this.sets = [...new Set(this.ranarr)]
-        // console.log(this.random);
+        // console.log(this.sets[0].price);
         
       }
 

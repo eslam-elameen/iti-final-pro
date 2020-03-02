@@ -8,6 +8,10 @@ import { BehaviorSubject } from 'rxjs';
 export class ApiService {
   private checkdata =new BehaviorSubject({})
   checkdatafinal = this.checkdata.asObservable()
+
+  private totalPrice =new BehaviorSubject({})
+
+  totalPricefinal = this.totalPrice.asObservable()
   constructor(private http: HttpClient) { }
   configUrl = './assets/db.json';
 
@@ -39,5 +43,8 @@ export class ApiService {
   }
     sendgetdata(data){
       this.checkdata.next(data)
+    }
+    sendpricedata(price){
+     this.totalPrice.next(price)
     }
 }

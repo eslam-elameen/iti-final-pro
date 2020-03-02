@@ -20,7 +20,7 @@ price=800
     //   this.products =data
     //   })
    }
-
+    totalPricePay
   ngOnInit() {
         this.payment.checkdatafinal.subscribe(
       data => {
@@ -29,14 +29,22 @@ price=800
         console.log(this.userData);
 
       })
+      this.payment.totalPricefinal.subscribe(data=>{
+        this.totalPricePay = data;
+        console.log(this.totalPricePay)
+
+      })
+
       this.myForm = this.fb.group({
         CardNumber: ['', [Validators.required, Validators.pattern('[0-9]{14}')]],
         CardHolders: ['', [Validators.required, Validators.pattern('[a-z]{5,15}')]],
         year: ['', [Validators.required, Validators.pattern('[0-9]{4}')]],
         month: ['', [Validators.required, Validators.pattern('[0-9]{1,2}')]],
-        day: ['', [Validators.required, Validators.pattern('[0-9]{1,2}')]]
+        day: ['', [Validators.required, Validators.pattern('[0-9]{1,2}')]],
+        checkbox:[]
   })
   this.myForm.disable()
+
 }
 
 onSubmit(form){
@@ -47,6 +55,7 @@ undisable(hoda){
   if(hoda=='credit'){
   this.myForm.enable()
   console.log(hoda)
+  // this.myForm["checkbox"].enable()
   }else{
   this.myForm.disable()
   }

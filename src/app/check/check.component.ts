@@ -1,5 +1,5 @@
 import { ApiService } from './../api.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter,Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ShoppingCartService } from './../shopping-cart.service'
@@ -14,12 +14,14 @@ export class CheckComponent implements OnInit {
   checkoutData;
   checkoutDataUser = {}
   productFromLocal: any;
-  total;
+  total
   services: any;
+  mytotalPrice
   constructor(private fb: FormBuilder,
     private checkout: ApiService,
     private router: Router,
     private shopping: ShoppingCartService) { }
+
 
   ngOnInit() {
     this.productFromLocal = JSON.parse(localStorage.getItem('shoppingCart'));
@@ -28,14 +30,18 @@ export class CheckComponent implements OnInit {
 
     this.services = JSON.parse(sessionStorage.getItem('services'));
     console.log(this.services);
-    
+   
+    this.checkout.sendpricedata(this.total)
+console.log(this.total)
+
+
 
     this.myForm = this.fb.group({
       fName: ['', [Validators.required, Validators.pattern('[a-z]{2,12}')]],
       lName: ['', [Validators.required, Validators.pattern('[a-z]{2,12}')]],
       city: ['', [Validators.required, Validators.pattern('[a-z]{2,12}')]],
       email: ['', [Validators.required, Validators.pattern(/\w{1,}@[a-z]{3,}\.com/)]],
-      mobile: ['', [Validators.required, Validators.pattern('[0-9]{11}')]],
+      mobile: ['', [Validators.required, Validators.pattern('01[0-9]{9}')]],
       address: ['', Validators.required],
       postalCode: ["", [Validators.required, Validators.pattern('[0-9]{6}')]]
     });
