@@ -27,10 +27,6 @@ export class BlogServiceService {
   getSlider(){
     return this.HttpClin.get(" http://localhost:3000/sliders");
   }
-  // getGalary(){
-  //   return this.HttpClin.get("http://localhost:3000/galary");
-  // }
-
   getCount() {
     this.count++;
   }

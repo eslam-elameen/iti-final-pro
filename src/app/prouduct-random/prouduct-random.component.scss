@@ -38,7 +38,7 @@ p::before {
 
 h5 {
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: capitalize;
 }
 
@@ -56,48 +56,42 @@ h5 {
   background-color: #9297ab;
   margin-top: 1rem;
   color: #fff;
+  padding: .8rem;
 }
 
 .price {
-  font-weight: 500;
+  font-weight: 600;
+
 }
 
 .card-body-detail {
   display: flex;
   justify-content: space-between;
 }
+
 .btn-primary {
+  background-color: #1f365c;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border: none;
 }
-.btn-primary {
-  background-color: #1f365c;
+.btn-primary:hover {
+  background-color: #142848;
+  color: #fff;
+  border: 1px solid #425575;
+  transition: 0.5s all ease-in-out;
+
+}
+.btn-primary:hover i {
+  transform: rotateY(360deg);
+  transition: 0.5s all ease-in-out;
+  color: #fff;
 }
 
 .card-wrapper {
   position: relative;
 }
-.icons-heart {
-  position: absolute;
-  top: 6px;
-  left: 10px;
-  top: 15px;
-  z-index: 1;
-  // background-color: rgba(0, 0, 0, 0.6);
-  padding: 9px 10px;
-  display: inline-block;
-  color: #aab8c2;
-  line-height: 1;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  border-radius: 3px;
-}
-.icons-heart i:hover {
-  color: #1f365c;
-  transition: 0.5s all ease-in-out;
-}
+
 .card:hover {
   transform: translate(0, -4px);
   transition: 0.5s all ease-in-out;
@@ -118,20 +112,7 @@ h5 {
 .card-img:hover img {
   transform: scale(1.1);
 }
-.btn-warning {
-  background: none;
-  color: #d39e00;
-  border: none;
-  padding: 0;
-}
 
-.btn-warning:not(:disabled):not(.disabled).active,
-.btn-warning:not(:disabled):not(.disabled):active,
-.show > .btn-warning.dropdown-toggle {
-  color: #d39e00;
-  background: none;
-  border-color: none;
-}
 .header-wapper {
   display: flex;
   justify-content: space-between;

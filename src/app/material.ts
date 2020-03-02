@@ -1,6 +1,7 @@
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatCardModule} from '@angular/material/card';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {CdkStepperModule} from '@angular/cdk/stepper';
 
 
 import {NgModule} from '@angular/core'
@@ -11,7 +12,8 @@ import { MatFormFieldModule,MatInputModule  } from '@angular/material';
         MatCardModule,
         MatAutocompleteModule,
         MatFormFieldModule,
-        MatInputModule 
+        MatInputModule,
+        CdkStepperModule
 
 
     ],
@@ -20,7 +22,8 @@ import { MatFormFieldModule,MatInputModule  } from '@angular/material';
         MatCardModule,
         MatAutocompleteModule,
         MatFormFieldModule,
-        MatInputModule 
+        MatInputModule,
+        CdkStepperModule
     ]
 
 

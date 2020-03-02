@@ -86,12 +86,12 @@ export class CheckBoxFilterService {
   getCatogery(eve) {
     console.log(eve.target.checked,eve.target.name)
     for (let i = 0; i < this.searchDataResult.length; i++) {
-      if (this.searchDataResult[i].category.toLowerCase() === eve.target.name.toLowerCase() && eve.target.checked === true) {
+      if (this.searchDataResult[i].category === eve.target.name && eve.target.checked === true) {
         this.catogery.push(this.searchDataResult[i])
         this.count++
       } else if (eve.target.checked === false) {
         for (let i = 0; i < this.catogery.length; i++) {
-          if (this.catogery[i].category.toLowerCase() === eve.target.name.toLowerCase()) {
+          if (this.catogery[i].category === eve.target.name) {
             this.catogery.splice(i, 1)
             this.count--
           }
@@ -111,7 +111,7 @@ export class CheckBoxFilterService {
   sor(val,arr){
     console.log(val.target.value)
     val.target.value==1?
-    arr.sort(function(a, b) {
+    arr.sort((a, b)=> {
      var nameA = a.productTitle.toUpperCase(); // ignore upper and lowercase
      var nameB = b.productTitle.toUpperCase(); // ignore upper and lowercase
      if (nameA < nameB) {
@@ -122,11 +122,25 @@ export class CheckBoxFilterService {
      }
      return 0;
    })
-   :val.target.value ==2? arr.sort((a, b)=> {
+   :val.target.value ==2?arr.sort((a, b)=> {
+    var nameA = a.productTitle.toUpperCase(); // ignore upper and lowercase
+    var nameB = b.productTitle.toUpperCase(); // ignore upper and lowercase
+    if (nameA > nameB) {
+      return -1;
+    }
+    if (nameA < nameB) {
+      return 1;
+    }
+    return 0;
+  }):val.target.value ==3? arr.sort((a, b)=> {
      a =a.price
      b =b.price
      return a - b;
-   }):val.target.value==0? arr.sort(() => Math.random() - 0.5)
+   }):val.target.value ==4? arr.sort((a, b)=> {
+    a =a.price
+    b =b.price
+    return b - a;
+  }):val.target.value==0? arr.sort(() => Math.random() - 0.5)
 :console.log(arr)
   }
 }

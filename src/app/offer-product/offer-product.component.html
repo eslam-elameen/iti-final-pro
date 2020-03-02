@@ -4,23 +4,19 @@
             <h3> <span> Our </span>spical offer products</h3>
             <p>best collection</p>
         </div>
-  
+
         <div class="row">
             <div class="col-md-3 wow zoomIn" *ngFor="let card of sets">
                 <div class="card card-img hover06 mt-4">
                     <div class="card-wrapper">
                         <span class="offer">Offer</span>
                         <span class="discount">20%</span>
-                        <div class="icons-heart">
-                            <i class="far fa-heart"></i>
-                        </div>
                         <div class="img-wrapper">
                             <img [src]="card.img" class="card-img-top" alt="..." routerLink="/OfferProduct/{{card.id}}">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">{{card.productTitle}}</h5>
-                            <div class="card-body-detail ">
-                                <rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"></rating>
+                            <div class="header-wrapper">
+                                <h5 class="card-title">{{card.productTitle | slice:0:22}}</h5>
                             </div>
                             <div class="price-detail">
                                 <del class="mr-3">{{card.price}} EGP</del>
