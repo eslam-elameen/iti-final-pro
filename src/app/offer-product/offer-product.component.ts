@@ -16,6 +16,8 @@ export class OfferProductComponent implements OnInit {
   sets;
   postItem;
   modul;
+  mathRandom: any;
+
   constructor(
     private http: ProudctsService,
     private dataServ: ProudctsService,
@@ -28,36 +30,24 @@ export class OfferProductComponent implements OnInit {
   cards;
   random;
   posts;
+  pricetotal = [];
   ngOnInit() {
+    // WoW animation
     this.wowService.init();
-    this.http.getData().subscribe(res => {
-      this.posts = res;
-      // console.log(this.posts);
-
-    });
+    // get data 
     this.http.getData().subscribe(res => {
       this.cards = res;
-      
-      for (let item of this.cards) {
-        this.random = this.cards[Math.floor(Math.random() * this.cards.length)];
-       if (this.ranarr.length < 4) {
-          this.ranarr.push(this.random)
-        }
-        this.sets = [...new Set(this.ranarr)]
-        // console.log(this.random);
-        
-      }
 
+      // sort data random
+      this.cards.sort(() => Math.random() - .5);
+      for (let item of this.cards) {
+        if (this.ranarr.length < 4) {
+          this.ranarr.push(item);
+            Math.floor(item.price);  
+        }
+      }
     });
-    // this.http.getData().subscribe( data =>{
-    //   this.cards = data
-    //   for (let i = 0; i < this.cards.length; i++) {
-        
-    //     console.log(this.modul);
-        
-      
-    //   }
-    // })
+
 
     // Save Product in local Storage 
     this.shoppingCart.saveInLocalStorge();
