@@ -1,70 +1,68 @@
-<section class="our-services mb-3">
+<section class="our-services ">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 offset-md-2">
-
-        
-<div class="card">
-  <h5 class="card-header">
-    Choose Your Services
-  </h5>
-  <div class="card-body">
-
-    
-    <form [formGroup]="servicesForm" (ngSubmit)="onSubmit(servicesForm)">
-
-      <div class="form-group " >
-
-        <!-- <div class="alert alert-danger" role="alert" 
-        *ngIf="servicesForm.get('checkServeices').hasError('required')">
-          Services is required, select atleast one Services.
-        </div> -->
-
-        <label class="checkBox" *ngFor="let item of data">
-          
-          <input type="checkbox"  [value]="item.name" class="mr-1" [name]="item.price"  (change)="onChange($event)">
-          {{ item.name }}
-        </label>
-      </div>
-     
-
       
-      <div class="form-group ">
-        <label>Cat</label>
-        <input type="number" class="form-control w-25" min="0" [value]="0" formControlName="cat" (change)="onChangevalue($event)">
-      </div>
-      <div class="form-group ">
-        <label >Dog</label>
-        <input type="number" class="form-control w-25" min="0" formControlName="dog" (change)="onChangevalue($event)">
+      <div class="col-md-6">
+        <img src="../../assets/img/dog-shampoo.jpg" class="img-fluid rounded " alt="Services image">
       </div>
 
-    
+      <div class="col-md-6">
+        <div class="card">
+          <h5 class="card-header">
+            Choose Your Services
+          </h5>
+          <div class="card-body">
 
-      <div class="form-group">
-        <label class="ml-2">Choose Your Date</label>
-        <input formControlName="date" type="text"  placeholder="Choose Your Date" class="form-control w-25" bsDatepicker  [bsConfig]="{ adaptivePosition: true }" [minDate]="minDate">
-      </div>
-      <!-- <div class="alert alert-danger" role="alert" *ngIf="servicesForm.get('date').hasError('required') && servicesForm.get('date').touched">
-          date is required.
-      </div> -->
-      <button type="submit" class="btn btn-success" [disabled]="!servicesForm.valid">Book</button>
+            
 
-    </form>
-
-   
-  </div>
-  <div class="card-footer">
-    <h5>Total Price : {{total}} EGP</h5>
-
-  </div>
-</div>
+            <form [formGroup]="servicesForm" (ngSubmit)="onSubmit(servicesForm)">
 
 
+              <div class="alert alert-warning" role="alert" *ngIf="!servicesForm.valid">
+                <p class="m-0 p-0">Please Check Atleast one Services </p>
+                <p class="m-0 p-0">Choose Your Date</p>
+              </div>
+              <div class="alert alert-warning" role="alert" *ngIf="servicesForm.get('cat').value == 0 && servicesForm.get('dog').value == 0">
+                <p class="m-0 p-0">Please increase one Animal </p>
+              </div>
 
-      </div><!-- End Col -->
+              <div class="form-group ">
+                <label class="checkBox" *ngFor="let item of data">
+                  <input type="checkbox" [value]="item.name" class="mr-1" [name]="item.price"
+                    (change)="onChange($event)">
+                  {{ item.name }}
+                </label>
+              </div>
+
+              <div class="form-group ">
+                <label>Cat</label>
+                <input type="number" class="form-control w-25" min="0"  formControlName="cat"
+                  (change)="onChangevalue($event)">
+              </div>
+
+              <div class="form-group ">
+                <label>Dog</label>
+                <input type="number" class="form-control w-25" min="0" formControlName="dog"
+                  (change)="onChangevalue($event)">
+              </div>
+
+              <div class="form-group">
+                <label class="ml-2">Put Your Date</label>
+                <input formControlName="date" type="text" placeholder="put Your Date" class="form-control w-50"
+                  bsDatepicker [bsConfig]="{ adaptivePosition: true }" [minDate]="minDate">
+              </div>
+
+              <button type="submit" class="btn btn-success">Book</button>
+            </form>
+
+          </div>
+          <div class="card-footer">
+            <h5>Total Price : {{total}} EGP</h5>
+
+          </div>
+        </div>
+
+      </div><!-- End Col-6 -->
     </div> <!-- End Row  -->
   </div><!-- End Container -->
 </section><!-- End Our Services-->
-
-
-

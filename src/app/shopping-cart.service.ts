@@ -106,7 +106,7 @@ export class ShoppingCartService implements OnInit {
     if (product) {
       for (let item of product) {
         total += Math.floor(item.totalPrice)
-        console.log(total);
+        // console.log(total);
 
       }
     }
@@ -124,7 +124,7 @@ export class ShoppingCartService implements OnInit {
 
       this.shipping = 50;
       this.shipping += this.subTotalPrice()
-      console.log(this.shipping);
+      // console.log(this.shipping);
 
     }
 
@@ -138,10 +138,9 @@ export class ShoppingCartService implements OnInit {
     if (services) {
       for (let item of services) {
         total += item.totalPrice;
-        console.log(total);
+        // console.log(total);
       }
     }
-
 
     return total;
   }

@@ -17,7 +17,7 @@ export class OurServicesComponent implements OnInit, OnChanges {
   servicesForm: FormGroup;
   servicesArray: any = [];
   total = 0;
-
+  
 
   data = [
     {
@@ -43,8 +43,8 @@ export class OurServicesComponent implements OnInit, OnChanges {
   ngOnInit() {
 
     this.servicesForm = this.formBulider.group({
-      cat: ['0', Validators.required],
-      dog: ['0', Validators.required],
+      cat: ['0'],
+      dog: ['0'],
       date: ['', Validators.required],
       checkServeices: this.formBulider.array([], [Validators.required])
 
@@ -85,8 +85,7 @@ export class OurServicesComponent implements OnInit, OnChanges {
   }
 
   onSubmit(form) {
-    if (form.valid) {
-      if (form.value.dog > 0 || form.value.cat > 0) {
+    if (form.value.dog > 0 || form.value.cat > 0) {
 
         form.value['qty'] = 1;
         form.value['totalPrice'] = this.total;
@@ -94,7 +93,7 @@ export class OurServicesComponent implements OnInit, OnChanges {
         sessionStorage.setItem('services', JSON.stringify(this.services.ourServices))
         // this.services.countQuantityOFServices()
         this.route.navigate(['/shoppingCart'])
-      }
+      
 
     }
 

@@ -47,12 +47,11 @@ export class NavbarComponent implements OnInit {
 ngOnInit() {
    
   this.wowService.init();
+
+  // count Quantity of product in navbar
   this.totalQty = this.shoppingServices.getAllQuantityProduct()
-console.log(this.totalQty)
   this.shoppingServices.sendCountNumber.subscribe(number => {
     this.total = number 
-console.log(this.total)
-
   });
 
 }

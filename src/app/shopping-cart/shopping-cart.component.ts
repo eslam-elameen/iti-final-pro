@@ -121,7 +121,7 @@ export class ShoppingCartComponent implements OnInit {
     for (let item of this.shoppingCart.products) {
       if (item.id === productID) {
         this.shoppingCart.products.splice(this.shoppingCart.products.indexOf(item), 1);
-        console.log(this.shoppingCart.products);
+        // console.log(this.shoppingCart.products);
 
       }
     }
