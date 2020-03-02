@@ -65,7 +65,7 @@ export class OurServicesComponent implements OnInit, OnChanges {
         price: event.target.name
       }
       this.servicesArray.push(new FormControl(services));
-
+      
       this.totalPrice()
       this.total = this.totalPrice()
     } else {
@@ -86,7 +86,8 @@ export class OurServicesComponent implements OnInit, OnChanges {
 
   onSubmit(form) {
     if (form.value.dog > 0 || form.value.cat > 0) {
-
+      if(form.valid){
+        
         form.value['qty'] = 1;
         form.value['totalPrice'] = this.total;
         this.services.ourServices.push(form.value);
@@ -95,33 +96,35 @@ export class OurServicesComponent implements OnInit, OnChanges {
         this.route.navigate(['/shoppingCart'])
       
 
+
+      }
+
     }
 
   }
 
   totalPrice() {
     let total = 0;
+
     if (this.servicesArray.length > 0) {
+      console.log(this.servicesArray.value);
+      
       for (let item of this.servicesArray.value) {
         total += item.price * (this.servicesForm.value.dog + this.servicesForm.value.cat);
-        // console.log(total);
+        console.log(total);
       }
     }
-
-
 
     return total;
   }
 
   onChangevalue(e) {
-    if (e.target.value > 0 && this.servicesForm.value.checkServeices.length > 0) {
-      this.totalPrice()
-      this.total = this.totalPrice();
-      // console.log();
-
-
+      if(e.target.value > 0){
+        this.totalPrice()
+        this.total = this.totalPrice();
+      }else{
+        this.total = 0;
     }
-
   }
 
 

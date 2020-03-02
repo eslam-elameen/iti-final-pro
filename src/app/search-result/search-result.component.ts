@@ -1,5 +1,6 @@
 import { Component, OnInit, } from '@angular/core';
 import { ProudctsService } from '../proudcts.service';
+import { ShoppingCartService } from '../shopping-cart.service';
 
 
 
@@ -38,7 +39,7 @@ export class SearchResultComponent implements OnInit {
       console.log(this.filterdData)
     }
   }
-  constructor(private resultServer: ProudctsService) { }
+  constructor(private resultServer: ProudctsService, private cartServices: ShoppingCartService) { }
   ngOnInit() {
     this.resultServer.getSearch.subscribe((data) => {
       this.searchData = data; // And he have data here too!
@@ -111,6 +112,11 @@ export class SearchResultComponent implements OnInit {
     this.runs()
     console.log(this.catogery)
     console.log(this.allArr)
+  }
+
+
+  addToCart(product){
+    this.cartServices.addCart(product)
   }
 
 

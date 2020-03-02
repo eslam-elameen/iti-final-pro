@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProudctsService } from '../proudcts.service';
-import {FormControl} from '@angular/forms';
-import {Observable} from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { map, startWith } from 'rxjs/operators';
 import { NgwWowService } from 'ngx-wow';
 import { ShoppingCartService } from '../shopping-cart.service';
 export interface Product {
@@ -23,12 +23,11 @@ export class NavbarComponent implements OnInit {
   productsData;
   filterd;
   searchResult;
-  
+
   toggle
   shoppingCartProduct;
   toggle3
   total;
-  totalQty;
   // serviceTotal: number = 0;
   // totalQty: number = 0;
 
@@ -39,25 +38,27 @@ export class NavbarComponent implements OnInit {
     private shoppingServices: ShoppingCartService) {
     this.searchServer.getData().subscribe(res => this.searchResult = this.productsData = res)
     this.filterAutoComolete = this.mySearch.valueChanges
-    .pipe(
-      startWith(''),
-      map(product => product ? this._filterStates(product) : this.filterd)
-    );
-}
-ngOnInit() {
-   
-  this.wowService.init();
+      .pipe(
+        startWith(''),
+        map(product => product ? this._filterStates(product) : this.filterd)
+      );
+  }
+  ngOnInit() {
 
-  // count Quantity of product in navbar
-  this.totalQty = this.shoppingServices.getAllQuantityProduct()
-  this.shoppingServices.sendCountNumber.subscribe(number => {
-    this.total = number 
-  });
+    this.wowService.init();
 
-}
-private _filterStates(value: string): Product[] {
-  const filterValue = value.toLowerCase();
-  return this.productsData.filter(product => product.kind.toLowerCase().includes(filterValue) || product.productTitle.toLowerCase().includes(filterValue) );
+    // count Quantity of product in navbar
+    this.shoppingServices.getAllQuantityProduct()
+    this.shoppingServices.sendCountNumber.subscribe(number => {
+      this.total = number
+      console.log(this.total);
+
+    });
+
+  }
+  private _filterStates(value: string): Product[] {
+    const filterValue = value.toLowerCase();
+    return this.productsData.filter(product => product.kind.toLowerCase().includes(filterValue) || product.productTitle.toLowerCase().includes(filterValue));
   }
   divToggle1(event) {
     this.toggle3 = !this.toggle3
@@ -73,8 +74,8 @@ private _filterStates(value: string): Product[] {
   }
   onSubmit(form) {
     this.searchResult = (form.value) ?
-      this.productsData.filter(item => item.storeName.toLowerCase().includes(form.value.toLowerCase()) || item.productTitle.toLowerCase().includes(form.value.toLowerCase()) ) :
-      this.searchResult ;
+      this.productsData.filter(item => item.storeName.toLowerCase().includes(form.value.toLowerCase()) || item.productTitle.toLowerCase().includes(form.value.toLowerCase())) :
+      this.searchResult;
     console.log(this.searchResult)
     this.searchServer.getResult(this.searchResult)
     console.log(form.value)

@@ -15,16 +15,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let item of  productFromLocal">
+            <tr *ngFor="let item of productFromLocal">
               <td class="w-50 ">
 
                 <div class="media">
                   <img [src]="item.img" class="img-fluid rounded  mr-3 w-25" [alt]="item.kind">
                   <div class="media-body">
-                    <h5 class="my-1 ">{{ item.productTitle }}</h5>
+                    <h5 class="my-2 ">{{ item.productTitle }}</h5>
                     <ul>
                       <li class="pb-1">Kind: <span>{{ item.kind }}</span> </li>
-                      <li class="pb-1">Store: <span>{{ item.storeName }}</span> </li>
+                      <li class="pb-2">Store: <span>{{ item.storeName }}</span> </li>
                       <li><button class="btn btn-danger btn-sm" (click)="onDelete(item.id)">Delete</button></li>
                     </ul>
                   </div><!-- End Media Body -->
@@ -55,8 +55,8 @@
                         </li>
                         <li class="pb-1">Cat: <span>{{ service.cat }}</span> </li>
                         <li class="pb-1">Dog: <span>{{ service.dog }}</span> </li>
-                        <li class="pb-1">Date: <span>{{ service.date | date: 'dd/MM/yyyy' }}</span> </li>
-                        <li class="pb-1">
+                        <li class="pb-2">Date: <span>{{ service.date | date: 'dd/MM/yyyy' }}</span> </li>
+                        <li>
                             <button class="btn btn-danger btn-sm mt-2" (click)="onDeleteServices(service)" >Delete</button>
                         </li>
                       </ul>
@@ -84,7 +84,7 @@
       <div class=" col-md-6 col-lg-3">
         <div class="card" *ngIf="productFromLocal.length > 0 || services.length > 0 ">
           <div class="card-body">
-            <button type="button" class="btn   btn-block mb-4">Continue Shopping</button>
+            <button type="button" (click)="continueShopping()" class="btn   btn-block mb-4">Continue Shopping</button>
             <h5 class="card-title mb-4 ">Order Summary</h5>
 
             <ul>
@@ -103,7 +103,7 @@
               </li>
             </ul>
 
-            <button type="button" class="btn   btn-block mt-2">Checkout</button>
+            <button type="button" class="btn btn-block mt-2" routerLink="/ckeck">Checkout</button>
 
           </div>
         </div><!-- End Card -->

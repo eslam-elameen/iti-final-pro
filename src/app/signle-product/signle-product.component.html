@@ -33,15 +33,18 @@
 
                         <h2 class="mr-4">{{postItem.price}} EGP</h2>
                         <div class="conut-quantity">
-                            <input type="number" id="quantity" name="quantity" value="1" min="1" max="20" controls>
-
-                            <button type="submit" class="btn btn-primary px-4"><i class="fas fa-cart-plus mr-2"></i>Add
-                                To cart</button>
+                            <button class="btns" (click)="onDecrease(postItem)"><i class="fas fa-minus"></i></button>
+                            <span class="qty">{{quantity}}</span>
+                            <button class="btns" (click)="onIncrease(postItem)"><i class="fas fa-plus"></i></button>
                         </div>
+
+                        <button type="button" (click)="onAddToCart(postItem)" class="btn btn-primary mt-3 px-4">
+                            <i class="fas fa-cart-plus mr-2"></i>Add
+                            To cart</button>
                         <div class="btn-display mt-2">
-                            <button type="submit" class="btn btn-outline-primary mt-3 px-4 mr-2"><i
+                            <button type="button" class="btn btn-outline-primary mt-3 px-4 mr-2"><i
                                     class="far fa-heart mr-2"></i>Add to Wishlist</button>
-                            <button type="submit" class="btn btn-outline-primary mt-3 px-4"><i
+                            <button type="button" class="btn btn-outline-primary mt-3 px-4"><i
                                     class="fas fa-retweet mr-2"></i>Add to compare</button>
                         </div>
 

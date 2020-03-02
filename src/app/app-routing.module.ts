@@ -1,4 +1,3 @@
-import { ProfileComponent } from './profile/profile.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductsComponent } from './products/products.component'
@@ -15,22 +14,27 @@ import { ProuductRandomComponent } from './prouduct-random/prouduct-random.compo
 import { SignleProductComponent } from './signle-product/signle-product.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { CheckComponent } from './check/check.component';
 
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'signin', component: LoginComponent }, 
   { path: 'signup', component: RegisterationComponent }, 
-  { path: '', component: HomeComponent },
   { path: 'blog', component: BlogComponent },
   { path: "shoppingCart", component: ShoppingCartComponent },
   { path: 'shipping', component: ShippingAreaComponent },
   { path: 'blog/:id', component: SingleBlogComponent },
   { path: 'result', component: SearchResultComponent },
   { path: 'randomProduct/:id', component: SignleProductComponent },
+  {path:'ckeck',component:CheckComponent},
   { path: 'randomProduct', component: ProuductRandomComponent },
-  { path: ":category/:kind", component: ProTypeComponent },
   { path: "ourServices", component: OurServicesComponent },
-  // { path: ":category", component: ProductsComponent },
+  {path:'shoppingCart', component:ShoppingCartComponent},
+  {path:'OfferProduct/:id', component: SignleProductComponent },
+  // {path:":category/:id",component:SignleProductComponent},
+  // {path:":category",component:ProductsComponent},
+  // {path:":category/:kind",component:ProTypeComponent}
 
 ]
 
