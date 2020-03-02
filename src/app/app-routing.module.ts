@@ -21,6 +21,7 @@ const routes: Routes = [
   { path: 'signin', component: LoginComponent }, 
   { path: 'signup', component: RegisterationComponent }, 
   { path: '', component: HomeComponent },
+  { path: 'profile',component:ProfileComponent},
   { path: 'blog', component: BlogComponent },
   { path: "shoppingCart", component: ShoppingCartComponent },
   { path: 'shipping', component: ShippingAreaComponent },
@@ -28,9 +29,9 @@ const routes: Routes = [
   { path: 'result', component: SearchResultComponent },
   { path: 'randomProduct/:id', component: SignleProductComponent },
   { path: 'randomProduct', component: ProuductRandomComponent },
-  { path: ":category/:kind", component: ProTypeComponent },
   { path: "ourServices", component: OurServicesComponent },
-  // { path: ":category", component: ProductsComponent },
+  { path: "catogery/:category", component: ProductsComponent },
+  { path: "catogery/:category/:kind", component: ProTypeComponent },
 
 ]
 

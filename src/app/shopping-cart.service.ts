@@ -47,8 +47,10 @@ export class ShoppingCartService implements OnInit {
         // console.log(this.products);
         localStorage.setItem('shoppingCart', JSON.stringify(this.products));
         this.getAllQuantityProduct()
+        console.log(this.products);
       }
     }
+    
 
   }
 
@@ -107,7 +109,6 @@ export class ShoppingCartService implements OnInit {
       for (let item of product) {
         total += Math.floor(item.totalPrice)
         console.log(total);
-
       }
     }
     return total;

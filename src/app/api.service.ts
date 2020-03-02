@@ -6,18 +6,22 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private checkdata =new BehaviorSubject({})
-  checkdatafinal = this.checkdata.asObservable()
+  private controlForm = new BehaviorSubject({});
+  comingForm = this.controlForm.asObservable();
+  private checkdata =new BehaviorSubject({});
+  checkdatafinal = this.checkdata.asObservable();
   constructor(private http: HttpClient) { }
   configUrl = './assets/db.json';
 
-
+local;
   editData(url, body, headers){
     return this.http.post<any>(url.id, body, headers);
   }
-  postData(url, body, headers) {
-    return this.http.post<any>(url, body, headers);
+  //put data from registr to json 
+  postData( obj) {
+    return this.http.post<any>("http://localhost:3000/users",obj);
   };
+  //get all user data from json 
   getUserData() {
     return this.http.get('http://localhost:3000/users');
   }
@@ -31,13 +35,19 @@ export class ApiService {
   updateUser(id, body) {
     return this.http.put("http://localhost:3000/users/" + id, body);
   }
-
-
+//put added to cart selection to json
+  postDataFromJson(obj) {
+    return this.http.post<any>("http://localhost:3000/shoppingCart", obj);
+  };
   
   getConfig() {
     return this.http.get(this.configUrl);
   }
     sendgetdata(data){
       this.checkdata.next(data)
+    }
+
+    loginControler(param){
+      this.controlForm.next(param)
     }
 }

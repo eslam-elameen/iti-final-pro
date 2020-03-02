@@ -10,30 +10,38 @@ export class ProfileComponent implements OnInit {
   fileData: File = null;
   userImg;
   user;
-
   userEmail;
-  userName
-  url = "assets/profile-placeholder.png"
-  constructor(private api: ApiService) {
+  userName;
+  gitUser;
+  url = "assets/profile-placeholder.png";
+  constructor(private http: ApiService , private userData : ApiService) {
 
-    this.user = this.api.getSingleUser(3).subscribe(data => {
-      this.user = data
-      console.log(this.user);
-      this.userEmail = this.user.email;
-      this.userName = this.user.name;
-      this.userImg = this.user.img;
-    });
-    console.log(this.user);
+    this.userData.getUserData().subscribe(data=>{
+      console.log(data);
+      
+      // this.user = data
+      //   console.log(this.user);
+      //   this.userEmail = this.user.email;
+      //   this.userName = this.user.name;
+      //   this.userImg = this.user.img;
+    })
+    // this.user = this.http.getSingleUser(3).subscribe(data => {
+    //   this.user = data
+    //   console.log(this.user);
+    //   this.userEmail = this.user.email;
+    //   this.userName = this.user.name;
+    //   this.userImg = this.user.img;
+    // });
+    // console.log(this.user);
     
-    console.log(this.user.image);
-
-
+    // console.log(this.user.image);
   }
 
+
   ngOnInit() {
-    this.user = this.api.getSingleUser(3).subscribe(data => {
+    this.user = this.http.getSingleUser(3).subscribe(data => {
       this.user = data
-      console.log(this.user);
+      // console.log(this.user);
       this.userImg = this.user.image;
       this.userName = this.user.name;
     });
@@ -52,13 +60,9 @@ export class ProfileComponent implements OnInit {
       this.userImg = reader.result
       console.log(this.userImg);
       this.user.image = reader.result;
-
-      this.api.updateUser(3, this.user).subscribe(data => {
-        console.log(data);
-
+      this.http.updateUser(3, this.user).subscribe(data => {
+        // console.log(data);
       })
-
-
     }
   }
 

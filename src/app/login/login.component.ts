@@ -1,3 +1,4 @@
+import { ShoppingCartService } from './../shopping-cart.service';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from './../api.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -12,9 +13,25 @@ export class LoginComponent implements OnInit {
   login: FormGroup;
   checkDAta;
   err;
-  constructor(private formBulider: FormBuilder, private validData: ApiService, private route: Router) { }
+  userData;
+  y;
+  shoppingCartData;
+  constructor(private formBulider: FormBuilder, private validData: ApiService, private route: Router , private cartServices:ShoppingCartService) { }
 
   ngOnInit() {
+
+    this.userData = JSON.parse(localStorage.getItem('user'))
+    console.log(this.userData);
+    this.shoppingCartData = JSON.parse(localStorage.getItem('shoppingCart'));
+    // for (let i = 0; i < this.shoppingCartData.length; i++) {
+    //   this.shoppingCartData.dina = this.userData.id;
+    //   console.log(this.shoppingCartData[i]);
+    //   console.log(this.shoppingCartData);
+    //   this.validData.postDataFromJson(this.shoppingCartData).subscribe(data => {
+    //     this.y = data
+    //     console.log(this.y);
+    //   });
+    // }
     this.login = this.formBulider.group({
       email: ['', [Validators.required, Validators.pattern(/\w{1,}@[a-z]{3,}\.com/)]],
       password: ['', [Validators.required, Validators.pattern(/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[A-z0-9]{8,}[\W]{0,}$/)]]
@@ -26,15 +43,40 @@ export class LoginComponent implements OnInit {
   onLoginSubmit(form) {
     if (form.valid) {
       for (let i = 0; i < this.checkDAta.length; i++) {
-        if (form.value.email != this.checkDAta[i].email) {
-          document.getElementById('submitAlert').style.display = 'block';
-        } else {
-          console.log('not valid email');
+        if (form.value.email == this.checkDAta[i].email && form.value.password == this.checkDAta[i].password) {
+          console.log(this.checkDAta[i]);
+          localStorage.setItem('user', JSON.stringify(this.checkDAta[i]));
+          this.validData.loginControler(form.value)
+          // let obj = {
+          //   userId: this.userData.id,
+          //   product: this.shoppingCartData
+          // }
+          // let arr = [];
+          // arr.push(obj);
+          // console.log(arr);
+          // this.validData.postDataFromJson(arr).subscribe(data => {
+          //   this.y = data
+          //   console.log(this.y);
+          // });
+          // localStorage.clear();
+          // this.cartServices.products=[];
+          // console.log(this.cartServices.products);
+          
+          // for (let i = 0; i < this.shoppingCartData.length; i++) {
+          //   this.shoppingCartData[i].userId = this.userData.id;
+          //   console.log(this.shoppingCartData[i]);
+          //   console.log(this.shoppingCartData);
+          //   this.validData.postDataFromJson(this.shoppingCartData).subscribe(data => {
+          //     this.y = data
+          //     console.log(this.y);
+          //   });
+          // }
           this.route.navigate(['/profile']);
           document.getElementById('submitAlert').style.display = 'none';
+        } else {
+          document.getElementById('submitAlert').style.display = 'block';
         }
       }
     }
   }
-
 }
