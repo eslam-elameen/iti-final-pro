@@ -1,3 +1,5 @@
+import { ProfileComponent } from './profile/profile.component';
+import { PayComponent } from './pay/pay.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductsComponent } from './products/products.component'
@@ -15,14 +17,17 @@ import { SignleProductComponent } from './signle-product/signle-product.componen
 import { OurServicesComponent } from './our-services/our-services.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckComponent } from './check/check.component';
-import { ProfileComponent } from './profile/profile.component';
+// import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'signin', component: LoginComponent },
-  { path: 'signup', component: RegisterationComponent },
+  { path: 'pay', component: PayComponent },
+
+  { path: 'signin', component: LoginComponent }, 
+  { path: 'profile', component:ProfileComponent }, 
+
+  { path: 'signup', component: RegisterationComponent }, 
   { path: 'blog', component: BlogComponent },
   { path: "shoppingCart", component: ShoppingCartComponent },
   { path: 'shipping', component: ShippingAreaComponent },
@@ -31,15 +36,14 @@ const routes: Routes = [
   { path: 'randomProduct/:id', component: SignleProductComponent },
   { path: 'RandomBlog', component: RandomBlogComponent },
   { path: "RandomBlog/:id", component: SingleBlogComponent },
-  { path: 'ckeck', component: CheckComponent },
+  {path:'check',component:CheckComponent},
   { path: 'randomProduct', component: ProuductRandomComponent },
   { path: "ourServices", component: OurServicesComponent },
-  { path: 'shoppingCart', component: ShoppingCartComponent },
-  { path: 'OfferProduct/:id', component: SignleProductComponent },
-  { path: ":category/:id", component: SignleProductComponent },
-  { path: ":category", component: ProductsComponent },
-  { path: ":category/:kind", component: ProTypeComponent }
-
+  {path:'shoppingCart', component:ShoppingCartComponent},
+  {path:'OfferProduct/:id', component: SignleProductComponent },
+  {path:"category/:category",component:ProductsComponent},
+  {path:"category/:category/:kind",component:ProTypeComponent},
+  {path:":category/:id",component:SignleProductComponent}
 ]
 
 

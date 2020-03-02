@@ -29,6 +29,7 @@ import { RatingModule } from 'ngx-bootstrap/rating';
 import { NgwWowModule } from 'ngx-wow';
 
 
+
 import { NgxSpinnerModule } from "ngx-spinner";
 import { FilterResultPipe } from './filter-result.pipe';
 import { RandomBlogComponent } from './random-blog/random-blog.component';
@@ -43,6 +44,8 @@ import { ModalModule } from 'ngx-bootstrap';
 
 import { OurServicesComponent } from './our-services/our-services.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+// import {PaginationModule} from 'ngx-pagination-bootstrap'
 import { CheckComponent } from './check/check.component';
 import { PayComponent } from './pay/pay.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -96,7 +99,9 @@ import { ProfileComponent } from './profile/profile.component';
     ModalModule.forRoot(),
     NgwWowModule,
     NgxSpinnerModule,
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    PaginationModule.forRoot(),
+    // PaginationModule
 
   ],
 

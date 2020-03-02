@@ -31,7 +31,7 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.user = this.api.getSingleUser(3).subscribe(data => {
+    this.user = this.api.getSingleUser(2).subscribe(data => {
       this.user = data
       console.log(this.user);
       this.userImg = this.user.image;
