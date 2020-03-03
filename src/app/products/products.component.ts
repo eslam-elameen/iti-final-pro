@@ -75,6 +75,7 @@ export class ProductsComponent implements OnInit {
       console.log(this.fiterCheck)
       console.log(this.returnedFilterArray )  
     } )
+    this.shoppingCart.saveInLocalStorge()
   }
   pageChanged(event: PageChangedEvent): void {
     const startItem = (event.page - 1) * event.itemsPerPage;

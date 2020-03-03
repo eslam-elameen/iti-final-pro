@@ -8,8 +8,6 @@ export class ShoppingCartService implements OnInit {
   products: any = [];
   ourServices: any = [];
   flag: boolean;
-  wishListProduct = [];
-  wishflag: boolean;
   shipping: number = 0;
 
   // send Quantity of product to navbar
@@ -61,13 +59,6 @@ export class ShoppingCartService implements OnInit {
       this.products = JSON.parse(localStorage.getItem('shoppingCart'));
       // console.log(this.products);
     }
-
-    if (localStorage.getItem('favouriteProduct') === null) {
-      this.wishListProduct = []
-    } else {
-      this.wishListProduct = JSON.parse(localStorage.getItem('favouriteProduct'));
-      // console.log(this.products);
-    }
   }
 
 
@@ -87,8 +78,10 @@ export class ShoppingCartService implements OnInit {
         total += item.qty;
         // console.log(total);
       }
+      this.sendOurnumber(total);
     }
-    this.sendOurnumber(total);
+    console.log(total);
+    
     return total;
   }
 
@@ -106,7 +99,7 @@ export class ShoppingCartService implements OnInit {
     if (product) {
       for (let item of product) {
         total += Math.floor(item.totalPrice)
-        console.log(total);
+        // console.log(total);
 
       }
     }
@@ -124,7 +117,7 @@ export class ShoppingCartService implements OnInit {
 
       this.shipping = 50;
       this.shipping += this.subTotalPrice()
-      console.log(this.shipping);
+      // console.log(this.shipping);
 
     }
 
@@ -138,10 +131,9 @@ export class ShoppingCartService implements OnInit {
     if (services) {
       for (let item of services) {
         total += item.totalPrice;
-        console.log(total);
+        // console.log(total);
       }
     }
-
 
     return total;
   }

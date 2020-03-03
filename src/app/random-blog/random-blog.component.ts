@@ -30,14 +30,8 @@ export class RandomBlogComponent implements OnInit {
 
     this.http.getData().subscribe(res => {
       this.cards = res;
-      for (let item of this.cards) {
-        this.random = this.cards[Math.floor(Math.random() * this.cards.length)];
-        if (this.ranarr.length < 5) {
-          this.ranarr.push(this.random)
-        }
-        this.sets = [...new Set(this.ranarr)]
-        // console.log(this.random);
-      }
+      this.ranarr = this.cards.sort(() => Math.random() - .5).slice(0,3);
+
 
     });
   }

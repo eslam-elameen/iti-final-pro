@@ -58,8 +58,10 @@ this.shoppingCart.saveInLocalStorge();
         product['qty'] = this.quantity;
         product['totalPrice'] = product.qty * product.price;
         localStorage.setItem('shoppingCart', JSON.stringify(this.shoppingCart.products));
+        
       }
     }
+    this.shoppingCart.getAllQuantityProduct()
 
   }
 

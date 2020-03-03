@@ -1,18 +1,40 @@
-.single-product {
-  padding-bottom: 20px;
+.side-bar {
+  margin-top: 20px;
+  margin-left: 0;
+}
+.sideBar-section {
+  padding-bottom: 100px;
   padding-top: 100px;
 }
-.header-section {
+.badge-primary {
+  background: none;
+}
+.list-group-item {
   position: relative;
+  display: block;
+  padding: 0.75rem 0rem;
+  background-color: #fff;
 }
 
-.header-section p {
-  margin-bottom: 0;
+p {
+  font-size: 12px;
+  font-weight: 400;
 }
+.side-bar h5 {
+  color: #425575;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 550;
+}
+.list-group-flush {
+  padding: 10px;
+}
+
+
 img {
-  padding: 38px;
+  padding: 30px;
   height: 300px;
-  width: 300px;
+  width: 100%;
 }
 h3 {
   color: #303030;
@@ -22,59 +44,39 @@ h3 {
 .card {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   transition: 0.5s all ease-in-out;
+  // width: 90%;
 }
-
-h3::before {
-  position: absolute;
-  content: "";
-  border-left: 4px solid #425575;
-  height: 35px;
-  left: -8px;
-}
-p::before {
-  position: absolute;
-  content: "";
-  border-left: 4px solid #b7b7b7;
-  height: 35px;
-  left: -8px;
-  top: 35px;
+.border-primary {
+  border: none;
 }
 
 h5 {
-  font-size: 15px;
-  font-weight: 400;
-  text-transform: capitalize;
+  font-size: 14px;
 }
-
 .img-wrapper {
   height: 16rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.header-section span {
-  color: #425575;
-}
 
 .card-body {
   background-color: #9297ab;
   margin-top: 1rem;
   color: #fff;
+  padding: 0.8rem;
 }
-
-.price {
-  font-weight: 500;
+.card-body p {
+  margin-bottom: 1px;
 }
-
 .card-body-detail {
   display: flex;
   justify-content: space-between;
 }
-.btn-primary {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border: none;
+.price {
+  font-weight: 500;
 }
+
 .btn-primary {
   background-color: #1f365c;
 }
@@ -82,59 +84,10 @@ h5 {
 .card-wrapper {
   position: relative;
 }
-.icons-heart {
-  position: absolute;
-  top: 6px;
-  left: 10px;
-  top: 15px;
-  z-index: 1;
-  // background-color: rgba(0, 0, 0, 0.6);
-  padding: 9px 10px;
-  display: inline-block;
-  color: #aab8c2;
-  line-height: 1;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  border-radius: 3px;
-}
-.icons-heart i:hover {
-  color: #1f365c;
-  transition: 0.5s all ease-in-out;
-}
+
 .card:hover {
   transform: translate(0, -4px);
   transition: 0.5s all ease-in-out;
-}
-
-.card-img img {
-  max-width: 100%;
-  transition: all 1s;
-  display: block;
-  height: auto;
-  transform: scale(1);
-  border-radius: 0;
-  height: 230px;
-  padding: 65px;
-  height: 300px;
-  width: 300px;
-}
-.card-img:hover img {
-  transform: scale(1.1);
-}
-.btn-warning {
-  background: none;
-  color: #d39e00;
-  border: none;
-  padding: 0;
-}
-
-.btn-warning:not(:disabled):not(.disabled).active,
-.btn-warning:not(:disabled):not(.disabled):active,
-.show > .btn-warning.dropdown-toggle {
-  color: #d39e00;
-  background: none;
-  border-color: none;
 }
 .header-wapper {
   display: flex;
@@ -143,4 +96,74 @@ h5 {
 }
 .storeName {
   font-size: 10px;
+}
+.rating-product .btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 22px;
+  background-color: none;
+  border: none;
+  padding: 0;
+  font-size: 1rem;
+  border-radius: none;
+}
+
+/*Checkboxes styles*/
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #303030;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child {
+  margin-bottom: 0;
+}
+
+input[type="checkbox"] + label:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #1f365c;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+  -webkit-transition: all 0.12s, border-color 0.08s;
+  transition: all 0.12s, border-color 0.08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.paddingcol {
+  padding: 10px;
+}
+::ng-deep .pagination {
+  display: flex;
+  flex-flow: row wrap !important;
 }

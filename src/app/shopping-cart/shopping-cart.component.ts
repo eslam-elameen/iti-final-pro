@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ShoppingCartService } from '../shopping-cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -14,14 +15,17 @@ export class ShoppingCartComponent implements OnInit {
   totalPrice: number;
   subTotal: number;
 
-  constructor(private shoppingCart: ShoppingCartService) { }
+  constructor(
+    private shoppingCart: ShoppingCartService,
+    private route: Router
+  ) { }
 
   ngOnInit() {
 
     if (JSON.parse(localStorage.getItem('shoppingCart'))) {
       this.productFromLocal = JSON.parse(localStorage.getItem('shoppingCart'));
       // console.log(this.productFromLocal);
-      
+
     }
 
     if (JSON.parse(sessionStorage.getItem('services'))) {
@@ -121,7 +125,7 @@ export class ShoppingCartComponent implements OnInit {
     for (let item of this.shoppingCart.products) {
       if (item.id === productID) {
         this.shoppingCart.products.splice(this.shoppingCart.products.indexOf(item), 1);
-        console.log(this.shoppingCart.products);
+        // console.log(this.shoppingCart.products);
 
       }
     }
@@ -148,5 +152,10 @@ export class ShoppingCartComponent implements OnInit {
         this.shippingPrice = this.shoppingCart.showShipping
       }
     }
+  }
+
+
+  continueShopping() {
+    this.route.navigate(["/category/dog"])
   }
 }
