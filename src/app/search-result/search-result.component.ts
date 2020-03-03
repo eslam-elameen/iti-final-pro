@@ -1,5 +1,6 @@
 import { Component, OnInit, } from '@angular/core';
 import { ProudctsService } from '../proudcts.service';
+import { ShoppingCartService } from '../shopping-cart.service';
 // import {CheckboxFilterService} from '../checkbox-filter.service'
 import {CheckBoxFilterService} from '../check-box-filter.service'
 import { PageChangedEvent } from 'ngx-bootstrap/pagination';
@@ -29,8 +30,10 @@ export class SearchResultComponent implements OnInit {
   checkBoxkind=[];
   checkBoxStore=[];
   returnedArray: any[];
+  toggle: HTMLElement;
+  toggle1: any;
   
-  constructor(private resultServer: ProudctsService , private filterService:CheckBoxFilterService) { 
+  constructor(private resultServer: ProudctsService , private filterService:CheckBoxFilterService,private cartServices:ShoppingCartService) { 
     this.resultServer.getSearch.subscribe((data) => {
       let chh = Array.from(document.getElementsByClassName('check'));
       if( this.searchValue){
@@ -83,6 +86,8 @@ export class SearchResultComponent implements OnInit {
   console.log(this.returnedFilterArray )  
 } )
 
+this.cartServices.saveInLocalStorge()
+
   }
 
   pageChanged(event: PageChangedEvent): void {
@@ -92,6 +97,12 @@ export class SearchResultComponent implements OnInit {
     this.returnedFilterArray=this.fiterCheck.slice(startItem, endItem);
   }
   
+
+
+  addToCart(product){
+    this.cartServices.addCart(product)
+  }
+
 
 
   filterGetKind = event=>{event.target.checked? this.counter++:this.counter--;
@@ -108,4 +119,15 @@ this.filterService.getCatogery(eve);
     this.filterService.sor(val,this.returnedArray)
     this.filterService.sor(val,this.returnedFilterArray)
    }
+   isCollapsed: boolean = true;
+
+   droptoggle1() {
+    this.toggle1 = document.getElementById('navbarSupportedContent1');
+    if (this.toggle1.style.display === "none") {
+      this.toggle1.style.display = "block";
+    }
+    else {
+      this.toggle1.style.display = "none";
+    }
+  }
 }

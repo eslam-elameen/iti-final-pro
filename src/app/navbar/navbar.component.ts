@@ -26,11 +26,13 @@ export class NavbarComponent implements OnInit {
   productsData;
   filterd;
   searchResult;
+
   toggle
   shoppingCartProduct;
   toggle3
-  totalQty: number;
-  total: number;
+  total;
+  // serviceTotal: number = 0;
+  // totalQty: number = 0;
 
   public constructor(private fb: FormBuilder,
     private checkFilter:CheckBoxFilterService,
@@ -44,17 +46,22 @@ export class NavbarComponent implements OnInit {
         map(product => product ? this._filterStates(product) : this.filterd)
       );
   }
-  private _filterStates(value: string): Product[] {
-    const filterValue = value.toLowerCase();
-    return this.productsData.filter(product => product.productTitle.toLowerCase().includes(filterValue) || product.storeName.toLowerCase().includes(filterValue));
-  }
   ngOnInit() {
+
     this.wowService.init();
-    this.totalQty = this.shoppingServices.getAllQuantityProduct()
-    console.log(this.totalQty)
+
+    // count Quantity of product in navbar
+    this.shoppingServices.getAllQuantityProduct()
     this.shoppingServices.sendCountNumber.subscribe(number => {
       this.total = number
-      console.log(this.total)});
+      console.log(this.total);
+
+    });
+
+  }
+  private _filterStates(value: string): Product[] {
+    const filterValue = value.toLowerCase();
+    return this.productsData.filter(product => product.kind.toLowerCase().includes(filterValue) || product.productTitle.toLowerCase().includes(filterValue));
   }
   divToggle1(event) {
     this.toggle3 = !this.toggle3
