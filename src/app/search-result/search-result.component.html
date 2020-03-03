@@ -107,7 +107,7 @@
 <div>
   <div *ngIf='searchData.length > 0 && counter ===0 ;else page' >
     <div>
-    <pagination [totalItems]="searchData.length" (pageChanged)="pageChanged($event)"></pagination>
+    <pagination class="pag" [totalItems]="searchData.length" (pageChanged)="pageChanged($event)"></pagination>
     </div>
   </div>
       <ng-template #page>
