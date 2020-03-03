@@ -11,6 +11,9 @@ export class ApiService {
   // private controlForm = new BehaviorSubject({});
   // comingForm = this.controlForm.asObservable();
   // payment data//////////
+  private totalPrice =new BehaviorSubject({})
+
+  totalPricefinal = this.totalPrice.asObservable()
   private checkdata =new BehaviorSubject({});
   checkdatafinal = this.checkdata.asObservable();
   constructor(private http: HttpClient) { }
@@ -49,5 +52,8 @@ local;
   };
     sendgetdata(data){
       this.checkdata.next(data)
+    }
+    sendpricedata(price){
+     this.totalPrice.next(price)
     }
 }

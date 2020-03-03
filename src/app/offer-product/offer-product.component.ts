@@ -15,6 +15,9 @@ export class OfferProductComponent implements OnInit {
   ranarr = []
   sets;
   postItem;
+  modul;
+  mathRandom: any;
+
   constructor(
     private http: ProudctsService,
     private dataServ: ProudctsService,
@@ -27,54 +30,29 @@ export class OfferProductComponent implements OnInit {
   cards;
   random;
   posts;
+  pricetotal = [];
   ngOnInit() {
+    // WoW animation
     this.wowService.init();
-    this.http.getData().subscribe(res => {
-      this.posts = res;
-      // console.log(this.posts);
-
-    });
+    // get data 
     this.http.getData().subscribe(res => {
       this.cards = res;
-      for (let item of this.cards) {
-        this.random = this.cards[Math.floor(Math.random() * this.cards.length)];
-        if (this.ranarr.length < 4) {
-          this.ranarr.push(this.random)
-        }
-        this.sets = [...new Set(this.ranarr)]
-        // console.log(this.random);
-      }
 
+      // sort data random
+      this.ranarr = this.cards.sort(() => Math.random() - .5).slice(0,4);
+      // for (let item of this.cards) {
+      //   if (this.ranarr.length < 4) {
+      //     this.ranarr.push(item);
+      //       // Math.floor(item.price);  
+      //   }
+      // }
     });
+
 
     // Save Product in local Storage 
     this.shoppingCart.saveInLocalStorge();
   }
-  customOptions: OwlOptions = {
-    loop: true,
-    // margin: 10,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    navSpeed: 700,
-    navText: ['', ''],
-    responsive: {
-      0: {
-        items: 0
-      },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 2
-      },
-      940: {
-        items: 4
-      }
-    },
-    nav: true
-  }
+
 
   // Add Product to Shopping Cart
   onAddToCart(product) {

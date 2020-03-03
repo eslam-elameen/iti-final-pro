@@ -1,123 +1,128 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="#"><img src="../../assets/img/logo12.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-            (click)="droptoggle($event)">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"
-                        routerLink="/">Home</a>
-                </li>
-                <li div class="btn-group" dropdown>
-                    <button routerLink="/catogery/dog" id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
-                        aria-controls="dropdown-basic" routerLinkActive="active-link">
-                        Dog <span class="caret"></span>
-                    </button>
-                    <div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right"
-                        container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic"
-                        routerLinkActive="active-link">
-                        <a routerLink="/catogery/dog/Dry Food" role="menuitem"><a class="dropdown-item" href="#">dry</a>
-                        </a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
-                        </a>
-                    </div>
-                </li>
-                <li div class="btn-group" dropdown>
+                <li routerLink="category/dog/Treat" role="menuitem">
+                  <a class="dropdown-item dropLink"><i class="fas fa-angle-right icon mr-2"></i>Treat</a></li>
+              </div>
+              <div>
 
-                    <button routerLink="/cat" id="button-basic" dropdownToggle type="button" class="btn dropdown-toggle"
-                        aria-controls="dropdown-basic" routerLinkActive="active-link">
-                        Cat <span class="caret"></span>
-                    </button>
-                    <div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right"
-                        container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-                        <a routerLink="/products/cat/dry food" role="menuitem"><a class="dropdown-item" href="#">Full
-                                Grooming</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
-                        </a>
-                    </div>
-                </li>
-                <li div class="btn-group" dropdown>
-                    <button routerLink="/bird" id="button-basic" dropdownToggle type="button"
-                        class="btn dropdown-toggle" aria-controls="dropdown-basic" routerLinkActive="active-link">
-                        Bird <span class="caret"></span>
-                    </button>
-                    <div id="dropdown-basic sub-menu" role="menuitem" dropdown triggers="mouseover" placement="right"
-                        container="body" class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-                        <a role="menuitem"><a class="dropdown-item" href="#">Full Grooming</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Bath & Dry</a></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#"> Styling</a></a>
-                        <a class="divider dropdown-divider"></a>
-                        <a role="menuitem"><a class="dropdown-item" href="#">Medical Bath</a>
-                        </a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active-link" routerLink="/ourServices">services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active-link" routerLink="/blog">Blog</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
+                <li routerLink="category/dog/gromming" role="menuitem">
+                  <a class="dropdown-item dropLink"> <i class="fas fa-angle-right icon mr-2"></i>gromming</a></li>
 
-                <div class="btn-group" dropdown>
-                    <div role="menu" aria-labelledby="button-basic">
-                        <div id="search" class="search-hidden">
-                            <form class="d-flex">
-                                <mat-form-field class="example-full-width">
-                                    <input list="browsers" type="search" placeholder="Search" class="form-control"
-                                        matInput aria-label="State" [matAutocomplete]="auto" [formControl]="mySearch">
-                                    <mat-autocomplete #auto="matAutocomplete">
-                                        <mat-option *ngFor="let product of filterAutoComplete | async"
-                                            [value]="product.productTitle">
-                                            <img class="example-option-img" aria-hidden [src]="product.img" height="25">
-                                            <span>{{product.productTitle}}</span> |
-                                            <small>{{product.storeName}}</small>
-                                        </mat-option>
-                                    </mat-autocomplete>
-                                </mat-form-field>
-                                <button routerLink="/result" type="submit" [disabled]="mySearch.invalid"
-                                    class="btn btn-primary one" (click)=onSubmit(mySearch)>
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="user-sign">
-                    <button class="btn btn-success search-icons dropdown-toggle my-2 my-sm-0" (click)="divToggle1($event)"
-                        type="button">
-                        <i class="far fa-user"></i></button>
-                        <div *ngIf = 'lox ==null  ; else lo'>
-                    <div *ngIf="toggle3" role="menu" aria-labelledby="button-basic" triggers="mouseover" class="list-user">
-                           <a role="menuitem"><a class="dropdown-item" id="login" routerLink="/signin">Sign In</a></a>
-                        <a role="menuitem"><a class="dropdown-item" id="signup" routerLink="/signup">Sign Up</a></a>
-                    </div>
-                        </div>
-                        <ng-template #lo>
-                            <div *ngIf="toggle3" role="menu" aria-labelledby="button-basic" triggers="mouseover" class="list-user">
-                                <!-- <a role="menuitem"><a class="dropdown-item" id="login" routerLink="/signin">Sign In</a></a> -->
-                                <a role="menuitem"><a class="dropdown-item" (click)= 'userLogout()' id ='logout' >Log Out</a></a>
-                            </div>
-                        </ng-template>
-       
-                </div>
-                <button class="btn btn-success my-2 my-sm-0" type="submit">
-                    <a routerLink="/shoppingCart">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="badge badge-warning" *ngIf="total === 0">{{ totalQty }}</span> 
-                        <span class="badge badge-warning" *ngIf="total > 0">{{ total  }}</span> 
-                    </a>
+                <li routerLink="category/dog/accessories" role="menuitem">
+                  <a class="dropdown-item dropLink"><i class="fas fa-angle-right icon mr-2"></i> accessories</a></li>
+                <li routerLink="category/dog/Cages&Caves" role="menuitem">
+                  <a class="dropdown-item dropLink"><i class="fas fa-angle-right icon mr-2"></i>Cages&Caves</a></li>
+                <li routerLink="category/dog/toys" role="menuitem">
+                  <a class="dropdown-item dropLink"><i class="fas fa-angle-right icon mr-2"></i> toys</a></li>
+              </div>
+            </div><!-- End Dog Wrapper -->
+          </ul><!-- End Dog Drop Down -->
+
+
+          <!-- Start Cat Drop Down -->
+        <li div class="btn-group" dropdown>
+
+          <button dropdownToggle type="button" class=" search-icons dropdown-toggle" aria-controls="dropdown-basic"
+            routerLinkActive="active-link">
+            Cat <span class="caret"></span>
+          </button>
+          <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+              <a class="dropdown-item font-weight-bold mb-2  dropLink">Cat</a>
+            </li>
+
+            <div class="dog-wrapper d-flex">
+              <div class="cat-food">
+                <li routerLink="category/cat/Dry Food" role="menuitem">
+                  <a class="dropdown-item dropLink"><i class="fas fa-angle-right icon mr-2"></i>Dry Food</a>
+                </li>
+                <li routerLink="category/cat/Wet Food" role="menuitem">
+                  <a class="dropdown-item dropLink"> <i class="fas fa-angle-right icon mr-2"></i>Wet Food</a>
+                </li>
+                <li routerLink="category/cat/Treat" role="menuitem">
+                  <a class="dropdown-item dropLink"> <i class="fas fa-angle-right icon mr-2"></i>Treat</a>
+                </li>
+              </div><!-- End Cat Food-->
+              <div class="cat-category">
+                <li routerLink="category/cat/accessories" role="menuitem">
+                  <a class="dropdown-item dropLink"> <i class="fas fa-angle-right icon mr-2"></i>accessories</a>
+                </li>
+                <li routerLink="category/cat/gromming" role="menuitem">
+                  <a class="dropdown-item dropLink"> <i class="fas fa-angle-right icon mr-2"></i>gromming</a>
+                </li>
+
+                <li routerLink="category/cat/Cages&Caves" role="menuitem">
+                  <a class="dropdown-item dropLink"><i class="fas fa-angle-right icon mr-2"></i> Cages&Caves</a>
+                </li> 
+                <li routerLink="category/cat/toys" role="menuitem">
+                  <a class="dropdown-item dropLink"><i class="fas fa-angle-right icon mr-2"></i>toys</a>
+                </li>
+
+              </div><!-- End Cat Category -->
+            </div><!-- End Cat Wrapper -->
+          </ul>
+
+        </li><!-- End Cat Drop Down -->
+
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active-link" routerLink="/ourServices">services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active-link" routerLink="/blog">Blog</a>
+        </li>
+      </ul>
+      <form class="form-inline ml-auto my-lg-0">
+
+        <div class="btn-group" dropdown>
+          <div role="menu" aria-labelledby="button-basic">
+            <div id="search" class="search-hidden">
+              <form class="d-flex justify-content-center style-search">
+                <mat-form-field class="example-full-width">
+                  <input list="browsers" type="search" placeholder="Search" class="form-control" matInput
+                    aria-label="State" [matAutocomplete]="auto" [formControl]="mySearch">
+                  <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let product of filterAutoComolete | async" [value]="product.productTitle">
+                      <img class="example-option-img" aria-hidden [src]="product.img" height="25">
+                      <span>{{product.productTitle}}</span> |
+                      <small>{{product.storeName}}</small>
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+
+                <button routerLink="/result" type="submit" [disabled]="mySearch.invalid" class="  one"
+                  (click)=onSubmit(mySearch)>
+                  <i class="fas fa-search"></i>
                 </button>
-            </form>
+              </form>
+            </div>
+          </div>
         </div>
+        <div class="user-sign">
+            <button class="btn btn-success search-icons dropdown-toggle my-2 my-sm-0" (click)="divToggle1($event)"
+                type="button">
+                <i class="far fa-user"></i></button>
+                <div *ngIf = 'lox ==null  ; else lo'>
+            <div *ngIf="toggle3" role="menu" aria-labelledby="button-basic" triggers="mouseover" class="list-user">
+                   <a role="menuitem"><a class="dropdown-item" id="login" routerLink="/signin">Sign In</a></a>
+                <a role="menuitem"><a class="dropdown-item" id="signup" routerLink="/signup">Sign Up</a></a>
+            </div>
+                </div>
+                <ng-template #lo>
+                    <div *ngIf="toggle3" role="menu" aria-labelledby="button-basic" triggers="mouseover" class="list-user">
+                        <!-- <a role="menuitem"><a class="dropdown-item" id="login" routerLink="/signin">Sign In</a></a> -->
+                        <a role="menuitem"><a class="dropdown-item" (click)= 'userLogout()' id ='logout' >Log Out</a></a>
+                    </div>
+                </ng-template>
+
+        </div>
+
+
+            <div class="shopping-cart">
+                <a routerLink="/shoppingCart">
+                    <i class="fas fa-shopping-cart "></i>
+                </a>
+                <span class="badge ">{{ total  }}</span>
+            </div>
+          
+      </form>
     </div>
+  </div>
 </nav>

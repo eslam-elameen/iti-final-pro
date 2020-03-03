@@ -18,16 +18,7 @@ export class HeroHeaderComponent implements OnInit {
   ngOnInit() {
     this.wowService.init();
     this.http.getSlider().subscribe(res => {
-      this.images = res;
-      this.id = this.images[1];
-      console.log(this.id);
-
-      
-    //  this.id = document.getElementById('slide2');
-      console.log(this.images[1]);
-      this.images[1] = Object.assign(this.images[1], {class: "slideTwo"});
-      console.log( this.images[1]);
-      console.log(this.id.class);
+      this.images = res;      
     });
    
   }

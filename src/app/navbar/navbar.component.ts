@@ -5,9 +5,12 @@ import { ProudctsService } from '../proudcts.service';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+// import { CheckboxFilterService } from '../checkbox-filter.service';
 import { NgwWowService } from 'ngx-wow';
 import { ShoppingCartService } from '../shopping-cart.service';
+import { CheckBoxFilterService } from '../check-box-filter.service';
 import { Router } from '@angular/router';
+
 export interface Product {
   category: string;
   kind: string;
@@ -30,18 +33,19 @@ export class NavbarComponent implements OnInit {
   shoppingCartProduct;
   toggle3
   total;
-  totalQty;
+  // serviceTotal: number = 0;
+  // totalQty: number = 0;
   checkLogIn;
   lox: string;
   logedin: any;
-  // serviceTotal: number = 0;
-  // totalQty: number = 0;
 
-  public constructor(
-    private searchServer: ProudctsService, private wowService: NgwWowService, private fb: FormBuilder,
+  public constructor(private fb: FormBuilder,
+    private checkFilter:CheckBoxFilterService,
+    private searchServer: ProudctsService,
+    private wowService: NgwWowService,
     private shoppingServices: ShoppingCartService,
     private login: ApiService , private route:Router) {
-    this.searchServer.getData().subscribe(res => this.searchResult = this.productsData = res)
+    this.searchServer.getData().subscribe(res =>  this.productsData = res)
     this.filterAutoComolete = this.mySearch.valueChanges
       .pipe(
         startWith(''),
@@ -49,27 +53,25 @@ export class NavbarComponent implements OnInit {
       );
   }
   ngOnInit() {
-    // this.login.comingForm.subscribe(data => {
-    //   // if(data){
-    //   this.checkLogIn = data
-    //   // }
-    // })
-    this.lox = localStorage.getItem('logedin')
-    console.log(this.lox)
+this.lox = localStorage.getItem('logedin')
+console.log(this.lox)
+
+this.login.teat.subscribe(itr=>{
+  itr?localStorage.setItem('logedin', JSON.stringify(this.logedin)) 
+ :console.log(itr  )
+ this.lox = localStorage.getItem('logedin')
     
-    this.login.teat.subscribe(itr=>{
-      itr?localStorage.setItem('logedin', JSON.stringify(this.logedin)) 
-     :console.log(itr  )
-     this.lox = localStorage.getItem('logedin')
-        
-      
-    })
-    this.wowService.init();
-    this.totalQty = this.shoppingServices.getAllQuantityProduct()
-    // console.log(this.totalQty)
+  
+})
+   
+this.wowService.init();
+
+    // count Quantity of product in navbar
+    this.shoppingServices.getAllQuantityProduct()
     this.shoppingServices.sendCountNumber.subscribe(number => {
       this.total = number
-      // console.log(this.total)
+      console.log(this.total);
+
     });
 
   }
@@ -90,12 +92,11 @@ export class NavbarComponent implements OnInit {
     }
   }
   onSubmit(form) {
-    this.searchResult = (form.value) ?
-      this.productsData.filter(item => item.storeName.toLowerCase().includes(form.value.toLowerCase()) || item.productTitle.toLowerCase().includes(form.value.toLowerCase())) :
-      this.searchResult;
-    // console.log(this.searchResult)
+    this.searchResult = (form.value)
+    console.log(this.searchResult)
     this.searchServer.getResult(this.searchResult)
-    // console.log(form.value)
+    console.log(form.value);
+
     this.mySearch.setValue('')
   }
 
@@ -117,3 +118,5 @@ export class NavbarComponent implements OnInit {
     // this.shoppingServices.sendCountQtyServices.subscribe(number => {
     //   this.serviceTotal = number;
     // })
+
+

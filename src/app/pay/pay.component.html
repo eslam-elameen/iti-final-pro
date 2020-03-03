@@ -1,3 +1,7 @@
+
+
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+
 <section class="container payment col-md-6">
    
     <div class="card">
@@ -21,7 +25,7 @@
         <blockquote class="blockquote mb-0">
           <h4>Door Delivary</h4>
           <p><span>deliveried between</span> wednesaday 4 march
-            <span> and </span>thursday 5 march <span> for </span><span class="price">EGY 46</span></p>
+            <span> and </span>thursday 5 march <span> for </span><span class="price">{{totalPricePay}}</span></p>
         </blockquote>
       </div>
     </div>
@@ -71,13 +75,13 @@
               </div>
             
             </section>
-         
+            <div class="form-group form-check" >
+              <input type="checkbox" class="form-check-input" formControlName="checkbox">
+                <label class="form-check-label" for="exampleCheck1">Save this Data</label>
+              </div>
               
             </form>
-            <div class="form-group form-check" >
-            <input type="checkbox" class="form-check-input" >
-              <label class="form-check-label" for="exampleCheck1">Save this Data</label>
-            </div>
+           
          
             </div>
             <div class="card-header" style="margin-top: 2rem;">

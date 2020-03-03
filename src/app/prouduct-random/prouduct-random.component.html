@@ -6,7 +6,7 @@
         </div>
         <div class="card-wrapper">
             <div class="row">
-                <div class="col-md-3 col-sm-12" *ngFor="let card of sets">
+                <div class="col-md-3 col-sm-12" *ngFor="let card of ranarr">
                     <div class="card mb-3 mt-4 card-img wow fadeInUp">
                         <div class="card-wrapper">
                             
@@ -15,20 +15,14 @@
                             </div>
                             <div class="card-body">
                                 <div class="header-wapper">
-                                    <h5 class="card-title">{{card.productTitle}}</h5>
-                                    <span class="storeName">{{card.storeName}}</span>
+                                    <h5 class="card-title">{{card.productTitle | slice:0:20}}</h5>
+                                    <span class="storeName">{{card.storeName | slice:0:10}}</span>
                                 </div>
                                 <div class="card-body-detail ">
-                                    <div>
-                                        <rating [max]="5" [(ngModel)]="y" [customTemplate]="tt"></rating>
-                                    </div>
+                                    <span class="kind">{{card.kind}}</span>
                                     <span class="price">{{card.price}} EGP</span>
                                 </div>
                             </div>
-                            <!-- <div class="cart-section">
-                                <button class="btn btn-primary p3" style="width: 100%;"><i
-                                        class="fas fa-shopping-cart mr-3"></i>Add To cart</button>
-                            </div> -->
                         </div>
                         <div class="cart-section">
                             <button class="btn btn-primary btn-block p3" type="button" (click)="onAddToCart(card)"><i
@@ -40,5 +34,9 @@
         </div>
     </div>
 </div>
+
+
+
+
 
 
