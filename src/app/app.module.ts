@@ -49,6 +49,7 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { CheckComponent } from './check/check.component';
 import { PayComponent } from './pay/pay.component';
 import { ProfileComponent } from './profile/profile.component';
+import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
 
 
 @NgModule({
@@ -78,7 +79,8 @@ import { ProfileComponent } from './profile/profile.component';
     OurServicesComponent,
     CheckComponent,
     PayComponent,
-    ProfileComponent
+    ProfileComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,
