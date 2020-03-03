@@ -21,7 +21,7 @@
                             <div class="price-detail">
                                 <del class="mr-3">{{card.price}} EGP</del>
 
-                                <span class="real-price text-white">{{card.price*.80}} EGP</span>
+                                <span class="real-price text-white">{{card.price*.80| number:'1.0-0'}} EGP</span>
                             </div>
                         </div>
                         <div class="cart-section">
@@ -35,9 +35,5 @@
             </div>
         </div>
     </div>
-    <!-- </ng-template>
-        </ng-container>
-
-    </owl-carousel-o> -->
-    <!-- </div> -->
+  
 </section>

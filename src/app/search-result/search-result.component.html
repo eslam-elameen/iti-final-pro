@@ -68,7 +68,7 @@
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="alert alert-danger m-auto w-75 text-center py-4" role="alert">
+          <div class="alert alert-danger m-auto w-75 text-center py-4" role="alert" *ngIf="searchData.length ===0" >
             <h3>No Data For Your search</h3>
           </div>
           <div *ngIf="counter ===0 ; else empty" class="row no-gutters">
@@ -124,26 +124,30 @@
             </div>
 
 
-          </ng-template>
-          <div *ngIf='searchData.length > 0 && counter ===0 ;else page'>
-            <div class="row">
-              <div class="col-xs-12 col-12">
-                <pagination class="pagination" [totalItems]="searchData.length" (pageChanged)="pageChanged($event)">
-                </pagination>
+              </ng-template>
+              <div *ngIf=' counter ===0 ;else page'>
+                <div class="row">
+                  <div class="col-xs-12 col-12">
+                    <pagination class="pagination" [totalItems]="searchData.length" (pageChanged)="pageChanged($event)">
+                    </pagination>
+                  </div>
+                </div>
               </div>
+                  <ng-template #page>
+                    <div class="col-md-12">
+                      <div class="row">
+                     
+                          <pagination class="pagination" [totalItems]="fiterCheck.length" (pageChanged)="pageChanged($event)">
+                          </pagination>
+                        </div>
+                    </div>        
+                     
+                  </ng-template>
             </div>
-            <ng-template #page>
-              <div class="col-md-12">
-                <pagination [totalItems]="fiterCheck.length" class="pagination" (pageChanged)="pageChanged($event)">
-                </pagination>
-              </div>
-            </ng-template>
+         
           </div>
         </div>
       </div>
     </div>
-  </div>
-  </div>
-  <!-- </div> -->
-  <!-- </nav> -->
+
 </section>

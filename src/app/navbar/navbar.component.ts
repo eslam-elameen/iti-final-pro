@@ -1,3 +1,4 @@
+import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProudctsService } from '../proudcts.service';
@@ -8,6 +9,7 @@ import { map, startWith } from 'rxjs/operators';
 import { NgwWowService } from 'ngx-wow';
 import { ShoppingCartService } from '../shopping-cart.service';
 import { CheckBoxFilterService } from '../check-box-filter.service';
+import { Router } from '@angular/router';
 
 export interface Product {
   category: string;
@@ -33,12 +35,17 @@ export class NavbarComponent implements OnInit {
   total;
   // serviceTotal: number = 0;
   // totalQty: number = 0;
+  checkLogIn;
+  lox: string;
+  logedin: any;
+  userName: any;
 
   public constructor(private fb: FormBuilder,
     private checkFilter:CheckBoxFilterService,
     private searchServer: ProudctsService,
     private wowService: NgwWowService,
-    private shoppingServices: ShoppingCartService) {
+    private shoppingServices: ShoppingCartService,
+    private login: ApiService , private route:Router) {
     this.searchServer.getData().subscribe(res =>  this.productsData = res)
     this.filterAutoComolete = this.mySearch.valueChanges
       .pipe(
@@ -47,8 +54,19 @@ export class NavbarComponent implements OnInit {
       );
   }
   ngOnInit() {
+this.lox = localStorage.getItem('logedin')
+console.log(this.lox)
 
-    this.wowService.init();
+this.login.teat.subscribe(logCheck=>{
+  console.log(logCheck  )
+  logCheck?localStorage.setItem('logedin', JSON.stringify(this.logedin)) 
+ :console.log(logCheck  )
+ this.lox = localStorage.getItem('logedin')
+    
+  
+})
+   this.userName =JSON.parse(localStorage.getItem('user'))
+this.wowService.init();
 
     // count Quantity of product in navbar
     this.shoppingServices.getAllQuantityProduct()
@@ -84,6 +102,18 @@ export class NavbarComponent implements OnInit {
     this.mySearch.setValue('')
   }
 
+
+  userLogout () {
+    localStorage.clear();
+    
+    this.shoppingServices.products=[];
+    console.log(this.shoppingServices.products);
+    this.lox = localStorage.getItem('logedin')
+    this.shoppingServices.getAllQuantityProduct()
+     
+    this.route.navigate(['/']);
+
+  }
 }
 
     // this.mySearch = this.fb.group({

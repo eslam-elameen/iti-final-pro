@@ -16,7 +16,7 @@ export class RegisterationComponent implements OnInit {
 
   ngOnInit() {
     this.registrationForm = this.registerBuild.group({
-      name: ['', [Validators.required, Validators.pattern(/^(?=.*\w)[A-z0-9]{6,10}$/)]],
+      name: ['', [Validators.required, Validators.pattern(/^(?=.*\w)[A-z0-9]{4,10}$/)]],
       email: ['', [Validators.required, Validators.pattern(/\w{1,}@[a-z]{3,}\.com/)]],
       password: ['', [Validators.required, Validators.pattern(/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[A-z0-9]{8,}[\W]{0,}$/)]],
       confirmPassword: ['', Validators.required]
@@ -54,12 +54,15 @@ export class RegisterationComponent implements OnInit {
   test(registrationForm) {
     console.log('inside test function');
     if (this.flag == false) {
-      const headers = { "Content-Type": "application/json" }
-      this.http.postData("http://localhost:3000/users", registrationForm.value, headers).subscribe(data => {
+     
+      this.http.postData(registrationForm.value).subscribe(data => {
+        let x =data;
+        console.log(x);
+        
       })
       this.allDataOfUsers.push(registrationForm.value);
       this.route.navigate(['/profile']);
-    }
+      localStorage.setItem('user',JSON.stringify(registrationForm.value)); }
   }
 
 }

@@ -6,28 +6,36 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private checkdata =new BehaviorSubject({})
-  checkdatafinal = this.checkdata.asObservable()
-
+  private tes = new BehaviorSubject('')
+  teat = this.tes.asObservable();
+  // private controlForm = new BehaviorSubject({});
+  // comingForm = this.controlForm.asObservable();
+  // payment data//////////
   private totalPrice =new BehaviorSubject({})
 
   totalPricefinal = this.totalPrice.asObservable()
+  private checkdata =new BehaviorSubject({});
+  checkdatafinal = this.checkdata.asObservable();
   constructor(private http: HttpClient) { }
-  configUrl = './assets/db.json';
-
-
+  // configUrl = './assets/db.json';
+localNex(str){
+  this.tes.next(str)
+}
+local;
   editData(url, body, headers){
     return this.http.post<any>(url.id, body, headers);
   }
-  postData(url, body, headers) {
-    return this.http.post<any>(url, body, headers);
+  //put data from registr to json 
+  postData( obj) {
+    return this.http.post<any>("http://localhost:3000/users",obj);
   };
+  //get all user data from json 
   getUserData() {
     return this.http.get('http://localhost:3000/users');
   }
 
-  getSingleUser(id){
-    return this.http.get('http://localhost:3000/users/'+id);
+  getSingleUser(){
+    return this.http.get('http://localhost:3000/users');
   }
   getProfileData() {
     return this.http.get('http://localhost:3000/profile');
@@ -35,12 +43,13 @@ export class ApiService {
   updateUser(id, body) {
     return this.http.put("http://localhost:3000/users/" + id, body);
   }
-
-
-  
-  getConfig() {
-    return this.http.get(this.configUrl);
+  delete(id, body) {
+    return this.http.put("http://localhost:3000/users/" + id, body);
   }
+//put added to cart selection to json
+  postDataFromJson(obj) {
+    return this.http.post<any>("http://localhost:3000/shoppingCart", obj);
+  };
     sendgetdata(data){
       this.checkdata.next(data)
     }

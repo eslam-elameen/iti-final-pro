@@ -39,13 +39,13 @@ export class OfferProductComponent implements OnInit {
       this.cards = res;
 
       // sort data random
-      this.cards.sort(() => Math.random() - .5);
-      for (let item of this.cards) {
-        if (this.ranarr.length < 4) {
-          this.ranarr.push(item);
-            Math.floor(item.price);  
-        }
-      }
+      this.ranarr = this.cards.sort(() => Math.random() - .5).slice(0,4);
+      // for (let item of this.cards) {
+      //   if (this.ranarr.length < 4) {
+      //     this.ranarr.push(item);
+      //       // Math.floor(item.price);  
+      //   }
+      // }
     });
 
 
