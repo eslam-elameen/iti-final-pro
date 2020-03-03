@@ -13,7 +13,7 @@ import { PageChangedEvent } from 'ngx-bootstrap/pagination';
   styleUrls: ['./search-result.component.scss']
 })
 export class SearchResultComponent implements OnInit {
-  searchValue;
+  searchValue
   returnedFilterArray;
   y: number = 4;
   max: number = 5;
@@ -30,6 +30,7 @@ export class SearchResultComponent implements OnInit {
   checkBoxkind = [];
   checkBoxStore = [];
   returnedArray: any[];
+  toggle: HTMLElement;
 
   constructor(private resultServer: ProudctsService, private filterService: CheckBoxFilterService, private cartServices: ShoppingCartService) {
     this.resultServer.getSearch.subscribe((data) => {
@@ -122,5 +123,15 @@ this.cartServices.saveInLocalStorge()
   sortData(val) {
     this.filterService.sor(val, this.returnedArray)
     this.filterService.sor(val, this.returnedFilterArray)
+  }
+
+  droptoggle1(event) {
+    this.toggle = document.getElementById('navbarSupportedContent1');
+    if (this.toggle.style.display === "none") {
+      this.toggle.style.display = "block";
+    }
+    else {
+      this.toggle.style.display = "none";
+    }
   }
 }
