@@ -38,6 +38,7 @@ export class NavbarComponent implements OnInit {
   checkLogIn;
   lox: string;
   logedin: any;
+  userName: any;
 
   public constructor(private fb: FormBuilder,
     private checkFilter:CheckBoxFilterService,
@@ -56,14 +57,15 @@ export class NavbarComponent implements OnInit {
 this.lox = localStorage.getItem('logedin')
 console.log(this.lox)
 
-this.login.teat.subscribe(itr=>{
-  itr?localStorage.setItem('logedin', JSON.stringify(this.logedin)) 
- :console.log(itr  )
+this.login.teat.subscribe(logCheck=>{
+  console.log(logCheck  )
+  logCheck?localStorage.setItem('logedin', JSON.stringify(this.logedin)) 
+ :console.log(logCheck  )
  this.lox = localStorage.getItem('logedin')
     
   
 })
-   
+   this.userName =JSON.parse(localStorage.getItem('user'))
 this.wowService.init();
 
     // count Quantity of product in navbar
@@ -103,7 +105,11 @@ this.wowService.init();
 
   userLogout () {
     localStorage.clear();
+    
+    this.shoppingServices.products=[];
+    console.log(this.shoppingServices.products);
     this.lox = localStorage.getItem('logedin')
+    this.shoppingServices.getAllQuantityProduct()
      
     this.route.navigate(['/']);
 

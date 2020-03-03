@@ -141,20 +141,24 @@
 
 
               </ng-template>
-              <div *ngIf='searchData.length > 0 && counter ===0 ;else page'>
+              <div *ngIf=' counter ===0 ;else page'>
                 <div class="row">
                   <div class="col-xs-12 col-12">
                     <pagination class="pagination" [totalItems]="searchData.length" (pageChanged)="pageChanged($event)">
                     </pagination>
                   </div>
                 </div>
-                <ng-template #page>
-                  <div class="col-md-12">
-                    <pagination [totalItems]="fiterCheck.length" class="pagination" (pageChanged)="pageChanged($event)">
-                    </pagination>
-                  </div>
-                </ng-template>
               </div>
+                  <ng-template #page>
+                    <div class="col-md-12">
+                      <div class="row">
+                     
+                          <pagination class="pagination" [totalItems]="fiterCheck.length" (pageChanged)="pageChanged($event)">
+                          </pagination>
+                        </div>
+                    </div>        
+                     
+                  </ng-template>
             </div>
           </div>
         </div>

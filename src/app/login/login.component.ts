@@ -57,6 +57,7 @@ export class LoginComponent implements OnInit {
             }
           } else if (this.shoppingCartData == null && this.userData.products != null) {
             localStorage.setItem('shoppingCart', JSON.stringify(this.userData.products))
+            this.cartServices.getAllQuantityProduct()
           } else {
             console.log('no data found');
 

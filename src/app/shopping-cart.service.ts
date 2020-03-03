@@ -101,6 +101,11 @@ export class ShoppingCartService implements OnInit {
         // console.log(total);
       }
       this.sendOurnumber(total);
+    }else{
+      total =0;
+    console.log(total);
+    this.sendOurnumber(total);
+
     }
     console.log(total);
     

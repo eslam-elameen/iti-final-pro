@@ -1,5 +1,4 @@
 <section class="userProfile">
-<<<<<<< HEAD
   <div class="container">
 
     <div id="sidebar-main" class="sidebar sidebar-default sidebar-separate">
@@ -12,26 +11,6 @@
                   <div class="image-upload">
                     <div *ngIf='this.comingUser ==null; else img'>
                     <img class="mr-1" width="300px" height="300px" src= '' >
-=======
-    <div class="container">
-      <div id="sidebar-main" class="sidebar sidebar-default sidebar-separate">
-        <div class="sidebar-content">
-          <div class="row no-gutters">
-            <div class="col-md-3 pr-3">
-              <div class="sidebar-category sidebar-default">
-                <div class="sidebar-user">
-                  <div class="category-content">
-                    <div class="image-upload">
-                      <img class="mr-1"  width="300px" height="300px" [src]="user.image">
-                      <label for="file-input" class="file-icons">
-                        <i class="fas fa-camera"></i>
-                      </label>
-                      <input id="file-input" type="file" accept=".jpg,.jpeg" (change)="readUrl($event)" />
-                    </div>
-                    <div class="media-body">
-                      <h5 class="mt-0">Name:{{user.name}}</h5>
-                      <p class="mt-0">Email:{{user.email}}</p>
->>>>>>> e4992d6a981781bf92bf586540057fec14c7bb26
                     </div>
                     <ng-template #img>
                     <img class="mr-1" width="300px" height="300px" [src]= 'this.comingUser.img' >
@@ -102,7 +81,6 @@
                         <span>Account Details</span>
                         <i class="fas fa-pen"></i>
                       </div>
-<<<<<<< HEAD
                     </div>
                     <div class="card-body">
                       <div class="media-body" >
@@ -110,13 +88,6 @@
                         <div class="media-body" >
 
                           <p class="card-text">Email:{{this.userEmail}}</p>
-=======
-                      <div class="card-body">
-                        <div class="media-body">
-                          <h6 class="card-title">Name:{{user.name}}</h6>
-                          <p class="card-text">Email:{{user.email}}</p>
-                          <button type="button" (click)="onEdit()" class="btn btn-primary px-5">Edit</button>
->>>>>>> e4992d6a981781bf92bf586540057fec14c7bb26
                         </div>
                         <button type="button" class="btn btn-primary px-5">Edit</button>
                       </div>
