@@ -8,7 +8,7 @@ import { RegisterationComponent } from './registeration/registeration.component'
 import { BlogComponent } from './blog/blog.component';
 import { LoginComponent } from './login/login.component'
 import { SearchResultComponent } from './search-result/search-result.component'
-
+import { RandomBlogComponent } from './random-blog/random-blog.component'
 import { ShippingAreaComponent } from './shipping-area/shipping-area.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
 import { HomeComponent } from './home/home.component';
@@ -17,6 +17,8 @@ import { SignleProductComponent } from './signle-product/signle-product.componen
 import { OurServicesComponent } from './our-services/our-services.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckComponent } from './check/check.component';
+import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
+// import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -25,23 +27,25 @@ const routes: Routes = [
 
   { path: 'signin', component: LoginComponent }, 
   { path: 'profile', component:ProfileComponent }, 
+  { path: 'edit-profile', component: EditProfileComponent}, 
 
   { path: 'signup', component: RegisterationComponent }, 
   { path: 'blog', component: BlogComponent },
-  { path: "shoppingCart", component: ShoppingCartComponent },
+  // { path: "shoppingCart", component: ShoppingCartComponent },
   { path: 'shipping', component: ShippingAreaComponent },
   { path: 'blog/:id', component: SingleBlogComponent },
   { path: 'result', component: SearchResultComponent },
-  { path: 'randomProduct/:id', component: SignleProductComponent },
-  {path:'check',component:CheckComponent},
   { path: 'randomProduct', component: ProuductRandomComponent },
+  { path: 'randomProduct/:id', component: SignleProductComponent },
+  { path: 'RandomBlog', component: RandomBlogComponent },
+  { path: "RandomBlog/:id", component: SingleBlogComponent },
+  {path:'check',component:CheckComponent},
   { path: "ourServices", component: OurServicesComponent },
   {path:'shoppingCart', component:ShoppingCartComponent},
   {path:'OfferProduct/:id', component: SignleProductComponent },
-  {path:":category/:id",component:SignleProductComponent},
-  {path:":category",component:ProductsComponent},
-  {path:":category/:kind",component:ProTypeComponent}
-
+  {path:"category/:category",component:ProductsComponent},
+  {path:"category/:category/:kind",component:ProTypeComponent},
+  {path:":category/:id",component:SignleProductComponent}
 ]
 
 

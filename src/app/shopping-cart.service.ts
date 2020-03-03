@@ -1,5 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -8,21 +9,25 @@ export class ShoppingCartService implements OnInit {
   products: any = [];
   ourServices: any = [];
   flag: boolean;
-  wishListProduct = [];
-  wishflag: boolean;
   shipping: number = 0;
-
+  shoppingCartData;
+  user;
   // send Quantity of product to navbar
   private countNumber = new BehaviorSubject(0);
   sendCountNumber = this.countNumber.asObservable()
   showShipping: number;
 
-  constructor() {
+  constructor(private http: HttpClient) {
 
   }
   ngOnInit() {
   }
-
+  delete(id, body) {
+    return this.http.put("http://localhost:3000/users/" + id, body);
+  }
+  updateUser(id, body) {
+    return this.http.put("http://localhost:3000/users/" + id, body);
+  }
   // Add product to shopping cart
   addCart(product) {
     this.flag = false
@@ -47,9 +52,24 @@ export class ShoppingCartService implements OnInit {
         // console.log(this.products);
         localStorage.setItem('shoppingCart', JSON.stringify(this.products));
         this.getAllQuantityProduct()
+        console.log(this.products);
       }
     }
 
+    this.user = JSON.parse(localStorage.getItem('user'));
+    console.log(this.user);
+    
+    this.shoppingCartData = JSON.parse(localStorage.getItem('shoppingCart'));
+    console.log(this.shoppingCartData);
+    
+    if (this.shoppingCartData != null && this.user != null) {
+      this.user['products']=this.shoppingCartData;
+
+      this.updateUser(this.user.id, this.user).subscribe(data=>{
+
+      });
+    }
+ 
   }
 
   // Save In LocalStorage
@@ -59,13 +79,6 @@ export class ShoppingCartService implements OnInit {
       this.products = []
     } else {
       this.products = JSON.parse(localStorage.getItem('shoppingCart'));
-      // console.log(this.products);
-    }
-
-    if (localStorage.getItem('favouriteProduct') === null) {
-      this.wishListProduct = []
-    } else {
-      this.wishListProduct = JSON.parse(localStorage.getItem('favouriteProduct'));
       // console.log(this.products);
     }
   }
@@ -87,8 +100,15 @@ export class ShoppingCartService implements OnInit {
         total += item.qty;
         // console.log(total);
       }
-    }
+      this.sendOurnumber(total);
+    }else{
+      total =0;
+    console.log(total);
     this.sendOurnumber(total);
+
+    }
+    console.log(total);
+    
     return total;
   }
 
@@ -107,7 +127,6 @@ export class ShoppingCartService implements OnInit {
       for (let item of product) {
         total += Math.floor(item.totalPrice)
         console.log(total);
-
       }
     }
     return total;
@@ -124,7 +143,7 @@ export class ShoppingCartService implements OnInit {
 
       this.shipping = 50;
       this.shipping += this.subTotalPrice()
-      console.log(this.shipping);
+      // console.log(this.shipping);
 
     }
 
@@ -138,10 +157,9 @@ export class ShoppingCartService implements OnInit {
     if (services) {
       for (let item of services) {
         total += item.totalPrice;
-        console.log(total);
+        // console.log(total);
       }
     }
-
 
     return total;
   }

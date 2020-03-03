@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ProudctsService {
-  private sendSearchResult = new BehaviorSubject([]);
+  private sendSearchResult = new BehaviorSubject('');
   getSearch = this.sendSearchResult.asObservable()
   constructor(private http:HttpClient) { }
   getData() {
@@ -18,7 +18,7 @@ export class ProudctsService {
     return this.http.get("http://localhost:3000/products/"+id)
   }
   
-  getResult(data:[]) {
+  getResult(data:string) {
     console.log(data);          
 
     this.sendSearchResult.next(data);
