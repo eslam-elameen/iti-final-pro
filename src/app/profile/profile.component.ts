@@ -1,5 +1,6 @@
 import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -14,7 +15,8 @@ export class ProfileComponent implements OnInit {
   userEmail;
   userName
   url = "assets/profile-placeholder.png"
-  constructor(private api: ApiService) {
+  constructor(private api: ApiService,    private route: Router
+    ) {
 
     this.user = this.api.getSingleUser(3).subscribe(data => {
       this.user = data
@@ -60,6 +62,10 @@ export class ProfileComponent implements OnInit {
 
 
     }
+  }
+
+  onEdit(){
+this.route.navigate(['/edit-profile'])
   }
 
 }

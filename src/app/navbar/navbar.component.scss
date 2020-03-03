@@ -224,7 +224,8 @@ nav {
   top: 0;
   background: transparent;
   width: 100%;
-  z-index: 9;
+  z-index: 9999;
+  padding: 1rem 0;
 }
 
 .dropLink {

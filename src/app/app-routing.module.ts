@@ -17,6 +17,7 @@ import { SignleProductComponent } from './signle-product/signle-product.componen
 import { OurServicesComponent } from './our-services/our-services.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckComponent } from './check/check.component';
+import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
 // import { ProfileComponent } from './profile/profile.component';
 
 
@@ -26,6 +27,7 @@ const routes: Routes = [
 
   { path: 'signin', component: LoginComponent }, 
   { path: 'profile', component:ProfileComponent }, 
+  { path: 'edit-profile', component: EditProfileComponent}, 
 
   { path: 'signup', component: RegisterationComponent }, 
   { path: 'blog', component: BlogComponent },
