@@ -20,6 +20,7 @@ mykind=[];
   returnedArray =[];
   returnedFilterArray=[];
   fiterCheck=[];
+  toggle: HTMLElement;
   constructor(private prouductsData:ProudctsService,
      private rout: ActivatedRoute,
      private checkfilterKind : CheckBoxFilterService,
@@ -87,6 +88,14 @@ mykind=[];
    onAddToCart(product) {
     this.shoppingCart.addCart(product)
   }
-
+  droptoggle1(event) {
+    this.toggle = document.getElementById('navbarSupportedContent3');
+    if (this.toggle.style.display === "none") {
+      this.toggle.style.display = "block";
+    }
+    else {
+      this.toggle.style.display = "none";
+    }
+  }
 
 }

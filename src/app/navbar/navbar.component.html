@@ -131,14 +131,29 @@
             class=" mr-2 search-icons pl-4 btn-toggle dropdown-toggle" aria-controls="dropdown-basic">
             <i class="far fa-user  userIcon"></i>
           </button>
+
           <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+          <div *ngIf = 'lox ==null  ; else lo'>
             <li role="menuitem">
                 <a class="dropdown-item dropLink" routerLink="/signin"><i class="fas fa-angle-right icon mr-2"></i>Sign In</a>
             </li>
             <li role="menuitem">
                 <a class="dropdown-item dropLink" routerLink="/signup"><i class="fas fa-angle-right icon mr-2"></i>Sign Up</a>
             </li>
+          </div>
+          <ng-template #lo>
+           
+                <li role="menuitem">
+                    <a class="dropdown-item dropLink" routerLink="/profile"><i class="fas fa-angle-right icon mr-2"></i>{{userName.name}}</a>
+                    <a class="dropdown-item dropLink" (click)= 'userLogout()'><i class="fas fa-angle-right icon mr-2"></i>log out</a>
+ 
+                </li>
+                
+             
+          </ng-template>
           </ul>
+          
+          
         </div>
 
 

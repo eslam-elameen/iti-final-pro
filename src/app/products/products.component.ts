@@ -22,6 +22,7 @@ export class ProductsComponent implements OnInit {
   fiterCheck: any[];
   returnedFilterArray: any[];
   counter: number = 0
+  toggle: any;
 
   constructor(
     private dogServe: ProudctsService,
@@ -100,6 +101,15 @@ export class ProductsComponent implements OnInit {
 
   onAddToCart(product) {
     this.shoppingCart.addCart(product)
+  }
+  droptoggle1(event) {
+    this.toggle = document.getElementById('navbarSupportedContent2');
+    if (this.toggle.style.display === "none") {
+      this.toggle.style.display = "block";
+    }
+    else {
+      this.toggle.style.display = "none";
+    }
   }
 
 }

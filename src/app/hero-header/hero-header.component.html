@@ -1,8 +1,8 @@
 
-<owl-carousel-o [options]="customOptions"  #owlCat>
+<section class="background-responsive">
+<owl-carousel-o [options]="customOptions"  #owlCat class="carousel">
   <ng-container>
     <ng-template carouselSlide *ngFor="let img of images">
-      <!-- <div *ngIf ="img.id = slide"> -->
       <div class="card">
         <div class="card-img">
           <img class="card-img-top image" [src]="img.img" alt="Card image cap">
@@ -18,7 +18,7 @@
           </div>
         </div>
       </div>
-    <!-- </div> -->
     </ng-template>
   </ng-container>
 </owl-carousel-o>
+</section>

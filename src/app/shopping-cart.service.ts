@@ -1,5 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -9,18 +10,24 @@ export class ShoppingCartService implements OnInit {
   ourServices: any = [];
   flag: boolean;
   shipping: number = 0;
-
+  shoppingCartData;
+  user;
   // send Quantity of product to navbar
   private countNumber = new BehaviorSubject(0);
   sendCountNumber = this.countNumber.asObservable()
   showShipping: number;
 
-  constructor() {
+  constructor(private http: HttpClient) {
 
   }
   ngOnInit() {
   }
-
+  delete(id, body) {
+    return this.http.put("http://localhost:3000/users/" + id, body);
+  }
+  updateUser(id, body) {
+    return this.http.put("http://localhost:3000/users/" + id, body);
+  }
   // Add product to shopping cart
   addCart(product) {
     this.flag = false
@@ -45,9 +52,24 @@ export class ShoppingCartService implements OnInit {
         // console.log(this.products);
         localStorage.setItem('shoppingCart', JSON.stringify(this.products));
         this.getAllQuantityProduct()
+        console.log(this.products);
       }
     }
 
+    this.user = JSON.parse(localStorage.getItem('user'));
+    console.log(this.user);
+    
+    this.shoppingCartData = JSON.parse(localStorage.getItem('shoppingCart'));
+    console.log(this.shoppingCartData);
+    
+    if (this.shoppingCartData != null && this.user != null) {
+      this.user['products']=this.shoppingCartData;
+
+      this.updateUser(this.user.id, this.user).subscribe(data=>{
+
+      });
+    }
+ 
   }
 
   // Save In LocalStorage
@@ -79,6 +101,11 @@ export class ShoppingCartService implements OnInit {
         // console.log(total);
       }
       this.sendOurnumber(total);
+    }else{
+      total =0;
+    console.log(total);
+    this.sendOurnumber(total);
+
     }
     console.log(total);
     
@@ -99,8 +126,7 @@ export class ShoppingCartService implements OnInit {
     if (product) {
       for (let item of product) {
         total += Math.floor(item.totalPrice)
-        // console.log(total);
-
+        console.log(total);
       }
     }
     return total;

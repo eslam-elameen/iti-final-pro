@@ -7,7 +7,7 @@
         
         <owl-carousel-o class="w-100" [options]="customOptions" #owlCat>
             <div class="row">
-            <ng-container *ngFor="let card of sets" class="col-md-4 ">
+            <ng-container *ngFor="let card of ranarr" class="col-md-4 ">
                 <ng-template carouselSlide >
                     <div class="card mr-3 wow fadeInUp">
 
@@ -20,11 +20,7 @@
                         </div>
                             <div class="content-overlay">
                                 <div class="card-body content-details">
-<<<<<<< HEAD
                                     <button class="btn btn-primary" routerLink="/RandomBlog/{{card.id}}">Learn More</button>
-=======
-                                    <button class="btn btn-primary" routerLink="/blog/{{card.id}}">Learn More</button>
->>>>>>> 41b72220be220c09c604f813493856308cd9c609
                                     
                                 </div>
                             </div>

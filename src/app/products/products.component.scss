@@ -4,7 +4,7 @@
 }
 .sideBar-section {
   padding-bottom: 100px;
-  padding-top: 100px;
+  // padding-top: 100px;
 }
 .badge-primary {
   background: none;
@@ -12,8 +12,9 @@
 .list-group-item {
   position: relative;
   display: block;
-  padding: 0.75rem 0rem;
+  padding: 0.75rem;
   background-color: #fff;
+  border-top: none;
 }
 
 p {
@@ -26,10 +27,9 @@ p {
   text-transform: uppercase;
   font-weight: 550;
 }
-.list-group-flush {
-  padding: 10px;
-}
-
+// .list-group-flush {
+//   padding: 10px;
+// }
 
 img {
   padding: 30px;
@@ -166,4 +166,24 @@ input[type="checkbox"]:checked + label:before {
 ::ng-deep .pagination {
   display: flex;
   flex-flow: row wrap !important;
+}
+@media (max-width: 991.98px) {
+  .hidden {
+    // top: 0%;
+    display: none;
+  }
+  .col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width: 992px) {
+  .hidden {
+    // top: 0%;
+    display: block;
+  }
+  .col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
