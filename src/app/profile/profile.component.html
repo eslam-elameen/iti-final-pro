@@ -31,35 +31,7 @@
                 </div>
               </div>
             </div>
-            <div class="sidebar-category sidebar-default">
-              <div class="category-title">
-                <h5>User Detail</h5>
-              </div>
-              <div class="category-content py-2">
-                <ul id="sidebar-editable-nav" class="nav flex-column">
-                  <li class="nav-item">
-                    <a href="/admin/customers" class="nav-link active">
-                      <i class="far fa-user"></i>
-                      My account
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="/admin/resettest" class="nav-link">
-                      <i class="far fa-clipboard"></i>
-                      Orders
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="/admin/logout"  class="nav-link">
-                      <i class="fas fa-sign-out-alt"></i>
-                      Log out
-                    </a>
-                  </li>
-                </ul>
-                <!-- /Nav -->
-              </div>
-              <!-- /Category Content -->
-            </div>
+
             <!-- /Sidebar Category -->
           </div>
 
@@ -95,13 +67,23 @@
                       <span> Orders</span>
                       <i class="fab fa-opencart"></i>
                     </div>
-                    <div class="card-body">
-                      <h6 class="card-title">You have placed no orders yet!</h6>
-                      <p class="card-text">All your orders will be saved here for you.</p>
-                      <button type="button" class="btn btn-primary">CONTINUE SHOPPING</button>
+                    <div class="card-body" *ngFor="let item of comingUser.products">
+                      <div class="media">
+                        <img class="mr-3" src="{{item.img}}" width="100px" height="100px">
+                        <div class="media-body">
+                          <h5 class="mt-0">{{item.productTitle}}</h5>
+                          <p>{{item.price}} EGP</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-danger " role="alert" *ngIf="comingUser.products > 0">
+                      <h4 class="alert-heading">No Product yet</h4>
+                      <p>Please go to shop and add Product Here <strong><a class="link" routerLink="/category/dog">Go To Shop</a></strong></p>
                     </div>
                   </div>
+                  <button class="btn btn-primary px-4 py-2" routerLink="/shoppingCart">Go To Shopping</button>
                 </div>
+                <!-- </div> -->
               </div>
             </div>
           </div>

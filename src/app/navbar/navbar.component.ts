@@ -58,10 +58,12 @@ this.lox = localStorage.getItem('logedin')
 console.log(this.lox)
 
 this.login.teat.subscribe(logCheck=>{
-  console.log(logCheck  )
+  console.log(logCheck)
   logCheck?localStorage.setItem('logedin', JSON.stringify(this.logedin)) 
- :console.log(logCheck  )
+ :console.log(logCheck)
  this.lox = localStorage.getItem('logedin')
+ console.log(this.lox);
+ 
     
   
 })
@@ -104,15 +106,16 @@ this.wowService.init();
 
 
   userLogout () {
-    localStorage.clear();
     
     this.shoppingServices.products=[];
     console.log(this.shoppingServices.products);
     this.lox = localStorage.getItem('logedin')
+    console.log(this.lox);
+    
     this.shoppingServices.getAllQuantityProduct()
-     
+    localStorage.clear();
     this.route.navigate(['/']);
-
+    
   }
 }
 

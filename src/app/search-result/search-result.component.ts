@@ -38,7 +38,7 @@ export class SearchResultComponent implements OnInit {
       if (this.searchValue) {
         for (let i of chh) {
           this.counter = 0
-          i.checked = false
+          i.check = false
         }
         this.filterService.updateData.splice(0, this.filterService.updateData.length);
       }

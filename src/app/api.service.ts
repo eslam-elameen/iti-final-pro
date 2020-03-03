@@ -34,8 +34,8 @@ local;
     return this.http.get('http://localhost:3000/users');
   }
 
-  getSingleUser(){
-    return this.http.get('http://localhost:3000/users');
+  getSingleUser(id){
+    return this.http.get('http://localhost:3000/users',id);
   }
   getProfileData() {
     return this.http.get('http://localhost:3000/profile');
