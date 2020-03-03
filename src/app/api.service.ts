@@ -6,13 +6,18 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private controlForm = new BehaviorSubject({});
-  comingForm = this.controlForm.asObservable();
+  private tes = new BehaviorSubject('')
+  teat = this.tes.asObservable();
+  // private controlForm = new BehaviorSubject({});
+  // comingForm = this.controlForm.asObservable();
+  // payment data//////////
   private checkdata =new BehaviorSubject({});
   checkdatafinal = this.checkdata.asObservable();
   constructor(private http: HttpClient) { }
-  configUrl = './assets/db.json';
-
+  // configUrl = './assets/db.json';
+localNex(str){
+  this.tes.next(str)
+}
 local;
   editData(url, body, headers){
     return this.http.post<any>(url.id, body, headers);
@@ -26,8 +31,8 @@ local;
     return this.http.get('http://localhost:3000/users');
   }
 
-  getSingleUser(id){
-    return this.http.get('http://localhost:3000/users/'+id);
+  getSingleUser(){
+    return this.http.get('http://localhost:3000/users');
   }
   getProfileData() {
     return this.http.get('http://localhost:3000/profile');
@@ -35,19 +40,14 @@ local;
   updateUser(id, body) {
     return this.http.put("http://localhost:3000/users/" + id, body);
   }
+  delete(id, body) {
+    return this.http.put("http://localhost:3000/users/" + id, body);
+  }
 //put added to cart selection to json
   postDataFromJson(obj) {
     return this.http.post<any>("http://localhost:3000/shoppingCart", obj);
   };
-  
-  getConfig() {
-    return this.http.get(this.configUrl);
-  }
     sendgetdata(data){
       this.checkdata.next(data)
-    }
-
-    loginControler(param){
-      this.controlForm.next(param)
     }
 }

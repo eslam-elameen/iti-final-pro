@@ -13,7 +13,8 @@ export class ShoppingCartComponent implements OnInit {
   shippingPrice: number;
   totalPrice: number;
   subTotal: number;
-
+  shoppingCartData;
+  user;
   constructor(private shoppingCart: ShoppingCartService) { }
 
   ngOnInit() {
@@ -67,7 +68,19 @@ export class ShoppingCartComponent implements OnInit {
 
       }
     }
+    this.user = JSON.parse(localStorage.getItem('user'));
+    console.log(this.user);
+    
+    this.shoppingCartData = JSON.parse(localStorage.getItem('shoppingCart'));
+    console.log(this.shoppingCartData);
+    
+    if (this.shoppingCartData != null && this.user != null) {
+      this.user['products']=this.shoppingCartData;
 
+      this.shoppingCart.updateUser(this.user.id, this.user).subscribe(data=>{
+
+      });
+    }
   }
 
   //  on Decrease button
@@ -92,6 +105,19 @@ export class ShoppingCartComponent implements OnInit {
         // Update Shippnig Price
         this.shippingPrice = this.shoppingCart.showShipping
       }
+    }
+    this.user = JSON.parse(localStorage.getItem('user'));
+    console.log(this.user);
+    
+    this.shoppingCartData = JSON.parse(localStorage.getItem('shoppingCart'));
+    console.log(this.shoppingCartData);
+    
+    if (this.shoppingCartData != null && this.user != null) {
+      this.user['products']=this.shoppingCartData;
+
+      this.shoppingCart.updateUser(this.user.id, this.user).subscribe(data=>{
+
+      });
     }
   }
 
@@ -126,7 +152,19 @@ export class ShoppingCartComponent implements OnInit {
       }
     }
 
+    this.user = JSON.parse(localStorage.getItem('user'));
+    console.log(this.user);
+    
+    this.shoppingCartData = JSON.parse(localStorage.getItem('shoppingCart'));
+    console.log(this.shoppingCartData);
+    
+    if (this.shoppingCartData != null && this.user != null) {
+      this.user['products']=this.shoppingCartData;
 
+      this.shoppingCart.updateUser(this.user.id, this.user).subscribe(data=>{
+
+      });
+    }
 
   }
 

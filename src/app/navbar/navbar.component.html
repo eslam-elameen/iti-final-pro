@@ -96,21 +96,19 @@
                     <button class="btn btn-success search-icons dropdown-toggle my-2 my-sm-0" (click)="divToggle1($event)"
                         type="button">
                         <i class="far fa-user"></i></button>
-                        <div *ngIf = 'checkLogIn; else lo'></div>
+                        <div *ngIf = 'lox ==null  ; else lo'>
                     <div *ngIf="toggle3" role="menu" aria-labelledby="button-basic" triggers="mouseover" class="list-user">
-                        <a role="menuitem"><a class="dropdown-item"  routerLink="/signin">Sign In</a></a>
-                        <a role="menuitem"><a class="dropdown-item" routerLink="/home">Log Out</a></a>
-                        <a role="menuitem"><a class="dropdown-item" routerLink="/signup" signUp>Sign Up</a></a>
+                           <a role="menuitem"><a class="dropdown-item" id="login" routerLink="/signin">Sign In</a></a>
+                        <a role="menuitem"><a class="dropdown-item" id="signup" routerLink="/signup">Sign Up</a></a>
                     </div>
-                    <ng-template #lo>
-                        <div *ngIf = 'checkLogIn; else lo'></div>
-                        <div *ngIf="toggle3" role="menu" aria-labelledby="button-basic" triggers="mouseover" class="list-user">
-                           
-                            <a role="menuitem"><a class="dropdown-item" routerLink="/home">Log Out</a></a>
-                          
                         </div>
-                        
-                    </ng-template>
+                        <ng-template #lo>
+                            <div *ngIf="toggle3" role="menu" aria-labelledby="button-basic" triggers="mouseover" class="list-user">
+                                <!-- <a role="menuitem"><a class="dropdown-item" id="login" routerLink="/signin">Sign In</a></a> -->
+                                <a role="menuitem"><a class="dropdown-item" (click)= 'userLogout()' id ='logout' >Log Out</a></a>
+                            </div>
+                        </ng-template>
+       
                 </div>
                 <button class="btn btn-success my-2 my-sm-0" type="submit">
                     <a routerLink="/shoppingCart">

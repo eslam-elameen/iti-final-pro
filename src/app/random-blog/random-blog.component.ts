@@ -22,8 +22,6 @@ export class RandomBlogComponent implements OnInit {
     this.wowService.init();
     this.http.getData().subscribe(res => {
       this.posts = res;
-      // console.log(this.posts);
-
     });
 
 
@@ -36,7 +34,6 @@ export class RandomBlogComponent implements OnInit {
           this.ranarr.push(this.random)
         }
         this.sets = [...new Set(this.ranarr)]
-        // console.log(this.random);
       }
 
     });

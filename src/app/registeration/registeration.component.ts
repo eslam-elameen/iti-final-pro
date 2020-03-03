@@ -62,7 +62,7 @@ export class RegisterationComponent implements OnInit {
       })
       this.allDataOfUsers.push(registrationForm.value);
       this.route.navigate(['/profile']);
-    }
+      localStorage.setItem('user',JSON.stringify(registrationForm.value)); }
   }
 
 }

@@ -11,32 +11,27 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   login: FormGroup;
-  checkDAta;
+  checkDAta = [];
+
   err;
   userData;
   y;
   shoppingCartData;
-  constructor(private formBulider: FormBuilder, private validData: ApiService, private route: Router , private cartServices:ShoppingCartService) { }
+  x;
+  logedin: boolean;
+  constructor(private formBulider: FormBuilder, private validData: ApiService, private route: Router, private cartServices: ShoppingCartService) { }
 
   ngOnInit() {
 
-    this.userData = JSON.parse(localStorage.getItem('user'))
-    console.log(this.userData);
-    this.shoppingCartData = JSON.parse(localStorage.getItem('shoppingCart'));
-    // for (let i = 0; i < this.shoppingCartData.length; i++) {
-    //   this.shoppingCartData.dina = this.userData.id;
-    //   console.log(this.shoppingCartData[i]);
-    //   console.log(this.shoppingCartData);
-    //   this.validData.postDataFromJson(this.shoppingCartData).subscribe(data => {
-    //     this.y = data
-    //     console.log(this.y);
-    //   });
-    // }
+
+    this.x = localStorage.getItem('logedin')
+    console.log(this.x);
+
     this.login = this.formBulider.group({
       email: ['', [Validators.required, Validators.pattern(/\w{1,}@[a-z]{3,}\.com/)]],
       password: ['', [Validators.required, Validators.pattern(/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[A-z0-9]{8,}[\W]{0,}$/)]]
     })
-    this.validData.getUserData().subscribe(data => {
+    this.validData.getUserData().subscribe((data: []) => {
       this.checkDAta = data
     })
   }
@@ -46,31 +41,27 @@ export class LoginComponent implements OnInit {
         if (form.value.email == this.checkDAta[i].email && form.value.password == this.checkDAta[i].password) {
           console.log(this.checkDAta[i]);
           localStorage.setItem('user', JSON.stringify(this.checkDAta[i]));
-          this.validData.loginControler(form.value)
-          // let obj = {
-          //   userId: this.userData.id,
-          //   product: this.shoppingCartData
-          // }
-          // let arr = [];
-          // arr.push(obj);
-          // console.log(arr);
-          // this.validData.postDataFromJson(arr).subscribe(data => {
-          //   this.y = data
-          //   console.log(this.y);
-          // });
-          // localStorage.clear();
-          // this.cartServices.products=[];
-          // console.log(this.cartServices.products);
-          
-          // for (let i = 0; i < this.shoppingCartData.length; i++) {
-          //   this.shoppingCartData[i].userId = this.userData.id;
-          //   console.log(this.shoppingCartData[i]);
-          //   console.log(this.shoppingCartData);
-          //   this.validData.postDataFromJson(this.shoppingCartData).subscribe(data => {
-          //     this.y = data
-          //     console.log(this.y);
-          //   });
-          // }
+          this.logedin = true
+          this.validData.localNex(this.logedin)
+          this.userData = JSON.parse(localStorage.getItem('user'));
+          console.log(this.userData);
+          this.shoppingCartData = JSON.parse(localStorage.getItem('shoppingCart'));
+          console.log(this.shoppingCartData);
+          if (this.shoppingCartData != null) {
+            this.userData['products'] = this.shoppingCartData;
+            for (let i = 0; i < this.shoppingCartData.length; i++) {
+              this.validData.updateUser(this.userData.id, this.userData).subscribe(data => {
+                let d = data;
+                console.log(d);
+              });
+            }
+          } else if (this.shoppingCartData == null && this.userData.products != null) {
+            localStorage.setItem('shoppingCart', JSON.stringify(this.userData.products))
+          } else {
+            console.log('no data found');
+
+          }
+        
           this.route.navigate(['/profile']);
           document.getElementById('submitAlert').style.display = 'none';
         } else {

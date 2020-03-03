@@ -58,12 +58,8 @@ export class ProuductRandomComponent implements OnInit {
           this.ranarr.push(this.random)
         }
         this.sets = [...new Set(this.ranarr)]
-        // console.log(this.random);
       }
-
     });
-
-
   }
  
   // Add Product to Shopping Cart
