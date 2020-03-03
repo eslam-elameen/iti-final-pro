@@ -42,7 +42,7 @@
                                                     formControlName='password' placeholder="enter your password">
                                                 <div *ngIf='registrationForm.controls.password.hasError("pattern")&&registrationForm.controls.password.touched'
                                                     class="alert alert-danger" role="alert">
-                                                    the password should contain ex :a-z,A-Z,0-9,!@#
+                                                    the password should contain ex :a-z,A-Z,0-9
                                                 </div>
                                                 <div *ngIf='registrationForm.controls.password.hasError("required")&&registrationForm.controls.password.touched'
                                                     class="alert alert-danger" role="alert">

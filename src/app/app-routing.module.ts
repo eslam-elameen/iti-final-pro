@@ -1,6 +1,8 @@
 import { ProfileComponent } from './profile/profile.component';
 import { PayComponent } from './pay/pay.component';
 import { NgModule } from '@angular/core';
+// router guard
+import { AuthGuardService } from './guards/auth-guard.service'
 import { Routes, RouterModule } from '@angular/router';
 import { ProductsComponent } from './products/products.component'
 import { ProTypeComponent } from './products/pro-type/pro-type.component'
@@ -18,7 +20,7 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckComponent } from './check/check.component';
 import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
-// import { ProfileComponent } from './profile/profile.component';
+//  import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -26,7 +28,7 @@ const routes: Routes = [
   { path: 'pay', component: PayComponent },
 
   { path: 'signin', component: LoginComponent }, 
-  { path: 'profile', component:ProfileComponent }, 
+  { path: 'profile', component:ProfileComponent,canActivate:[AuthGuardService] }, 
   { path: 'edit-profile', component: EditProfileComponent}, 
 
   { path: 'signup', component: RegisterationComponent }, 
