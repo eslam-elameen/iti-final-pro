@@ -26,12 +26,13 @@ export class LoginComponent implements OnInit {
   onLoginSubmit(form) {
     if (form.valid) {
       for (let i = 0; i < this.checkDAta.length; i++) {
-        if (form.value.email != this.checkDAta[i].email) {
-          document.getElementById('submitAlert').style.display = 'block';
-        } else {
-          console.log('not valid email');
+        if (form.value.email == this.checkDAta[i].email && form.value.password == this.checkDAta[i].password) {
+          localStorage.setItem('user',JSON.stringify(this.checkDAta[i]))
           this.route.navigate(['/profile']);
           document.getElementById('submitAlert').style.display = 'none';
+        } else {
+          document.getElementById('submitAlert').style.display = 'block';
+          console.log('not valid email');
         }
       }
     }
