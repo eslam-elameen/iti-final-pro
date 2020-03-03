@@ -21,6 +21,13 @@
           "totalPrice": 170
         }
       ]
+    },
+    {
+      "name": "anasismail",
+      "email": "anas@gmail.com",
+      "password": "Anas_1234",
+      "confirmPassword": "Anas_1234",
+      "id": 2
     }
   ],
   "shoppingCart": [

@@ -35,7 +35,7 @@
               <div class="category-title">
                 <h5>User Detail</h5>
               </div>
-              <div class="category-content">
+              <div class="category-content py-2">
                 <ul id="sidebar-editable-nav" class="nav flex-column">
                   <li class="nav-item">
                     <a href="/admin/customers" class="nav-link active">
@@ -47,12 +47,6 @@
                     <a href="/admin/resettest" class="nav-link">
                       <i class="far fa-clipboard"></i>
                       Orders
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="/admin/usersprofiles" class="nav-link">
-                      <i class="far fa-heart"></i>
-                      Saved Items
                     </a>
                   </li>
                   <li class="nav-item">
@@ -70,10 +64,10 @@
           </div>
 
           <div class="col-md-9">
-            <div class="content-wapper py-5">
+            <div class="content-wapper py-3">
 
               <div class="row d-flex justify-content-center">
-                <div class="col-md-5">
+                <div class="col-md-8">
                   <div class="card mb-3">
                     <div class="header-card">
 
@@ -89,13 +83,13 @@
 
                           <p class="card-text">Email:{{this.userEmail}}</p>
                         </div>
-                        <button type="button" class="btn btn-primary px-5">Edit</button>
+                        <button type="button" class="btn btn-primary mt-4 px-5">Edit</button>
                       </div>
                     </div>
                   </div>
 
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-8">
                   <div class="card mb-3">
                     <div class="card-header">
                       <span> Orders</span>
@@ -105,23 +99,6 @@
                       <h6 class="card-title">You have placed no orders yet!</h6>
                       <p class="card-text">All your orders will be saved here for you.</p>
                       <button type="button" class="btn btn-primary">CONTINUE SHOPPING</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card mb-3">
-                    <div class="header-card">
-                      <div class="card-header">
-                        <span>Saved Items</span>
-                        <i class="fas fa-heart"></i>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <h6 class="card-title">You have no orders waiting for feedback</h6>
-                      <p class="card-text">Found something you like? the item to add it
-                        to your wishlist! All items your will items here.</p>
-                      <button type="button" class="btn btn-primary">CONTINUE SHOPPING</button>
-
                     </div>
                   </div>
                 </div>

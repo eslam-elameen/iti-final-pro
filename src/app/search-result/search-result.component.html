@@ -125,14 +125,19 @@
 
 
               </ng-template>
-              <div *ngIf=' counter ===0 ;else page'>
+              <ng-container *ngIf="foo === 1;else second"></ng-container>
+<ng-template #second>
+    <ng-container *ngIf="foo === 2;else third"></ng-container>
+</ng-template>
+<ng-template #third></ng-template>
+              <ng-container *ngIf=' counter ===0 ;else page'>
                 <div class="row">
                   <div class="col-xs-12 col-12">
                     <pagination class="pagination" [totalItems]="searchData.length" (pageChanged)="pageChanged($event)">
                     </pagination>
                   </div>
                 </div>
-              </div>
+              </ng-container>
                   <ng-template #page>
                     <div class="col-md-12">
                       <div class="row">
