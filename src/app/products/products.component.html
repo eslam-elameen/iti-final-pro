@@ -7,9 +7,15 @@
     <div class="sideBar-section">
       <div class="container">
         <div class="row no-gutters">
-          <div class="col-md-3 side-bar">
+          <div class="col-md-3 side-bar navbar navbar-expand-lg navbar-light d-flex align-items-baseline">
+            <button class="navbar-toggler" (click)="droptoggle1($event)" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
+            aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
 
-            <div class="card border-primary mb-3">
+          <div id="navbarSupportedContent2" class="hidden">
+
+            <div class="card p-0 border-primary mb-3">
 
               <h5 class="card-header">Food & accessories</h5>
               <ul class="list-group list-group-flush" *ngFor='let kin of checkBoxkind'>
@@ -22,7 +28,7 @@
 
               </ul>
             </div>
-            <div class="card border-primary mb-3">
+            <div class="card border-primary p-0 mb-3">
               <h5 class="card-header">Store</h5>
               <ul class="list-group list-group-flush" *ngFor='let stor of checkBoxStore'>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -34,11 +40,12 @@
               </ul>
             </div>
           </div>
+          </div>
           <div class="col-md-9">
             <div>
-              <div class="form-group d-flex justify-content-end ">
+              <div class="form-group pt-4 d-flex justify-content-end ">
                 <label class="mt-1 mr-2">Sort by:</label>
-            <select name="" id="" (change)='sortData($event)' class="form-control w-25 mb-5 ">
+            <select name="" id="" (change)='sortData($event)' class="form-control w-25 mb-3 ">
               <option value="0">
                 none
               </option>
@@ -63,7 +70,7 @@
 
               </div>
               <div *ngIf="counter ===0 ; else empty" class="row no-gutters">
-                <div class="col-md-4 mb-4 col-sm-12" *ngFor='let item of returnedArray'>
+                <div class="col-md-4 mb-4 col-sm-12 p-3" *ngFor='let item of returnedArray'>
 
 
                   <div class="card">

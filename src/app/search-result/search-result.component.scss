@@ -165,6 +165,7 @@ input[type="checkbox"]:checked + label:before {
   transform: rotate(45deg);
 }
 
+
 .paddingcol {
   padding: 10px;
 }
@@ -174,9 +175,24 @@ input[type="checkbox"]:checked + label:before {
 }
 
 @media (max-width: 991.98px) {
-  .navbar-collapse{
+  .hidden{
       // top: 0%;
     display: none;
     }
+    .col-md-12  {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
 
 }
+@media (min-width: 992px) { 
+  .hidden{
+    // top: 0%;
+  display: block;
+  }
+  .col-md-12  {
+    padding-left: 0;
+    padding-right: 0;
+  }
+ }

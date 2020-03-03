@@ -6,7 +6,7 @@
   bottom: 20px;
   left: 15%;
   z-index: 10;
-  padding-top: 20px;
+  // padding-top: 20px;
   padding-bottom: 20px;
   top: 35%;
   color: #fff;
@@ -85,18 +85,15 @@ p {
 }
 
 @media (max-width: 991.98px) {
-    .carousel-captionTwo__title{
-        top: 0%;
-    }
-  .carousel-captionTwo__title h3,
-  i {
-    visibility: hidden;
-    
-    font-size: 10px;
+  .carousel {
+    display: none;
+   
   }
-  .carousel-captionTwo__paraghaph p,
-  i {
-    font-size: 10px;
-    margin-top: 10px;
+  .background-responsive {
+ background: url('https://demo.fieldthemes.com/ps_petshop/home1/modules/fieldslideshow/images/slider-111.jpg');
+    background-size: cover;
+    height: 10rem;
+    background-position: center;
+    margin-top: 60px;
   }
 }
