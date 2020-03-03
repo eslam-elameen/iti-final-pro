@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-md-12 col-lg-9">
 
-        <table class="table " *ngIf="productFromLocal.length > 0 || services.length > 0 ">
+        <table class="table mb-4" *ngIf="productFromLocal.length > 0 ">
           <thead>
             <tr>
               <th scope="col">Product Details</th>
@@ -42,8 +42,21 @@
                 <button class="btns" (click)="onIncrease(item)">+</button>
               </td>
               <td class="price text-center">{{item.totalPrice}} EGP</td>
-            </tr>
+            </tr>  
+          </tbody>
+        </table> <!-- End Product Table -->
 
+
+        <table class="table " *ngIf="services.length > 0 ">
+          <thead>
+            <tr>
+              <th scope="col">Services Details</th>
+              <th scope="col">Price</th>
+              <th scope="col" class="text-center">Quantity</th>
+              <th scope="col" class="text-center">Total Price</th>
+            </tr>
+          </thead>
+          <tbody>
             <tr *ngFor="let service of services">
                 <td class="w-50">
                   <div class="media">
@@ -72,11 +85,14 @@
               </tr>
 
           </tbody>
-        </table> <!-- End Table -->
+        </table> <!-- End Services Table -->
 
         <div class="alert alert-danger " role="alert" *ngIf="productFromLocal.length == 0 && services.length == 0 ">
-            <h4 class="alert-heading">No Product yet</h4>
-            <p>Please go to shop and add Product Here <strong><a class="link" routerLink="/category/dog">Go To Shop</a></strong></p>
+            <h4 class="alert-heading mb-3">No Product And Services Yet </h4>
+            <p>Please Add Product First <strong><a class="link" routerLink="/category/dog">Go To Add Product</a></strong></p>
+            <p>OR go to services and add services <strong><a class="link" routerLink="/ourServices">Go To Services</a></strong></p>
+
+
           </div>
 
       </div><!-- End Col 9 -->
