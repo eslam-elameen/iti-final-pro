@@ -13,7 +13,7 @@ import { PageChangedEvent } from 'ngx-bootstrap/pagination';
   styleUrls: ['./search-result.component.scss']
 })
 export class SearchResultComponent implements OnInit {
-  searchValue: string
+  searchValue;
   returnedFilterArray;
   y: number = 4;
   max: number = 5;
@@ -86,6 +86,8 @@ export class SearchResultComponent implements OnInit {
     })
 
     this.cartServices.saveInLocalStorge()
+
+this.cartServices.saveInLocalStorge()
 
   }
 

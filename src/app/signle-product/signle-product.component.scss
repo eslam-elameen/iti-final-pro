@@ -17,7 +17,7 @@
   border-color: #425575;
 }
 .img-wrapper {
-  border: 1px solid #ddd;
+  border-right: 2px solid #ddd;
 }
 .btn-outline-success {
   border-radius: 10px;
@@ -147,7 +147,7 @@ line-height: 22px;
 }
 
 
-.btn-outline-primary:hover i {
+.btn:hover i {
   transform: rotateY(360deg);
   transition: 0.5s all ease-in-out;
 }

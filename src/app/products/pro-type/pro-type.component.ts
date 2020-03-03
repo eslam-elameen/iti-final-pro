@@ -65,7 +65,6 @@ mykind=[];
       console.log(this.fiterCheck)
       console.log(this.returnedFilterArray )  
     } )
-
     this.shoppingCart.saveInLocalStorge()
   }
   pageChanged(event: PageChangedEvent): void {

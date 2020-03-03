@@ -8,7 +8,7 @@ import { RegisterationComponent } from './registeration/registeration.component'
 import { BlogComponent } from './blog/blog.component';
 import { LoginComponent } from './login/login.component'
 import { SearchResultComponent } from './search-result/search-result.component'
-
+import { RandomBlogComponent } from './random-blog/random-blog.component'
 import { ShippingAreaComponent } from './shipping-area/shipping-area.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
 import { HomeComponent } from './home/home.component';
@@ -18,6 +18,7 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckComponent } from './check/check.component';
 import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
+// import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,8 @@ const routes: Routes = [
   { path: 'blog/:id', component: SingleBlogComponent },
   { path: 'result', component: SearchResultComponent },
   { path: 'randomProduct/:id', component: SignleProductComponent },
+  { path: 'RandomBlog', component: RandomBlogComponent },
+  { path: "RandomBlog/:id", component: SingleBlogComponent },
   {path:'check',component:CheckComponent},
   { path: 'randomProduct', component: ProuductRandomComponent },
   { path: "ourServices", component: OurServicesComponent },

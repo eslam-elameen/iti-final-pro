@@ -23,11 +23,14 @@
             </div>
           </div>
           <div class="col-md-9">
-            <select name="" id="" (change)='sortData($event)'>
+            <div>
+              <div class="form-group d-flex justify-content-end ">
+                <label class="mt-1 mr-2">Sort by:</label>
+            <select name="" id="" (change)='sortData($event)' class="form-control w-25 mb-5 ">
               <option value="0">
                 none
               </option>
-              <option value="1">
+              <option value="1">`
                 A-Z
               </option>
               <option value="2">
@@ -40,6 +43,8 @@
                 price High To low
               </option>
             </select>
+          </div>
+            </div>
             <div class="row">
 
               <div *ngIf="counter ===0 ; else empty" class="row">
@@ -47,66 +52,79 @@
 
 
                   <div class="card">
-                    <img src="{{item.img}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">{{item.productTitle}}</h5>
-                      <div>
-                        <p class="card-text">{{item.kind}}</p>
-                        <!-- <span class="card-text">{{item.storeName}}</span> -->
-                        <span class="card-text">price : {{item.price}}</span>
+                    <div class="card-wrapper">
+                      <div class="img-wrapper">
+                        <img [src]="item.img" class="card-img-top" alt="..." routerLink="/randomProduct/{{item.id}}">
                       </div>
-                      <button type="button" (click)="onAddToCart(item)" class="btn btn-primary">
-                        Add To Cart <i class="fas fa-shopping-cart"></i>
-                      </button>
+                      <div class="card-body">
+                        <div class="header-wapper">
+                          <h5 class="card-title">{{item.productTitle | slice:0:20}}</h5>
+                          <span class="storeName">{{item.storeName | slice:0:10}}</span>
+                        </div>
+                        <div class="card-body-detail ">
+                          <span class="kind">{{item.kind}}</span>
+                          <span class="price">{{item.price}} EGP</span>
+                        </div>
+                      </div>
+                      <div class="cart-section">
+                        <button type="button" (click)="onAddToCart(item)" class="btn btn-primary btn-block">
+                          <i class="fas fa-shopping-cart"></i> Add To Cart
+                        </button>
+                      </div>
                     </div>
-                  </div>
 
+                  </div>
                 </div>
+
               </div>
               <ng-template #empty>
                 <div class="col-md-4 mb-4 col-sm-12" *ngFor='let item of returnedFilterArray'>
                   <div class="card">
-                    <img src="{{item.img}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">{{item.productTitle}}</h5>
-                      <div>
-                        <p class="card-text">{{item.kind}}</p>
-                        <!-- <span class="card-text">{{item.storeName}}</span> -->
-                        <!-- <p class="card-text">{{item.kind}}</p> -->
-                        <span class="card-text">{{item.storeName}}</span>
-                        <span class="card-text">price : {{item.price}}</span>
+                    <div class="card-wrapper">
+                      <div class="img-wrapper">
+                        <img [src]="item.img" class="card-img-top" alt="..." routerLink="/randomProduct/{{item.id}}">
                       </div>
-                      <button type="button" (click)="onAddToCart(item)" class="btn btn-primary">
-                        Add To Cart <i class="fas fa-shopping-cart"></i>
-                      </button>
+                      <div class="card-body">
+                        <div class="header-wapper">
+                          <h5 class="card-title">{{item.productTitle | slice:0:20}}</h5>
+                          <span class="storeName">{{item.storeName | slice:0:10}}</span>
+                        </div>
+                        <div class="card-body-detail ">
+                          <span class="kind">{{item.kind}}</span>
+                          <span class="price">{{item.price}} EGP</span>
+                        </div>
+                      </div>
+                      <div class="cart-section">
+                        <button type="button" (click)="onAddToCart(item)" class="btn btn-primary btn-block">
+                          <i class="fas fa-shopping-cart"></i>  Add To Cart 
+                        </button>
+                      </div>
                     </div>
+
                   </div>
                 </div>
 
 
               </ng-template>
+              <div>
+                <div *ngIf='kindFilterData.length > 0 && counter ===0 ;else page'>
+                  <div>
+                    <pagination [totalItems]="kindFilterData.length" class="pagination"
+                      (pageChanged)="pageChanged($event)"></pagination>
+                  </div>
+                </div>
+                <ng-template #page>
+                  <div>
+                    <pagination [totalItems]="fiterCheck.length" class="pagination" (pageChanged)="pageChanged($event)">
+                    </pagination>
+                  </div>
+                </ng-template>
+              </div>
             </div>
           </div>
+          <!-- </div> -->
         </div>
       </div>
     </div>
-    <div>
-      <div *ngIf='kindFilterData.length > 0 && counter ===0 ;else page'>
-        <div>
-          <pagination [totalItems]="kindFilterData.length" (pageChanged)="pageChanged($event)"></pagination>
-        </div>
-      </div>
-      <ng-template #page>
-        <div>
-          <pagination [totalItems]="fiterCheck.length" (pageChanged)="pageChanged($event)"></pagination>
-        </div>
-      </ng-template>
-    </div>
-
-
-
-
-
-
   </div>
 </div>
