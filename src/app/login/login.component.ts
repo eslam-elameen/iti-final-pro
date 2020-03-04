@@ -44,6 +44,7 @@ export class LoginComponent implements OnInit {
           this.logedin = true
           this.validData.localNex(this.logedin)
           this.userData = JSON.parse(localStorage.getItem('user'));
+
           console.log(this.userData);
           this.shoppingCartData = JSON.parse(localStorage.getItem('shoppingCart'));
           console.log(this.shoppingCartData);
@@ -62,9 +63,9 @@ export class LoginComponent implements OnInit {
             console.log('no data found');
 
           }
-        
-          this.route.navigate(['/profile']);
-          document.getElementById('submitAlert').style.display = 'none';
+        this.validData.senobject(this.userData);
+        this.route.navigate(['/profile']);
+        document.getElementById('submitAlert').style.display = 'none';
         } else {
           document.getElementById('submitAlert').style.display = 'block';
         }

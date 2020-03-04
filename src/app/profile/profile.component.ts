@@ -17,36 +17,23 @@ export class ProfileComponent implements OnInit {
   comingUser;
   comingUserFromJson;
   url = "assets/profile-placeholder.png";
-  product: any;
-  arr = [];
   constructor(private http: ApiService, private userData: ApiService) { }
   ngOnInit() {
     this.comingUser = JSON.parse(localStorage.getItem('user'));
     console.log(this.comingUser);
-    console.log(this.comingUser.products);
-    
-
 
     this.http.getSingleUser(this.comingUser).subscribe(data => {
       this.userFromJson = data
       console.log(this.userFromJson);
-
       for (let i = 0; i < this.userFromJson.length; i++) {
         if (this.comingUser.email == this.userFromJson[i].email) {
           this.userEmail = this.userFromJson[i].email;
           this.userName = this.userFromJson[i].name;
-          // this.product = this.comingUser.products[i].id;
-
-          // console.log(this.product);
-          
           console.log(this.userFromJson[i].email);
         }
       }
-      // for(let i =0; i < this.userFromJson.length; i++){
-      //   this.product = this.userFromJson[i].products[i].productTitle;
-
-      // }
     });
+
   }
 
   callForImage() {
