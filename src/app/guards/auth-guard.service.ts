@@ -6,7 +6,15 @@ import { Observable } from 'rxjs';
 })
 export class AuthGuardService {
 
-  constructor(private _authService: AuthGuardService, private _router: Router) { }
+  constructor( private route: Router) { }
 
-  // canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+  canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+    if (localStorage.getItem('user')) {
+      return true
+    } else {
+      this.route.navigate(['signin'])
+      //add  route if he doesnt't loged in
+      return false
+    }
+  }
 }

@@ -39,7 +39,7 @@ export class ProductsComponent implements OnInit {
       if( params){
         for ( let i of uncheck){
           this.counter = 0
-          i.checked = false
+          i.checked= false
        }
       
        this.checkfilter.updateData.splice(0, this.checkfilter.updateData.length);
@@ -83,6 +83,8 @@ export class ProductsComponent implements OnInit {
     const endItem = event.page * event.itemsPerPage;
     this.returnedArray = this.dogData.slice(startItem, endItem);
     this.returnedFilterArray=this.fiterCheck.slice(startItem, endItem);
+    window.scroll(0,0);
+
   }
 
   

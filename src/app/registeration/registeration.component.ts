@@ -1,7 +1,8 @@
+import { ShoppingCartService } from './../shopping-cart.service';
 import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router'
+import { Router, ActivatedRoute } from '@angular/router'
 @Component({
   selector: 'app-registeration',
   templateUrl: './registeration.component.html',
@@ -12,7 +13,15 @@ export class RegisterationComponent implements OnInit {
   flag;
   registrationForm: FormGroup;
   getFile: File;
-  constructor(private registerBuild: FormBuilder, private http: ApiService, private route: Router) { }
+  shoppingCartData;
+  userData;
+  logedin: boolean;
+  dataFromJson;
+  x;
+  hidenConfirm=true
+  hiden: boolean=true
+  constructor(private registerBuild: FormBuilder, private http: ApiService, private route: Router
+    , private cartServices: ShoppingCartService,private gitCheckout :ActivatedRoute) { }
 
   ngOnInit() {
     this.registrationForm = this.registerBuild.group({
@@ -26,7 +35,14 @@ export class RegisterationComponent implements OnInit {
 
     this.http.getUserData().subscribe(data => {
       this.allDataOfUsers = data
-    })
+    });
+  }
+  hidden(){
+
+    this.hiden = !this.hiden
+  }
+  hide(){
+this.hidenConfirm=!this.hidenConfirm
   }
   match(password, confirmPassword) {
     return (registrationForm: FormGroup) => {
@@ -48,21 +64,55 @@ export class RegisterationComponent implements OnInit {
           this.flag = true
         }
       }
+      this.logedin =true
       this.test(registrationForm)
+      this.http.localNex(this.logedin)
     }
   }
+
   test(registrationForm) {
     console.log('inside test function');
     if (this.flag == false) {
-     
       this.http.postData(registrationForm.value).subscribe(data => {
-        let x =data;
-        console.log(x);
+        let userData = data;
+        localStorage.setItem('user',JSON.stringify(userData))
+
+        console.log(userData);
         
       })
       this.allDataOfUsers.push(registrationForm.value);
-      this.route.navigate(['/profile']);
+      this.gitCheckout.params.subscribe(param=>{
+        if(param.data ==='check'){
+          this.route.navigate(['/check']); 
+        }else{
+
+          this.route.navigate(['/profile']);
+        }
+      })
       localStorage.setItem('user',JSON.stringify(registrationForm.value)); }
   }
 
-}
+      // this.logedin = true
+      // this.http.localNex(this.logedin)
+      // this.userData = JSON.parse(localStorage.getItem('user'));
+      // console.log(this.userData);
+      // this.shoppingCartData = JSON.parse(localStorage.getItem('shoppingCart'));
+      // console.log(this.shoppingCartData);
+     
+      // if (this.shoppingCartData != null) {
+      //   this.userData['products'] = this.shoppingCartData;
+      //   for (let i = 0; i < this.shoppingCartData.length; i++) {
+      //     this.http.updateUser(this.userData.id, this.userData).subscribe(data => {
+      //       let d = data;
+      //       console.log(d);
+      //     });
+      //   }
+      // } else if (this.shoppingCartData == null && this.userData.products != null) {
+      //   localStorage.setItem('shoppingCart', JSON.stringify(this.userData.products))
+      //   this.cartServices.getAllQuantityProduct()
+      // } else {
+      //   console.log('no data found');
+      // }
+    }
+//   }
+// }

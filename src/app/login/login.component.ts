@@ -2,7 +2,8 @@ import { ShoppingCartService } from './../shopping-cart.service';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from './../api.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -12,16 +13,21 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   login: FormGroup;
   checkDAta = [];
-
+  hiden = true;
   err;
   userData;
   y;
   shoppingCartData;
   x;
   logedin: boolean;
-  constructor(private formBulider: FormBuilder, private validData: ApiService, private route: Router, private cartServices: ShoppingCartService) { }
+  checoutLog: any;
+  constructor(private gitCheckout :ActivatedRoute,private formBulider: FormBuilder, private validData: ApiService, private route: Router, private cartServices: ShoppingCartService) { }
+  hidden(){
 
+    this.hiden = !this.hiden
+  }
   ngOnInit() {
+    
 
 
     this.x = localStorage.getItem('logedin')
@@ -44,6 +50,7 @@ export class LoginComponent implements OnInit {
           this.logedin = true
           this.validData.localNex(this.logedin)
           this.userData = JSON.parse(localStorage.getItem('user'));
+
           console.log(this.userData);
           this.shoppingCartData = JSON.parse(localStorage.getItem('shoppingCart'));
           console.log(this.shoppingCartData);
@@ -62,13 +69,38 @@ export class LoginComponent implements OnInit {
             console.log('no data found');
 
           }
-        
-          this.route.navigate(['/profile']);
+          this.gitCheckout.params.subscribe(param=>{
+            this.checoutLog = param
+
+            if(param.data ==='check'){
+              this.route.navigate(['/check']);
+            
+            }else{
+
+              this.route.navigate(['/']);
+            }
+          })
+
+
+          
           document.getElementById('submitAlert').style.display = 'none';
         } else {
           document.getElementById('submitAlert').style.display = 'block';
         }
       }
     }
+  }
+
+
+  onRegister(){
+    this.gitCheckout.params.subscribe(param=>{
+      this.checoutLog = param
+
+      if(param.data ==='check'){
+        this.route.navigate(['/checkoutRegister/check']);
+      
+      }
+    })
+
   }
 }

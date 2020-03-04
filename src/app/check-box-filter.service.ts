@@ -23,6 +23,7 @@ export class CheckBoxFilterService {
     for (let item of this.allArr) {
       this.updateData.indexOf(item)!=-1? this.updateData.splice(this.updateData.indexOf(item),1,item):
     item.length > 0? this.updateData.push(item):
+    console.log(this.updateData)
     console.log(this.updateData.indexOf(item))
   }
     for (let it of this.updateData) {

@@ -5,7 +5,12 @@
         <div class="col-md-3 navbar navbar-expand-lg navbar-light d-flex align-items-baseline">
           <button class="navbar-toggler"   (click)="droptoggle1($event)" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
             aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+       
+
+              Filter:
               <span class="navbar-toggler-icon"></span>
+            
+            
           </button>
 
           <!-- <div> -->
@@ -71,7 +76,7 @@
           <div class="alert alert-danger m-auto w-75 text-center py-4" role="alert" *ngIf="searchData.length ===0" >
             <h3>No Data For Your search</h3>
           </div>
-          <div *ngIf="counter ===0 ; else empty" class="row no-gutters">
+          <div *ngIf="counter ===0 ; else empty"  class="row no-gutters" >
             <div class="col-md-4 mb-4 paddingcol col-12" *ngFor='let item of returnedArray'>
               <div class="card">
                 <div class="card-wrapper">
@@ -89,7 +94,7 @@
                     </div>
                   </div>
                   <div class="cart-section">
-                    <button class="btn btn-primary btn-block p3" type="button" (click)="onAddToCart(card)"><i
+                    <button class="btn btn-primary btn-block p3" type="button" (click)="addToCart(item)"><i
                         class="fas fa-shopping-cart mr-3"></i>Add To cart</button>
                   </div>
                 </div>
@@ -116,7 +121,7 @@
                     </div>
                   </div>
                   <div class="cart-section">
-                    <button class="btn btn-primary btn-block p3" type="button" (click)="onAddToCart(card)"><i
+                    <button class="btn btn-primary btn-block p3" type="button" (click)="addToCart(item)"><i
                         class="fas fa-shopping-cart mr-3"></i>Add To cart</button>
                   </div>
                 </div>
@@ -125,29 +130,33 @@
 
 
               </ng-template>
-              <div *ngIf=' counter ===0 ;else page'>
-                <div class="row">
-                  <div class="col-xs-12 col-12">
-                    <pagination class="pagination" [totalItems]="searchData.length" (pageChanged)="pageChanged($event)">
-                    </pagination>
-                  </div>
-                </div>
-              </div>
-                  <ng-template #page>
-                    <div class="col-md-12">
-                      <div class="row">
-                     
-                          <pagination class="pagination" [totalItems]="fiterCheck.length" (pageChanged)="pageChanged($event)">
-                          </pagination>
-                        </div>
-                    </div>        
-                     
-                  </ng-template>
             </div>
-         
+            
           </div>
         </div>
       </div>
     </div>
+    
+  </section>
+      <ng-container *ngIf='searchData.length == 0  ;else page'>
+        <h1></h1>
+  
+      </ng-container  >
+      <ng-template #page >
+        <ng-container *ngIf='counter == 0  ;else pag'>
+          
+              <pagination (activate)="onActivate($event)" class="pagination" [totalItems]="searchData.length" (pageChanged)="pageChanged($event)">
+              </pagination>
+        
+      </ng-container>    
+         
+      </ng-template>
+      <ng-template #pag>
+        <ng-container *ngIf='counter > 0  '>
 
-</section>
+           
+              <pagination (activate)="onActivate($event)" class="pagination" [totalItems]="fiterCheck.length" (pageChanged)="pageChanged($event)">
+              </pagination>
+           
+      </ng-container>   
+      </ng-template>

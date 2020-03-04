@@ -23,12 +23,17 @@ export class OurServicesComponent implements OnInit, OnChanges {
     {
       id: 1,
       name: 'Grooming',
-      price: 10
+      price: 250
     },
     {
       id: 2,
       name: 'Dry & Bath',
-      price: 30
+      price: 100
+    },
+    {
+      id: 2,
+      name: 'Styling',
+      price: 150
     }
   ]
 
@@ -118,8 +123,8 @@ export class OurServicesComponent implements OnInit, OnChanges {
     return total;
   }
 
-  onChangevalue(e) {
-      if(e.target.value > 0){
+  onChangevalue() {
+      if(this.servicesForm.value.dog > 0 || this.servicesForm.value.cat > 0){
         this.totalPrice()
         this.total = this.totalPrice();
       }else{

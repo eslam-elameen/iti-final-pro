@@ -21,6 +21,7 @@ mykind=[];
   returnedFilterArray=[];
   fiterCheck=[];
   toggle: HTMLElement;
+  
   constructor(private prouductsData:ProudctsService,
      private rout: ActivatedRoute,
      private checkfilterKind : CheckBoxFilterService,
@@ -28,7 +29,7 @@ mykind=[];
      ) {
     this.prouductsData.getData().subscribe((data:[]) =>{ this.kindData=data;
       this.rout.params.subscribe( params => {   this.checkfilterKind.searchDataResult =this.kindFilterData= this.kindData.filter(item => item.kind.includes(params.kind) && item.category.includes(params.category))
-        let uncheck = Array.from(document.getElementsByClassName('check'));
+         let uncheck = Array.from(document.getElementsByClassName('check'));
       if( params){
         for ( let i of uncheck){
           this.counter = 0
@@ -73,6 +74,8 @@ mykind=[];
     const endItem = event.page * event.itemsPerPage;
     this.returnedArray = this.kindFilterData.slice(startItem, endItem);
     this.returnedFilterArray=this.fiterCheck.slice(startItem, endItem);
+    window.scroll(0,0);
+
   }
 
  

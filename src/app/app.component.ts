@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
   message: number;
   cards;
 
+ 
   ngOnInit() {
    
     this.wowService.init();
@@ -29,7 +30,7 @@ export class AppComponent implements OnInit {
 
     setTimeout(() => {
       this.spinner.hide();
-    }, 2000);
+    }, 1000);
 
     this.http.getData().subscribe(res => {
       this.posts = res;

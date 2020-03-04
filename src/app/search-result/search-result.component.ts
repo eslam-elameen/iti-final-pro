@@ -31,7 +31,12 @@ export class SearchResultComponent implements OnInit {
   checkBoxStore = [];
   returnedArray: any[];
   toggle: HTMLElement;
-
+  onActivate(event) {
+    window.scroll(0,0);
+    //or document.body.scrollTop = 0;
+    //or document.querySelector('body').scrollTo(0,0)
+    
+}
   constructor(private resultServer: ProudctsService, private filterService: CheckBoxFilterService, private cartServices: ShoppingCartService) {
     this.resultServer.getSearch.subscribe((data) => {
       let chh = Array.from(document.getElementsByClassName('check'));
@@ -50,7 +55,8 @@ export class SearchResultComponent implements OnInit {
         console.log(res)
         this.apiData = res;
         this.filterService.searchDataResult = this.searchData = (this.searchValue) ?
-          this.apiData.filter(item => item.productTitle.toLowerCase().includes(this.searchValue.toLowerCase())) :
+          this.apiData.filter(item => item.productTitle.toLowerCase().includes(this.searchValue.toLowerCase())||
+          item.kind.toLowerCase().includes(this.searchValue.toLowerCase()) || item.storeName.toLowerCase().includes(this.searchValue.toLowerCase())) :
           this.searchData;
         console.log(this.searchData)
         this.returnedArray = this.searchData.slice(0, 9);
@@ -93,10 +99,13 @@ this.cartServices.saveInLocalStorge()
   }
 
   pageChanged(event: PageChangedEvent): void {
+    
     const startItem = (event.page - 1) * event.itemsPerPage;
     const endItem = event.page * event.itemsPerPage;
     this.returnedArray = this.searchData.slice(startItem, endItem);
     this.returnedFilterArray = this.fiterCheck.slice(startItem, endItem);
+    window.scroll(0,0);
+
   }
 
 

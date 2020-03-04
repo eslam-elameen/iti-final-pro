@@ -17,7 +17,7 @@ export class ProfileComponent implements OnInit {
   comingUser;
   comingUserFromJson;
   url = "assets/profile-placeholder.png";
-  constructor(private http: ApiService, private userData: ApiService) { }
+  constructor(private http: ApiService, private userData: ApiService, private route: Router) { }
   ngOnInit() {
     this.comingUser = JSON.parse(localStorage.getItem('user'));
     console.log(this.comingUser);
@@ -33,6 +33,7 @@ export class ProfileComponent implements OnInit {
         }
       }
     });
+
   }
 
   callForImage() {
@@ -58,5 +59,9 @@ export class ProfileComponent implements OnInit {
       })
       localStorage.setItem("user",JSON.stringify(this.comingUser));
     }
+  }
+
+  onEdit(){
+    this.route.navigate(['/edit-profile'])
   }
 }

@@ -60,7 +60,7 @@
   .sidebar {
     position: relative;
     width: 100%;
-    z-index: 9;
+    z-index: 9FFF;
     .sidebar-user .category-content {
       padding: $spacer;
       text-align: center;
@@ -210,6 +210,9 @@
       color: #425575;
       top: 123px;
   }
+  .file-icons i:hover {
+    cursor: pointer;
+  }
   .card-header {
   display: flex;
   justify-content: space-between;
@@ -236,4 +239,18 @@
       background-color: #425575;
       border: 2px solid #425575;
       border-radius: 0 20px 20px 20px;
+  }
+  .btn-primary:hover {
+    background-color: #fff;
+    transition: all .5s ease-in-out;
+    color: #425575;
+  }
+  .media img {
+    width: 100px;
+    height: 100px;
+    border-radius: 0;
+  }
+  .media-body span {
+    color: #425575;
+    font-weight: 500;
   }
