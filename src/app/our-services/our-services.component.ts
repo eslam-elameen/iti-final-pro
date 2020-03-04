@@ -23,12 +23,17 @@ export class OurServicesComponent implements OnInit, OnChanges {
     {
       id: 1,
       name: 'Grooming',
-      price: 10
+      price: 250
     },
     {
       id: 2,
       name: 'Dry & Bath',
-      price: 30
+      price: 100
+    },
+    {
+      id: 2,
+      name: 'Styling',
+      price: 150
     }
   ]
 

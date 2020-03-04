@@ -133,7 +133,10 @@ export class ShoppingCartService implements OnInit {
   }
 
   totalPrice() {
-    if (this.subTotalPrice() >= 300) {
+    let product = JSON.parse(localStorage.getItem('shoppingCart'));
+    console.log(product);
+    
+    if (this.subTotalPrice() >= 300 || product.length == 0) {
       this.showShipping = 0;
 
       this.shipping = 0;

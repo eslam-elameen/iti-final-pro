@@ -1,7 +1,7 @@
 import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router'
+import { Router, ActivatedRoute } from '@angular/router'
 @Component({
   selector: 'app-registeration',
   templateUrl: './registeration.component.html',
@@ -12,7 +12,11 @@ export class RegisterationComponent implements OnInit {
   flag;
   registrationForm: FormGroup;
   getFile: File;
-  constructor(private registerBuild: FormBuilder, private http: ApiService, private route: Router) { }
+  constructor(private registerBuild: FormBuilder,
+     private http: ApiService, 
+     private route: Router,
+     private gitCheckout :ActivatedRoute
+     ) { }
 
   ngOnInit() {
     this.registrationForm = this.registerBuild.group({
@@ -61,7 +65,14 @@ export class RegisterationComponent implements OnInit {
         
       })
       this.allDataOfUsers.push(registrationForm.value);
-      this.route.navigate(['/profile']);
+      this.gitCheckout.params.subscribe(param=>{
+        if(param.data ==='check'){
+          this.route.navigate(['/check']); 
+        }else{
+
+          this.route.navigate(['/profile']);
+        }
+      })
       localStorage.setItem('user',JSON.stringify(registrationForm.value)); }
   }
 
