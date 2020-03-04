@@ -166,6 +166,8 @@ input[type="checkbox"]:checked + label:before {
 ::ng-deep .pagination {
   display: flex;
   flex-flow: row wrap !important;
+  justify-content: center;
+
 }
 @media (max-width: 991.98px) {
   .hidden {

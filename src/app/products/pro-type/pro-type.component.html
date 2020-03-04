@@ -112,20 +112,7 @@
 
 
               </ng-template>
-              <div>
-                <div *ngIf='kindFilterData.length > 0 && counter ===0 ;else page'>
-                  <div>
-                    <pagination [totalItems]="kindFilterData.length" class="pagination"
-                      (pageChanged)="pageChanged($event)"></pagination>
-                  </div>
-                </div>
-                <ng-template #page>
-                  <div>
-                    <pagination [totalItems]="fiterCheck.length" class="pagination" (pageChanged)="pageChanged($event)">
-                    </pagination>
-                  </div>
-                </ng-template>
-              </div>
+         
             </div>
           </div>
           <!-- </div> -->
@@ -134,3 +121,25 @@
     </div>
   </div>
 </div>
+<ng-container *ngIf='kindFilterData.length == 0  ;else page'>
+  <h1></h1>
+
+</ng-container  >
+<ng-template #page >
+  <ng-container *ngIf='counter == 0  ;else pag'>
+    
+        <pagination class="pagination" [totalItems]="kindFilterData.length" (pageChanged)="pageChanged($event)">
+        </pagination>
+  
+</ng-container>    
+   
+</ng-template>
+<ng-template #pag>
+  <ng-container *ngIf='counter > 0  '>
+
+     
+        <pagination class="pagination" [totalItems]="fiterCheck.length" (pageChanged)="pageChanged($event)">
+        </pagination>
+     
+</ng-container>   
+</ng-template>

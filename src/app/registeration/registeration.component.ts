@@ -64,7 +64,9 @@ this.hidenConfirm=!this.hidenConfirm
           this.flag = true
         }
       }
+      this.logedin =true
       this.test(registrationForm)
+      this.http.localNex(this.logedin)
     }
   }
 

@@ -144,8 +144,15 @@
           <ng-template #lo>
            
                 <li role="menuitem">
+                  <ng-container *ngIf='userName != null; else profile'>
                     <a class="dropdown-item dropLink" routerLink="/profile"><i class="fas fa-angle-right icon mr-2"></i>{{userName.name}}</a>
-                    <a class="dropdown-item dropLink" (click)= 'userLogout()'><i class="fas fa-angle-right icon mr-2"></i>log out</a>
+
+                  </ng-container>
+                  <ng-template #profile>
+                    <a class="dropdown-item dropLink" routerLink="/profile"><i class="fas fa-angle-right icon mr-2"></i>profile</a>
+
+                  </ng-template> 
+                  <a class="dropdown-item dropLink" (click)= 'userLogout()'><i class="fas fa-angle-right icon mr-2"></i>log out</a>
  
                 </li>
                 
