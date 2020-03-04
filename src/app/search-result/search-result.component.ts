@@ -31,7 +31,12 @@ export class SearchResultComponent implements OnInit {
   checkBoxStore = [];
   returnedArray: any[];
   toggle: HTMLElement;
-
+  onActivate(event) {
+    window.scroll(0,0);
+    //or document.body.scrollTop = 0;
+    //or document.querySelector('body').scrollTo(0,0)
+    
+}
   constructor(private resultServer: ProudctsService, private filterService: CheckBoxFilterService, private cartServices: ShoppingCartService) {
     this.resultServer.getSearch.subscribe((data) => {
       let chh = Array.from(document.getElementsByClassName('check'));
@@ -94,10 +99,13 @@ this.cartServices.saveInLocalStorge()
   }
 
   pageChanged(event: PageChangedEvent): void {
+    
     const startItem = (event.page - 1) * event.itemsPerPage;
     const endItem = event.page * event.itemsPerPage;
     this.returnedArray = this.searchData.slice(startItem, endItem);
     this.returnedFilterArray = this.fiterCheck.slice(startItem, endItem);
+    window.scroll(0,0);
+
   }
 
 

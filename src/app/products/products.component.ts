@@ -83,6 +83,8 @@ export class ProductsComponent implements OnInit {
     const endItem = event.page * event.itemsPerPage;
     this.returnedArray = this.dogData.slice(startItem, endItem);
     this.returnedFilterArray=this.fiterCheck.slice(startItem, endItem);
+    window.scroll(0,0);
+
   }
 
   

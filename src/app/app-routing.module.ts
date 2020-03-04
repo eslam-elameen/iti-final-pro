@@ -39,7 +39,7 @@ const routes: Routes = [
   // { path: "shoppingCart", component: ShoppingCartComponent },
   { path: 'shipping', component: ShippingAreaComponent },
   { path: 'blog/:id', component: SingleBlogComponent },
-  { path: 'result', component: SearchResultComponent },
+  { path: 'result', component: SearchResultComponent},
   { path: 'randomProduct', component: ProuductRandomComponent },
   { path: 'randomProduct/:id', component: SignleProductComponent },
   { path: 'RandomBlog', component: RandomBlogComponent },
@@ -56,7 +56,10 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    enableTracing:false,
+    scrollPositionRestoration:'top'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
