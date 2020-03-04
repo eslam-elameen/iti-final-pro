@@ -12,6 +12,8 @@ export class RegisterationComponent implements OnInit {
   flag;
   registrationForm: FormGroup;
   getFile: File;
+  hidenConfirm=true
+  hiden: boolean=true
   constructor(private registerBuild: FormBuilder, private http: ApiService, private route: Router) { }
 
   ngOnInit() {
@@ -27,6 +29,13 @@ export class RegisterationComponent implements OnInit {
     this.http.getUserData().subscribe(data => {
       this.allDataOfUsers = data
     })
+  }
+  hidden(){
+
+    this.hiden = !this.hiden
+  }
+  hide(){
+this.hidenConfirm=!this.hidenConfirm
   }
   match(password, confirmPassword) {
     return (registrationForm: FormGroup) => {

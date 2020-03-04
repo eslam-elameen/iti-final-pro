@@ -4,6 +4,7 @@ import { ApiService } from './../api.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   login: FormGroup;
   checkDAta = [];
-
+  hiden = true;
   err;
   userData;
   y;
@@ -20,7 +21,10 @@ export class LoginComponent implements OnInit {
   x;
   logedin: boolean;
   constructor(private formBulider: FormBuilder, private validData: ApiService, private route: Router, private cartServices: ShoppingCartService) { }
+  hidden(){
 
+    this.hiden = !this.hiden
+  }
   ngOnInit() {
 
 

@@ -50,7 +50,8 @@ export class SearchResultComponent implements OnInit {
         console.log(res)
         this.apiData = res;
         this.filterService.searchDataResult = this.searchData = (this.searchValue) ?
-          this.apiData.filter(item => item.productTitle.toLowerCase().includes(this.searchValue.toLowerCase())) :
+          this.apiData.filter(item => item.productTitle.toLowerCase().includes(this.searchValue.toLowerCase())||
+          item.kind.toLowerCase().includes(this.searchValue.toLowerCase()) || item.storeName.toLowerCase().includes(this.searchValue.toLowerCase())) :
           this.searchData;
         console.log(this.searchData)
         this.returnedArray = this.searchData.slice(0, 9);

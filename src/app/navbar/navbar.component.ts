@@ -23,7 +23,7 @@ export interface Product {
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  mySearch = new FormControl('', Validators.required);
+  mySearch = new FormControl('',Validators.required);
   filterAutoComolete: Observable<Product[]>;
   productsData;
   filterd;
@@ -79,7 +79,7 @@ this.wowService.init();
   }
   private _filterStates(value: string): Product[] {
     const filterValue = value.toLowerCase();
-    return this.productsData.filter(product => product.kind.toLowerCase().includes(filterValue) || product.productTitle.toLowerCase().includes(filterValue));
+    return this.productsData.filter(product =>  product.productTitle.toLowerCase().includes(filterValue));
   }
   divToggle1(event) {
     this.toggle3 = !this.toggle3

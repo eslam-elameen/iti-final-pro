@@ -89,7 +89,7 @@
                     </div>
                   </div>
                   <div class="cart-section">
-                    <button class="btn btn-primary btn-block p3" type="button" (click)="onAddToCart(card)"><i
+                    <button class="btn btn-primary btn-block p3" type="button" (click)="addToCart(item)"><i
                         class="fas fa-shopping-cart mr-3"></i>Add To cart</button>
                   </div>
                 </div>
@@ -116,7 +116,7 @@
                     </div>
                   </div>
                   <div class="cart-section">
-                    <button class="btn btn-primary btn-block p3" type="button" (click)="onAddToCart(card)"><i
+                    <button class="btn btn-primary btn-block p3" type="button" (click)="addToCart(item)"><i
                         class="fas fa-shopping-cart mr-3"></i>Add To cart</button>
                   </div>
                 </div>
@@ -125,29 +125,33 @@
 
 
               </ng-template>
-              <div *ngIf=' counter ===0 ;else page'>
-                <div class="row">
-                  <div class="col-xs-12 col-12">
-                    <pagination class="pagination" [totalItems]="searchData.length" (pageChanged)="pageChanged($event)">
-                    </pagination>
-                  </div>
-                </div>
-              </div>
-                  <ng-template #page>
-                    <div class="col-md-12">
-                      <div class="row">
-                     
-                          <pagination class="pagination" [totalItems]="fiterCheck.length" (pageChanged)="pageChanged($event)">
-                          </pagination>
-                        </div>
-                    </div>        
-                     
-                  </ng-template>
             </div>
-         
+            
           </div>
         </div>
       </div>
     </div>
+    
+  </section>
+      <ng-container *ngIf='searchData.length == 0  ;else page'>
+        <h1></h1>
+  
+      </ng-container  >
+      <ng-template #page >
+        <ng-container *ngIf='counter == 0  ;else pag'>
+          
+              <pagination class="pagination" [totalItems]="searchData.length" (pageChanged)="pageChanged($event)">
+              </pagination>
+        
+      </ng-container>    
+         
+      </ng-template>
+      <ng-template #pag>
+        <ng-container *ngIf='counter > 0  '>
 
-</section>
+           
+              <pagination class="pagination" [totalItems]="fiterCheck.length" (pageChanged)="pageChanged($event)">
+              </pagination>
+           
+      </ng-container>   
+      </ng-template>
