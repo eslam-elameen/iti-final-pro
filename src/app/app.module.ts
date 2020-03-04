@@ -52,6 +52,7 @@ import { CheckComponent } from './check/check.component';
 import { PayComponent } from './pay/pay.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 @NgModule({
@@ -82,7 +83,8 @@ import { EditProfileComponent } from './profile/edit-profile/edit-profile.compon
     CheckComponent,
     PayComponent,
     ProfileComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

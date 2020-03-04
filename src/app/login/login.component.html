@@ -43,7 +43,7 @@
                                                    
                                                 <div class="alert alert-danger mt-2" role="alert"
                                                     *ngIf="login.controls.password.hasError('pattern') && login.controls.password.touched">
-                                                    *pawword include spacial @ capital A lowercase a number 0-9
+                                                    *pawword include lowercase a capital A number 0-9 min lenght 6
                                                 </div>
                                                 <div class="alert alert-danger mt-2" role="alert"
                                                     *ngIf="login.controls.password.hasError('required') && login.controls.password.touched">
@@ -55,6 +55,7 @@
                                                     or
                                                     password</span>
                                                 <button type="submit" class="btn btn-primary">Login</button>
+                                                <button type="button" (click)="onRegister()" class="btn btn-primary">Register</button>
 
                                             </div>
                                         </div>

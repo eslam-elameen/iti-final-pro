@@ -195,4 +195,14 @@ export class ShoppingCartComponent implements OnInit {
   continueShopping() {
     this.route.navigate(["/category/dog"])
   }
+
+  onCheckOut(){
+    let userLogin = JSON.parse(localStorage.getItem('user'))
+
+    if(userLogin == null){
+      this.route.navigate(['/checkout-login/check'])
+    }else{
+      this.route.navigate(['/check'])
+    }
+  }
 }
