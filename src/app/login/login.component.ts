@@ -4,6 +4,7 @@ import { ApiService } from './../api.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router,ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,7 +13,7 @@ import { Router,ActivatedRoute } from '@angular/router';
 export class LoginComponent implements OnInit {
   login: FormGroup;
   checkDAta = [];
-
+  hiden = true;
   err;
   userData;
   y;
@@ -20,8 +21,11 @@ export class LoginComponent implements OnInit {
   x;
   logedin: boolean;
   checoutLog: any;
-  constructor( private gitCheckout :ActivatedRoute,private formBulider: FormBuilder, private validData: ApiService, private route: Router, private cartServices: ShoppingCartService) { }
+  constructor(private gitCheckout :ActivatedRoute,private formBulider: FormBuilder, private validData: ApiService, private route: Router, private cartServices: ShoppingCartService) { }
+  hidden(){
 
+    this.hiden = !this.hiden
+  }
   ngOnInit() {
     
 
@@ -46,6 +50,7 @@ export class LoginComponent implements OnInit {
           this.logedin = true
           this.validData.localNex(this.logedin)
           this.userData = JSON.parse(localStorage.getItem('user'));
+
           console.log(this.userData);
           this.shoppingCartData = JSON.parse(localStorage.getItem('shoppingCart'));
           console.log(this.shoppingCartData);

@@ -7,7 +7,7 @@
                         (ngSubmit)='onregisterSubmit(registrationForm)'>
                         <div class="row justify-content-center no-gutters">
                             <div class="signup-wrapper">
-                                <div class="col-md-6">
+                                <div class="col-md-6 p-0">
                                     <div class="row-inputs">
                                         <div class="form-design align-items-center">
                                             <div class="header-signUp text-center">
@@ -38,8 +38,16 @@
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-12">
-                                                <input type="password" class="form-control input100"
+                                                <input [type]="hiden? 'password':'text'" class="form-control input100"
                                                     formControlName='password' placeholder="enter your password">
+                                                    <div (click)='hidden()' class="hidePassword">
+                                                        <ng-container *ngIf='hiden;else unhide'>
+                                                            <i class="fas fa-eye"></i>
+                                                        </ng-container>
+                                                        <ng-template #unhide>
+                                                            <i class="fas fa-eye-slash"></i>
+                                                        </ng-template>
+                                                    </div>
                                                 <div *ngIf='registrationForm.controls.password.hasError("pattern")&&registrationForm.controls.password.touched'
                                                     class="alert alert-danger" role="alert">
                                                     the password should contain ex :a-z,A-Z,0-9
@@ -50,9 +58,17 @@
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-12">
-                                                <input type="password" class="form-control input100"
+                                                <input [type]="hidenConfirm? 'password':'text'" class="form-control hideConfirm input100"
                                                     formControlName='confirmPassword'
                                                     placeholder="confirm your password ">
+                                                    <div (click)='hide()' class="hideConPassword">
+                                                        <ng-container *ngIf='hidenConfirm;else unhiden'>
+                                                            <i class="fas fa-eye"></i>
+                                                        </ng-container>
+                                                        <ng-template #unhiden>
+                                                            <i class="fas fa-eye-slash"></i>
+                                                        </ng-template>
+                                                    </div>
                                                 <div *ngIf='registrationForm.controls.confirmPassword.hasError("match")&&registrationForm.controls.confirmPassword.touched'
                                                     class="alert alert-danger" role="alert">
                                                     password dosen't match
@@ -80,7 +96,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 imgBackGround">
                                     <div class="img-wrapper">
                                         <img src="https://image.freepik.com/free-vector/people-stroll-with-pets-vector-illustration_82574-8739.jpg"
                                             alt="" class="img-fluid">
