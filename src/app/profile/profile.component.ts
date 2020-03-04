@@ -22,7 +22,7 @@ export class ProfileComponent implements OnInit {
     this.comingUser = JSON.parse(localStorage.getItem('user'));
     console.log(this.comingUser);
 
-    this.http.getUserData().subscribe(data => {
+    this.http.getSingleUser(this.comingUser).subscribe(data => {
       this.userFromJson = data
       console.log(this.userFromJson);
       for (let i = 0; i < this.userFromJson.length; i++) {
@@ -33,6 +33,7 @@ export class ProfileComponent implements OnInit {
         }
       }
     });
+
   }
 
   callForImage() {
@@ -56,6 +57,7 @@ export class ProfileComponent implements OnInit {
       console.log(this.comingUser.id);
       this.http.updateUser(this.comingUser.id, this.comingUser).subscribe(data => {
       })
+      localStorage.setItem("user",JSON.stringify(this.comingUser));
     }
   }
 }

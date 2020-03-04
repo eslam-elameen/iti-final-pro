@@ -18,7 +18,7 @@
             <div class="card p-0 border-primary mb-3">
 
               <h5 class="card-header">Food & accessories</h5>
-              <ul class="list-group list-group-flush" *ngFor='let kin of checkBoxkind'>
+              <ul class="list-group list-group-flush p-2" *ngFor='let kin of checkBoxkind'>
 
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                   <input class="check" type="checkbox" name="{{kin}}" id="{{kin}}-3" value=""
@@ -28,9 +28,9 @@
 
               </ul>
             </div>
-            <div class="card border-primary p-0 mb-3">
+            <div class="card border-primary mb-3">
               <h5 class="card-header">Store</h5>
-              <ul class="list-group list-group-flush" *ngFor='let stor of checkBoxStore'>
+              <ul class="list-group list-group-flush p-2" *ngFor='let stor of checkBoxStore'>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                   <input class="check" type="checkbox" name="{{stor}}" id="{{stor}}-9" value=""
                     (change)=filterGetStore($event)>
@@ -100,7 +100,7 @@
                 </div>
               </div>
               <ng-template #empty>
-                <div class="col-md-4 mb-4 col-sm-12" *ngFor='let item of returnedFilterArray'>
+                <div class="col-md-4 mb-4 col-sm-12 p-3" *ngFor='let item of returnedFilterArray'>
                   <div class="card">
                     <div class="card-wrapper">
                       <div class="img-wrapper">

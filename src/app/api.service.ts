@@ -6,8 +6,19 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
+
+private testing = new BehaviorSubject({});
+testName = this.testing.asObservable();
+
+senobject(obj){
+  this.testing.next(obj)
+}
+
+
   private tes = new BehaviorSubject('')
   teat = this.tes.asObservable();
+
+  userName: any;
   // private controlForm = new BehaviorSubject({});
   // comingForm = this.controlForm.asObservable();
   // payment data//////////
@@ -34,14 +45,14 @@ local;
     return this.http.get('http://localhost:3000/users');
   }
 
-  getSingleUser(){
-    return this.http.get('http://localhost:3000/users');
+  getSingleUser(id){
+    return this.http.get('http://localhost:3000/users',id);
   }
   getProfileData() {
     return this.http.get('http://localhost:3000/profile');
   }
-  updateUser(id, body) {
-    return this.http.put("http://localhost:3000/users/" + id, body);
+  updateUser(id, obj) {
+    return this.http.put("http://localhost:3000/users/" + id, obj);
   }
   delete(id, body) {
     return this.http.put("http://localhost:3000/users/" + id, body);

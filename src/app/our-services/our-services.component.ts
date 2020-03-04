@@ -118,8 +118,8 @@ export class OurServicesComponent implements OnInit, OnChanges {
     return total;
   }
 
-  onChangevalue(e) {
-      if(e.target.value > 0){
+  onChangevalue() {
+      if(this.servicesForm.value.dog > 0 || this.servicesForm.value.cat > 0){
         this.totalPrice()
         this.total = this.totalPrice();
       }else{

@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+//importing guard service
+import { AuthGuardService } from './guards/auth-guard.service'
 // import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 // import { NgxNavbarModule } from 'ngx-bootstrap-navbar';                                  
-import {MaterialAnglur} from './material'
+import { MaterialAnglur } from './material'
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeroHeaderComponent } from './hero-header/hero-header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -107,7 +109,7 @@ import { EditProfileComponent } from './profile/edit-profile/edit-profile.compon
 
   ],
 
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
