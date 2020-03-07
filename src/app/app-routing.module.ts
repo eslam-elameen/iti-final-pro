@@ -23,7 +23,6 @@ import { EditProfileComponent } from './profile/edit-profile/edit-profile.compon
 import { NotfoundComponent } from './notfound/notfound.component';
 //  import { ProfileComponent } from './profile/profile.component';
 
-
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'pay', component: PayComponent ,canActivate:[AuthGuardService]},

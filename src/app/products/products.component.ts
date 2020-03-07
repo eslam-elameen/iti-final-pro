@@ -37,11 +37,8 @@ export class ProductsComponent implements OnInit {
       this.route.params.subscribe(params => {
         let uncheck = Array.from(document.getElementsByClassName('check'));
       if( params){
-        for ( let i of uncheck){
+        this.checkfilter.uncCheck(uncheck)
           this.counter = 0
-          i.checked = false
-       }
-      
        this.checkfilter.updateData.splice(0, this.checkfilter.updateData.length);
       }
         this.checkfilter.searchDataResult =this.dogData = this.productsData.filter(item => item.category.includes(params.category));

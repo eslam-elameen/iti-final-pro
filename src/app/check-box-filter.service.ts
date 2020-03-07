@@ -18,7 +18,12 @@ export class CheckBoxFilterService {
   updateData = [];
   filterdData = [];
   sendResult = data =>this.filterBehavior.next(data);
-  
+  uncCheck(calssArr){
+    let item:any
+    for (  item of calssArr){
+      item.checked = false
+   }
+  }
   runs = () => {
     for (let item of this.allArr) {
       this.updateData.indexOf(item)!=-1? this.updateData.splice(this.updateData.indexOf(item),1,item):

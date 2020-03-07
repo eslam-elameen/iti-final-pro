@@ -76,7 +76,7 @@
           <div class="alert alert-danger m-auto w-75 text-center py-4" role="alert" *ngIf="searchData.length ===0" >
             <h3>No Data For Your search</h3>
           </div>
-          <div *ngIf="counter ===0 ; else empty"  >
+          <div *ngIf="counter ===0 ; else empty" class="row no-gutters">
             <div class="col-md-4 mb-4 paddingcol col-12" *ngFor='let item of returnedArray'>
               <div class="card">
                 <div class="card-wrapper">
