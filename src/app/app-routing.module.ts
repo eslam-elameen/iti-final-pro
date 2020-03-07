@@ -1,3 +1,4 @@
+import { FinishComponent } from './finish/finish.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PayComponent } from './pay/pay.component';
 import { NgModule } from '@angular/core';
@@ -26,6 +27,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'pay', component: PayComponent ,canActivate:[AuthGuardService]},
+  { path: 'finish', component: FinishComponent},
 
   { path: 'signin', component: LoginComponent },
   { path: 'checkout-login/:data', component: LoginComponent },
