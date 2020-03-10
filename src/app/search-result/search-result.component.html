@@ -5,7 +5,12 @@
         <div class="col-md-3 navbar navbar-expand-lg navbar-light d-flex align-items-baseline">
           <button class="navbar-toggler"   (click)="droptoggle1($event)" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
             aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+       
+
+              Filter:
               <span class="navbar-toggler-icon"></span>
+            
+            
           </button>
 
           <!-- <div> -->
@@ -140,7 +145,7 @@
       <ng-template #page >
         <ng-container *ngIf='counter == 0  ;else pag'>
           
-              <pagination class="pagination" [totalItems]="searchData.length" (pageChanged)="pageChanged($event)">
+              <pagination (activate)="onActivate($event)" class="pagination" [totalItems]="searchData.length" (pageChanged)="pageChanged($event)">
               </pagination>
         
       </ng-container>    
@@ -150,7 +155,7 @@
         <ng-container *ngIf='counter > 0  '>
 
            
-              <pagination class="pagination" [totalItems]="fiterCheck.length" (pageChanged)="pageChanged($event)">
+              <pagination (activate)="onActivate($event)" class="pagination" [totalItems]="fiterCheck.length" (pageChanged)="pageChanged($event)">
               </pagination>
            
       </ng-container>   

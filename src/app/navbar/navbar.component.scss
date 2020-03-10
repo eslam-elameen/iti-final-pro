@@ -79,7 +79,9 @@ button:focus{
 
 }
 
-
+::ng-deep .autom{
+  padding-top: 10px;
+}
 // #logout{
 //   display: none ;
 // }

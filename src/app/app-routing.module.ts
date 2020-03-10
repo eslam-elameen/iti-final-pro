@@ -1,3 +1,4 @@
+import { FinishComponent } from './finish/finish.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PayComponent } from './pay/pay.component';
 import { NgModule } from '@angular/core';
@@ -23,10 +24,10 @@ import { EditProfileComponent } from './profile/edit-profile/edit-profile.compon
 import { NotfoundComponent } from './notfound/notfound.component';
 //  import { ProfileComponent } from './profile/profile.component';
 
-
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'pay', component: PayComponent ,canActivate:[AuthGuardService]},
+  { path: 'finish', component: FinishComponent},
 
   { path: 'signin', component: LoginComponent },
   { path: 'checkout-login/:data', component: LoginComponent },
@@ -39,7 +40,7 @@ const routes: Routes = [
   // { path: "shoppingCart", component: ShoppingCartComponent },
   { path: 'shipping', component: ShippingAreaComponent },
   { path: 'blog/:id', component: SingleBlogComponent },
-  { path: 'result', component: SearchResultComponent },
+  { path: 'result', component: SearchResultComponent},
   { path: 'randomProduct', component: ProuductRandomComponent },
   { path: 'randomProduct/:id', component: SignleProductComponent },
   { path: 'RandomBlog', component: RandomBlogComponent },
@@ -56,7 +57,10 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    enableTracing:false,
+    scrollPositionRestoration:'top'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

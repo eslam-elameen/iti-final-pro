@@ -38,13 +38,18 @@ this.shoppingCart.saveInLocalStorge();
   getSinglePost(postId) {
     this.productData.getSingleData(postId).subscribe(postObj => {
       this.postItem = postObj;
-      // console.log(this.postItem);
     })
   }
+
+
   onAddToCart(product) {
+    
     this.flag = false
     for (let item of this.shoppingCart.products) {
       if (item.id === product.id) {
+        item.qty += this.quantity;
+        item.totalPrice = item.qty * product.price;
+        localStorage.setItem('shoppingCart', JSON.stringify(this.shoppingCart.products));
         this.flag = true;
       }
     }
@@ -58,6 +63,7 @@ this.shoppingCart.saveInLocalStorge();
         product['qty'] = this.quantity;
         product['totalPrice'] = product.qty * product.price;
         localStorage.setItem('shoppingCart', JSON.stringify(this.shoppingCart.products));
+        console.log(this.shoppingCart.products);
         
       }
     }
@@ -68,6 +74,7 @@ this.shoppingCart.saveInLocalStorge();
   onDecrease(){
     if(this.quantity > 1){
       this.quantity--;
+
     }
   }
 
