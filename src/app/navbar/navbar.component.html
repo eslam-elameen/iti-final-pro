@@ -1,6 +1,9 @@
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
+<!-- Logoo  -->
     <a class="navbar-brand" routerLink="/"><img src="../../assets/img/logo12.png" alt=""></a>
+   
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
       (click)="droptoggle($event)">
@@ -133,7 +136,7 @@
           </button>
 
           <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
-          <div *ngIf = 'lox ==null  ; else lo'>
+          <div *ngIf = 'checkLogIn ==null  ; else logout'>
             <li role="menuitem">
                 <a class="dropdown-item dropLink" routerLink="/signin"><i class="fas fa-angle-right icon mr-2"></i>Sign In</a>
             </li>
@@ -141,7 +144,7 @@
                 <a class="dropdown-item dropLink" routerLink="/signup"><i class="fas fa-angle-right icon mr-2"></i>Sign Up</a>
             </li>
           </div>
-          <ng-template #lo>
+          <ng-template #logout>
            
                 <li role="menuitem">
                   <ng-container *ngIf='userName != null; else profile'>

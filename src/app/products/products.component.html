@@ -66,11 +66,8 @@
           </div>
             </div>
             <div class="row no-gutters">
-              <div class="alert alert-danger" role="alert" *ngIf='dogData.length ==0'>
-                <h4>No Data Found</h4>
-
-              </div>
-              <div *ngIf="counter ===0 ; else empty" class="row no-gutters">
+             
+              <ng-container *ngIf="counter ===0 ; else empty" >
                 <div class="col-md-4 mb-4 col-sm-12 p-3" *ngFor='let item of returnedArray'>
 
 
@@ -84,22 +81,20 @@
                           <h5 class="card-title">{{item.productTitle | slice:0:20}}</h5>
                           <span class="storeName">{{item.storeName | slice:0:10}}</span>
                         </div>
-                        <div class="card-body-detail ">
+                        <div class="card-body-detail">
                           <span class="kind">{{item.kind}}</span>
                           <span class="price">{{item.price}} EGP</span>
                         </div>
                       </div>
                       <div class="cart-section">
-                        <button type="button" (click)="onAddToCart(item)" class="btn btn-primary btn-block">
-                          <i class="fas fa-shopping-cart"></i> Add To Cart
-                        </button>
+                        <button class="btn btn-primary btn-block p3" type="button" (click)="onAddToCart(item)"><i
+                            class="fas fa-shopping-cart mr-3"></i>Add To cart</button>
                       </div>
-
                     </div>
                   </div>
 
                 </div>
-              </div>
+              </ng-container>
               <ng-template #empty>
                 <div class="col-md-4 mb-4 col-sm-12 p-3" *ngFor='let item of returnedFilterArray'>
                   <div class="card">
