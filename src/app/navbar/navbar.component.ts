@@ -65,7 +65,7 @@ export class NavbarComponent implements OnInit {
       this.checkLogIn = localStorage.getItem('logedin')
     })
     this.userName = JSON.parse(localStorage.getItem('user'));
-   
+  
     this.wowService.init();
 
     // count Quantity of product in navbar
