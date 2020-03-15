@@ -49,7 +49,10 @@ console.log(this.total)
   onSubmit(form) {
     console.log(form.value)
     this.checkoutData = form.value
-    this.checkout.sendgetdata(form.value)
+    this.checkout.sendgetdata(form.value);
+    console.log(form.value);
+    
+    localStorage.setItem('checoutInfo', JSON.stringify(form.value))
     this.router.navigate(['/pay'])
     console.log(form.value)
   }

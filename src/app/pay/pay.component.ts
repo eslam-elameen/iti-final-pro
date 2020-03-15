@@ -1,6 +1,7 @@
 import { ApiService } from './../api.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ShoppingCartService } from '../shopping-cart.service';
 
 @Component({
   selector: 'app-pay',
@@ -15,25 +16,16 @@ export class PayComponent implements OnInit {
 price=800
   userData ;
   products
-  constructor(private payment:  ApiService,private fb: FormBuilder) {
+  constructor(private payment:  ApiService,private fb: FormBuilder,private shopping: ShoppingCartService) {
     // this.payment.getConfig().subscribe(data=>{
     //   this.products =data
     //   })
    }
     totalPricePay
   ngOnInit() {
-        this.payment.checkdatafinal.subscribe(
-      data => {
-        console.log(data)
-        this.userData = data;
-        console.log(this.userData);
+     this.userData = JSON.parse(localStorage.getItem('checoutInfo'));
+     this.totalPricePay = this.shopping.totalPrice() + this.shopping.totalServicesPrice();
 
-      })
-      this.payment.totalPricefinal.subscribe(data=>{
-        this.totalPricePay = data;
-        console.log(this.totalPricePay)
-
-      })
 
       this.myForm = this.fb.group({
         CardNumber: ['', [Validators.required, Validators.pattern('[0-9]{14}')]],
