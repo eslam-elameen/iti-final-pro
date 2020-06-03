@@ -36,8 +36,7 @@ const routes: Routes = [
 
   { path: 'signup', component: RegisterationComponent }, 
   { path: 'checkoutRegister/:data', component: RegisterationComponent }, 
-  { path: 'blog', component: BlogComponent },
-  // { path: "shoppingCart", component: ShoppingCartComponent },
+  { path: 'blog', component: BlogComponent }, 
   { path: 'shipping', component: ShippingAreaComponent },
   { path: 'blog/:id', component: SingleBlogComponent },
   { path: 'result', component: SearchResultComponent},

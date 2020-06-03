@@ -235,6 +235,13 @@
       "password": "Goweda20",
       "confirmPassword": "Goweda20",
       "id": 10
+    },
+    {
+      "name": "eslam",
+      "email": "saad@sad.com",
+      "password": "aminion92W",
+      "confirmPassword": "aminion92W",
+      "id": 11
     }
   ],
   "products": [

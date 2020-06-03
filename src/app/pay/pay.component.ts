@@ -9,13 +9,14 @@ import { ShoppingCartService } from '../shopping-cart.service';
   styleUrls: ['./pay.component.scss']
 })
 export class PayComponent implements OnInit {
-  
+
   // formMethod = document.getElementById("x").setAttribute("disabled", "false");
 
   myForm: FormGroup;
 price=800
   userData ;
-  products
+  products;
+  hoda;
   constructor(private payment:  ApiService,private fb: FormBuilder,private shopping: ShoppingCartService) {
     // this.payment.getConfig().subscribe(data=>{
     //   this.products =data
